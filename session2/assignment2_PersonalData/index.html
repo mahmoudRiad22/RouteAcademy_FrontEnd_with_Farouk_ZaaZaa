@@ -5,25 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Data</title>
+
+    <style>
+        :root {
+            --bg: #EFE4D2;
+            --surface: #254D70;
+            --buttons: #131D4F;
+            --text: #954C2E;
+        }
+
+        * {
+            color: var(--text);
+        }
+    </style>
 </head>
 
 <body>
 
     <fieldset style="margin: 0; padding: 0; border: 0;">
-        <legend style="background-color: blueviolet;"><strong>Personal Data</strong></legend>
-        <form action="" style="background-color: brown; margin-top: -12px;">
+
+        <legend style="background-color: var(--surface); margin: auto;">
+            <strong style="color: var(--bg);">Personal Data</strong>
+        </legend>
+
+
+        <form action="" style="background-color: var(--bg);">
             <br><br><br><br><br><br>
 
-            <fieldset style="background-color: orange;">
+            <fieldset style="background-color: var(--surface);">
 
-                <fieldset style="background-color: orangered; 
+                <fieldset style="background-color: var(--surface); 
                     width: 100px; 
                     height: 60px;
                     margin-top: -60px;
                     padding-top: 35px;
                     text-align: center;
                  ">
-                    <span> <strong>your Name</strong></span>
+                    <span>
+                        <strong style="color: var(--bg);">your Name</strong>
+                    </span>
                 </fieldset><br>
 
                 <table>
@@ -31,7 +51,7 @@
                         <br><br>
                         <tr>
                             <td>
-                                <label for="firstName">First Name</label>
+                                <label for="firstName" style="color: var(--bg);">First Name</label>
                             </td>
                             <td>:</td>
                             <td>
@@ -40,7 +60,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="lastName">Last Name</label>
+                                <label for="lastName" style="color: var(--bg);">Last Name</label>
                             </td>
                             <td>:</td>
                             <td>
@@ -141,14 +161,14 @@
                 <option value="" hidden>University</option>
                 <optgroup label="Tanta">
                     <option value="Tanta University">Tanta University</option>
-                    <option value="Delta University for Science and Technology">Delta University for Science and
-                        Technology
+                    <option value="Delta University for Science and Technology">
+                        Delta University for Science and Technology
                     </option>
-                    <option value="Egyptian Russian University (Tanta Branch)">Egyptian Russian University (Tanta
-                        Branch)
+                    <option value="Egyptian Russian University (Tanta Branch)">
+                        Egyptian Russian University (TantaBranch)
                     </option>
-                    <option value="Higher Technological Institute (HTI-Tanta)">Higher Technological Institute
-                        (HTI-Tanta)
+                    <option value="Higher Technological Institute (HTI-Tanta)">
+                        Higher Technological Institute (HTI-Tanta)
                     </option>
                 </optgroup>
 
@@ -163,16 +183,16 @@
                     <option value="Mansoura University">Mansoura University</option>
                     <option value="Mansoura National University">Mansoura National University</option>
                     <option value="New Mansoura University">New Mansoura University</option>
-                    <option value="Arab Academy for Science & Technology (Mansoura Branch)">Arab Academy for Science &
-                        Technology (Mansoura Branch)</option>
+                    <option value="Arab Academy for Science & Technology (Mansoura Branch)">
+                        Arab Academy for Science & Technology (Mansoura Branch)
+                    </option>
                 </optgroup>
-
             </select>
             <br><br>
 
 
-            <button type="submit" style="cursor: pointer; margin-left: 20px;" >
-                <img src="./submit.jpg" alt="submit form" width="100px;">
+            <button type="submit" style="cursor: pointer; margin-left: 20px; border: 0; padding: 0;">
+                <img src="./submit2.jpg" alt="submit form" width="100px">
             </button>
 
             <button type="reset">Reset</button>
