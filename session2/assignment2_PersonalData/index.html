@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data</title>
+</head>
+
+<body>
+
+    <fieldset style="margin: 0; padding: 0; border: 0;">
+        <legend style="background-color: blueviolet;"><strong>Personal Data</strong></legend>
+        <form action="" style="background-color: brown; margin-top: -12px;">
+            <br><br><br><br><br><br>
+
+            <fieldset style="background-color: orange;">
+
+                <fieldset style="background-color: orangered; 
+                    width: 100px; 
+                    height: 60px;
+                    margin-top: -60px;
+                    padding-top: 35px;
+                    text-align: center;
+                 ">
+                    <span> <strong>your Name</strong></span>
+                </fieldset><br>
+
+                <table>
+                    <tbody>
+                        <br><br>
+                        <tr>
+                            <td>
+                                <label for="firstName">First Name</label>
+                            </td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" name="firstName" id="firstName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lastName">Last Name</label>
+                            </td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" name="lastName" id="lastName">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+
+            <table style="margin-left: 20px;">
+                <br><br><br>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="userPhone"><strong>Your phone</strong></label>
+                        </td>
+                        <td>:</td>
+                        <td>
+                            <input type="number" name="userPhone" id="userPhone">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="userEmail"><strong>Email</strong></label>
+                        </td>
+                        <td>:</td>
+                        <td>
+                            <input type="email" name="userEmail" id="userEmail">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="userPassword"><strong>Password</strong></label>
+                        </td>
+                        <td>:</td>
+                        <td>
+                            <input type="password" name="userPassword" id="userPassword">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="userRepassword"><strong>Re-password</strong></label>
+                        </td>
+                        <td>:</td>
+                        <td>
+                            <input type="password" name="userRepassword" id="userRepassword">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br><br>
+
+            <table style="margin-left: 20px;">
+                <th>
+                    <label for="userGender">Gender:</label><br>
+                </th>
+                <tr>
+                    <td>
+                        <input type="radio" name="userGender" id="userMale" value="male">
+                        <label for="userMale">Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="userGender" id="userFemale" value="female">
+                        <label for="userFemale">Female</label>
+                    </td>
+                </tr>
+            </table>
+            <br><br><br>
+
+            <table style="margin-left: 20px;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="userState" id="userStudent" value="student">
+                            <label for="userStudent">Student</label><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="userState" id="userGraduated" value="graduated">
+                            <label for="userGraduated">Graduated</label><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br><br><br>
+
+            <label for="universties" style="margin-left: 20px;"><strong>Choose your: </strong></label>
+            <select name="" id="universties">
+                <option value="" hidden>University</option>
+                <optgroup label="Tanta">
+                    <option value="Tanta University">Tanta University</option>
+                    <option value="Delta University for Science and Technology">Delta University for Science and
+                        Technology
+                    </option>
+                    <option value="Egyptian Russian University (Tanta Branch)">Egyptian Russian University (Tanta
+                        Branch)
+                    </option>
+                    <option value="Higher Technological Institute (HTI-Tanta)">Higher Technological Institute
+                        (HTI-Tanta)
+                    </option>
+                </optgroup>
+
+                <optgroup label="Cairo">
+                    <option value="Cairo University">Cairo University</option>
+                    <option value="Ain Shams University">Ain Shams University</option>
+                    <option value="American University in Cairo (AUC)">American University in Cairo (AUC)</option>
+                    <option value="German University in Cairo (GUC)">German University in Cairo (GUC)</option>
+                </optgroup>
+
+                <optgroup label="Mansoura">
+                    <option value="Mansoura University">Mansoura University</option>
+                    <option value="Mansoura National University">Mansoura National University</option>
+                    <option value="New Mansoura University">New Mansoura University</option>
+                    <option value="Arab Academy for Science & Technology (Mansoura Branch)">Arab Academy for Science &
+                        Technology (Mansoura Branch)</option>
+                </optgroup>
+
+            </select>
+            <br><br>
+
+
+            <button type="submit" style="cursor: pointer; margin-left: 20px;" >
+                <img src="./submit.jpg" alt="submit form" width="100px;">
+            </button>
+
+            <button type="reset">Reset</button>
+            <br><br><br>
+            <br><br><br>
+        </form>
+    </fieldset>
+
+</body>
+
+</html>
