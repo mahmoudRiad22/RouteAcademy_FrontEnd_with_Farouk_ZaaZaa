@@ -261,39 +261,100 @@
     background-color: #403D38;
     color: #f5f5e9;
 }
+.footer .footer-top table{
+    margin: 0px 60px;
+}
+
 .footer .footer-top th{
-    padding-top: 50px;
+    padding-top: 75px;
     text-align: left;
     padding-bottom: 25px;
 }
-.footer .footer-top table{
-    margin: 30px 60px;
-}
+
 .footer .footer-top td{
     width: 25%;
     text-align: left;
+    vertical-align: top; /*what a ngighmare to find it out on my own*/
 }
 .footer .footer-top ul{
     list-style: none;
-    /* padding-bottom: 50px; */
 }
-
+.footer .footer-top ul li{
+    padding: 0px;
+}
+.footer .footer-top li p{
+    line-height: 25px;
+    font-size: 16px;
+    color: gray;
+}
 .footer .footer-top li img{
     height: 25px;
     float: left;
 }
-.footer .footer-top li span{
+.footer .footer-top li span {
     line-height: 25px;
     vertical-align: middle;
     font-size: 16px;
-    /* text-align: center; */
+    text-align: center;
+    color: gray;
 }
-.footer .footer-top li p{
-    line-height: 25px;
-    vertical-align: middle;
+.footer .footer-top li span a{
+    line-height: 40px;
     font-size: 16px;
-    /* padding-left: 100px; */
+    text-align: center;
+    color: gray;
+    
 }
 /* #endregion footer using lists*/
+
+.footer .footer-bottom{
+    background-color: #353330;
+    text-align: center;
+}
+
+.footer-bottom .container img{
+    margin-bottom: 30px;
+}
+
+.footer .footer-bottom .container p{
+    padding: 0px 0px 20px 0px;
+    color: gray;
+}
+.footer .footer-bottom a img{
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #403D38;
+}
+
+
+/* Footer Hover Effect */
+.footer .footer-bottom a .facebook-icon:hover{
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #3B5998;
+}
+
+.footer .footer-bottom a .google-icon:hover{
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #DD4B39;
+}
+
+.footer .footer-bottom a .linkedin-icon:hover{
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #007BB5;
+}
+
+.footer .footer-bottom a .twitter-icon:hover{
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #00ACED;
+}
 
 
