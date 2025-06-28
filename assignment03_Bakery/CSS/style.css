@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    font-family: "";
 }
 .clear {
     clear: both;
@@ -40,7 +42,7 @@
 .home_section p {
     font-weight: 400;
     font-size: 24px;
-
+    font-family: "Alegreya-static";
     padding: 30px 260px;
 }
 .home_section h1 {
@@ -68,6 +70,8 @@
 }
 .home_section .btn:hover{
     cursor: pointer;
+    background-color: #f8f8f8;
+    color: black;
 }
 /* #endregion home-section */
 
@@ -191,7 +195,9 @@
 
 .contact-information {
     background-color: #f8f8f8;
-    margin: 100px 0px;
+    margin: 50px 0px 0px 0px;
+    padding: 100px 0px 50px 0px;
+
 }
 .contact-information .left-side {
     padding: 50px 50px;
@@ -318,6 +324,7 @@
 
 .footer .footer-bottom .container p{
     padding: 0px 0px 20px 0px;
+    font-size: 15px;
     color: gray;
 }
 .footer .footer-bottom a img{
