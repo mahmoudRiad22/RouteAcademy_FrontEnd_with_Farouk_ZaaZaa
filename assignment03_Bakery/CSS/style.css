@@ -226,8 +226,8 @@
 /* #endregion Contact-information */
 
 
-/* #region */
-
+/* #region footer using tables */
+/* 
 .footer .last-section{
     background-color: #403D38;
     color: #f5f5e9;
@@ -250,10 +250,50 @@
     line-height: 25px;
     vertical-align: middle;
     font-size: 14px;
-}
+} */
+
 /* #endregion */
 
 
+/* #region footer using lists*/
+.footer .footer-top{
+    width: 100%;
+    background-color: #403D38;
+    color: #f5f5e9;
+}
+.footer .footer-top th{
+    padding-top: 50px;
+    text-align: left;
+    padding-bottom: 25px;
+}
+.footer .footer-top table{
+    margin: 30px 60px;
+}
+.footer .footer-top td{
+    width: 25%;
+    text-align: left;
+}
+.footer .footer-top ul{
+    list-style: none;
+    /* padding-bottom: 50px; */
+}
 
+.footer .footer-top li img{
+    height: 25px;
+    float: left;
+}
+.footer .footer-top li span{
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 16px;
+    /* text-align: center; */
+}
+.footer .footer-top li p{
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 16px;
+    /* padding-left: 100px; */
+}
+/* #endregion footer using lists*/
 
 
