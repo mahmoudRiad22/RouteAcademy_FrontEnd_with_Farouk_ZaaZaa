@@ -116,4 +116,28 @@
     border-bottom: 30px solid transparent;
     border-left: 30px solid transparent;
     border-radius: 5%;
+
+    border-top: 100px solid green;
+    border-right: 100px solid orange;
+    border-bottom: 100px solid red;
+    border-left: 100px solid gray;
+    /* border-radius: 5%; */
+    border-top-left-radius: 35%;
+}
+
+
+.div6{
+    width: 500px;
+    height: 500px;
+
+    background-color: red;
+    border: 6px dotted   black;
+    /* margin: auto; */
+    background-image: url(../images/ben-garratt.jpg);
+    padding: 30px;
+
+    background-clip: border-box ;
+    background-clip: padding-box ;
+    background-clip: content-box;
+    
 }
