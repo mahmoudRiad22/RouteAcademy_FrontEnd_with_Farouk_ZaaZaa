@@ -7,7 +7,6 @@
 
 /* Main CSS */
 
-
 /* background-image */
 
 .div1 {
@@ -47,8 +46,7 @@
     background-attachment: scroll; /*default state*/
 }
 
-
-.div21{
+.div21 {
     height: 200px;
     background-image: url(../images/clem-onojeghuo.jpg);
     /* Size, postion, attachment, repeat*/
@@ -57,32 +55,65 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.div22{
+.div22 {
     height: 300px;
     background-image: url(../images/drew-coffman-1872.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 /* Border */
 
-
-.div3{
+.div3 {
     height: 400px;
     width: 600px;
 
     background-color: aquamarine;
     margin: 0px 150px;
 
-    border-top: 10px solid black ;
+    border-top: 10px solid black;
     border-right: 10px dashed red;
     border-bottom: 10px solid green;
     border-left: 10px dotted gray;
 
     /* border shorthand */
     border: 20px solid violet;
+}
 
+/* creating arrows with borders */
+.div4 {
+    width: 0px;
+    height: 0px;
+
+    /* chose one arrow and make the others "transparent" */
+
+    /* RIGHT ARROW */
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid gray;
+    border-radius: 5%;
+
+    /* LEFT ARROW */
+    border-top: 30px solid transparent;
+    border-right: 30px solid orange;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-radius: 5%;
+
+    /* UPWARD ARROW */
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid red;
+    border-left: 30px solid transparent;
+    border-radius: 5%;
+
+    /* DOWNWARD ARROW */
+    border-top: 30px solid green;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-radius: 5%;
 }
