@@ -125,19 +125,48 @@
     border-top-left-radius: 35%;
 }
 
-
-.div6{
+/* background-clip */
+.div6 {
     width: 500px;
     height: 500px;
 
     background-color: red;
-    border: 6px dotted   black;
+    border: 6px dotted black;
     /* margin: auto; */
     background-image: url(../images/ben-garratt.jpg);
     padding: 30px;
 
-    background-clip: border-box ;
-    background-clip: padding-box ;
+    background-clip: border-box;
+    background-clip: padding-box;
     background-clip: content-box;
-    
+}
+
+/* multiple background images */
+.div7 {
+    width: 70%;
+    margin: auto;
+    height: 500px;
+    background-color: red;
+
+    background-image: 
+        url(../images/drew-coffman-1872.jpg),
+        url(../images/ben-garratt.jpg),
+        url(../images/stas-ovsky.jpg),
+        url(../images/clem-onojeghuo.jpg),
+        url(../images/full-2.jpg);
+
+    background-size: 
+        230px 230px,
+        230px 230px,
+        230px 230px,
+        230px 230px,
+        230px 230px;
+
+    background-repeat: no-repeat;
+    background-position:
+        center center,
+        top right,
+        top left,
+        bottom left,
+        bottom right;
 }
