@@ -1,5 +1,5 @@
 /* Global CSS */
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -7,20 +7,27 @@
 
 /* Main CSS */
 
-.div1{
-    width: 500px;
-    height: 300px;
+.div1 {
+    width: 600px;
+    height: 400px;
     background-color: violet;
-    color: black;
+    color: whitesmoke;
 
     /* background-img */
 
-    /* background-image: url(./); */
+    background-image: url(../images/full-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /*
+    full pic with best quality
+    Think of it like fitting a photo into 
+    a frame without cutting off any parts.
+    */
+    background-size: cover;
+    /*
+    cover full div + no stretch
+    Think of it like zooming in on a photo 
+    until it fills the entire frame, even if edges get cut off.
+    */
+
 }
-
-
-
-
-
-
-
