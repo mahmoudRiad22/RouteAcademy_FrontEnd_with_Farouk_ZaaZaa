@@ -1,5 +1,14 @@
 /* Global CSS */
 
+h3{
+    background-color: darkcyan;
+    color: black;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+
+}
 
 /* Main CSS */
 
@@ -26,3 +35,36 @@
     opacity: .5;
     visibility: visible;
 }
+
+.div3{
+    height: 500px;
+    width: 800px;
+    background-color: lightblue;
+}
+
+.div3:hover{
+    background-color: lightsalmon;
+
+}
+
+.div4{
+    height: 500px;
+    width: 800px;
+    background-color: rgb(17, 128, 165);
+}
+.div41{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(196, 230, 173);
+}
+
+.div4:hover .div41{
+    background-color: brown;
+}
+
+.div41:hover .div41{
+    cursor: pointer;
+    background-color: rgb(196, 230, 173);
+
+}
+
