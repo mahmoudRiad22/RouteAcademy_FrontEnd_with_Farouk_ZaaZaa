@@ -30,4 +30,36 @@
     until it fills the entire frame, even if edges get cut off.
     */
 
+    background-position: center center;
+
+    background-attachment: fixed;
+    /* 
+    Key Behavior
+    -- The background image is locked to the viewport 
+        (visible screen area).
+    -- Content scrolls over the image (creates a "parallax" effect).
+    -- The image does not move when you scroll.
+    */
+
+    background-attachment: scroll; /*default state*/
+}
+
+
+.div21{
+    height: 200px;
+    background-image: url(../images/clem-onojeghuo.jpg);
+    /* Size, postion, attachment, repeat*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.div22{
+    height: 300px;
+    background-image: url(../images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
