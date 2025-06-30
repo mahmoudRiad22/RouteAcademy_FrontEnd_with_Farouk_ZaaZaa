@@ -7,6 +7,9 @@
 
 /* Main CSS */
 
+
+/* background-image */
+
 .div1 {
     width: 600px;
     height: 400px;
@@ -61,5 +64,25 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
+}
+
+/* Border */
+
+
+.div3{
+    height: 400px;
+    width: 600px;
+
+    background-color: aquamarine;
+    margin: 0px 150px;
+
+    border-top: 10px solid black ;
+    border-right: 10px dashed red;
+    border-bottom: 10px solid green;
+    border-left: 10px dotted gray;
+
+    /* border shorthand */
+    border: 20px solid violet;
+
 }
