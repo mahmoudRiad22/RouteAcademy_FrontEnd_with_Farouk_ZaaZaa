@@ -1,0 +1,28 @@
+/* Global CSS */
+
+
+/* Main CSS */
+
+.div1{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+
+    /* overflow */
+
+    overflow: visible; /*default value*/
+    /* overflow: hidden; */
+    overflow: scroll; /*stupid effect: adds scroll effect regardless*/
+    overflow: auto; /*if overflow fouond a scroll bar is created*/
+
+}
+
+.div2 .div21{
+    background-color: violet;
+    height: 300px;
+
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: .5;
+    visibility: visible;
+}
