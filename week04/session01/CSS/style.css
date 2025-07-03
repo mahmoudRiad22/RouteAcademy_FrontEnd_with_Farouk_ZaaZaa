@@ -8,12 +8,17 @@
 
 /* Color Variables */
 :root {
-    --bg: #3674B5;
-    --surface: #578FCA;
-    --buttons: #F5F0CD;
-    --text: #FADA7A;
+    --bg: #BC9CB0; /* middle color Dominant background */
+    --surface: #D3CDD7; /* 1st right Cards/surfaces */
+    --buttons: #DDF2EB; /* 2nd right Interactive elements */
+    --accent: #606D5D; /* 1st left For highlights */
+    --text: #48564e; /* 2nd left Primary text */
+    
+    /* Optional extended palette */
+    --success: #4CAF50; /* Positive actions */
+    --warning: #FFC107; /* Caution states */
+    --error: #F44336; /* Destructive actions */
 }
-
 body {
     background-color: var(--bg);
     color: var(--text);
