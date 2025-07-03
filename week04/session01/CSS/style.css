@@ -19,6 +19,7 @@
     --warning: #FFC107; /* Caution states */
     --error: #F44336; /* Destructive actions */
 }
+
 body {
     background-color: var(--bg);
     color: var(--text);
