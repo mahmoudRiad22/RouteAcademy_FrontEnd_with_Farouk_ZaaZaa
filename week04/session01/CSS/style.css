@@ -1,0 +1,49 @@
+/* #region Global CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --bg: #3674B5;
+    --surface: #578FCA;
+    --buttons: #F5F0CD;
+    --text: #FADA7A;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Alegreya Sans", serif;
+    font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 15px 0px;
+    font-family: "Playwrite IT Moderna";
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+p {
+    padding-left: 15px;
+    font-family: "Alegreya", serif;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.container {
+    background-color: var(--surface);
+    width: 85%;
+    margin: auto;
+}
+
+/* #endregion */
+
+/* #region Main CSS */
+
+/* #endregion */
