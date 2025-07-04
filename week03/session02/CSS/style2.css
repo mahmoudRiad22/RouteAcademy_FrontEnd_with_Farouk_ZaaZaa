@@ -10,16 +10,16 @@
 
 /* Color Variables */
 :root {
-    --bg: #00072D; /* middle color Dominant background */
-    --surface: #001C55; /* 1st right Cards/surfaces */
-    --buttons: #0A2472; /* 2nd right Interactive elements */
-    --accent: #0E6BA8; /* 1st left For highlights */
-    --text: #A6E1FA; /* 2nd left Primary text */
-    
+    --bg: #00072d; /* middle color Dominant background */
+    --surface: #001c55; /* 1st right Cards/surfaces */
+    --buttons: #0a2472; /* 2nd right Interactive elements */
+    --accent: #0e6ba8; /* 1st left For highlights */
+    --text: #a6e1fa; /* 2nd left Primary text */
+
     /* Optional extended palette */
-    --success: #4CAF50; /* Positive actions */
-    --warning: #FFC107; /* Caution states */
-    --error: #F44336; /* Destructive actions */
+    --success: #4caf50; /* Positive actions */
+    --warning: #ffc107; /* Caution states */
+    --error: #f44336; /* Destructive actions */
 }
 
 body {
@@ -55,15 +55,12 @@ p {
     margin: auto;
 }
 
-.clear-fix{
+.clear-fix {
     clear: both;
 }
 /* #endregion */
 /*****************************/
 /*****************************/
-
-
-
 
 /*****************************/
 /*****************************/
@@ -72,46 +69,39 @@ p {
 /* ////////// SCROLL BAR CSS */
 /* Firefox (version 64+) */
 html {
-  scrollbar-width: thin; /* auto | thin | none */
-  scrollbar-color: rgba(51, 51, 51) rgba(0, 0, 0, 0.452); /* thumb | track */
+    scrollbar-width: thin; /* auto | thin | none */
+    scrollbar-color: rgba(51, 51, 51) rgba(0, 0, 0, 0.452); /* thumb | track */
 }
 /* For Chrome/Safari/Edge */
 ::-webkit-scrollbar {
-  width: 1px;  /* Adjust scrollbar width */
+    width: 1px; /* Adjust scrollbar width */
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(187, 15, 15, 0.1);  /* Semi-transparent track */
+    background: rgba(187, 15, 15, 0.1); /* Semi-transparent track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);  /* Semi-transparent thumb */
-  border-radius: 5px;  /* Rounded corners */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent thumb */
+    border-radius: 5px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.5);  /* Darker on hover */
+    background: rgba(0, 0, 0, 0.5); /* Darker on hover */
 }
-
-
 
 /* #endregion */
 /*****************************/
 /*****************************/
 
-
-
-
-
-
 /*****************************/
 /*****************************/
 /* #region topic 1- Overflow */
 
-.overflow-applying-section{
+.overflow-applying-section {
     width: 100%;
 }
-.overflow-applying-section .overflow-test1{
+.overflow-applying-section .overflow-test1 {
     margin-top: 20px;
     width: calc(100% / 3);
     height: 250px;
@@ -119,7 +109,7 @@ html {
     float: left;
 }
 
-.overflow-applying-section .overflow-test2{
+.overflow-applying-section .overflow-test2 {
     margin-top: 20px;
     width: calc(100% / 3);
 
@@ -129,10 +119,9 @@ html {
     float: left;
 
     overflow: scroll;
-    
 }
 
-.overflow-applying-section .overflow-test3{
+.overflow-applying-section .overflow-test3 {
     margin-top: 20px;
     width: calc(100% / 3);
     height: 250px;
@@ -140,9 +129,8 @@ html {
     float: left;
 
     overflow: hidden;
-    
 }
-.overflow-applying-section .overflow-test4{
+.overflow-applying-section .overflow-test4 {
     margin-top: 20px;
     width: calc(100% / 3);
     height: 250px;
@@ -150,7 +138,25 @@ html {
     float: left;
 
     overflow: auto;
-    
+}
+/* #endregion */
+/*****************************/
+/*****************************/
+
+
+
+/*****************************/
+/*****************************/
+/* #region 2-how to hide_elements */
+
+.hide_elements-applying-section .test1{
+    display: none;
+}
+.hide_elements-applying-section .test2{
+    visibility: hidden;
+}
+.hide_elements-applying-section .test3{
+    opacity: 0;
 }
 /* #endregion */
 /*****************************/
