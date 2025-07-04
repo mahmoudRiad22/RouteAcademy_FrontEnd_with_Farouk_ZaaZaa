@@ -1,0 +1,60 @@
+/*****************************/
+/*****************************/
+/* #region global CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --bg: #; /* middle color Dominant background */
+    --surface: #; /* 1st right Cards/surfaces */
+    --buttons: #; /* 2nd right Interactive elements */
+    --accent: #; /* 1st left For highlights */
+    --text: #; /* 2nd left Primary text */
+    
+    /* Optional extended palette */
+    --success: #4CAF50; /* Positive actions */
+    --warning: #FFC107; /* Caution states */
+    --error: #F44336; /* Destructive actions */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Alegreya Sans", serif;
+    font-size: medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    margin: 15px 0px;
+    font-family: "Playwrite IT Moderna";
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+p {
+    padding-left: 15px;
+    font-family: "Alegreya", serif;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.container {
+    background-color: var(--surface);
+    width: 85%;
+    margin: auto;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
