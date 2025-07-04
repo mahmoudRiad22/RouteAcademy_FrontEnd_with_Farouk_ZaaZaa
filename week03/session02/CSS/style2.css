@@ -10,11 +10,11 @@
 
 /* Color Variables */
 :root {
-    --bg: #; /* middle color Dominant background */
-    --surface: #; /* 1st right Cards/surfaces */
-    --buttons: #; /* 2nd right Interactive elements */
-    --accent: #; /* 1st left For highlights */
-    --text: #; /* 2nd left Primary text */
+    --bg: #00072D; /* middle color Dominant background */
+    --surface: #001C55; /* 1st right Cards/surfaces */
+    --buttons: #0A2472; /* 2nd right Interactive elements */
+    --accent: #0E6BA8; /* 1st left For highlights */
+    --text: #A6E1FA; /* 2nd left Primary text */
     
     /* Optional extended palette */
     --success: #4CAF50; /* Positive actions */
@@ -55,6 +55,105 @@ p {
     margin: auto;
 }
 
+.clear-fix{
+    clear: both;
+}
 /* #endregion */
 /*****************************/
 /*****************************/
+
+
+
+
+/*****************************/
+/*****************************/
+/* #region ScrollBar CSS */
+
+/* ////////// SCROLL BAR CSS */
+/* Firefox (version 64+) */
+html {
+  scrollbar-width: thin; /* auto | thin | none */
+  scrollbar-color: rgba(51, 51, 51) rgba(0, 0, 0, 0.452); /* thumb | track */
+}
+/* For Chrome/Safari/Edge */
+::-webkit-scrollbar {
+  width: 1px;  /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(187, 15, 15, 0.1);  /* Semi-transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);  /* Semi-transparent thumb */
+  border-radius: 5px;  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);  /* Darker on hover */
+}
+
+
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+
+
+
+
+
+/*****************************/
+/*****************************/
+/* #region topic 1- Overflow */
+
+.overflow-applying-section{
+    width: 100%;
+}
+.overflow-applying-section .overflow-test1{
+    margin-top: 20px;
+    width: calc(100% / 3);
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+}
+
+.overflow-applying-section .overflow-test2{
+    margin-top: 20px;
+    width: calc(100% / 3);
+
+    width: 350px;
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+
+    overflow: scroll;
+    
+}
+
+.overflow-applying-section .overflow-test3{
+    margin-top: 20px;
+    width: calc(100% / 3);
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+
+    overflow: hidden;
+    
+}
+.overflow-applying-section .overflow-test4{
+    margin-top: 20px;
+    width: calc(100% / 3);
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+
+    overflow: auto;
+    
+}
+/* #endregion */
+/*****************************/
+/*****************************/
+
+
