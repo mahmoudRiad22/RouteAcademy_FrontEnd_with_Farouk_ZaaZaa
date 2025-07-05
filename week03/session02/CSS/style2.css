@@ -595,7 +595,7 @@ html {
     float: left;
 }
 
-.layer {
+.width-vs-scale-applying-section .layer {
     width: 0;
     height: 0;
 
@@ -607,7 +607,7 @@ html {
     background-color: rgba(0, 0, 0, 0.527);
     transition: height 0.5s, width 0.5s;
 }
-.card:hover .layer {
+.width-vs-scale-applying-section .card:hover .layer {
     height: 100%;
     width: 100%;
 }
@@ -616,3 +616,98 @@ html {
 /* #endregion width-vs-scale-applying-section */
 /*****************************/
 /*****************************/
+
+
+
+/*****************************/
+/*****************************/
+/* #region position&hover-applying-section */
+
+.position-and-hover-applying-section .card{
+    width: 30%;
+    margin: 10px;
+
+    background-color: var(--error);
+    padding: 5px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+/* /////////////////////// */
+.position-and-hover-applying-section img{
+    width: 100%;
+    display: block;
+}
+
+.position-and-hover-applying-section .card:hover img{
+    transform: scale(1.2); 
+    transition: transform .5s .5s;
+}
+
+
+/* /////////////////////// */
+.position-and-hover-applying-section .layer1{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.4);
+    z-index: 1;
+    opacity: 0;
+    transition: transform .5s, opacity .2s;
+}
+
+.position-and-hover-applying-section .card:hover .layer1{
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+
+/* /////////////////////// */
+.position-and-hover-applying-section .layer2 .title{
+    position: absolute;
+    right: 0;
+    top: 5%;
+
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    transform: translateX(110%);
+    z-index: 2;
+}
+.position-and-hover-applying-section .card:hover .layer2 .title{
+    transform: translate(0);
+    background-color: black;
+    color: white;
+    transition: transform 1s 1s;
+
+}
+
+
+/* /////////////////////// */
+.position-and-hover-applying-section .layer2 .details {
+    position: absolute;
+    right: 0;
+    top: 25%;
+
+    width: 100%;
+    transform: translateX(110%);
+    z-index: 2;
+
+}
+
+.position-and-hover-applying-section .card:hover .layer2 .details {
+    transform: translate(0);
+    transition: transform 1s 1.85s;
+
+}
+
+
+/* #endregion position&hover-applying-section */
+/*****************************/
+/*****************************/
+
+
