@@ -197,7 +197,7 @@ html {
 .hover-applying-section .test2 {
     margin: 20px 0px;
     width: 300px;
-    
+
     float: right;
     background-color: var(--warning);
     opacity: 0;
@@ -207,7 +207,7 @@ html {
     cursor: pointer;
     opacity: 1;
 }
-.hover-applying-section .test3{
+.hover-applying-section .test3 {
     width: 300px;
     float: left;
     margin: 20px 0px;
@@ -215,12 +215,126 @@ html {
     opacity: 0;
 }
 
-.hover-applying-section .test3:hover{
+.hover-applying-section .test3:hover {
     background-color: var(--error);
     opacity: 1;
     color: var(--text);
     cursor: grabbing;
 }
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region topic 5- transition */
+
+/*****************************/
+/*****************************/
+/* #region test1 */
+
+.transition-properties-applying-section .test1 {
+    height: 150px;
+}
+.transition-properties-applying-section .test1-1 {
+    width: 300px;
+    height: 8px;
+    overflow: auto;
+    background-color: var(--accent);
+    color: var(--accent);
+    transition: width 1s, background-color 1s 0.5s, color 0.5s 1.5s, height 1s;
+}
+
+.transition-properties-applying-section .test1-1:hover {
+    width: 100%;
+    height: 100px;
+    background-color: var(--warning);
+    color: var(--bg);
+    cursor: pointer;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region test2 */
+
+.transition-properties-applying-section .test2 {
+    height: 200px;
+    /* background-color: var(--success); */
+}
+.transition-properties-applying-section .test2 .item {
+    border: 1px solid black;
+    text-align: center;
+    width: 25%;
+    height: 200px;
+    background-color: var(--accent);
+    float: left;
+    position: relative;
+}
+.transition-properties-applying-section .item .container {
+    height: 100%;
+}
+.transition-properties-applying-section .test2 .layer {
+    height: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transition: height 0.5s 0s linear;
+}
+.transition-properties-applying-section .test2 .container:hover .layer {
+    height: 100%;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region test3 */
+.transition-properties-applying-section .test3 .container {
+    width: 80%;
+    margin: auto;
+}
+
+.transition-properties-applying-section .test3 .card {
+    width: calc(90% / 3);
+    background-color: rgb(95, 24, 182);
+    text-align: center;
+    margin: 20px 10px;
+    padding: 30px 10px;
+    float: left;
+    position: relative;
+}
+.transition-properties-applying-section .test3 .card .title {
+    color: var(--text);
+}
+
+.transition-properties-applying-section .test3 .card .layer {
+    width: 100%;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.388);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: height 0.7s 0s ease-in-out;
+}
+.transition-properties-applying-section .test3 .card:hover .layer {
+    height: 100%;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
 /* #endregion */
 /*****************************/
 /*****************************/
