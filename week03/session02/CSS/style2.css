@@ -489,43 +489,43 @@ html {
 
 /*****************************/
 /*****************************/
-/* #region skew left */
+/* #region skewX left */
 
-.skew-left-10deg {
+.skewX-left-10deg {
     transition: transform 0.5s;
 }
-.skew-left-10deg:hover {
+.skewX-left-10deg:hover {
     transform: skewX(10deg);
 }
 
-.skew-left-20deg {
+.skewX-left-20deg {
     transition: transform 0.5s;
 }
-.skew-left-20deg:hover {
+.skewX-left-20deg:hover {
     transform: skewX(20deg);
 }
 
-.skew-left-30deg {
+.skewX-left-30deg {
     transition: transform 0.5s;
 }
-.skew-left-30deg:hover {
+.skewX-left-30deg:hover {
     transform: skewX(30deg);
 }
 
-.skew-left-40deg {
+.skewX-left-40deg {
     transition: transform 0.5s;
 }
-.skew-left-40deg:hover {
+.skewX-left-40deg:hover {
     transform: skewX(40deg);
 }
 
-.skew-left-50deg {
+.skewX-left-50deg {
     transition: transform 0.5s;
 }
-.skew-left-50deg:hover {
+.skewX-left-50deg:hover {
     transform: skewX(50deg);
 }
-/* #endregion skew left */
+/* #endregion skewX left */
 /*****************************/
 /*****************************/
 
@@ -533,38 +533,38 @@ html {
 /*****************************/
 /* #region skew right */
 
-.skew-right-10deg {
+.skewX-right-10deg {
     transition: transform 1s;
 }
-.skew-right-10deg:hover {
+.skewX-right-10deg:hover {
     transform: skewX(-10deg);
 }
 
-.skew-right-20deg {
+.skewX-right-20deg {
     transition: transform 1s;
 }
-.skew-right-20deg:hover {
+.skewX-right-20deg:hover {
     transform: skewX(-20deg);
 }
 
-.skew-right-30deg {
+.skewX-right-30deg {
     transition: transform 1s;
 }
-.skew-right-30deg:hover {
+.skewX-right-30deg:hover {
     transform: skewX(-30deg);
 }
 
-.skew-right-40deg {
+.skewX-right-40deg {
     transition: transform 1s;
 }
-.skew-right-40deg:hover {
+.skewX-right-40deg:hover {
     transform: skewX(-40deg);
 }
 
-.skew-right-50deg {
+.skewX-right-50deg {
     transition: transform 1s;
 }
-.skew-right-50deg:hover {
+.skewX-right-50deg:hover {
     transform: skewX(-50deg);
 }
 
@@ -577,5 +577,42 @@ html {
 /*****************************/
 
 /* #endregion topic 7,8- transform*/
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region width-vs-scale-applying-section */
+
+.width-vs-scale-applying-section .card {
+    width: 30%;
+    height: 200px;
+    margin: 10px;
+    background-color: var(--buttons);
+    text-align: center;
+    position: relative;
+
+    float: left;
+}
+
+.layer {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.527);
+    transition: height 0.5s, width 0.5s;
+}
+.card:hover .layer {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* #endregion width-vs-scale-applying-section */
 /*****************************/
 /*****************************/
