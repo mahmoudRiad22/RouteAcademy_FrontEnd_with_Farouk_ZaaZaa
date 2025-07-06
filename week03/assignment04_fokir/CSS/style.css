@@ -27,7 +27,7 @@ img {
 .container {
     width: 90%;
     margin: auto;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .clear-fix {
     clear: both;
@@ -36,89 +36,10 @@ img {
     /* position: relative; */
     height: 70px;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.2);
+    /* background-color: rgba(255, 0, 0, 0.2); */
 }
+
 /* #endregion Global CSS */
-/*****************************/
-/*****************************/
-
-/*****************************/
-/*****************************/
-/* #region FONTS */
-
-@font-face {
-    font-family: "Roboto";
-    src: url(../fonts/Roboto/static/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: "Roboto Light";
-    src: url(../fonts/Roboto/static/Roboto-Light.ttf);
-}
-@font-face {
-    font-family: "Roboto Bold";
-    src: url(../fonts/Roboto/static/Roboto-Bold.ttf);
-}
-
-@font-face {
-    font-family: "SourceSansPro";
-    src: url(../fonts/SourceSansPro-Regular.ttf);
-}
-.Roboto-300 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-.Roboto-400 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-.Roboto-Light-300 {
-    font-family: "Roboto Light";
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-.Roboto-800 {
-    font-family: "Roboto";
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings: "width" 100;
-}
-.Roboto-bold-800 {
-    font-family: "Roboto Bold";
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings: "width" 100;
-}
-.Source-Sans-Pro-700 {
-    /* font-family: "Source Code Pro", monospace; */
-    font-family: "SourceSansPro";
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 700;
-}
-.Source-Sans-Pro-600 {
-    /* font-family: "Source Code Pro", monospace; */
-    font-family: "SourceSansPro";
-    font-style: normal;
-    font-weight: 600;
-}
-.Source-Sans-Pro-800 {
-    /* font-family: "Source Code Pro", monospace; */
-    font-family: "SourceSansPro";
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 800;
-}
-/* #endregion FONTS */
 /*****************************/
 /*****************************/
 
@@ -253,7 +174,6 @@ img {
     border: 8px solid #555555;
     width: 85%;
     margin-left: 50px;
-
 }
 .about-section .image img {
     border-radius: 10px;
@@ -284,15 +204,15 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.about-section .image .layer .layer-icons i{
+.about-section .image .layer .layer-icons i {
     margin: 10px;
     color: #ffffff;
     display: block;
     float: left;
 }
-.about-section .image .layer .layer-icons a:hover i{
+.about-section .image .layer .layer-icons a:hover i {
     color: #ff305b;
     /* transform: scale(1.2); */
 }
@@ -302,7 +222,6 @@ img {
     height: 100%;
     text-align: left;
     /* background-color: lightblue; */
-
 }
 .about-section h2 {
     font-size: 32px;
@@ -311,9 +230,11 @@ img {
     letter-spacing: 2px;
     text-transform: uppercase;
     position: relative;
-
+    font-family: "SourceSansPro-Regular";
     border-left: 5px solid #ff305b;
     padding-left: 10px;
+    color: #333333;
+
 }
 
 .about-section .info-section .title {
@@ -361,19 +282,98 @@ img {
 
 .services-section {
     width: 100%;
-    height: 100vh;
-    background-color: white;
+    height: 90vh;
+    background-color: #f1f1f1;
     text-align: center;
 }
-.services-section .container{
+.services-section .container {
     height: 100%;
 }
 
-.services-section .title h2{
+.services-section .services-cards {
+    margin: 50px 0px;
+}
+.services-section .title h2 {
+    font-family: "SourceSansPro-Semibold";
     font-size: 40px;
     line-height: 30px;
     font-weight: 800;
+    color: #333333;
+
 }
+.services-section .title .border {
+    border-top: 1.5px solid #ff305b;
+    width: 15%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+.services-section .title .border::after {
+    content: "";
+
+    width: 50%;
+    border-top: 1px solid #ff305b;
+    /* margin-top: 5px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 4px);
+}
+.services-section .title .border::before {
+    content: "";
+
+    width: 50%;
+    border-top: 1px solid #ff305b;
+    margin-bottom: 15px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -6px);
+}
+
+.services-section .card {
+    width: 25%;
+    text-align: center;
+    /* border: 1px solid black; */
+    float: left;
+    transition: background-color 0.5s;
+}
+.services-section .card .container {
+    padding: 40px 0px;
+}
+.card:hover {
+    background-color: #ffffff;
+}
+.card:hover .icon {
+    transform: scale(1.2);
+}
+.card .icon {
+    /* font-size: 26px; */
+    /* display: block; */
+    display: inline-block;
+    margin: 10px 0px;
+    width: 15%;
+    color: #ff305b;
+    transition: transform 0.5s;
+}
+.card .card-title {
+    font-family: "SourceSansPro-Regular";
+    text-transform: uppercase;
+    margin: 10px 0px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 26px;
+}
+.card .card-details p {
+    text-align: center;
+    /* margin: 0px 20px; */
+    padding-top: 10px;
+    font-family: "Roboto-Black";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
 /* #endregion services-section */
 /*****************************/
 /*****************************/
@@ -386,8 +386,100 @@ img {
     width: 100%;
     height: 100vh;
     background-color: white;
+    text-align: center;
 }
 
+.portfolio-section .title h2 {
+    font-family: "SourceSansPro-Semibold";
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 800;
+    color: #333333;
+}
+.portfolio-section .title .border {
+    border-top: 1.5px solid #ff305b;
+    width: 15%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+.portfolio-section .title .border::after {
+    content: "";
+
+    width: 50%;
+    border-top: 1px solid #ff305b;
+    /* margin-top: 5px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 4px);
+}
+.portfolio-section .title .border::before {
+    content: "";
+
+    width: 50%;
+    border-top: 1px solid #ff305b;
+    margin-bottom: 15px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -6px);
+}
+.portfolio-section .buttons .btn {
+    font-family: "SourceSansPro-Regular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 2px;
+    padding: 3px 15px;
+    border: none;
+    background-color: transparent;
+
+    text-transform: uppercase;
+
+    transition: color 0.5s;
+}
+.portfolio-section .btn:hover {
+    color: #ff305b;
+    cursor: pointer;
+}
+
+.portfolio-images .container {
+    width: 100%;
+    position: relative;
+
+}
+.portfolio-section .portfolio-images .image {
+    width: 30%;
+    float: left;
+    padding: 0px 15px;
+    margin: 15px 0px;
+
+}
+
+.portfolio-layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .5s;
+}
+.portfolio-section .portfolio-images .image:hover .portfolio-layer{
+    opacity: 1;
+    cursor: pointer;
+}
+.portfolio-images .image .portfolio-layer .icon{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
 /* #endregion portfolio-section */
 /*****************************/
 /*****************************/
