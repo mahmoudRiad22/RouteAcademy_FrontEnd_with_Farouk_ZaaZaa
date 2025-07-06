@@ -36,7 +36,7 @@ img {
     /* position: relative; */
     height: 70px;
     width: 100%;
-    /* background-color: rgba(255, 0, 0, 0.2); */
+    /* background-color: rgba(255, 0, 0, 0.5); */
 }
 
 /* #endregion Global CSS */
@@ -54,8 +54,6 @@ img {
     width: 100%;
     height: 100vh;
     background-color: white;
-
-    height: 100vh;
 
     text-align: center;
     text-transform: capitalize;
@@ -157,7 +155,7 @@ img {
 
 .about-section {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: white;
 }
 
@@ -234,7 +232,6 @@ img {
     border-left: 5px solid #ff305b;
     padding-left: 10px;
     color: #333333;
-
 }
 
 .about-section .info-section .title {
@@ -299,7 +296,6 @@ img {
     line-height: 30px;
     font-weight: 800;
     color: #333333;
-
 }
 .services-section .title .border {
     border-top: 1.5px solid #ff305b;
@@ -341,13 +337,13 @@ img {
 .services-section .card .container {
     padding: 40px 0px;
 }
-.card:hover {
+.services-section .card:hover {
     background-color: #ffffff;
 }
-.card:hover .icon {
+.services-section .card:hover .icon {
     transform: scale(1.2);
 }
-.card .icon {
+.services-section .card .icon {
     /* font-size: 26px; */
     /* display: block; */
     display: inline-block;
@@ -356,7 +352,7 @@ img {
     color: #ff305b;
     transition: transform 0.5s;
 }
-.card .card-title {
+.services-section .card .card-title {
     font-family: "SourceSansPro-Regular";
     text-transform: uppercase;
     margin: 10px 0px;
@@ -364,7 +360,7 @@ img {
     font-size: 24px;
     line-height: 26px;
 }
-.card .card-details p {
+.services-section .card .card-details p {
     text-align: center;
     /* margin: 0px 20px; */
     padding-top: 10px;
@@ -384,7 +380,7 @@ img {
 
 .portfolio-section {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: white;
     text-align: center;
 }
@@ -447,17 +443,15 @@ img {
 .portfolio-images .container {
     width: 100%;
     position: relative;
-
 }
 .portfolio-section .portfolio-images .image {
     width: 30%;
     float: left;
     padding: 0px 15px;
     margin: 15px 0px;
-
 }
 
-.portfolio-layer{
+.portfolio-layer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -466,21 +460,76 @@ img {
     left: 0;
 
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
 }
-.portfolio-section .portfolio-images .image:hover .portfolio-layer{
+.portfolio-section .portfolio-images .image:hover .portfolio-layer {
     opacity: 1;
     cursor: pointer;
 }
-.portfolio-images .image .portfolio-layer .icon{
+.portfolio-images .image .portfolio-layer .icon {
     width: 25px;
     height: 25px;
     position: absolute;
     bottom: 10px;
     right: 10px;
-
 }
 /* #endregion portfolio-section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region stats-section */
+
+.stats-section {
+    /* background-color: green; */
+    width: 100%;
+    /* height: 400px; */
+    text-align: center;
+
+}
+.stats-section .stats{
+    width: 100%;
+    background-color: #F1F1F1;
+
+}
+.stats-section .stats .card {
+    width: 25%;
+    float: left;
+    padding: 100px 0px;
+}
+.stats-section .stats .card .image-icon {
+    width: 48px;
+    height: 48px;
+    margin: 10px auto;
+}
+.stats-section .stats .card .image-icon img{
+    width: 90%;
+}
+
+
+.services-section .stats .card .image-icon i {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.stats-section .stats .card h3 {
+    font-family: "SourceSansPro-Regular";
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 29px;
+}
+.stats-section .stats .card h5 {
+    font-family: "SourceSansPro-Regular";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: capitalize;
+
+}
+
+/* #endregion stats-section */
 /*****************************/
 /*****************************/
 
@@ -490,7 +539,6 @@ img {
 
 .testimonial-section {
     width: 100%;
-    height: 100vh;
     background-color: white;
 }
 
@@ -504,7 +552,7 @@ img {
 
 .blog-section {
     width: 100%;
-    height: 100vh;
+
     background-color: white;
 }
 
@@ -518,7 +566,6 @@ img {
 
 .contact-section {
     width: 100%;
-    height: 100vh;
     background-color: white;
 }
 
