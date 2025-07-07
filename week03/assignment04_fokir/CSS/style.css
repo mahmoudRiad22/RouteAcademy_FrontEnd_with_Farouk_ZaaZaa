@@ -46,6 +46,7 @@ img {
 }
 .active-button{
     transform: scale(1.3);
+    background-color: #ff305b;
 }
 /* #endregion Global CSS */
 /*****************************/
@@ -693,7 +694,6 @@ img {
     height: 12px;
     border-radius: 50%;
     margin: 0px 5px;
-    background-color: #ff305b;
     border: 1px solid #ff305b;
 }
 
