@@ -90,8 +90,6 @@ img {
 /* ///////// */
 .home-section .nav-bar .logo {
     display: block;
-    /* margin-top: 1.5%; */
-    /* margin-left: 2%; */
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
 
@@ -102,6 +100,10 @@ img {
     font-size: 24px;
     line-height: 25px;
     text-decoration: none;
+    font-family: "Roboto-Regular";
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 25px;
 }
 /* ///////// */
 .nav-bar-links {
@@ -118,6 +120,9 @@ img {
 
     text-decoration: none;
     color: rgba(255, 255, 255);
+
+    font-family: "Roboto-Light";
+
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
@@ -133,23 +138,25 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     text-align: center;
     color: #ffffff;
 }
 .home-section-details h1 {
     color: #ff305b;
+    font-family: "SourceSansPro-Semibold";
     font-weight: 700;
     font-size: 70px;
     line-height: 77px;
     text-transform: uppercase;
 }
 .home-section-details h3 {
+    font-family: "SourceSansPro-Regular";
     font-weight: 600;
     font-size: 24px;
     line-height: 25px;
 }
 .home-section-details h4 {
+    font-family: "SourceSansPro-Light";
     font-weight: 300;
     font-size: 26px;
     line-height: 31px;
@@ -230,7 +237,8 @@ img {
     text-align: left;
     /* background-color: lightblue; */
 }
-.about-section h2 {
+.about-section .info-section .title h2 {
+    font-family: "SourceSansPro-Semibold";
     font-size: 32px;
     line-height: 22px;
     /* word-spacing: 6px; */
@@ -241,6 +249,12 @@ img {
     border-left: 5px solid #ff305b;
     padding-left: 10px;
     color: #333333;
+}
+.about-section .info-section .title p{
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .about-section .info-section .title {
@@ -254,10 +268,12 @@ img {
     display: inline-block;
     width: 45%;
     margin-bottom: 20px;
+    font-family: "Roboto-Regular";
     font-size: 16px;
     line-height: 16px;
 }
 .about-section .info-section span {
+    font-family: "Roboto-Regular";
     font-size: 16px;
     line-height: 16px;
 }
@@ -270,6 +286,7 @@ img {
     color: white;
     background-color: #ff305b;
     border: none;
+    font-family: "Roboto-Regular";
 
     transition: background-color 0.5s;
 }
@@ -372,7 +389,8 @@ img {
     text-align: center;
     /* margin: 0px 20px; */
     padding-top: 10px;
-    font-family: "Roboto-Black";
+    /* font-family: "Roboto-Black"; */
+    font-family: "Roboto-Regular";
     font-size: 16px;
     font-weight: 400;
     line-height: 25px;
