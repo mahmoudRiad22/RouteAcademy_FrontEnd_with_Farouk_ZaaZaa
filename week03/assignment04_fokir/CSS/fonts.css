@@ -67,220 +67,221 @@
 
 @font-face {
     font-family: "Roboto-Black";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Black.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Black.ttf);
 }
 @font-face {
     font-family: "Roboto-BlackItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-BlackItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-BlackItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-Bold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Bold.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Bold.ttf);
 }
 @font-face {
     font-family: "Roboto-BoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-BoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-BoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-ExtraBold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-ExtraBold.ttf);
+    src: url(../fonts/Roboto/static/Roboto-ExtraBold.ttf);
 }
 @font-face {
     font-family: "Roboto-ExtraBoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-ExtraBoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-ExtraBoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-ExtraLight";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-ExtraLight.ttf);
+    src: url(../fonts/Roboto/static/Roboto-ExtraLight.ttf);
 }
 @font-face {
     font-family: "Roboto-ExtraLightItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-ExtraLightItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-ExtraLightItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-Italic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Italic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Italic.ttf);
 }
 @font-face {
     font-family: "Roboto-Light";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Light.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Light.ttf);
 }
 @font-face {
     font-family: "Roboto-LightItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-LightItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-LightItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-Medium";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Medium.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Medium.ttf);
 }
 @font-face {
     font-family: "Roboto-MediumItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-MediumItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-MediumItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-Regular";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Regular.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Regular.ttf);
 }
 @font-face {
     font-family: "Roboto-SemiBold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-SemiBold.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Semibold.ttf);
 }
 @font-face {
     font-family: "Roboto-SemiBoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-SemiBoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-SemiBoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto-Thin";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-Thin.ttf);
+    src: url(../fonts/Roboto/static/Roboto-Thin.ttf);
 }
 @font-face {
     font-family: "Roboto-ThinItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto-ThinItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto-ThinItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Black";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Black.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Black.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-BlackItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-BlackItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-BlackItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Bold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Bold.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Bold.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-BoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-BoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-BoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-ExtraBold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-ExtraBold.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-ExtraBold.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-ExtraBoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-ExtraBoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-ExtraBoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-ExtraLight";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-ExtraLight.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-ExtraLight.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-ExtraLightItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-ExtraLightItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-ExtraLightItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Italic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Italic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Italic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Light";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Light.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Light.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-LightItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-LightItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-LightItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Medium";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Medium.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Medium.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-MediumItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-MediumItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-MediumItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Regular";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Regular.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Regular.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-SemiBold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-SemiBold.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-SemiBold.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-SemiBoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-SemiBoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-SemiBoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-Thin";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-Thin.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-Thin.ttf);
 }
 @font-face {
     font-family: "Roboto_Condensed-ThinItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_Condensed-ThinItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_Condensed-ThinItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Black";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Black.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Black.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-BlackItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-BlackItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-BlackItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Bold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Bold.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Bold.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-BoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-BoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-BoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-ExtraBold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-ExtraBold.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-ExtraBold.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-ExtraBoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-ExtraBoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-ExtraBoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-ExtraLight";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-ExtraLight.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-ExtraLight.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-ExtraLightItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-ExtraLightItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-ExtraLightItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Italic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Italic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Italic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Light";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Light.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Light.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-LightItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-LightItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-LightItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Medium";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Medium.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Medium.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-MediumItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-MediumItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-MediumItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Regular";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Regular.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Regular.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-SemiBold";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-SemiBold.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-SemiBold.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-SemiBoldItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-SemiBoldItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-SemiBoldItalic.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-Thin";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-Thin.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-Thin.ttf);
 }
 @font-face {
     font-family: "Roboto_SemiCondensed-ThinItalic";
-    src: url(./week03/assignment04_fokir/fonts/Roboto/static/Roboto_SemiCondensed-ThinItalic.ttf);
+    src: url(../fonts/Roboto/static/Roboto_SemiCondensed-ThinItalic.ttf);
 }
+
 /* #endregion */
 /*****************************/
 /*****************************/

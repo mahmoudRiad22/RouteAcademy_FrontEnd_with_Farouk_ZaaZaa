@@ -36,9 +36,17 @@ img {
     /* position: relative; */
     height: 70px;
     width: 100%;
-    /* background-color: rgba(255, 0, 0, 0.5); */
+    background-color: rgba(255, 0, 0, 0.5);
 }
-
+.clip-right-bottom-diagonal{
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.clip-right-side{
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+.active-button{
+    transform: scale(1.3);
+}
 /* #endregion Global CSS */
 /*****************************/
 /*****************************/
@@ -301,7 +309,6 @@ img {
     border-top: 1.5px solid #ff305b;
     width: 15%;
     margin: auto;
-    margin-top: 20px;
     position: relative;
 }
 .services-section .title .border::after {
@@ -396,7 +403,6 @@ img {
     border-top: 1.5px solid #ff305b;
     width: 15%;
     margin: auto;
-    margin-top: 20px;
     position: relative;
 }
 .portfolio-section .title .border::after {
@@ -404,7 +410,6 @@ img {
 
     width: 50%;
     border-top: 1px solid #ff305b;
-    /* margin-top: 5px; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -537,6 +542,168 @@ img {
 .testimonial-section {
     width: 100%;
     background-color: white;
+}
+.testimonial-section .container{
+    width: 100%;
+}
+.testimonial-section .card-container {
+    overflow: hidden;
+    position: relative;
+
+}
+.testimonial-section  #first-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 2s ease;
+
+    transform: translateX(00%);
+
+}
+.testimonial-section  #second-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 2s ease;
+    transform: translateX(100%);
+
+}
+.testimonial-section .feed-back-title .container {
+    text-align: center;
+
+}
+.testimonial-section .feed-back-title h2 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: "SourceSansPro-Semibold";
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 30px;
+    color: #333333;
+}
+.testimonial-section .feed-back-title .border {
+    border-top: 1.5px solid #ff305b;
+    width: 15%;
+    margin: auto;
+    position: relative;
+}
+
+.testimonial-section .feed-back-title .border::after {
+    content: "";
+    border-top: 1px solid #ff305b;
+    width: 50%;
+    /* background-color: red; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 4px);
+}
+.testimonial-section .feed-back-title .border::before {
+    content: "";
+    border-top: 1px solid #ff305b;
+    width: 50%;
+    /* background-color: red; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -6px);
+}
+
+.testimonial-section .feed-back-card .container {
+    /* border: 2px solid green; */
+
+    background-color: #f1f1f1;
+    width: 70%;
+    margin: auto;
+}
+.testimonial-section .feed-back-card .image {
+    width: 18%;
+    float: left;
+    /* background: linear-gradient(to bottom right, red 0%, red 50%, transparent 50%); */
+    padding-top: 150px;
+    position: relative;
+}
+.testimonial-section .feed-back-card .image .layer {
+    background-color: #ff305b;
+    height: 150%;
+    width: 150%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.feed-back-card .image img {
+    width: 85%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(40%, 40%);
+}
+.testimonial-section .feed-back-card .details {
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+    float: left;
+}
+
+.testimonial-section .feed-back-card .details .user-name {
+    text-transform: capitalize;
+    font-family: "SourceSansPro-Regular";
+    color: #555555;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 29px;
+}
+
+.testimonial-section .feed-back-card .location {
+    margin: 10px 0px;
+    font-family: "SourceSansPro-Regular";
+}
+.testimonial-section .feed-back-card .location a {
+    text-decoration: none;
+    color: #777;
+}
+.testimonial-section .feed-back-card .location i {
+    font-size: 16px;
+    line-height: 25px;
+}
+.testimonial-section .feed-back-card .details .review{
+    font-family: "Roboto-Italic";
+    color: #555555;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.testimonial-section .feed-back-card .rating{
+    margin: 15px 0px;
+}
+
+.testimonial-section .buttons{
+    width: 10%;
+    margin: auto;
+}
+.testimonial-section .buttons .btn1 , .btn2{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    background-color: #ff305b;
+    border: 1px solid #ff305b;
+}
+
+.testimonial-section .buttons .btn1:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.testimonial-section .buttons .btn2:hover {
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 /* #endregion testimonial-section */
