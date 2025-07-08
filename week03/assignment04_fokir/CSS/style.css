@@ -24,6 +24,12 @@ img {
     width: 100%;
     display: block;
 }
+iframe{
+    width: 100%;
+    display: block;
+    height: 195px;
+
+}
 .container {
     width: 90%;
     margin: auto;
