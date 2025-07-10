@@ -1,3 +1,5 @@
+/*****************************/
+/*****************************/
 /* #region Global CSS */
 
 * {
@@ -8,16 +10,16 @@
 
 /* Color Variables */
 :root {
-    --bg: #BC9CB0; /* middle color Dominant background */
-    --surface: #D3CDD7; /* 1st right Cards/surfaces */
-    --buttons: #DDF2EB; /* 2nd right Interactive elements */
-    --accent: #606D5D; /* 1st left For highlights */
+    --bg: #bc9cb0; /* middle color Dominant background */
+    --surface: #d3cdd7; /* 1st right Cards/surfaces */
+    --buttons: #ddf2eb; /* 2nd right Interactive elements */
+    --accent: #606d5d; /* 1st left For highlights */
     --text: #48564e; /* 2nd left Primary text */
-    
+
     /* Optional extended palette */
-    --success: #4CAF50; /* Positive actions */
-    --warning: #FFC107; /* Caution states */
-    --error: #F44336; /* Destructive actions */
+    --success: #4caf50; /* Positive actions */
+    --warning: #ffc107; /* Caution states */
+    --error: #f44336; /* Destructive actions */
 }
 
 body {
@@ -27,7 +29,12 @@ body {
     font-size: medium;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-align: center;
     margin: 15px 0px;
     font-family: "Playwrite IT Moderna";
@@ -44,12 +51,66 @@ p {
 
 .container {
     background-color: var(--surface);
-    width: 85%;
+    width: 70%;
     margin: auto;
 }
 
-/* #endregion */
+img {
+    width: 100%;
+    display: block;
+}
+.clear-fix{
+    clear: both;
+}
+/* #endregion Global CSS */
+/*****************************/
+/*****************************/
 
-/* #region Main CSS */
+/*****************************/
+/*****************************/
+/* #region nav-bar */
 
-/* #endregion */
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+    overflow: auto;
+
+    width: 15%;
+    height: 90%;
+
+    /* background-color: var(--buttons); */
+}
+.nav-bar h4 {
+    font-weight: 800;
+}
+/* #endregion nav-bar */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region RWD */
+
+.Responsive-web-design .gallery{
+    background-color: green;
+}
+
+.Responsive-web-design .gallery .card{
+    width: 25%;
+    padding: 0px 10px;
+    float: left;
+}
+.Responsive-web-design .gallery .card .card-container{
+    background-color: red;
+}
+.Responsive-web-design .gallery .card .image-container {
+    width: 100%;
+}
+
+/* #endregion RWD */
+/*****************************/
+/*****************************/
