@@ -12,9 +12,13 @@
 :root {
     --bg1: #eeeeee;
     --bg2: #ffffff;
+
     --buttons: #ce1212;
     --text: #212529;
-    --accent: #e61414;
+
+    --highlight: #e61414;
+    --selection: #DD5959;
+    
     --navbar: #ffffff;
     --footer: #100e0f;
 }
@@ -64,7 +68,7 @@ img{
 }
 
 ::selection {
-    background-color: var(--accent);
+    background-color: var(--selection);
     color: var(--bg2);
 }
 
