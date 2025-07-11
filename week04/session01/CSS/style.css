@@ -54,18 +54,18 @@ p {
     width: 70%;
     margin: auto;
 }
-a{
+a {
     text-decoration: none;
     display: block;
     font-style: italic;
-    font-size: 26px;
     text-align: center;
+    color: var(--text);
 }
 img {
     width: 100%;
     display: block;
 }
-.clear-fix{
+.clear-fix {
     clear: both;
 }
 /* #endregion Global CSS */
@@ -93,19 +93,66 @@ img {
 .nav-bar h4 {
     font-weight: 800;
 }
+.nav-bar a {
+    text-align: left;
+    font-size: 26px;
+    margin: 10px 0px;
+    padding-left: 8px;
+}
 /* #endregion nav-bar */
 /*****************************/
 /*****************************/
 
+/*****************************/
+/*****************************/
+/* #region nav-bar-icons */
 
+.nav-bar-icons {
+    position: fixed;
+    bottom: 0;
+    right: 0px;
 
+    width: 15%;
+    padding: 10px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar-icons a i {
+    padding: 5px;
+    text-align: center;
+}
+.nav-bar-icons .fa-facebook:hover {
+    color: rgb(31, 109, 243);
+    transform: scale(1.3);
+}
+.nav-bar-icons a:hover .fa-linkedin {
+    transform: scale(1.3);
+    color: rgb(0, 0, 168);
+}
+.nav-bar-icons .fa-x-twitter:hover {
+    transform: scale(1.3);
+    color: rgb(0, 0, 59);
+}
+.nav-bar-icons .fa-google:hover {
+    transform: scale(1.3);
+    color: rgb(219, 63, 99);
+}
+.nav-bar-icons .fa-github:hover {
+    transform: scale(1.3);
+    color: rgb(1, 0, 0);
+}
+/* #endregion nav-bar-icons */
+/*****************************/
+/*****************************/
 
 /*****************************/
 /*****************************/
 /* #region 1- recape */
 
-.recape .container p{
-    padding:  0px 50px;
+.recape .container p {
+    padding: 0px 50px;
     text-transform: none;
 }
 
@@ -113,28 +160,26 @@ img {
 /*****************************/
 /*****************************/
 
-
-
 /*****************************/
 /*****************************/
-/* #region RWD */
+/* #region cards applying */
 
-.Responsive-web-design .gallery{
+.cards-applying .gallery {
     background-color: green;
 }
 
-.Responsive-web-design .gallery .card{
+.cards-applying .gallery .card {
     width: 25%;
     padding: 0px 10px;
     float: left;
 }
-.Responsive-web-design .gallery .card .card-container{
+.cards-applying .gallery .card .card-container {
     background-color: red;
 }
-.Responsive-web-design .gallery .card .image-container {
+.cards-applying .gallery .card .image-container {
     width: 100%;
 }
 
-/* #endregion RWD */
+/* #endregion cards applying */
 /*****************************/
 /*****************************/
