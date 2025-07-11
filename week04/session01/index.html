@@ -29,6 +29,7 @@
 
     <!-- #region CSS and JS links -->
     <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
     <!-- #endregion -->
 </head>
 
@@ -41,19 +42,19 @@
 
 
             <h4>week04 session01</h4>
-            <a href="#1">1- recape</a>
-            <a href="#2">2- 3cards-applyin</a>
-            <a href="#3">3-box-sizing</a>
-            <a href="#4"></a>
-            <a href="#5"></a>
-            <a href="#6"></a>
-            <a href="#7"></a>
-            <a href="#8"></a>
-            <a href="#9"></a>
-            <a href="#10"></a>
-            <a href="#11"></a>
-            <a href="#12"></a>
-            <a href="#13"></a>
+            <a href="#1">1- "recape"</a>
+            <a href="#2">2- "3cards applyin"</a>
+            <a href="#3">3- "box-sizing"</a>
+            <a href="#4">4- "universal selector"</a>
+            <a href="#5">5- "media-query"</a>
+            <a href="#6">6- "media-query-applying"</a>
+            <a href="#7">7- "nav-bar and header in RWD"</a>
+            <!-- <a href="#8"></a> -->
+            <!-- <a href="#9"></a> -->
+            <!-- <a href="#10"></a> -->
+            <!-- <a href="#11"></a> -->
+            <!-- <a href="#12"></a> -->
+            <!-- <a href="#13"></a> -->
         </div>
         <div class="nav-bar-icons">
             <a href="https://web.facebook.com/mahmoudriad0" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -68,7 +69,7 @@
 
         </div>
     </div>
-    
+
     <h1>Week 04 session 01</h1>
 
 
@@ -111,7 +112,7 @@
             </p>
             <div class="applying-section"></div>
         </div>
-            <br /><br />
+        <br /><br />
     </div>
 
 
@@ -179,7 +180,7 @@
 
         <div class="container">
 
-            <h3>3- box-sizing</h3>
+            <h3>3,4- box-sizing</h3>
             <p>
                 in summary the <b><i>box-sizing: border-box;</i></b>
                 is used to make the badding abd the borders part of the width itself and not extra size
@@ -193,20 +194,284 @@
 
 
     <div class="new-topic 4-universal selector and horizontal scroll" id="4">
-    
-        <div class="container">
-    
-            <h3>4-universal-selector and horizontal scroll</h3>
-    
-            <p>
-                description: <br/>
 
+        <div class="container">
+
+            <h3>5- universal-selector and horizontal scroll</h3>
+
+            <p>
+                description: <br />
+                &emsp;-- we use the "<b><i> * </i></b>" to apply a styling to the entier page. <br />
+                &emsp;-- standard * is:- <br /><br />
+                &emsp;&emsp;&emsp; <b><i> * {</i></b><br />
+                &emsp;&emsp;&emsp;&emsp;&emsp; <b><i> padding: 0;</i></b><br />
+                &emsp;&emsp;&emsp;&emsp;&emsp; <b><i> margin: 0;</i></b><br />
+                &emsp;&emsp;&emsp;&emsp;&emsp; <b><i> box-sizing: border-box;</i></b><br />
+                &emsp;&emsp;&emsp;<b><i> }</i></b><br />
+                &emsp;-- horizonal scroll:- <b><i> must never be found in your project</i></b>
             </p><br />
-    
+
             <div class="applying-section"></div>
+            <br />
         </div>
-    <br/>
-    <br/>
+        <br />
+        <br />
+    </div>
+
+
+    <div class="new-topic media-query" id="5">
+
+        <div class="container">
+
+            <h3>6- media-query</h3>
+
+            <p>description:<br />
+                simply apply the media-classes into the item-parent. for now we only use width until we see
+                whats gonna appear during the next project.
+            </p><br />
+
+            <p><b><i>-- Example of a single screen media-query --</i></b><br /><br /></p>
+
+            <p style="text-transform: none;" class="example-text">
+                /* mobile-small ms- */<br />
+                @media screen and (min-width: 320px) {<br />
+                .ms-1 {<br />
+                width: calc(100% / 1);<br />
+                }<br />
+                <br />
+                .ms-2 {<br />
+                width: calc(100% / 2);<br />
+                }<br />
+                <br />
+                .ms-3 {<br />
+                width: calc(100% / 3);<br />
+                }<br />
+                <br />
+                .ms-4 {<br />
+                width: calc(100% / 4);<br />
+                }<br />
+                <br />
+                .ms-5 {<br />
+                width: 20%;<br />
+                width: calc(100% / 5);<br />
+                }<br />
+                <br />
+                .ms-6 {<br />
+                width: calc(100% / 6);<br />
+                }<br />
+                }<br /><br />
+            </p>
+
+            <div class="applying-section">
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic media-query-applying" id="6">
+
+        <div class="container">
+            <h3><b><i>6- media-query-applying</i></b></h3>
+
+            <p>description: a simple applying for the media query using classes.</p><br />
+
+            <div class="media-query-applying">
+
+                <div class="cards">
+
+                    <div class="container">
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item ms-1 mm-1 ml-1 tab-2 lab-s-3 lab-l-4 S4k-5">
+
+                            <div class="card-img ">
+                                <div class="card-layer"></div>
+                                <img src="./images/Route_Session2.png" alt="Route_Session2.png">
+                            </div>
+                            <div class="card-info">
+                                <p class="card-title">CARD 1</p>
+                                <p class="card-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
+                                    nam?
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <br />
     </div>
 </body>
 
