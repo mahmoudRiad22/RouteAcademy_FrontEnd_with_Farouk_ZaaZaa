@@ -25,6 +25,59 @@
 </head>
 
 <body>
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region light-dark-switch -->
+
+    <div class="light-dark-switch">
+
+        <button id="dark-on" onclick="
+        document.getElementById('dark-on').style.visibility= 'hidden';
+        document.getElementById('light-on').style.visibility= 'visible';
+
+        document.documentElement.style.setProperty('--bg1', '#252525');
+        document.documentElement.style.setProperty('--bg2', '#202020');
+
+        document.documentElement.style.setProperty('--buttons', '#C17E1F');
+        document.documentElement.style.setProperty('--text', '#FFFFFF');
+        document.documentElement.style.setProperty('--accent', '#D78C23');
+
+        document.documentElement.style.setProperty('--navbar', '#171717');
+        document.documentElement.style.setProperty('--footer', '#080708');
+
+        ">
+            <i id="dark-on-icon" class="fa-solid fa-moon"></i>
+        </button>
+
+
+
+        <button id="light-on" onclick="
+        document.getElementById('light-on').style.visibility= 'hidden';
+        document.getElementById('dark-on').style.visibility= 'visible';
+
+        document.documentElement.style.setProperty('--bg1', '#eeeeee');
+        document.documentElement.style.setProperty('--bg2', '#ffffff');
+
+        document.documentElement.style.setProperty('--buttons', '#ce1212');
+        document.documentElement.style.setProperty('--text', '#212529');
+        document.documentElement.style.setProperty('--accent', '#e61414');
+
+        document.documentElement.style.setProperty('--navbar', '#FFFFFF');
+        document.documentElement.style.setProperty('--footer', '#100e0f');
+        " style="visibility: hidden;">
+            <i id="light-on-icon" class="fa-solid fa-sun"></i>
+        </button>
+    </div>
+
+    <!-- #endregion light-dark-switch -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio vitae dolorum quaerat facilis, magni sit.
+        Itaque illo optio veniam vel numquam. Voluptate, esse repudiandae reiciendis itaque aspernatur ipsum? Quibusdam.
+    </p>
+
+
 
 </body>
 

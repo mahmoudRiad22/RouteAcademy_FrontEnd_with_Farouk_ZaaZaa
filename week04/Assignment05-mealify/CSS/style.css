@@ -1,6 +1,6 @@
 /*****************************/
 /*****************************/
-/* #region global CSS */
+/* #region Global CSS */
 
 * {
     padding: 0;
@@ -10,14 +10,17 @@
 
 /* Color Variables */
 :root {
-    --bg: #3674b5;
-    --surface: #578fca;
-    --buttons: #f5f0cd;
-    --text: #fada7a;
+    --bg1: #eeeeee;
+    --bg2: #ffffff;
+    --buttons: #ce1212;
+    --text: #212529;
+    --accent: #e61414;
+    --navbar: #ffffff;
+    --footer: #100e0f;
 }
 
 body {
-    background-color: var(--bg);
+    background-color: var(--bg1);
     color: var(--text);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
         Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -30,18 +33,19 @@ h4,
 h5,
 h6 {
     text-align: center;
-    margin: 15px 0px;
     font-family: "Inter_18pt-Regular";
-    font-weight: 400;
     text-transform: capitalize;
 }
 
 p {
-    padding-left: 15px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
         Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: medium;
     text-transform: capitalize;
+}
+
+span {
+    font-family: "AmaticSC-Regular";
 }
 
 .container {
@@ -49,9 +53,61 @@ p {
     width: 85%;
     margin: auto;
 }
-span {
-    font-family: "AmaticSC-Regular";
+
+a {
+    text-decoration: none;
 }
+
+img{
+    width: 100%;
+    display: block;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--bg2);
+}
+
 /* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region light-dark-switch */
+
+.light-dark-switch {
+    position: relative;
+}
+
+#light-on #light-on-icon {
+    color: var(--text);
+    background-color: var(--navbar);
+}
+
+#dark-on #dark-on-icon {
+    color: var(--text);
+    background-color: var(--navbar);
+}
+
+#dark-on,
+#light-on {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+#dark-on:hover,
+#light-on:hover {
+    cursor: pointer;
+}
+
+/* #endregion light-dark-switch */
 /*****************************/
 /*****************************/
