@@ -54,7 +54,13 @@ p {
     width: 70%;
     margin: auto;
 }
-
+a{
+    text-decoration: none;
+    display: block;
+    font-style: italic;
+    font-size: 26px;
+    text-align: center;
+}
 img {
     width: 100%;
     display: block;
@@ -90,6 +96,24 @@ img {
 /* #endregion nav-bar */
 /*****************************/
 /*****************************/
+
+
+
+
+/*****************************/
+/*****************************/
+/* #region 1- recape */
+
+.recape .container p{
+    padding:  0px 50px;
+    text-transform: none;
+}
+
+/* #endregion 1- recape */
+/*****************************/
+/*****************************/
+
+
 
 /*****************************/
 /*****************************/
