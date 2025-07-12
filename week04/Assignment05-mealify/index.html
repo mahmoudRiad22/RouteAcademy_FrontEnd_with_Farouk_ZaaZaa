@@ -25,61 +25,86 @@
 </head>
 
 <body>
-    <!-- ****************************** -->
-    <!-- ****************************** -->
-    <!-- #region light-dark-switch -->
-
-    <div class="light-dark-switch">
-
-        <button id="dark-on" onclick="
-        document.getElementById('dark-on').style.visibility= 'hidden';
-        document.getElementById('light-on').style.visibility= 'visible';
-
-        document.documentElement.style.setProperty('--bg1', '#252525');
-        document.documentElement.style.setProperty('--bg2', '#202020');
-
-        document.documentElement.style.setProperty('--buttons', '#C17E1F');
-        document.documentElement.style.setProperty('--text', '#FFFFFF');
-
-        document.documentElement.style.setProperty('--highlight', '#D78C23');
-        document.documentElement.style.setProperty('--selection', '#845B22');
-
-        document.documentElement.style.setProperty('--navbar', '#171717');
-        document.documentElement.style.setProperty('--footer', '#080708');
-
-        ">
-            <i id="dark-on-icon" class="fa-solid fa-moon"></i>
-        </button>
 
 
 
-        <button id="light-on" onclick="
-        document.getElementById('light-on').style.visibility= 'hidden';
-        document.getElementById('dark-on').style.visibility= 'visible';
+    <div class="header">
 
-        document.documentElement.style.setProperty('--bg1', '#eeeeee');
-        document.documentElement.style.setProperty('--bg2', '#ffffff');
+        <div class="container">
 
-        document.documentElement.style.setProperty('--buttons', '#ce1212');
-        document.documentElement.style.setProperty('--text', '#212529');
+            <div class="logo"><a href="#"><span>mealify<span>.</span></span></a></div>
 
-        document.documentElement.style.setProperty('--highlight', '#e61414');
-        document.documentElement.style.setProperty('--selection', '#DD5959');
+            <div class="inner-container">
+                <div class="header-btns">
 
-        document.documentElement.style.setProperty('--navbar', '#FFFFFF');
-        document.documentElement.style.setProperty('--footer', '#100e0f');
-        " style="visibility: hidden;">
-            <i id="light-on-icon" class="fa-solid fa-sun"></i>
-        </button>
+                    <div class="darkmode-btns">
+
+                        <button id="dark-on" onclick="
+                        document.getElementById('dark-on').style.visibility= 'hidden';
+                        document.getElementById('light-on').style.visibility= 'visible';
+
+                        document.getElementById('nav-btn').style.color = 'var(--hidden-navbar-text)';
+                        document.getElementById('x-btn').style.color = 'var(--hidden-navbar-text)';
+                        document.querySelectorAll('.links a').forEach(target => target.style.color = 'var(--hidden-navbar-text)');
+
+                        
+                        document.documentElement.style.setProperty('--bg1', '#252525');
+                        document.documentElement.style.setProperty('--bg2', '#202020');
+                        document.documentElement.style.setProperty('--buttons', '#C17E1F');
+                        document.documentElement.style.setProperty('--text', '#FFFFFF');
+                        document.documentElement.style.setProperty('--highlight', '#D78C23');
+                        document.documentElement.style.setProperty('--selection', '#845B22');
+                        document.documentElement.style.setProperty('--navbar', '#171717');
+                        document.documentElement.style.setProperty('--footer', '#080708');
+                        document.documentElement.style.setProperty('--hidden-navbar-text', '#eeeeee');
+                        ">
+                            <i id="dark-on-icon" class="fa-solid fa-moon"></i>
+                        </button>
+                        <button id="light-on" onclick="
+                        document.getElementById('light-on').style.visibility= 'hidden';
+                        document.getElementById('dark-on').style.visibility= 'visible';
+                        document.documentElement.style.setProperty('--bg1', '#eeeeee');
+                        document.documentElement.style.setProperty('--bg2', '#ffffff');
+                        document.documentElement.style.setProperty('--buttons', '#ce1212');
+                        document.documentElement.style.setProperty('--text', '#212529');
+                        document.documentElement.style.setProperty('--highlight', '#e61414');
+                        document.documentElement.style.setProperty('--selection', '#DD5959');
+                        document.documentElement.style.setProperty('--navbar', '#FFFFFF');
+                        document.documentElement.style.setProperty('--footer', '#100e0f');
+                        document.documentElement.style.setProperty('--hidden-navbar-text', '#7f7f90');
+                        " style="visibility: hidden;">
+                            <i id="light-on-icon" class="fa-solid fa-sun"></i>
+                        </button>
+                    </div>
+                    <button class="nav-btn" onclick="
+                        document.getElementById('hidden-navbar').style.transform = 'translateX(0%)';">
+                        <i id="nav-btn" class="fa-solid fa-bars"></i>
+                    </button>
+                    
+                </div>
+
+
+                <div class="hidden">
+                    <div class="navbar" id="hidden-navbar">
+                        <div class="links" id="links">
+                            <button class="x-btn" id="x-btn" onclick="
+                                document.getElementById('hidden-navbar').style.transform = 'translateX(110%)';"><i
+                                    class="fa-solid fa-xmark"></i></button>
+
+                            <a id="a" href="#home">home</a>
+                            <a id="a" href="#chefs">chefs</a>
+                            <a id="a" href="#gallery">gallery</a>
+                            <a id="a" href="#contacts">contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- #endregion light-dark-switch -->
-    <!-- ****************************** -->
-    <!-- ****************************** -->
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio vitae dolorum quaerat facilis, magni sit.
-        Itaque illo optio veniam vel numquam. Voluptate, esse repudiandae reiciendis itaque aspernatur ipsum? Quibusdam.
-    </p>
+
 
 
 
