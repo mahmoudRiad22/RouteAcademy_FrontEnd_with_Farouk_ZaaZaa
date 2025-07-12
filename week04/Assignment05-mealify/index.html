@@ -30,73 +30,81 @@
 
     <div class="header">
 
-        <div class="container">
+        <div class="container tab-70 lab-s-95 lab-l-90 S4k-55">
 
-            <div class="logo"><a href="#"><span>mealify<span>.</span></span></a></div>
+            <h1 class="logo"><a href="#"><span>mealify<span>.</span></span></a></h1>
 
-            <div class="inner-container">
-                <div class="header-btns">
 
-                    <div class="darkmode-btns">
+            <div class="navbar-links">
+                <ul>
+                    <li> <a id="a" href="#home">home</a></li>
+                    <li> <a id="a" href="#chefs">chefs</a></li>
+                    <li> <a id="a" href="#gallery">gallery</a></li>
+                    <li> <a id="a" href="#contacts">contact</a></li>
+                </ul>
+                <!-- <a id="a" href="#home">home</a>
+                    <a id="a" href="#chefs">chefs</a>
+                    <a id="a" href="#gallery">gallery</a>
+                    <a id="a" href="#contacts">contact</a> -->
+            </div>
 
-                        <button id="dark-on" onclick="
-                        document.getElementById('dark-on').style.visibility= 'hidden';
-                        document.getElementById('light-on').style.visibility= 'visible';
-
-                        document.getElementById('nav-btn').style.color = 'var(--hidden-navbar-text)';
-                        document.getElementById('x-btn').style.color = 'var(--hidden-navbar-text)';
-                        document.querySelectorAll('.links a').forEach(target => target.style.color = 'var(--hidden-navbar-text)');
-
-                        
-                        document.documentElement.style.setProperty('--bg1', '#252525');
-                        document.documentElement.style.setProperty('--bg2', '#202020');
-                        document.documentElement.style.setProperty('--buttons', '#C17E1F');
-                        document.documentElement.style.setProperty('--text', '#FFFFFF');
-                        document.documentElement.style.setProperty('--highlight', '#D78C23');
-                        document.documentElement.style.setProperty('--selection', '#845B22');
-                        document.documentElement.style.setProperty('--navbar', '#171717');
-                        document.documentElement.style.setProperty('--footer', '#080708');
-                        document.documentElement.style.setProperty('--hidden-navbar-text', '#eeeeee');
-                        ">
-                            <i id="dark-on-icon" class="fa-solid fa-moon"></i>
-                        </button>
-                        <button id="light-on" onclick="
-                        document.getElementById('light-on').style.visibility= 'hidden';
-                        document.getElementById('dark-on').style.visibility= 'visible';
-                        document.documentElement.style.setProperty('--bg1', '#eeeeee');
-                        document.documentElement.style.setProperty('--bg2', '#ffffff');
-                        document.documentElement.style.setProperty('--buttons', '#ce1212');
-                        document.documentElement.style.setProperty('--text', '#212529');
-                        document.documentElement.style.setProperty('--highlight', '#e61414');
-                        document.documentElement.style.setProperty('--selection', '#DD5959');
-                        document.documentElement.style.setProperty('--navbar', '#FFFFFF');
-                        document.documentElement.style.setProperty('--footer', '#100e0f');
-                        document.documentElement.style.setProperty('--hidden-navbar-text', '#7f7f90');
-                        " style="visibility: hidden;">
-                            <i id="light-on-icon" class="fa-solid fa-sun"></i>
-                        </button>
-                    </div>
-                    <button class="nav-btn" onclick="
-                        document.getElementById('hidden-navbar').style.transform = 'translateX(0%)';">
-                        <i id="nav-btn" class="fa-solid fa-bars"></i>
-                    </button>
+            <div class="btns">
+                <div class="darkmode-btns">
+                    <button id="dark-on" onclick="
+                            document.getElementById('dark-on').style.visibility= 'hidden';
+                            document.getElementById('light-on').style.visibility= 'visible';
+                            document.getElementById('nav-btn').style.color = 'var(--hidden-navbar-text)';
+                            document.getElementById('x-btn').style.color = 'var(--hidden-navbar-text)';
+                            document.querySelectorAll('.links a').forEach(target => target.style.color = 'var(--hidden-navbar-text)');
                     
+                            document.documentElement.style.setProperty('--bg1', '#252525');
+                            document.documentElement.style.setProperty('--bg2', '#202020');
+                            document.documentElement.style.setProperty('--buttons', '#C17E1F');
+                            document.documentElement.style.setProperty('--text', '#FFFFFF');
+                            document.documentElement.style.setProperty('--highlight', '#D78C23');
+                            document.documentElement.style.setProperty('--selection', '#845B22');
+                            document.documentElement.style.setProperty('--navbar', '#171717');
+                            document.documentElement.style.setProperty('--footer', '#080708');
+                            document.documentElement.style.setProperty('--hidden-navbar-text', '#eeeeee');
+                            ">
+                        <i id="dark-on-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="light-on" onclick="
+                            document.getElementById('light-on').style.visibility= 'hidden';
+                            document.getElementById('dark-on').style.visibility= 'visible';
+                            document.documentElement.style.setProperty('--bg1', '#eeeeee');
+                            document.documentElement.style.setProperty('--bg2', '#ffffff');
+                            document.documentElement.style.setProperty('--buttons', '#ce1212');
+                            document.documentElement.style.setProperty('--text', '#212529');
+                            document.documentElement.style.setProperty('--highlight', '#e61414');
+                            document.documentElement.style.setProperty('--selection', '#DD5959');
+                            document.documentElement.style.setProperty('--navbar', '#FFFFFF');
+                            document.documentElement.style.setProperty('--footer', '#100e0f');
+                            document.documentElement.style.setProperty('--hidden-navbar-text', '#7f7f90');
+                            " style="visibility: hidden;">
+                        <i id="light-on-icon" class="fa-solid fa-sun"></i>
+                    </button>
                 </div>
+                <button class="nav-btn" onclick="
+                            document.getElementById('hidden-navbar').style.transform = 'translateX(0%)';">
+                    <i id="nav-btn" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
 
 
-                <div class="hidden">
-                    <div class="navbar" id="hidden-navbar">
-                        <div class="links" id="links">
-                            <button class="x-btn" id="x-btn" onclick="
+        <div class="hidden">
+            <div class="navbar ms-90 ml-80 tab-45 lab-s-35" id="hidden-navbar">
+                <div class="links" id="links">
+                    <button class="x-btn" id="x-btn" onclick="
                                 document.getElementById('hidden-navbar').style.transform = 'translateX(110%)';"><i
-                                    class="fa-solid fa-xmark"></i></button>
+                            class="fa-solid fa-xmark"></i></button>
 
-                            <a id="a" href="#home">home</a>
-                            <a id="a" href="#chefs">chefs</a>
-                            <a id="a" href="#gallery">gallery</a>
-                            <a id="a" href="#contacts">contact</a>
-                        </div>
-                    </div>
+                    <a id="a" href="#home">home</a>
+                    <a id="a" href="#chefs">chefs</a>
+                    <a id="a" href="#gallery">gallery</a>
+                    <a id="a" href="#contacts">contact</a>
                 </div>
             </div>
         </div>

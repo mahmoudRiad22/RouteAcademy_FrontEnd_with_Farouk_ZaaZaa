@@ -58,6 +58,7 @@ span {
     background-color: var(--surface);
     width: 90%;
     margin: auto;
+    /* border: 3px solid blue; */
 }
 
 a {
@@ -74,6 +75,11 @@ img {
     color: var(--bg2);
 }
 
+ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
 /* #endregion Global CSS */
 /*****************************/
 /*****************************/
@@ -87,14 +93,18 @@ img {
     width: 100vw;
     position: fixed;
     z-index: 300;
+    /* background-color: yellow; */
 }
 .header .container {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px;
+    flex-wrap: wrap;
+    padding: 25px 5px;
+
 }
+
+
 
 .logo a span {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
@@ -120,12 +130,6 @@ img {
 /* #region header-btns */
 
 
-.header-btns {
-    display: flex;
-}
-.header-btns .darkmode-btns {
-    position: relative;
-}
 #light-on #light-on-icon {
     color: var(--text);
     background-color: var(--navbar);
@@ -135,27 +139,41 @@ img {
     color: var(--text);
     background-color: var(--navbar);
 }
+.header .container .btns .darkmode-btns {
+    position: relative;
+}
+.header .container .btns .darkmode-btns #dark-on {
+    border: none;
+    margin: 0px 20px;
+    font-weight: 400;
+    line-height: 25px;
 
-.header-btns .darkmode-btns #dark-on,
-#light-on {
+    font-size: 28px;
+    padding: 2px 5px;
+    border: none;
+    background-color: var(--navbar);
+}
+.header .container .btns .darkmode-btns #light-on {
     position: absolute;
     top: 0;
     right: 0;
-    display: flex;
     border: none;
     margin: 0px 20px;
-    border-radius: 50%;
-    font-size: 25px;
+    vertical-align: middle;
     font-weight: 400;
     line-height: 25px;
-}
 
+    font-size: 28px;
+    padding: 2px 5px;
+    border: none;
+    background-color: var(--navbar);
+}
 #dark-on:hover,
 #light-on:hover {
     cursor: pointer;
 }
 
-.header-btns .nav-btn {
+.header .container .btns .nav-btn {
     font-weight: 900;
     font-size: 31px;
     line-height: 31px;
@@ -169,20 +187,47 @@ img {
 
 /*****************************/
 /*****************************/
+/* #region visiable navbar-links */
+
+.header .container .navbar-links {
+    /* background-color: red; */
+    display: none;
+}
+.header .container  .btns {
+    display: flex;
+}
+
+.header .container .navbar-links a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 21px;
+    line-height: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0px 10px;
+}
+
+/* #endregion visiable navbar-links */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
 /* #region hidden navbar */
 
-.hidden .navbar {
+.navbar {
     background-color: var(--navbar);
     height: 100vh;
-    width: 93vw;
+    width: 95vw;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 301;
     transform: translateX(110%);
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 
-.hidden .navbar .links {
+.header .hidden .navbar .links {
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -190,7 +235,7 @@ img {
     margin: 40px 15px;
     text-transform: capitalize;
 }
-.hidden .navbar .links .x-btn,
+.header .hidden .navbar .links .x-btn,
 a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
         Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -199,12 +244,12 @@ a {
     font-weight: 600;
     color: #7f7f90;
 }
-.hidden .navbar .links .x-btn {
+.header .hidden .navbar .links .x-btn {
     position: absolute;
     top: 0;
     right: 0;
     font-size: 28px;
-    padding: 30px 15px;
+    padding: 15px 15px;
     border: none;
     background-color: var(--navbar);
 }
@@ -212,3 +257,4 @@ a {
 /* #endregion hidden-navbar */
 /*****************************/
 /*****************************/
+
