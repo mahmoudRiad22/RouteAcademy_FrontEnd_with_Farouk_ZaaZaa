@@ -1,5 +1,9 @@
 /* mobile-small ms- */
 @media screen and (min-width: 320px) {
+    /*****************************/
+    /*****************************/
+    /* #region width with every 5% */
+
     .ms-100 {
         width: calc(100% - 0%);
     }
@@ -60,10 +64,26 @@
     .ms-5 {
         width: calc(100% - 95%);
     }
+
+    /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
+    .home-section .container .left-side {
+        flex-wrap: wrap-reverse;
+    }
+
+    .home-section .container {
+        margin-top: 8%;
+        padding: 30px 0px;
+    }
 }
 
 /* mobile-medium mm- */
 @media screen and (min-width: 375px) {
+    /*****************************/
+    /*****************************/
+    /* #region width with every 5% */
+
     .mm-100 {
         width: calc(100% - 0%);
     }
@@ -124,10 +144,18 @@
     .mm-5 {
         width: calc(100% - 95%);
     }
+
+    /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
 }
 
 /* mobile-large ml- */
 @media screen and (min-width: 425px) {
+    /*****************************/
+    /*****************************/
+    /* #region width with every 5% */
+
     .ml-100 {
         width: calc(100% - 0%);
     }
@@ -188,10 +216,23 @@
     .ml-5 {
         width: calc(100% - 95%);
     }
+
+    /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
+
+    .home-section .container .left-side .btns-container .video-link button {
+        padding: 15px 30px;
+        margin-left: 35px;
+    }
 }
 
 /* tablet tab- */
 @media screen and (min-width: 768px) {
+    /*****************************/
+    /*****************************/
+    /* #region width with every 5% */
+
     .tab-100 {
         width: calc(100% - 0%);
     }
@@ -252,10 +293,21 @@
     .tab-5 {
         width: calc(100% - 95%);
     }
+
+    /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
+    .home-section .container .left-side .btns-container {
+        /* margin: auto; */
+    }
 }
 
 /* labtop lab-s- */
 @media screen and (min-width: 1024px) {
+    /*****************************/
+    /*****************************/
+    /* #region width with every 5% */
+
     .lab-s-100 {
         width: calc(100% - 0%);
     }
@@ -315,6 +367,48 @@
     }
     .lab-s-5 {
         width: calc(100% - 95%);
+    }
+
+    /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
+    .home-section .container {
+        flex-wrap: nowrap;
+    }
+
+    .header .container .btns .nav-btn {
+        display: none;
+    }
+    .header .container .navbar-links {
+        display: flex;
+    }
+    .header .container .btns .darkmode-btns #dark-on {
+        margin: 0px 0px;
+    }
+    .header .container .btns .darkmode-btns #light-on {
+        margin: 0;
+        padding: 0;
+    }
+    .home-section .container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        /* padding-top: 130px; */
+    }
+
+    .home-section .container .left-side .btns-container .video-link button {
+        padding: 15px 30px;
+        margin-left: 35px;
+    }
+    .home-section .container .left-side .btns-container {
+        /* align-self: center; */
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        /* border: 3px solid red; */
+    }
+    .home-section .container .left-side .btn1 {
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
     }
 }
 
@@ -386,6 +480,12 @@
     /* #endregion width every 5% */
     /*****************************/
     /*****************************/
+    .home-section .container {
+        /* padding-top: 130px; */
+        align-items: center;
+        height: 100vh;
+    }
+
     .header .container .btns .nav-btn {
         display: none;
     }
@@ -403,6 +503,10 @@
 
 /* 4K-screen S4k- */
 @media screen and (min-width: 2560px) {
+    /*****************************/
+    /*****************************/
+    /* #region width with every 5% */
+
     .S4k-100 {
         width: calc(100% - 0%);
     }
@@ -462,5 +566,12 @@
     }
     .S4k-5 {
         width: calc(100% - 95%);
+    }
+
+    /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
+    .home-section .container {
+        height: 100vh;
     }
 }
