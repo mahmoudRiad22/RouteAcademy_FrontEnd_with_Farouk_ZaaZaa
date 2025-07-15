@@ -22,7 +22,10 @@
     --navbar: #ffffff;
     --footer: #100e0f;
     --hidden-navbar-text: #7f7f90;
-    --card-bgc: blue;
+
+    --gray-text: #7D7D7D;
+    --card-bgc: #ffffff;
+    --info-bgc: #eeeeee;
 }
 html {
     scroll-behavior: smooth;
@@ -439,11 +442,11 @@ a {
     transform: translate(0);
     cursor: pointer;
 }
-.chefs-section .card-container .links li i{
+.chefs-section .card-container .links li i {
     color: var(--hidden-navbar-text);
-    transition: color .25s;
+    transition: color 0.25s;
 }
-.chefs-section .card-container .links li i:hover{
+.chefs-section .card-container .links li i:hover {
     color: var(--footer);
 }
 
@@ -466,7 +469,6 @@ a {
 
 .chefs-section .sections-cards .card-container .card-info {
     padding: 20px;
-    
 }
 .chefs-section .section-title .card-container .card-info h3 {
     font-family: "Inter_24pt-Regular";
@@ -479,7 +481,6 @@ a {
     font-weight: 400;
     font-size: 18px;
     color: var(--hidden-navbar-text);
-
 }
 .chefs-section .sections-cards .card-container .card-info p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
@@ -490,5 +491,122 @@ a {
     margin-top: 15px;
 }
 /* #endregion chefs-section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region Contacts-section */
+
+.contacts-section {
+    background-color: var(--bg2);
+    margin: 80px 0px;
+    padding: 50px 0px;
+    text-align: center;
+}
+.contacts-section .title {
+    padding: 80px 0px 0 0;
+}
+.contacts-section .title h2 {
+    padding: 0 0 5px 0;
+    font-size: 18px;
+    color: var(--hidden-navbar-text);
+    text-transform: uppercase;
+}
+.contacts-section .title span {
+    font-size: 63px;
+    font-weight: 400;
+    color: var(--text);
+}
+.contacts-section .title span span {
+    color: var(--highlight);
+}
+
+.contacts-section .container .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contacts-section .contact-details .info {
+    width: 49%;
+    text-align: left;
+    padding: 20px;
+    margin: 5px;
+    background-color: var(--bg1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--info-bgc);
+}
+.contacts-section .contact-details .info .icon {
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--buttons);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--bg2);
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.contacts-section .contact-details .info .text h3 {
+    padding-top: 5px;
+    padding-left: 10px;
+    color: var(--gray-text);
+}
+.contacts-section .contact-details .info .text p {
+    padding-top: 5px;
+    padding-left: 10px;
+    text-align: left;
+    color: var(--text);
+}
+.contacts-section .container .form form{
+    width: 100%;
+    /* background-color: red; */
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contacts-section .container .form #name{
+    width: 49%;
+    height: 60px;
+    margin: 10px 0px;
+}
+.contacts-section .container .form #email{
+    width: 49%;
+    height: 60px;
+    margin: 10px 0px;
+}
+.contacts-section .container .form #subject{
+    width: 100%;
+    height: 60px;
+    margin: 10px 0px;
+}
+.contacts-section .container .form #msg{
+    width: 100%;
+    height: calc(60px * 3);
+    margin: 10px 0px;
+}
+
+.contacts-section .container .form button{
+    padding: 20px 50px;
+    border-radius: 30px;
+    background-color: var(--buttons);
+    color: var(--bg2);
+    border: none;
+}
+.contacts-section .container .form button:hover{
+    cursor: pointer;
+    background-color: var(--highlight);
+}
+/* #endregion Contacts-section */
 /*****************************/
 /*****************************/
