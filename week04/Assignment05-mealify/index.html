@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./CSS/fontawesome-all.css" />
     <link rel="stylesheet" href="./CSS/fonts.css" />
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./CSS/media-classses.css" />
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
 
     <!-- #endregion CSS files -->
     <!-- ****************************** -->
@@ -30,7 +30,7 @@
 
     <div class="header">
 
-        <div class="container tab-70 lab-s-70 lab-l-80 S4k-55">
+        <div class="container">
 
             <h1 class="logo"><a href="#"><span>mealify<span>.</span></span></a></h1>
 
@@ -95,7 +95,7 @@
 
 
         <div class="hidden">
-            <div class="navbar ms-90 ml-80 tab-45 lab-s-35" id="hidden-navbar">
+            <div class="navbar" id="hidden-navbar">
                 <div class="links" id="links">
                     <button class="x-btn" id="x-btn" onclick="
                                 document.getElementById('hidden-navbar').style.transform = 'translateX(110%)';"><i
@@ -113,34 +113,41 @@
 
     <div class="home-section" id="home">
         <!-- <div class="navbar-holder"></div> -->
-        <!-- <div class="navbar-holder"></div> -->
-        <div class="container  lab-s-85 lab-l-80 S4k-55">
+        <!-- <div class="navbar-placeholder"></div> -->
+        <div class="container">
 
-            <div class="left-side lab-s-45">
-                <h2>
-                    enjoy your healthy <br />
-                    delicious food
-                </h2>
-                <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum
-                    quaerat.
-                </p>
-                <div class="btns-container tab-80 lab-s-95">
-                    <button class="btn1"><a href="#contact">Book a Table</a></button>
-                    <div class="video-link">
-                        <button>
-                            <a href="https://www.youtube.com/" target="_blank">watch a video</a>
-                            <div class="half-circle"></div>
-                            <div class="icon">
-                                <a href="https://www.youtube.com/" target="_blank"><i
-                                        class="fa-solid fa-circle-play"></i></a>
-                            </div>
-                        </button>
+            <div class="flex-container">
+                <div class="left-side">
+                    <div class="text">
+                        <h2>
+                            enjoy your healthy <br />
+                            delicious food
+                        </h2>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae
+                            cumque eum
+                            quaerat.
+                        </p>
+                    </div>
+                    <div class="btns-container">
+                        <button class="btn1"><a href="#contact">Book a Table</a></button>
+                        <div class="video-btn">
+                            <button>
+                                <div class="icon">
+                                    <div class="half-circle"></div>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </div>
+                                <a href="https://www.youtube.com/" target="_blank">watch a video</a>
+
+                            </button>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="right-side home-image lab-s-40">
-                <img src="./images/imgi_1_hero-img.png" alt="imgi_1_hero-img.png">
+                <div class="right-side home-image">
+                    <img src="./images/imgi_1_hero-img.png" alt="imgi_1_hero-img.png">
+                </div>
             </div>
         </div>
     </div>
