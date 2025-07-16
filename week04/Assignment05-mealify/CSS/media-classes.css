@@ -3,7 +3,6 @@
     /*****************************/
     /*****************************/
     /* #region width with every 5% */
-
     .ms-100 {
         width: calc(100% - 0%);
     }
@@ -68,14 +67,6 @@
     /* #endregion width with every 5% */
     /*****************************/
     /*****************************/
-    .home-section .container .left-side {
-        /* flex-wrap: wrap-reverse; */
-    }
-
-    .home-section .container {
-        /* margin-top: 8%; */
-        /* padding: 30px 0px; */
-    }
 }
 
 /* mobile-medium mm- */
@@ -148,6 +139,18 @@
     /* #endregion width with every 5% */
     /*****************************/
     /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region header */
+
+    .header #hidden-navbar {
+        width: 80%;
+    }
+
+    /* #endregion header */
+    /*****************************/
+    /*****************************/
 }
 
 /* mobile-large ml- */
@@ -218,6 +221,18 @@
     }
 
     /* #endregion width with every 5% */
+    /*****************************/
+    /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region header */
+
+    .header #hidden-navbar {
+        width: 70%;
+    }
+
+    /* #endregion header */
     /*****************************/
     /*****************************/
 
@@ -297,6 +312,32 @@
     /* #endregion width with every 5% */
     /*****************************/
     /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region header */
+
+    .header #hidden-navbar {
+        width: 60%;
+    }
+
+    /* #endregion header */
+    /*****************************/
+    /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region home */
+
+    .home-section .left-side .btns-container .video-btn {
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+
+    /* #endregion home */
+    /*****************************/
+    /*****************************/
+
     .home-section .container .left-side .btns-container {
         /* margin: auto; */
     }
@@ -304,6 +345,78 @@
 
 /* labtop lab-s- */
 @media screen and (min-width: 1024px) {
+    /*****************************/
+    /*****************************/
+    /* #region header */
+
+    .header .container .btns .nav-btn {
+        display: none;
+    }
+    .header .container .navbar-links {
+        display: block;
+    }
+    .header #hidden-navbar {
+        display: none;
+    }
+
+    /* #endregion header */
+    /*****************************/
+    /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region home-section */
+
+    .home-section .left-side {
+        width: 45%;
+    }
+    .home-section .right-side {
+        width: 40%;
+    }
+    .home-section .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+    }
+    .home-section .left-side .text h2 {
+        text-align: left;
+    }
+    .home-section .left-side .text p {
+        text-align: left;
+    }
+
+    .home-section .left-side .btns-container {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .home-section .left-side .btns-container .video-btn {
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+    .home-section .home-image {
+        margin: 0;
+    }
+
+    /* #endregion home-section */
+    /*****************************/
+    /*****************************/
+
+    
+    
+    
+    /*****************************/
+    /*****************************/
+    /* #region chefs-section */
+    
+    
+    
+    /* #endregion chefs-section */
+    /*****************************/
+    /*****************************/
+    
+    
+    
     /*****************************/
     /*****************************/
     /* #region width with every 5% */

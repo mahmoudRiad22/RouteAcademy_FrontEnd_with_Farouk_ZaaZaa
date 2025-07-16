@@ -46,7 +46,7 @@
 
             <div class="navbar-links">
                 <ul>
-                    <li> <a id="a" href="#home">home</a></li>
+                    <li> <a class="active" id="a" href="#home">home</a></li>
                     <li> <a id="a" href="#chefs">chefs</a></li>
                     <li> <a id="a" href="#gallery">gallery</a></li>
                     <li> <a id="a" href="#contacts">contact</a></li>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="right-side home-image">
-                    <img src="./images/imgi_1_hero-img.png" alt="imgi_1_hero-img.png">
+                    <img class="shadow-img" src="./images/imgi_1_hero-img.png" alt="imgi_1_hero-img.png">
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@
 
                 <!-- <div class="flex-conatiner" id="flex-conatiner"> -->
 
-                <div class="card">
+                <div class="card shadow-card">
                     <div class="card-container">
                         <div class="image">
                             <img src="./images/imgi_2_chefs-1.jpg" alt="imgi_2_chefs-1.jpg" />
@@ -200,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card shadow-card">
                     <div class="card-container">
                         <div class="image">
                             <img src="./images/imgi_3_chefs-2.jpg" alt="imgi_2_chefs-2.jpg" />
@@ -221,7 +221,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card shadow-card">
                     <div class="card-container">
                         <div class="image">
                             <img src="./images/imgi_4_chefs-3.jpg" alt="imgi_4_chefs-3.jpg" />
@@ -458,6 +458,20 @@
 
         </div>
     </div>
+
+
+    <script>
+        document.querySelectorAll('.navbar-links ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                document.querySelectorAll('.navbar-links ul li a').forEach(l =>
+                    l.classList.remove('active'));
+                // Add active class to clicked link
+                link.classList.add('no-after');
+                link.classList.add('active');
+            });
+        });    
+    </script>
 </body>
 
 </html>
