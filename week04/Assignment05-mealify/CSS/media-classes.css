@@ -338,6 +338,26 @@
     /*****************************/
     /*****************************/
 
+    /*****************************/
+    /*****************************/
+    /* #region chefs-section */
+
+    .chefs-section .sections-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .chefs-section .card {
+        width: 40%;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        border-radius: 10px;
+    }
+
+    /* #endregion chefs-section */
+    /*****************************/
+    /*****************************/
+
     .home-section .container .left-side .btns-container {
         /* margin: auto; */
     }
@@ -402,21 +422,22 @@
     /*****************************/
     /*****************************/
 
-    
-    
-    
     /*****************************/
     /*****************************/
     /* #region chefs-section */
-    
-    
-    
+
+    .chefs-section .sections-cards {
+        display: flex;
+        flex-direction: row;
+    }
+    .chefs-section .card {
+        width: 30%;
+    }
+
     /* #endregion chefs-section */
     /*****************************/
     /*****************************/
-    
-    
-    
+
     /*****************************/
     /*****************************/
     /* #region width with every 5% */
