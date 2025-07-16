@@ -67,6 +67,21 @@
     /* #endregion width with every 5% */
     /*****************************/
     /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region gallery-section */
+
+    .gallery-section {
+        padding: 30px 0 0 0; /* Reduce padding */
+    }
+    .gallery-section .section-title {
+        padding: 40px 0 0 0;
+    }
+
+    /* #endregion gallery-section */
+    /*****************************/
+    /*****************************/
 }
 
 /* mobile-medium mm- */
@@ -236,6 +251,28 @@
     /*****************************/
     /*****************************/
 
+    /*****************************/
+    /*****************************/
+    /* #region gallery-section */
+
+    .gallery-section .gallery-pics {
+        column-count: 1; /* Single column */
+        column-gap: 0;
+    }
+    .gallery-section .image {
+        margin-bottom: 8px;
+        border-width: 2px; /* Thinner border */
+    }
+    .gallery-section .image .layer .text h2 {
+        font-size: 24px; /* Smaller text */
+    }
+    .gallery-section .image .layer .text p {
+        font-size: 16px;
+    }
+    /* #endregion gallery-section */
+    /*****************************/
+    /*****************************/
+
     .home-section .container .left-side .btns-container .video-link button {
         /* padding: 15px 30px; */
         /* margin-left: 35px; */
@@ -358,6 +395,21 @@
     /*****************************/
     /*****************************/
 
+    /*****************************/
+    /*****************************/
+    /* #region gallery-section */
+
+    .gallery-section .gallery-pics {
+        column-count: 2; /* Switch to 2 columns */
+    }
+    .gallery-section .image {
+        margin-bottom: 10px; /* Reduce spacing */
+    }
+
+    /* #endregion gallery-section */
+    /*****************************/
+    /*****************************/
+
     .home-section .container .left-side .btns-container {
         /* margin: auto; */
     }
@@ -435,6 +487,18 @@
     }
 
     /* #endregion chefs-section */
+    /*****************************/
+    /*****************************/
+
+    /*****************************/
+    /*****************************/
+    /* #region gallery-section */
+
+    .gallery-section .gallery-pics {
+        column-count: 3;
+        column-gap: 15px;
+    }
+    /* #endregion gallery-section */
     /*****************************/
     /*****************************/
 
