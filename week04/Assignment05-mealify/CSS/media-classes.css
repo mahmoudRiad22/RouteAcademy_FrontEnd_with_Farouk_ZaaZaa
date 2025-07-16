@@ -93,10 +93,10 @@
         width: 100%;
     }
     .contacts-section .container .form #name {
-        width: 49%;
+        width: 100%;
     }
     .contacts-section .container .form #email {
-        width: 49%;
+        width: 100%;
     }
 
     /* #endregion contact-section */
@@ -437,10 +437,10 @@
         width: 47%;
     }
     .contacts-section .container .form #name {
-        width: 49%;
+        width: 100%;
     }
     .contacts-section .container .form #email {
-        width: 49%;
+        width: 100%;
     }
 
     /* #endregion contact-section */
