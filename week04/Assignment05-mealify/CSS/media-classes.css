@@ -82,7 +82,7 @@
     /* #endregion gallery-section */
     /*****************************/
     /*****************************/
-        /*****************************/
+    /*****************************/
     /*****************************/
     /* #region contact-section */
     .contacts-section .container .contact-details {
@@ -102,7 +102,6 @@
     /* #endregion contact-section */
     /*****************************/
     /*****************************/
-
 }
 
 /* mobile-medium mm- */
@@ -446,7 +445,6 @@
     /* #endregion contact-section */
     /*****************************/
     /*****************************/
-
 }
 
 /* labtop lab-s- */
@@ -624,7 +622,6 @@
     /* #endregion width with every 5% */
     /*****************************/
     /*****************************/
-
 }
 
 /* labtop-large lab-l- */
@@ -696,16 +693,13 @@
     /*****************************/
     /*****************************/
 
-    
-    
-    
     /*****************************/
     /*****************************/
     /* #region contact */
-        .contacts-section .container .contact-details {
+    .contacts-section .container .contact-details {
         justify-content: space-between;
     }
-        .contacts-section .contact-details .info {
+    .contacts-section .contact-details .info {
         width: 49%;
     }
     .contacts-section .container .form #name {
@@ -717,10 +711,6 @@
     /* #endregion contact */
     /*****************************/
     /*****************************/
-    
-    
-    
-
 }
 
 /* 4K-screen S4k- */
