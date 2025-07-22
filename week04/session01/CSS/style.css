@@ -192,7 +192,7 @@ html {
 /*****************************/
 /* #region media-query-applying */
 
-.media-query .example-text{
+.media-query .example-text {
     padding-left: 50px;
 }
 .media-query-applying .cards .container {
@@ -226,7 +226,7 @@ html {
     transform: translateX(120%);
     transition: transform 1.5s;
 }
-.media-query-applying .cards .card-item:hover .card-img{
+.media-query-applying .cards .card-item:hover .card-img {
     cursor: pointer;
 }
 .media-query-applying .cards .card-item:hover .card-img .card-layer {
@@ -238,5 +238,81 @@ html {
 }
 
 /* #endregion media-query */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region header-navbar-applying */
+.header-navbar-applying #header {
+    background-color: black;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)) ,url(../images/drew-coffman-1872.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+.header-navbar-applying #header .header-content {
+    text-align: center;
+    min-width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.header-navbar-applying #header .header-content span {
+    font-size: 22px;
+    font-family: "alegrey-sans";
+}
+.header-navbar-applying #header .header-content h1 {
+    font-family: serif;
+    font-size: 76px;
+    line-height: 91px;
+    font-weight: 400;
+}
+.header-navbar-applying #header .header-content p {
+    font-family: "alegrey-sans";
+    font-size: 24px;
+    line-height: 45px;
+    text-transform: none;
+    padding-bottom: 20px;
+}
+.header-navbar-applying #header .header-content .btn1,
+.header-navbar-applying #header .header-content .btn2 {
+    padding: 15px 30px;
+    font-family: serif;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.header-navbar-applying #header .header-content .btn1{
+    background-color: #8E7754;
+    color:#fff
+}
+.header-navbar-applying #header .header-content .btn2 {
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+}
+.header-navbar-applying #header .header-content .btn1:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+}
+.header-navbar-applying #header .header-content .btn2:hover{
+        cursor: pointer;
+    background-color: #fff;
+    color: black;
+
+}
+/* #endregion header-navbar-applying */
 /*****************************/
 /*****************************/

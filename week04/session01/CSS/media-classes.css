@@ -1,3 +1,7 @@
+/*****************************/
+/*****************************/
+/* #region old media-query */
+
 /* mobile-small ms- */
 @media screen and (min-width: 320px) {
     .ms-1 {
@@ -193,3 +197,135 @@
         width: calc(100% / 6);
     }
 }
+
+/* #endregion old media-query */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region Updated media-query */
+
+/* small ms- */
+@media screen and (min-width: 576px) {
+    .ms-50 {
+        width: calc(100% / 2);
+    }
+
+    .ms-33 {
+        width: calc(100% / 3);
+    }
+
+    .ms-25 {
+        width: calc(100% / 4);
+    }
+
+    .ms-20 {
+        width: calc(100% / 5);
+    }
+
+    .ms-16 {
+        width: 20%;
+        width: calc(100% / 6);
+    }
+}
+
+/* medium md- */
+@media screen and (min-width: 768px) {
+    .md-50 {
+        width: calc(100% / 2);
+    }
+
+    .md-33 {
+        width: calc(100% / 3);
+    }
+
+    .md-25 {
+        width: calc(100% / 4);
+    }
+
+    .md-20 {
+        width: calc(100% / 5);
+    }
+
+    .md-16 {
+        width: 20%;
+        width: calc(100% / 6);
+    }
+}
+
+/* large lg- */
+@media screen and (min-width: 992px) {
+    .lg-50 {
+        width: calc(100% / 2);
+    }
+
+    .lg-33 {
+        width: calc(100% / 3);
+    }
+
+    .lg-25 {
+        width: calc(100% / 4);
+    }
+
+    .lg-20 {
+        width: calc(100% / 5);
+    }
+
+    .lg-16 {
+        width: 20%;
+        width: calc(100% / 6);
+    }
+}
+
+/* XLarge xl- */
+@media screen and (min-width: 1200px) {
+    .xl-50 {
+        width: calc(100% / 2);
+    }
+
+    .xl-33 {
+        width: calc(100% / 3);
+    }
+
+    .xl-25 {
+        width: calc(100% / 4);
+    }
+
+    .xl-20 {
+        width: calc(100% / 5);
+    }
+
+    .xl-16 {
+        width: 20%;
+        width: calc(100% / 6);
+    }
+}
+
+/* XXLarge xxl- */
+@media screen and (min-width: 1440px) {
+    .xxl-50 {
+        width: calc(100% / 2);
+    }
+
+    .xxl-33 {
+        width: calc(100% / 3);
+    }
+
+    .xxl-25 {
+        width: calc(100% / 4);
+    }
+
+    .xxl-20 {
+        width: calc(100% / 5);
+    }
+
+    .xxl-16 {
+        width: 20%;
+        width: calc(100% / 6);
+    }
+}
+
+/* #endregion Updated media-query */
+/*****************************/
+/*****************************/
