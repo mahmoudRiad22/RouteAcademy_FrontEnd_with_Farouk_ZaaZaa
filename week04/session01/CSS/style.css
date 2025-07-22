@@ -244,6 +244,9 @@ html {
 /*****************************/
 /*****************************/
 /* #region header-navbar-applying */
+.header-navbar-applying{
+    min-height: 100vh;
+}
 .header-navbar-applying #header {
     background-color: black;
     min-height: 100vh;
@@ -265,19 +268,24 @@ html {
     color: white;
 }
 .header-navbar-applying #header .header-content span {
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 15px;
     font-family: "alegrey-sans";
 }
 .header-navbar-applying #header .header-content h1 {
     font-family: serif;
-    font-size: 76px;
-    line-height: 91px;
+    /* font-size: 76px; */
+    font-size: 30px; /**/
+    padding: 10px 0px;
+    /* line-height: 51px; */
     font-weight: 400;
 }
 .header-navbar-applying #header .header-content p {
     font-family: "alegrey-sans";
-    font-size: 24px;
-    line-height: 45px;
+    /* font-size: 24px; */
+    font-display: 16px;
+    /* line-height: 45px; */
+    line-height: 30px;
     text-transform: none;
     padding-bottom: 20px;
 }
@@ -326,25 +334,28 @@ html {
 }
 .header-navbar-applying #navbar .container{
     width: 100%;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, .7);
 }
 .header-navbar-applying #navbar .nav-logo{
-    float: left;
-    display: inline;
-    width: 20%;
+    /* float: left; */
+    /* display: inline; */
+    
+    width: 200px;
     padding: 0px 20px;
-    margin: 10px 30px;
+    /* margin: 10px 30px; */
 }
 .header-navbar-applying #navbar .nav-links{
-    float: right;
+    /* float: right; */
+    display: none;
     padding: 18px 20px;
 }
 .header-navbar-applying #navbar .nav-links ul{
     list-style: none;
 }
 .header-navbar-applying #navbar .nav-links ul li{
-    display: inline-block;
-    padding: 0px 10px;
+    /* display: inline-block; */
+    /* padding: 0px 10px; */
+    padding: 10px 0;
     color: #fff;
 }
 .header-navbar-applying #navbar .nav-links ul li a{
