@@ -313,6 +313,50 @@ html {
     color: black;
 
 }
+
+.header-navbar-applying{
+    position: relative;
+}
+.header-navbar-applying #navbar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.header-navbar-applying #navbar .container{
+    width: 100%;
+    background-color: transparent;
+}
+.header-navbar-applying #navbar .nav-logo{
+    float: left;
+    display: inline;
+    width: 20%;
+    padding: 0px 20px;
+    margin: 10px 30px;
+}
+.header-navbar-applying #navbar .nav-links{
+    float: right;
+    padding: 18px 20px;
+}
+.header-navbar-applying #navbar .nav-links ul{
+    list-style: none;
+}
+.header-navbar-applying #navbar .nav-links ul li{
+    display: inline-block;
+    padding: 0px 10px;
+    color: #fff;
+}
+.header-navbar-applying #navbar .nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+
+    transition: color .5s;
+}
+.header-navbar-applying #navbar .nav-links ul li a:hover{
+    color: #8E7754;
+}
 /* #endregion header-navbar-applying */
 /*****************************/
 /*****************************/
