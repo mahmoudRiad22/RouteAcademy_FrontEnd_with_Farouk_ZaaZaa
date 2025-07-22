@@ -244,13 +244,14 @@ html {
 /*****************************/
 /*****************************/
 /* #region header-navbar-applying */
-.header-navbar-applying{
+.header-navbar-applying {
     min-height: 100vh;
 }
 .header-navbar-applying #header {
     background-color: black;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)) ,url(../images/drew-coffman-1872.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/drew-coffman-1872.jpg);
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
@@ -301,72 +302,72 @@ html {
     margin: 5px;
 }
 
-.header-navbar-applying #header .header-content .btn1{
-    background-color: #8E7754;
-    color:#fff
+.header-navbar-applying #header .header-content .btn1 {
+    background-color: #8e7754;
+    color: #fff;
 }
 .header-navbar-applying #header .header-content .btn2 {
     background-color: transparent;
     border: 2px solid white;
     color: #fff;
 }
-.header-navbar-applying #header .header-content .btn1:hover{
+.header-navbar-applying #header .header-content .btn1:hover {
     cursor: pointer;
     background-color: #fff;
     color: black;
 }
-.header-navbar-applying #header .header-content .btn2:hover{
-        cursor: pointer;
+.header-navbar-applying #header .header-content .btn2:hover {
+    cursor: pointer;
     background-color: #fff;
     color: black;
-
 }
 
-.header-navbar-applying{
+.header-navbar-applying .container .header-navbar-applying {
     position: relative;
+    width: 100%;
 }
-.header-navbar-applying #navbar{
+.header-navbar-applying #navbar {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
 }
-.header-navbar-applying #navbar .container{
+.header-navbar-applying #navbar .container {
     width: 100%;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
-.header-navbar-applying #navbar .nav-logo{
+.header-navbar-applying #navbar .nav-logo {
     /* float: left; */
     /* display: inline; */
-    
+
     width: 200px;
     padding: 0px 20px;
     /* margin: 10px 30px; */
 }
-.header-navbar-applying #navbar .nav-links{
+.header-navbar-applying #navbar .nav-links {
     /* float: right; */
     display: none;
     padding: 18px 20px;
 }
-.header-navbar-applying #navbar .nav-links ul{
+.header-navbar-applying #navbar .nav-links ul {
     list-style: none;
 }
-.header-navbar-applying #navbar .nav-links ul li{
+.header-navbar-applying #navbar .nav-links ul li {
     /* display: inline-block; */
     /* padding: 0px 10px; */
     padding: 10px 0;
     color: #fff;
 }
-.header-navbar-applying #navbar .nav-links ul li a{
+.header-navbar-applying #navbar .nav-links ul li a {
     color: #fff;
     text-decoration: none;
     font-style: normal;
 
-    transition: color .5s;
+    transition: color 0.5s;
 }
-.header-navbar-applying #navbar .nav-links ul li a:hover{
-    color: #8E7754;
+.header-navbar-applying #navbar .nav-links ul li a:hover {
+    color: #8e7754;
 }
 /* #endregion header-navbar-applying */
 /*****************************/
