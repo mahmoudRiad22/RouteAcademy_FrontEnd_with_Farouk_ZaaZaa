@@ -87,17 +87,18 @@
             <br />
             <h2>01- Display flex "parent properties"</h2>
             <p>
-                <b>parent properties:</b> <br/>
+                <b>parent properties:</b> <br />
                 display: flex;<br />
                 flex-direction: row[default] | column | row-reverse | column-reverse <br />
-                flex-wrap: nowrap[default] | wrap | wrap-reverse <br/>
-                <b>"shorthand"</b> <br/>
-                flex-flow: flex-driection flex-wrap <br/> <hr/>
+                flex-wrap: nowrap[default] | wrap | wrap-reverse <br />
+                <b>"shorthand"</b> <br />
+                flex-flow: flex-driection flex-wrap <br />
+                <hr />
 
-                <b>"must have an extra space in the width to be used"</b><br/>
-                justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly <br/>
-                align-items: stretch[default] | flex-start | flex-end | center <br/>
-                
+                <b>"must have an extra space in the width to be used"</b><br />
+                justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly <br />
+                align-items: stretch[default] | flex-start | flex-end | center <br />
+
             </p><br />
             <div class="applying-section">
                 <h4>applying using display flex</h4>
@@ -156,13 +157,69 @@
         <br /> <br />
     </div>
 
+    <div class="new-topic word-animation">
 
+        <div class="container">
+
+            <h3>word animation</h3>
+
+            <p>description:</p><br />
+
+            <div class="applying-section">
+                <div class="typing-container">
+                    <span id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts area -->
 
     <script src="./bootstrap/bootstrap.bundle.min.js"></script>
 
+    <script>
+        const textElement = document.getElementById('typing-text');
+        const words = ["Developer", "Freelancer", "Photographer", "Designer"];
+        let wordIndex = 0; 
+        let charIndex = 0; 
+        let isDeleting = false;
+        let typingSpeed = 200;
+
+        function type() {
+            const currentWord = words[wordIndex];
+
+            if (!isDeleting) {
+                textElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 150;
+
+                if (charIndex === currentWord.length) {
+                    isDeleting = true;
+                    typingSpeed = 1000;
+                }
+            }
+            else {
+                textElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length; 
+                    typingSpeed = 500;
+                }
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+
+        type();
+    </script>
     <!-- #endregion Scripts area -->
     <!-- ****************************** -->
     <!-- ****************************** -->
