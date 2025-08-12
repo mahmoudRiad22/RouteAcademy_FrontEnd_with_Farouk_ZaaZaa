@@ -10,11 +10,11 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
-    --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
+    --bg: #1C352D; /* middle color Dominant background */
+    --surface: #A6B28B; /* 1st right Cards/surfaces */
+    --buttons: #F5C9B0; /* 2nd right Interactive elements */
+    --accent: #f9b68f; /* 1st left For highlights */
+    --text: #F9F6F3; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
@@ -71,6 +71,12 @@ img {
 }
 .clear-fix {
     clear: both;
+}
+b{
+    color: var(--accent);
+}
+.bg-txt{
+    color: var(--bg);
 }
 /* #endregion Global CSS */
 /*****************************/
