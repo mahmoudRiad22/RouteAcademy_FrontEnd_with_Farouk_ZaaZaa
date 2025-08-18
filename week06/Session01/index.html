@@ -51,7 +51,7 @@
             <a href="#3">3- box-shadow and text-shadow</a>
             <a href="#4">bootstrap-bg-color</a>
             <a href="#5">bootstrap-sizing [w,h]</a>
-            <a href="#6"></a>
+            <a href="#6">bootstrap-spacing</a>
             <a href="#7"></a>
             <a href="#8"></a>
             <a href="#9"></a>
@@ -287,18 +287,33 @@
         <br />
     </div>
 
-    <div class="new-topic bootstrap-sizing [w,h]">
+    <div class="new-topic bootstrap-sizing [w,h]" id="5">
 
         <div class="container">
 
             <h3>bootstrap-sizing [w,h]</h3>
 
-            <p>description:
-
+            <p>description: <br />
+            <table>
+                <tr>
+                    <td class="pe-5 ps-3">
+                        <b>.w-100</b><br />
+                        <b>.w-75</b><br />
+                        <b>.w-50</b><br />
+                        <b>.w-25</b><br />
+                    </td>
+                    <td class="ps-5">
+                        <b>.h-100</b><br />
+                        <b>.h-75</b><br />
+                        <b>.h-50</b><br />
+                        <b>.h-25</b><br />
+                    </td>
+                </tr>
+            </table>
             </p><br />
 
-            <div class="applying-section bootstrap-sizing [w,h]" id="5">
-                <p class="w- bg-primary">
+            <div class="applying-section bootstrap-sizing [w,h]">
+                <p class=" w-100 bg-primary">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea consequuntur rerum reprehenderit
                     distinctio quae quaerat non assumenda minima omnis temporibus perferendis officiis et repudiandae
                     officia, maiores ipsum impedit odit fugit, tempore voluptates voluptatum, deserunt eum ipsam porro.
@@ -329,7 +344,143 @@
         <br />
     </div>
 
-    
+    <div class="new-topic bootstrap-spacing" id="6">
+
+        <div class="container">
+
+            <h3>bootstrap-spacing</h3>
+
+            <p>description: <br />
+            <table style="border-collapse: collapse;" class="bg-secondary">
+                <th>
+                <td>{properity}</td>
+                <td colspan="3">{sides}</td>
+                <td colspan="2">-</td>
+                <td colspan="3">{size}</td>
+                </th>
+
+                <tr>
+                    <td colspan="3">
+                        <p>m</p>
+                        <p>p</p>
+                    </td>
+                    <td colspan="3">
+                        <p>t</p>
+                        <p>b</p>
+                        <p>s</p>
+                        <p>e</p>
+                        <p>x</p>
+                        <p>y</p>
+                    </td>
+                    <td>-</td>
+                    <td colspan="3">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9">
+                        <p>horizontal centering:</p>
+                        <p>mx-auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9">
+                        <p>negative margine</p>
+                        <p>m{sides}-n{size}</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><b>gab</b><br />[on the parent element]</td>
+                    <td>-</td>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><b>row-gab</b><br />[on the parent element]</td>
+                    <td>-</td>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><b>column-gab</b><br />[on the parent element]</td>
+                    <td>-</td>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+            </table>
+
+            </p><br />
+
+            <div class="applying-section">
+                <div class="mx-auto p-2 bg-gradient bg-info" style="width: 200px;">
+                    Centered element
+                </div>
+
+                <p class="text-center">gab</p>
+                <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-4 bg-opacity-50 mb-3">
+                    <div class="p-2 border border-2 border-black border-black bg-warning-subtle text-black bg-gradient">
+                        Grid item 1</div>
+                    <div class="p-2 border border-2 border-black bg-warning-subtle text-black bg-gradient">Grid item 2
+                    </div>
+                    <div class="p-2 border border-2 border-black bg-warning-subtle text-black bg-gradient">Grid item 3
+                    </div>
+                    <div class="p-2 border border-2 border-black bg-warning-subtle text-black bg-gradient">Grid item 4
+                    </div>
+                </div>
+
+
+                <p class="text-center">row-gab</p>
+                <div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-2 bg-opacity-50 mb-3">
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 1</div>
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 2</div>
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 3</div>
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 4</div>
+                </div>
+
+                <p class="text-center">column-gab</p>
+                <div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-3 gap-0 bg-opacity-50 mb-3">
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 1</div>
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 2</div>
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 3</div>
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 4</div>
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts files -->

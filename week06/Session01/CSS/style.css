@@ -73,10 +73,14 @@ img {
     clear: both;
 }
 b{
-    color: var(--accent);
+    color: var(--bg);
 }
 .bg-txt{
     color: var(--bg);
+}
+td {
+  border: 1px solid black; /* Border for cells */
+  padding: 8px; /* Spacing inside cells */
 }
 /* #endregion Global CSS */
 /*****************************/
