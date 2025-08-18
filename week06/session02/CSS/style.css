@@ -10,31 +10,31 @@
 
 /* Color Variables */
 :root {
-    --bg: #EA2264; /* middle color Dominant background */
-    --surface: #F78D60; /* 1st right Cards/surfaces */
-    --buttons: #EA2264; /* 2nd right Interactive elements */
-    --accent: #640D5F; /* 1st left For highlights */
-    --text: #0D1164; /* 2nd left Primary text */
+    --bg: #ea2264; /* middle color Dominant background */
+    --surface: #f78d60; /* 1st right Cards/surfaces */
+    --buttons: #ea2264; /* 2nd right Interactive elements */
+    --accent: #640d5f; /* 1st left For highlights */
+    --text: #0d1164; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
     --warning: #ffc107; /* Caution states */
     --error: #f44336; /* Destructive actions */
 }
-.my-bg{
-    background-color: #F78D60
+.my-bg {
+    background-color: #f78d60;
 }
-.surface-bg{
-    background-color: #EA2264;
+.surface-bg {
+    background-color: #ea2264;
 }
-.buttons-bg{
-    background-color: #EA2264;
+.buttons-bg {
+    background-color: #ea2264;
 }
-.accent-bg{
-    background-color: #640D5F;
+.accent-bg {
+    background-color: #640d5f;
 }
-.text-clr{
-    color: #0D1164;
+.text-clr {
+    color: #0d1164;
 }
 
 body {
@@ -44,7 +44,7 @@ body {
     font-size: medium;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 15px 0px;
     font-family: "Playwrite IT Moderna";
@@ -84,10 +84,10 @@ a {
     text-align: center;
     color: var(--text);
 }
-img {
+/* img {
     width: 100%;
     display: block;
-}
+} */
 .clear-fix {
     clear: both;
 }
@@ -169,3 +169,43 @@ img {
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region flex-example */
+
+#test {
+    background-color: var(--accent);
+    margin: 0;
+    padding: 0;
+}
+
+#test .container {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+}
+#test .cards {
+    background-color: var(--accent);
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+#test .cards .card-item {
+    background-color: limegreen;
+    width: 22%;
+    margin: 5px;
+}
+#test .cards .card-item img{
+    width: 100%;
+    display: block;
+}
+
+
+/* ================================================= */
+
+
+
+/* #endregion flex-example */
+/******************************************************************************/
+/******************************************************************************/
