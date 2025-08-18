@@ -50,7 +50,7 @@ p {
     padding-left: 15px;
     font-family: "Alegreya", serif;
     font-size: medium;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .container {
@@ -156,3 +156,7 @@ b{
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
+
+.text-new-color{
+    color: cyan;
+}
