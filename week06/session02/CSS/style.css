@@ -10,16 +10,31 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
-    --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
+    --bg: #EA2264; /* middle color Dominant background */
+    --surface: #F78D60; /* 1st right Cards/surfaces */
+    --buttons: #EA2264; /* 2nd right Interactive elements */
+    --accent: #640D5F; /* 1st left For highlights */
+    --text: #0D1164; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
     --warning: #ffc107; /* Caution states */
     --error: #f44336; /* Destructive actions */
+}
+.my-bg{
+    background-color: #F78D60
+}
+.surface-bg{
+    background-color: #EA2264;
+}
+.buttons-bg{
+    background-color: #EA2264;
+}
+.accent-bg{
+    background-color: #640D5F;
+}
+.text-clr{
+    color: #0D1164;
 }
 
 body {
