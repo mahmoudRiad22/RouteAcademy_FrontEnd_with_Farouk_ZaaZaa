@@ -180,7 +180,7 @@ h2::after {
 /* #region 2-navbar */
 
 #header2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
         url(../images/imgi_27_abstract-business-objects-as-symbol-teamwork.jpg);
 
     background-repeat: no-repeat;
@@ -189,5 +189,78 @@ h2::after {
 }
 
 /* #endregion 2-navbar */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 4-category section */
+
+#header3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url(../images/imgi_7_business-people-negotiating-a-contract.jpg);
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.square2 {
+    width: 80px;
+    height: 80px;
+}
+.square1 {
+    width: 120px;
+    height: 120px;
+}
+.header-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #066ac9;
+    line-height: 33px;
+}
+.bg1 {
+    background-color: #E6F8F3;
+}
+.bg2 {
+    background-color: #FFF2E7;
+}
+.bg3 {
+    background-color: #FBE9EB;
+}
+.bg4 {
+    background-color: #F0ECF9;
+}
+.bg5 {
+    background-color: #E7F6F8;
+}
+.bg6 {
+    background-color: #E8EBED;
+}
+.bg7 {
+    background-color: #FEF6E0;
+}
+.bg8 {
+    background-color: #E9E9EA;
+}
+.bg9 {
+    background-color: #F0ECF9;
+}
+.bg10 {
+    background-color: #FBE9EB;
+}
+.bg11 {
+    background-color: #FBE9EB;
+}
+.bg12 {
+    background-color: #FBE9EB;
+}
+.card-item{
+    transition: transform .25s;
+}
+.card-item:hover{
+    transform: translateY(-8px);
+}
+/* #endregion 4-category section */
 /******************************************************************************/
 /******************************************************************************/
