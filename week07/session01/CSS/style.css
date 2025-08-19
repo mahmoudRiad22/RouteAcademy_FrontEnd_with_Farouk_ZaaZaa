@@ -10,10 +10,10 @@
 
 /* Color Variables */
 :root {
-    --bg: #CFAB8D; /* middle color Dominant background */
-    --surface: #D9C4B0; /* 1st right Cards/surfaces */
-    --buttons: #D9C4B0; /* 2nd right Interactive elements */
-    --accent: #ECEEDF; /* 1st left For highlights */
+    --bg: #cfab8d; /* middle color Dominant background */
+    --surface: #d9c4b0; /* 1st right Cards/surfaces */
+    --buttons: #d9c4b0; /* 2nd right Interactive elements */
+    --accent: #eceedf; /* 1st left For highlights */
     --text: black; /* 2nd left Primary text */
 
     /* Optional extended palette */
@@ -21,19 +21,19 @@
     --warning: #ffc107; /* Caution states */
     --error: #f44336; /* Destructive actions */
 }
-.my-bg{
-    background-color: var(--bg)
+.my-bg {
+    background-color: var(--bg);
 }
-.surface-bg{
+.surface-bg {
     background-color: var(--surface);
 }
-.buttons-bg{
+.buttons-bg {
     background-color: var(--buttons);
 }
-.accent-bg{
+.accent-bg {
     background-color: var(--accent);
 }
-.text-clr{
+.text-clr {
     color: var(--text);
 }
 
@@ -44,7 +44,7 @@ body {
     font-size: medium;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 15px 0px;
     font-family: "Playwrite IT Moderna";
@@ -57,7 +57,6 @@ h5,
 h6 {
     font-family: "Playwrite IT Moderna";
     font-weight: 400;
-    text-align: center;
 }
 
 html {
@@ -69,7 +68,6 @@ p {
     font-family: "Alegreya", serif;
     font-size: medium;
 }
-
 
 a {
     text-decoration: none;
@@ -119,38 +117,35 @@ a {
 /* #region nav-bar-icons */
 
 .nav-bar-icons .fa-facebook:hover {
-    color: rgb(31, 109, 243) !important; 
+    color: rgb(31, 109, 243) !important;
     transform: scale(1.3);
 }
 .nav-bar-icons .fa-linkedin:hover {
     transform: scale(1.3);
-    color: rgb(0, 0, 168)!important;
+    color: rgb(0, 0, 168) !important;
 }
 .nav-bar-icons .fa-x-twitter:hover {
     transform: scale(1.3);
-    color: rgb(174, 174, 177)!important;
+    color: rgb(174, 174, 177) !important;
 }
 .nav-bar-icons .fa-google:hover {
     transform: scale(1.3);
-    color: rgb(219, 63, 99)!important;
+    color: rgb(219, 63, 99) !important;
 }
 .nav-bar-icons .fa-github:hover {
     transform: scale(1.3);
-    color: rgb(200, 200, 200)!important;
+    color: rgb(200, 200, 200) !important;
 }
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
-
-
-
 
 /******************************************************************************/
 /******************************************************************************/
 /* #region 1-recape */
 
 h2::after {
-    content: "";
+    /* content: ""; */
 
     width: 100px;
     height: 100px;
@@ -159,11 +154,23 @@ h2::after {
     position: absolute;
     top: 0;
     left: 0;
-    
 }
 
 /* #endregion 1-recape */
 /******************************************************************************/
 /******************************************************************************/
 
+/******************************************************************************/
+/******************************************************************************/
+/* #region 2*header */
 
+#header {
+    background-image: linear-gradient(rgba(0, 0, 0,.7), rgba(0, 0, 0, .7)), 
+        url(../images/imgi_8_liability-concept.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* #endregion 2*header  */
+/******************************************************************************/
+/******************************************************************************/
