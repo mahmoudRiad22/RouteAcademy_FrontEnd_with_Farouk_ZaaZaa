@@ -41,7 +41,7 @@
 <body>
 
 
-    <div class="full-nav-bar">
+    <div class="full-nav-bar" style="display: none;">
 
         <div class="nav-bar left">
 
@@ -78,15 +78,78 @@
 
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg bg-black  opacity-75 fixed-top p-1">
+        <div class="container-fluid">
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="fs-6 text-white">week06 session02</span>
+                        </a>
+                        <ul class="dropdown-menu text-white bg-dark-subtle">
+                            <li><a class="dropdown-item" href="#1">1-containers</a></li>
+                            <li><a class="dropdown-item" href="#2">2-bootstrap grid system</a></li>
+                            <li><a class="dropdown-item" href="#3">3- cols & cols responsive</a></li>
+                            <li><a class="dropdown-item" href="#4">4-Applying</a></li>
+                            <li><a class="dropdown-item" href="#5">5-row-columns</a></li>
+                            <li><a class="dropdown-item" href="#6">6-gutters</a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                        </ul>
+                    </li>
+                </ul>
 
+                <ul class="navbar-nav  ">
 
-    <h1>week06 session02</h1>
+                    <li class="nav-item ">
+                        <a class="nav-link active nav-bar-icons" href="https://web.facebook.com/mahmoudriad0"
+                            target="_blank"><i class="fa-brands fa-facebook text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons" href="https://x.com/ByLoKtK" target="_blank"><i
+                                class="fa-brands fa-x-twitter text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoudriad027@gmail.com&su=&body="
+                            target="_blank">
+                            <i class="fa-brands fa-google text-white"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons" href="https://www.linkedin.com/in/mahmoudriad0/"
+                            target="_blank"><i class="fa-brands fa-linkedin text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons" href="https://github.com/mahmoudRiad22"
+                            target="_blank"><i class="fa-brands fa-github text-white"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="pt-5 mt-5">week06 session02</h1>
 
     <div class="new-topic 1-containers" id="1">
 
-        <div class="container">
+        <div class="container surface-bg">
 
-            <h3>1-containers</h3>
+            <h3 class="pt-5 mt-5">1-containers</h3>
 
             <p>description:
                 there are build in classes in bootstrap. <br /> <br />
@@ -186,9 +249,9 @@
 
     <div class="new-topic 2-bootstrap grid system" id="2">
 
-        <div class="container">
+        <div class="container surface-bg">
 
-            <h3>2-bootstrap grid system</h3>
+            <h3 class="mt-5 pt-5">2-bootstrap grid system</h3>
 
             <p>description:</p><br />
 
@@ -263,13 +326,14 @@
 
                 <div class="classic-cards-applying">
 
-                    <h5>classic card applying.</h5>
+                    <h5>bootstrap card applying.</h5>
                     <div id="test2" class="bg-danger">
                         <div class="container">
 
                             <div class="cards row">
 
-                                <div class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
+                                <div
+                                    class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
                                     <div class="inner">
                                         <img class="w-100" src="./images/drew-coffman-1872.jpg"
                                             alt="drew-coffman-1872.jpg" />
@@ -279,7 +343,8 @@
                                     </div>
                                 </div>
 
-                                <div class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
+                                <div
+                                    class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
                                     <div class="inner">
                                         <img class="w-100" src="./images/drew-coffman-1872.jpg"
                                             alt="drew-coffman-1872.jpg" />
@@ -289,7 +354,8 @@
                                     </div>
                                 </div>
 
-                                <div class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
+                                <div
+                                    class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
                                     <div class="inner">
                                         <img class="w-100" src="./images/drew-coffman-1872.jpg"
                                             alt="drew-coffman-1872.jpg" />
@@ -299,7 +365,8 @@
                                     </div>
                                 </div>
 
-                                <div class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
+                                <div
+                                    class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
                                     <div class="inner">
                                         <img class="w-100" src="./images/drew-coffman-1872.jpg"
                                             alt="drew-coffman-1872.jpg" />
@@ -309,7 +376,8 @@
                                     </div>
                                 </div>
 
-                                <div class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
+                                <div
+                                    class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
                                     <div class="inner">
                                         <img class="w-100" src="./images/drew-coffman-1872.jpg"
                                             alt="drew-coffman-1872.jpg" />
@@ -319,7 +387,8 @@
                                     </div>
                                 </div>
 
-                                <div class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
+                                <div
+                                    class="card-item border border-1 rounded-3 border-danger bg-warning w-25 text-center">
                                     <div class="inner">
                                         <img class="w-100" src="./images/drew-coffman-1872.jpg"
                                             alt="drew-coffman-1872.jpg" />
@@ -339,6 +408,403 @@
         <br />
         <br />
     </div>
+
+
+    <div class="new-topic 3- cols & cols responsive" id="3">
+
+        <div class="container surface-bg">
+
+            <h3 class="mt-5 pt-5">3- cols & cols responsive</h3>
+
+            <div class="applying-section">
+                <div class="test3">
+                    <div class="container">
+                        <div class="cards row ">
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item   col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item   col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item   col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2  text-center">
+                                <div class="inner bg-warning border border-0 rounded-3 overflow-hidden my-2">
+                                    <img class="w-100" src="./images/drew-coffman-1872.jpg"
+                                        alt="drew-coffman-1872.jpg" />
+                                    <h2>card title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rerum.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+
+    <div class="new-topic 4-Applying" id="4">
+
+        <div class="container surface-bg">
+
+            <h3 class="mt-5 pt-5">4-Applying</h3>
+
+
+            <div class="applying-section">
+                <div class="test4 bg-secondary">
+                    <div class="container-fluid">
+                        <div class="cards row bg-danger">
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-md-3 mx-1" style="width: 18rem;">
+                                <div class="inner bg-warning">
+                                    <img src="./images/ben-garratt.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make
+                                            up the bulk of the card’s content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+
+
+    <div class="new-topic 5-row-columns" id="5">
+
+        <div class="container">
+
+            <h3 class="mt-5 pt-5">5-row-columns</h3>
+
+            <div class="applying-section">
+                <div class="container surface-bg text-center">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6
+                    bg-info bg-gradient">
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                        <div class="border border-1 border-black ">Column</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+<div class="new-topic 6-gutters" id="6">
+
+    <div class="container surface-bg">
+
+        <h3 class="mt-5 pt-5">6-gutters</h3>
+
+
+        <div class="applying-section">
+            
+        </div>
+    </div>
+<br/>
+<br/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts files -->

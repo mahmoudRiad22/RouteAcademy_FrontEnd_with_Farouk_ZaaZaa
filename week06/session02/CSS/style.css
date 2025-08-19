@@ -10,31 +10,31 @@
 
 /* Color Variables */
 :root {
-    --bg: #ea2264; /* middle color Dominant background */
-    --surface: #f78d60; /* 1st right Cards/surfaces */
-    --buttons: #ea2264; /* 2nd right Interactive elements */
-    --accent: #640d5f; /* 1st left For highlights */
-    --text: #0d1164; /* 2nd left Primary text */
+    --bg: #bc9cb0; /* middle color Dominant background */
+    --surface: #d3cdd7; /* 1st right Cards/surfaces */
+    --buttons: #ddf2eb; /* 2nd right Interactive elements */
+    --accent: #606d5d; /* 1st left For highlights */
+    --text: #48564e; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
     --warning: #ffc107; /* Caution states */
     --error: #f44336; /* Destructive actions */
 }
-.my-bg {
-    background-color: #f78d60;
+.my-bg{
+    background-color: var(--bg)
 }
-.surface-bg {
-    background-color: #ea2264;
+.surface-bg{
+    background-color: var(--surface);
 }
-.buttons-bg {
-    background-color: #ea2264;
+.buttons-bg{
+    background-color: var(--buttons);
 }
-.accent-bg {
-    background-color: #640d5f;
+.accent-bg{
+    background-color: var(--accent);
 }
-.text-clr {
-    color: #0d1164;
+.text-clr{
+    color: var(--text);
 }
 
 body {
@@ -44,7 +44,7 @@ body {
     font-size: medium;
 }
 
-h1 {
+h1{
     text-align: center;
     margin: 15px 0px;
     font-family: "Playwrite IT Moderna";
@@ -72,11 +72,6 @@ p {
     font-size: medium;
 }
 
-.container {
-    background-color: var(--surface);
-    width: 70%;
-    margin: auto;
-}
 a {
     text-decoration: none;
     display: block;
@@ -84,10 +79,10 @@ a {
     text-align: center;
     color: var(--text);
 }
-/* img {
+img {
     width: 100%;
     display: block;
-} */
+}
 .clear-fix {
     clear: both;
 }
@@ -130,46 +125,29 @@ a {
 /*****************************/
 /* #region nav-bar-icons */
 
-.nav-bar-icons {
-    position: fixed;
-    bottom: 0;
-    right: 0px;
-
-    width: 15%;
-    padding: 10px 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-bar-icons a i {
-    padding: 5px;
-    text-align: center;
-}
 .nav-bar-icons .fa-facebook:hover {
-    color: rgb(31, 109, 243);
+    color: rgb(31, 109, 243) !important; 
     transform: scale(1.3);
 }
-.nav-bar-icons a:hover .fa-linkedin {
+.nav-bar-icons .fa-linkedin:hover {
     transform: scale(1.3);
-    color: rgb(0, 0, 168);
+    color: rgb(0, 0, 168)!important;
 }
 .nav-bar-icons .fa-x-twitter:hover {
     transform: scale(1.3);
-    color: rgb(0, 0, 59);
+    color: rgb(174, 174, 177)!important;
 }
 .nav-bar-icons .fa-google:hover {
     transform: scale(1.3);
-    color: rgb(219, 63, 99);
+    color: rgb(219, 63, 99)!important;
 }
 .nav-bar-icons .fa-github:hover {
     transform: scale(1.3);
-    color: rgb(1, 0, 0);
+    color: rgb(200, 200, 200)!important;
 }
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
-
 /******************************************************************************/
 /******************************************************************************/
 /* #region flex-example */
