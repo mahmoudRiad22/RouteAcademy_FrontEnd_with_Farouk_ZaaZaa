@@ -10,11 +10,11 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
-    --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
+    --bg: #CFAB8D; /* middle color Dominant background */
+    --surface: #D9C4B0; /* 1st right Cards/surfaces */
+    --buttons: #D9C4B0; /* 2nd right Interactive elements */
+    --accent: #ECEEDF; /* 1st left For highlights */
+    --text: black; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
@@ -49,17 +49,15 @@ h1{
     margin: 15px 0px;
     font-family: "Playwrite IT Moderna";
     font-weight: 400;
-    text-transform: capitalize;
 }
 h2,
 h3,
 h4,
 h5,
 h6 {
-    text-align: center;
     font-family: "Playwrite IT Moderna";
     font-weight: 400;
-    text-transform: capitalize;
+    text-align: center;
 }
 
 html {
@@ -72,11 +70,7 @@ p {
     font-size: medium;
 }
 
-.container {
-    background-color: var(--surface);
-    width: 70%;
-    margin: auto;
-}
+
 a {
     text-decoration: none;
     display: block;
@@ -84,13 +78,7 @@ a {
     text-align: center;
     color: var(--text);
 }
-img {
-    width: 100%;
-    display: block;
-}
-.clear-fix {
-    clear: both;
-}
+
 /* #endregion Global CSS */
 /*****************************/
 /*****************************/
@@ -153,3 +141,29 @@ img {
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 1-recape */
+
+h2::after {
+    content: "";
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+/* #endregion 1-recape */
+/******************************************************************************/
+/******************************************************************************/
+
+
