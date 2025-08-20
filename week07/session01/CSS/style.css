@@ -264,3 +264,63 @@ h2::after {
 /* #endregion 4-category section */
 /******************************************************************************/
 /******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 5-carsouel */
+#slide1{
+    position: relative;
+}
+.cicle-60{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.cicle-120{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+#slide1 img{
+    /* position: absolute; */
+    /* top: -15%; */
+
+    /* transform: translateX(-50%); */
+    transform: translateY(50%);
+}
+#slide1 .content .content-title h3{
+    position: relative;
+    padding-bottom: 10px;
+}
+#slide1 .content .content-title h3::after {
+    content: "";
+
+    width: 15%;
+    height: 5px;
+    background-color: rgb(114, 197, 225);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.carousel-control-prev, .carousel-control-next{
+    transform: translateY(10%);
+}
+.carousel-indicators [data-bs-target], .carousel-indicators [data-bs-target] img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-indent: 0;
+    display: block;
+}
+/* #endregion 5-carsouel */
+/******************************************************************************/
+/******************************************************************************/
+
+
