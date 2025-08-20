@@ -7,6 +7,10 @@
     src: url(../fonts/SourceSans3-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
 /* #endregion fonts */
 /******************************************************************************/
 /******************************************************************************/
