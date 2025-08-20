@@ -81,6 +81,27 @@ a {
 /*****************************/
 /*****************************/
 
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region fonts */
+
+@font-face {
+    font-family: "Heebo";
+    src: url(../fonts/Heebo-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+/* #endregion fonts */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
 /*****************************/
 /*****************************/
 /* #region nav-bar */
@@ -255,10 +276,10 @@ h2::after {
 .bg12 {
     background-color: #FBE9EB;
 }
-.card-item{
+#category .card-item{
     transition: transform .25s;
 }
-.card-item:hover{
+#category .card-item:hover{
     transform: translateY(-8px);
 }
 /* #endregion 4-category section */
@@ -322,5 +343,88 @@ h2::after {
 /* #endregion 5-carsouel */
 /******************************************************************************/
 /******************************************************************************/
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 6-navs&tabs */
+
+.bg-gray{
+    background-color: rgb(240, 240, 240);
+}
+.bg-lighblue{
+    background-color: #cae0f3;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #066AC9;
+}
+.all-levels{
+    background-color: rgba(190, 6, 190, 0.217);
+    color: purple;
+    font-size: 16px;
+}
+.bg-heart{
+    color: #D6293E;
+}
+.tabs .card-title{
+    font-size: 26px;
+    font-family: "Heebo";
+    font-weight: 500;
+    line-height: 33px   ;
+    color: black;
+    transition: color 1s;
+}
+.tabs .card-title a:hover{
+    color: #066ac9;
+}
+.card-text{
+    font-size: 19px;
+    font-family: "Roboto";
+    color: #747579;
+}
+
+.scrollSpy .navbar-nav .nav-link.active, .scrollSpy.navbar-nav .nav-link.show{
+border-radius: 10px;
+background-color: lightskyblue;
+color: black;
+
+}
+/* #endregion 6-navs&tabs */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 7-scrollSpy */
+
+.scrollSpy .navbar-nav .nav-link.active, .scrollSpy.navbar-nav .nav-link.show{
+border-radius: 10px;
+background-color: lightskyblue;
+color: black;
+
+}
+.scrollSpy .applying-section #navbar-example{
+    top: 50px;
+
+}
+.three .applying-section #navbar-example2{
+    top: 50px;
+
+}
+.four .applying-section nav{
+    top: 50px;
+    z-index: 1030;
+}
+/* #endregion 7-scrollSpy */
+/******************************************************************************/
+/******************************************************************************/
+
+
 
 
