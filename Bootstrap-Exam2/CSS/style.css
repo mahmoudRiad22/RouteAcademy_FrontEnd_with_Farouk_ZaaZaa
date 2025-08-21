@@ -41,8 +41,17 @@ a {
     --text-black: #1f1f1f;
     --text-light: #787878;
 
-    --bg-offwhite: #F7F7F7;
+    --bg-offwhite: #f7f7f7;
     --bg-darkgrey: #616161;
+}
+.bg-offwhite {
+    background-color: #f7f7f7;
+}
+.bg-darkgrey {
+    background-color: #616161;
+}
+ul li {
+    list-style: none;
 }
 /* #endregion CSS Global */
 /******************************************************************************/
@@ -245,7 +254,7 @@ a {
     color: var(--text-black);
 }
 .teams .teams-title h2::after {
-    content: attr(data-first-letter);
+    content: "c";
     position: absolute;
     top: 35%;
     left: 49%;
@@ -261,7 +270,7 @@ a {
     line-height: 23px;
     color: var(--text-light);
 }
-.teams .card-item:hover .layer{
+.teams .card-item:hover .layer {
     transform: translateY(0px);
     opacity: 1;
     visibility: visible;
@@ -269,7 +278,7 @@ a {
 .teams .card-item .layer {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 195, 218, 0.90);
+    background-color: rgba(0, 195, 218, 0.9);
 
     position: absolute;
     top: 0;
@@ -279,7 +288,7 @@ a {
     opacity: 0;
     visibility: hidden;
 
-    transition: all .35s ease;
+    transition: all 0.35s ease;
 }
 .teams .card-item .layer .links_ a {
     font-family: "SourceSans3";
@@ -287,13 +296,13 @@ a {
     font-weight: 600;
     line-height: 18px;
 }
-.teams .card-item .layer .info_ h5{
+.teams .card-item .layer .info_ h5 {
     font-family: "Poppins-Regular";
     font-size: 13px;
     font-weight: 600;
     line-height: 17px;
 }
-.teams .card-item .layer .info_ p{
+.teams .card-item .layer .info_ p {
     font-family: "Poppins-Regular";
     font-size: 12px;
     font-weight: 400;
@@ -301,5 +310,54 @@ a {
 }
 
 /* #endregion teams */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region services */
+
+.services .top-sec h4 {
+    color: white;
+    font-family: "Poppins-Regular";
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+}
+.services .bottom-sec h2 {
+    font-family: "Poppins-Bold";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 49px;
+    position: relative;
+    /* color: rebeccapurple; */
+    
+}
+.services .bottom-sec h2::after {
+    content: "w";
+    position: absolute;
+    bottom: 30%;
+    left: 2%;
+    /* transform: translateX(-100%); */
+    color: black;
+    transform: scale(2);
+    /* z-index: -1; */
+    color: rgba(255, 255, 255, 0.1);
+}
+.services .bottom-sec p {
+    width: 75%;
+    font-family: "SourceSans3";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.services .bottom-sec ul li{
+    font-family: "SourceSans3";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* #endregion services */
 /******************************************************************************/
 /******************************************************************************/
