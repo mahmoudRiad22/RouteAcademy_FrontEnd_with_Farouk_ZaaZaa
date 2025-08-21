@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bezel | Creative Multi-purpose HTML Template</title>
-
+    <title>Bezel </title>
+<!-- | Creative Multi-purpose HTML Template -->
 
     <!-- ****************************** -->
     <!-- ****************************** -->
@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/fonts.css"/>
     <link rel="stylesheet" href="./CSS/style.css" />
 
     <!-- #endregion Links -->
@@ -40,7 +41,7 @@
     <!-- ****************************** -->
     <!-- #region navbar -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top opacity-0">
         <div class="container">
 
             <a class="navbar-brand" href="#">bezel</a>
@@ -54,10 +55,10 @@
             <div class="collapse navbar-collapse bg-danger" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">about</a>
+                        <a class="nav-link" href="#about">about</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">team</a>
@@ -90,16 +91,103 @@
                     </li>
                 </ul>
 
-               
+
             </div>
 
         </div>
-    
+
     </nav>
-    
+
     <!-- #endregion navbar -->
     <!-- ****************************** -->
     <!-- ****************************** -->
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Home -->
+    <section id="home" class="home min-vh-100">
+
+        <div id="carouselExampleIndicators" class="carousel slide position-relative">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item bg-slide-1 active vh-100 position-relative">
+                    <div class="carousel-caption carousel-caption-style d-none d-md-block position-absolute">
+                        <h1 class="fadeInUp-100ms">Get Awesome</h1>
+                        <p class="fadeInUp-125ms">We are an innovative company making digital stuff.</p>
+                        <div class="fadeInUp-165ms">
+                            <button class="btns btn shiny-button rounded-1 py-0 px-3" type="button"> Read More</button>
+                            <button class="btns-outline btn border border-1 rounded-1 ms-2 py-0 px-3" type="button"> Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item bg-slide-2 vh-100 position-relative">
+                    <div class="carousel-caption carousel-caption-style d-none d-md-block position-absolute">
+                        <h1 class="fadeInUp-100ms">Create with Bezel</h1>
+                        <p class="fadeInUp-125ms">We help ambitious companies create new values.</p>
+                        <div class="fadeInUp-165ms">
+                            <button class="btns btn shiny-button rounded-1 py-0 px-4" type="button"> Hire Us</button>
+                            <button class="btns-outline btn border border-1 rounded-1 ms-2 py-0 px-4" type="button"> Services</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-btns position-absolute row flex-column">
+                <button class=" carousel-prev-btn py-1 px-3 ms-2" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <button class="carousel-next-btn py-1 px-3 ms-2" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <hr class="p-0 m-0"/>
+
+    <!-- #endregion Home -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region About -->
+
+    <section class="about min-vh-100 bg-light" id="about">
+        <div class="container-fluid text-center p-4">
+            <div class="inner p-4">
+                <div class="about-content w-75 m-auto p-5 pb-3">
+                    <h6 class=" text-uppercase"><b>who we are</b></h6>
+                    <p>We are an innovative company. We develop and design <span id="text-anim"><b>sofwares</b></span>
+                        costumers around the world. Our clients are some of the most forward-looking companies in the
+                        world.
+                    </p>
+                </div>
+                <button type="button" class="btn1 btn btn-light py-0 px-4 border border-2 rounded-0 text-uppercase">read
+                    more</button>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="p-0 m-0"/>
+
+    <!-- #endregion About -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
 
 
 

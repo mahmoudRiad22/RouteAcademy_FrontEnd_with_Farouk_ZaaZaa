@@ -1,16 +1,225 @@
 /******************************************************************************/
 /******************************************************************************/
-/* #region fonts */
+/* #region CSS Global */
 
-@font-face {
-    font-family: " source sans 3";
-    src: url(../fonts/SourceSans3-VariableFont_wght.ttf);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins-Regular.ttf);
+html {
+    scroll-behavior: smooth;
 }
-/* #endregion fonts */
+
+body {
+    /* font-family: "SourceSans3-Regular"; */
+    /* font-family: "SourceSans3-Medium"; */
+    font-family: "SourceSans3";
+}
+::selection {
+    background-color: black;
+    color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins-Regular";
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --btn-bg-color: #00c3da;
+    --btn-highlight: #1ad9f0;
+}
+/* #endregion CSS Global */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region Home */
+
+.bg-slide-2 {
+    background: linear-gradient(rgba(19, 19, 19, 0.2), rgba(19, 19, 19, 0.2)),
+        url(../images/imgi_36_bg-image-29.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bg-slide-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/imgi_37_bg-image-28.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+#home .carousel-item .carousel-caption {
+    top: 30%;
+}
+
+.fadeInUp-100ms {
+    opacity: 0;
+    animation: fadeInUp 1s ease 1s forwards;
+}
+.fadeInUp-125ms {
+    opacity: 0;
+    animation: fadeInUp 1s ease 1.25s forwards;
+}
+.fadeInUp-165ms {
+    opacity: 0;
+    animation: fadeInUp 1s ease 1.65s forwards;
+}
+.fadeInUp-2-half-s {
+    opacity: 0;
+    animation: fadeInUp 1s ease 2.5s forwards;
+}
+.fadeInUp-3s {
+    opacity: 0;
+    animation: fadeInUp 1s ease 3s forwards;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /* transform: translateY(50px); */
+        transform: translateZ(100%);
+    }
+    to {
+        opacity: 1;
+
+        /* transform: translateY(0); */
+        transform: translateZ(0px);
+    }
+}
+.carousel-caption-style h1 {
+    font-family: "Poppins-Bold";
+    font-size: 95px;
+    font-weight: 700;
+    line-height: 125px;
+}
+.carousel-caption-style p{
+    font-family: "Poppins-Regular";
+}
+#home .carousel-btns {
+    top: 50%;
+}
+.carousel-prev-btn, .carousel-next-btn  {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: auto;
+}
+.carousel-next-btn i, .carousel-prev-btn i{
+    font-family: "SourceSans3-ExtraLight";
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 28px;
+
+}
+
+.btns {
+    color: white;
+    background-color: var(--btn-bg-color);
+    transition: transform 0.25s background-color 0.25s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.btns:hover {
+    transform: translateY(-1px);
+    background-color: var(--btn-highlight);
+}
+.btns-outline {
+    color: white;
+    background-color: transparent;
+    transition: transform 0.25s background-color 0.5s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.btns-outline:hover {
+    transform: translateY(-1px);
+    background-color: white;
+    color: black;
+}
+.shiny-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-button:hover:before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+
+    animation: shine 3s 0.25s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+/* #endregion Home */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region about */
+
+.about .about-content #text-anim {
+    color: #09c;
+}
+.about .about-content h6 {
+    font-family: "Poppins-SemiBold";
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.about .about-content p {
+    font-family: "SourceSans3";
+
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+.about .inner .btn1 {
+    font-family: "Poppins-Regular";
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 48px;
+}
+.about .inner .btn1:hover {
+    background-color: black;
+    color: white;
+}
+/* #endregion about */
 /******************************************************************************/
 /******************************************************************************/
