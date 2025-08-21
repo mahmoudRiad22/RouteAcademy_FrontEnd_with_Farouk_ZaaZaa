@@ -52,6 +52,16 @@ a {
 ul li {
     list-style: none;
 }
+.circle-100px {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.circle-sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 /* #endregion CSS Global */
 /******************************************************************************/
 /******************************************************************************/
@@ -421,7 +431,7 @@ ul li {
     font-weight: 400;
     line-height: 24px;
 }
-.pricing .card-item .inner button{
+.pricing .card-item .inner button {
     font-family: "Poppins-Regular";
     font-size: 12px;
     font-weight: 600;
@@ -431,9 +441,124 @@ ul li {
     background-color: var(--btn-bg);
     color: white;
 }
-.pricing .card-item .inner button:hover{
+.pricing .card-item .inner button:hover {
     background-color: var(--btn-highlight);
 }
 /* #endregion pricing */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region contact */
+
+.contact {
+    /* background-color: lightpink; */
+}
+.contact .card-item {
+    /* width: 70%; */
+}
+
+.contact .card-item .card-content h4 {
+    font-family: "Poppins-Bold";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+}
+.contact .card-item .card-content span {
+    font-family: "Poppins-SemiBold";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--text-light);
+}
+
+.contact .card-item .card-content p {
+    font-family: "SourceSans3";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+}
+.contact h6 {
+    font-family: "Poppins-Regular";
+    font-family: "Poppins-SemiBold";
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+}
+.contact .card-item img {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.contact .carousel-indicators {
+    /* margin-top: 50px; */
+    transform: translateY(150%);
+    /* background-color: blue; */
+}
+.contact .carousel-indicators [data-bs-target] {
+    text-indent: 0;
+    background-color: #dddddd;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.contact .carousel-indicators .active {
+    background-color: var(--btn-highlight);
+}
+.contact .carousel .prev-btn,
+.contact .carousel .next-btn {
+    font-family: "SourceSans3";
+    /* font-family: "Poppins-Thin"; */
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.contact .carousel-control-next,
+.contact .carousel-control-prev {
+    top: auto;
+    display: flex;
+    transform: translate(0, -400%);
+    color: rgba(120, 120, 120,.3);
+    opacity: 1;
+}
+.contact .carousel-control-prev:hover .next-btn {
+    color: red;
+}
+
+.contact [data-prev-btn]:hover {
+    color: var(--btn-highlight);
+    animation: move-left .25s ease forwards;
+}
+.contact [data-next-btn]:hover {
+    color: var(--btn-highlight);
+    animation: move-right .25s ease forwards;
+}
+@keyframes move-left {
+    0% {
+    transform: translate(0, -400%);
+    }
+    50% {
+    /* transform: translate(-5%,-400%); */
+    }
+    100% {
+    transform: translate(-5%,-400%);
+    }
+}
+@keyframes move-right {
+    0% {
+    transform: translate(0, -400%);
+    }
+    50% {
+    /* transform: translate(-5%,-400%); */
+    }
+    100% {
+    transform: translate(+5%,-400%);
+    }
+}
+/* #endregion contact */
 /******************************************************************************/
 /******************************************************************************/
