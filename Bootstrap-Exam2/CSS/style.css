@@ -40,8 +40,7 @@ a {
 
     --text-black: #1f1f1f;
     --text-light: #787878;
-
-    --bg-offwhite: #f7f7f7;
+    --bg-offwhite: #f8f9fa;
     --bg-darkgrey: #616161;
 }
 .bg-offwhite {
@@ -331,18 +330,13 @@ ul li {
     font-weight: 700;
     line-height: 49px;
     position: relative;
-    /* color: rebeccapurple; */
-    
 }
 .services .bottom-sec h2::after {
     content: "w";
     position: absolute;
     bottom: 30%;
     left: 2%;
-    /* transform: translateX(-100%); */
-    color: black;
     transform: scale(2);
-    /* z-index: -1; */
     color: rgba(255, 255, 255, 0.1);
 }
 .services .bottom-sec p {
@@ -352,12 +346,94 @@ ul li {
     font-weight: 400;
     line-height: 24px;
 }
-.services .bottom-sec ul li{
+.services .bottom-sec ul li {
     font-family: "SourceSans3";
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
 /* #endregion services */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region pricing */
+
+.pricing .pricing-title h2 {
+    position: relative;
+    font-family: "Poppins-Bold";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 49px;
+    color: var(--text-black);
+}
+.pricing .pricing-title h2::after {
+    content: "c";
+    position: absolute;
+    top: -30%;
+    left: 48%;
+    transform: scale(2.5);
+    color: rgba(0, 0, 0, 0.1);
+}
+.pricing .pricing-title p {
+    font-family: "SourceSans3";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--text-light);
+}
+.pricing .card-item .inner h2 {
+    font-family: "Poppins-SemiBold";
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 72px;
+}
+.pricing .card-item .inner h2 .my-dollar {
+    font-family: "Poppins-Thin";
+    font-family: "Poppins-Regular";
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.pricing .card-item .inner h4 {
+    font-family: "Poppins-Regular";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+}
+.pricing .card-item .inner .card-top .gold-badge {
+    font-family: "Poppins-Regular";
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 14px;
+    background-color: #00c3da;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+.pricing .card-item .inner .card-mid span {
+    font-family: "SourceSans3";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.pricing .card-item .inner button{
+    font-family: "Poppins-Regular";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 40px;
+    border-radius: 5px;
+    padding: 0px 20px;
+    background-color: var(--btn-bg);
+    color: white;
+}
+.pricing .card-item .inner button:hover{
+    background-color: var(--btn-highlight);
+}
+/* #endregion pricing */
 /******************************************************************************/
 /******************************************************************************/
