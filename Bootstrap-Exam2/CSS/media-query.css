@@ -2,23 +2,14 @@
 /* // No media query for `xs` since this is the default in Bootstrap */
 
 /* -sm- Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-    /******************************************************************************/
-    /******************************************************************************/
-    /* #region home */
 
+@media (min-width: 576px) {
     .home .carousel-caption-style h1 {
         font-family: "Poppins-Bold";
         font-size: 60px;
         font-weight: 700;
         line-height: 78px;
     }
-    /* .contact-pt2 .part2 .map iframe {
-        height: 100% !important;
-    } */
-    /* #endregion home */
-    /******************************************************************************/
-    /******************************************************************************/
 }
 
 /* -md- Medium devices (tablets, 768px and up) */
@@ -30,12 +21,21 @@
     .contact .part1 .carousel-inner .carousel-item .card-item {
         width: 100% !important;
     }
+        .services .bottom-sec p {
+        width: 100%;
+        background-color: blue;
+    }
+
 }
 
 /* -lg- Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .contact .part1 .carousel-inner .carousel-item .card-item {
         width: 75% !important;
+    }
+    .services .bottom-sec p {
+        width: 80%;
+        background-color: red;
     }
 }
 
