@@ -1,0 +1,41 @@
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* -sm- Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region home */
+
+    .home .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 78px;
+    }
+    /* .contact-pt2 .part2 .map iframe {
+        height: 100% !important;
+    } */
+    /* #endregion home */
+    /******************************************************************************/
+    /******************************************************************************/
+}
+
+/* -md- Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .contact-pt2 .part2 .map iframe {
+        height: 100% !important;
+    }
+}
+
+/* -lg- Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* -xl- X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* -xx-l XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
