@@ -1,677 +1,654 @@
-/******************************************************************************/
-/******************************************************************************/
-/* #region CSS Global */
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region CSS Global */
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    /* font-family: "SourceSans3-Regular"; */
-    /* font-family: "SourceSans3-Medium"; */
-    font-family: "SourceSans3";
-    background-color: darkred;
-}
-::selection {
-    background-color: rgb(31, 31, 31);
-    color: white;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Poppins-Regular";
-}
-
-a {
-    text-decoration: none;
-}
-
-:root {
-    --btn-bg: #00c3da;
-    --btn-highlight: #1ad9f0;
-
-    --text-black: #1f1f1f;
-    --text-light: #787878;
-    --bg-offwhite: #f8f9fa;
-    --bg-darkgrey: #616161;
-}
-.bg-offwhite {
-    background-color: #f7f7f7;
-}
-.bg-darkgrey {
-    background-color: #616161;
-}
-ul li {
-    list-style: none;
-}
-.circle-100px {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-.circle-sm {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-.shiny-button {
-    position: relative;
-    overflow: hidden;
-}
-
-.shiny-button:hover:before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: -100%;
-
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-
-    animation: shine 3s 0.25s infinite;
-}
-/* #endregion CSS Global */
-/******************************************************************************/
-/******************************************************************************/
-
-
-
-/******************************************************************************/
-/******************************************************************************/
-/* #region navbar */
-
-.navbar .logo-img{
-    max-height: 40px;
-}
-
-.navbar .nav-item .nav-link{
-    font-family: "Poppins-Regular";
-    font-family: "Poppins-SemiBold";
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 20px;
-    color: rgb(36, 36, 36);
-    padding-left: 25px;
-}
-.navbar .nav-item:hover .nav-link{
-    color: rgb(120, 120, 120);
-}
-.navbar .nav-item .active{
-    color: rgb(120, 120, 120);
-}
-.navbar .socials .nav-item .nav-link{
-    color: rgb(36, 36, 36);
-    font-family: "Poppins-SemiBold";
-    font-size: 13px;
-    font-weight: 400;
-    font-style: italic;
-
-}
-.navbar .socials .nav-item:hover .nav-link{
-    color: rgb(120, 120, 120);
-    
-}
-
-/* #endregion navbar */
-/******************************************************************************/
-/******************************************************************************/
-
-
-
-/******************************************************************************/
-/******************************************************************************/
-/* #region Home */
-.home .carousel-indicators{
-    position: absolute;
-    top: 95%;
-    transform: translateY(40%) !important;
-    /* background-color: green; */
-}
-.bg-slide-1 {
-    background: linear-gradient(#1f1f2090, #1f1f2090), url(../images/imgi_37_bg-image-28.jpg);
-    background-position: center 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.bg-slide-2 {
-    background: linear-gradient(#1f1f2090, #1f1f2090), url(../images/imgi_36_bg-image-29.jpg);
-    background-position: center 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#home .carousel-item .carousel-caption {
-    top: 30%;
-}
-
-.fadeInUp-100ms {
-    opacity: 0;
-    animation: fadeInUp 1s ease 1s forwards;
-}
-.fadeInUp-125ms {
-    opacity: 0;
-    animation: fadeInUp 1s ease 1.25s forwards;
-}
-.fadeInUp-165ms {
-    opacity: 0;
-    animation: fadeInUp 1s ease 1.65s forwards;
-}
-.fadeInUp-2-half-s {
-    opacity: 0;
-    animation: fadeInUp 1s ease 2.5s forwards;
-}
-.fadeInUp-3s {
-    opacity: 0;
-    animation: fadeInUp 1s ease 3s forwards;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        /* transform: translateY(50px); */
-        transform: translateZ(100%);
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
-    to {
-        opacity: 1;
 
-        /* transform: translateY(0); */
-        transform: translateZ(0px);
+    html {
+        scroll-behavior: smooth;
     }
-}
 
-.carousel-caption-style h1 {
-    font-family: "Poppins-Bold";
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 78px;
-    background-color: red;
-}
-.carousel-caption-style p {
-    font-family: "Poppins-Regular";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21px;
-}
-#home .carousel-btns {
-    top: 50%;
-}
-.carousel-prev-btn,
-.carousel-next-btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: auto;
-    transition: color .35 ease;
-}
-.carousel-next-btn i,
-.carousel-prev-btn i {
-    font-family: "SourceSans3-ExtraLight";
-    font-size: 28px;
-    font-weight: 100;
-    line-height: 28px;
-}
+    body {
+        font-family: "SourceSans3";
+    }
+    ::selection {
+        background-color: rgb(31, 31, 31);
+        color: white;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Poppins-Regular";
+    }
 
-.btns {
-    color: white;
-    background-color: var(--btn-bg);
-    transition: transform 0.25s background-color 0.25s;
+    a {
+        text-decoration: none;
+    }
 
-    font-family: "Poppins-Regular";
+    :root {
+        --btn-bg: #00c3da;
+        --btn-highlight: #1ad9f0;
 
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 40px;
-}
+        --text-black: #1f1f1f;
+        --text-light: #787878;
+        --bg-offwhite: #f8f9fa;
+        --bg-darkgrey: #616161;
+    }
+    .bg-offwhite {
+        background-color: #f7f7f7;
+    }
+    .bg-darkgrey {
+        background-color: #616161;
+    }
+    ul li {
+        list-style: none;
+    }
+    .circle-100px {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .circle-sm {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .shiny-button {
+        position: relative;
+        overflow: hidden;
+    }
 
-.btns:hover {
-    transform: translateY(-1px);
-    background-color: var(--btn-highlight);
-}
-.btns-outline {
-    color: white;
-    background-color: transparent;
-    transition: transform 0.25s background-color 0.5s;
+    .shiny-button:hover:before {
+        content: "";
 
-    font-family: "Poppins-Regular";
-
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 40px;
-}
-
-.btns-outline:hover {
-    transform: translateY(-1px);
-    background-color: white;
-    color: black;
-}
-
-@keyframes shine {
-    0% {
+        position: absolute;
+        top: 0;
         left: -100%;
+
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+
+        animation: shine 3s 0.25s infinite;
     }
-    20% {
-        left: 100%;
+    /* #endregion CSS Global */
+    /******************************************************************************/
+    /******************************************************************************/
+
+
+
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region navbar */
+
+    .navbar .logo-img{
+        max-height: 40px;
     }
-    100% {
-        left: 100%;
+
+    .navbar .nav-item .nav-link{
+        font-family: "Poppins-Regular";
+        font-family: "Poppins-SemiBold";
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        color: rgb(36, 36, 36);
+        padding-left: 25px;
     }
-}
+    .navbar .nav-item:hover .nav-link{
+        color: rgb(120, 120, 120);
+    }
+    .navbar .nav-item .active{
+        color: rgb(120, 120, 120);
+    }
+    .navbar .socials .nav-item .nav-link{
+        color: rgb(36, 36, 36);
+        font-family: "Poppins-SemiBold";
+        font-size: 13px;
+        font-weight: 400;
+        font-style: italic;
 
-.home .layer::before {
-    content: "";
+    }
+    .navbar .socials .nav-item:hover .nav-link{
+        color: rgb(120, 120, 120);
+        
+    }
 
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-110%);
+    /* #endregion navbar */
+    /******************************************************************************/
+    /******************************************************************************/
 
-    transition: transform .35s ease;
-} 
 
-.home .layer:hover::before {
-    transform: translateX(0%);
-}
-.carousel-prev-btn:hover,
-.carousel-next-btn:hover {
-    color: #777777;
-}
-/* #endregion Home */
-/******************************************************************************/
-/******************************************************************************/
 
-/******************************************************************************/
-/******************************************************************************/
-/* #region about */
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region Home */
 
-.about .about-content #text-anim {
-    color: #09c;
-}
-.about .about-content h6 {
-    font-family: "Poppins-SemiBold";
-    color: var(--text-black);
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 17px;
-}
-.about .about-content p {
-    font-family: "SourceSans3";
-    color: var(--text-light);
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 36px;
-}
-.about .inner .btn1 {
-    font-family: "Poppins-Regular";
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 48px;
-    background-color: transparent;
-    border: 1px solid white;
-    border-radius: 0;
-}
-.about .inner .btn1:hover {
-    background-color: black;
-    color: white;
-}
-/* #endregion about */
-/******************************************************************************/
-/******************************************************************************/
+    .bg-slide-1 {
+        background: linear-gradient(#1f1f2090, #1f1f2090), url(../images/imgi_37_bg-image-28.jpg);
+        background-position: center 20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .bg-slide-2 {
+        background: linear-gradient(#1f1f2090, #1f1f2090), url(../images/imgi_36_bg-image-29.jpg);
+        background-position: center 20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-/******************************************************************************/
-/******************************************************************************/
-/* #region teams */
-.teams .teams-title h2 {
-    position: relative;
-    font-family: "Poppins-Bold";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 49px;
-    color: var(--text-black);
-}
-.teams .teams-title h2::after {
-    content: "c";
-    position: absolute;
-    top: 35%;
-    left: 49%;
-    transform: translateX(-100%);
-    transform: scale(2.5);
-    z-index: -1;
-    color: rgba(0, 0, 0, 0.05);
-}
-.teams .teams-title p {
-    font-family: "SourceSans3";
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23px;
-    color: var(--text-light);
-}
-.teams .card-item:hover .layer {
-    transform: translateY(0px);
-    opacity: 1;
-    visibility: visible;
-}
-.teams .card-item .layer {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 195, 218, 0.9);
+    #home .carousel-item .carousel-caption {
+        top: 30%;
+    }
 
-    position: absolute;
-    top: 0;
-    left: 0;
+    .fadeInUp-100ms {
+        opacity: 0;
+        animation: fadeInUp 1s ease 1s forwards;
+    }
+    .fadeInUp-125ms {
+        opacity: 0;
+        animation: fadeInUp 1s ease 1.25s forwards;
+    }
+    .fadeInUp-165ms {
+        opacity: 0;
+        animation: fadeInUp 1s ease 1.65s forwards;
+    }
+    .fadeInUp-2-half-s {
+        opacity: 0;
+        animation: fadeInUp 1s ease 2.5s forwards;
+    }
+    .fadeInUp-3s {
+        opacity: 0;
+        animation: fadeInUp 1s ease 3s forwards;
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateZ(100%);
+        }
+        to {
+            opacity: 1;
 
-    transform: translateY(15px);
-    opacity: 0;
-    visibility: hidden;
+            transform: translateZ(0px);
+        }
+    }
 
-    transition: all 0.35s ease;
-}
-.teams .card-item .layer .links_ a {
-    font-family: "SourceSans3";
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 18px;
-}
-.teams .card-item .layer .info_ h5 {
-    font-family: "Poppins-Regular";
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 17px;
-}
-.teams .card-item .layer .info_ p {
-    font-family: "Poppins-Regular";
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-}
+    .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 78px;
+    }
+    .carousel-caption-style p {
+        font-family: "Poppins-Regular";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    #home .carousel-btns {
+        top: 50%;
+    }
+    .carousel-prev-btn,
+    .carousel-next-btn {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        width: auto;
+        transition: color .35 ease;
+    }
+    .carousel-next-btn i,
+    .carousel-prev-btn i {
+        font-family: "SourceSans3-ExtraLight";
+        font-size: 28px;
+        font-weight: 100;
+        line-height: 28px;
+    }
 
-/* #endregion teams */
-/******************************************************************************/
-/******************************************************************************/
+    .btns {
+        color: white;
+        background-color: var(--btn-bg);
+        transition: transform 0.25s background-color 0.25s;
 
-/******************************************************************************/
-/******************************************************************************/
-/* #region services */
+        font-family: "Poppins-Regular";
 
-.services .top-sec h4 {
-    color: white;
-    font-family: "Poppins-Regular";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 40px;
+    }
 
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 17px;
-}
-.services .bottom-sec h2 {
-    font-family: "Poppins-Bold";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 49px;
-    position: relative;
-}
-.services .bottom-sec h2::after {
-    content: "w";
-    position: absolute;
-    bottom: 30%;
-    left: 2%;
-    transform: scale(2);
-    color: rgba(255, 255, 255, 0.05);
-}
-.services .bottom-sec p {
-    width: 100%;
-    font-family: "SourceSans3";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-}
-.services .bottom-sec ul li {
-    font-family: "SourceSans3";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-}
-/* #endregion services */
-/******************************************************************************/
-/******************************************************************************/
+    .btns:hover {
+        transform: translateY(-1px);
+        background-color: var(--btn-highlight);
+    }
+    .btns-outline {
+        color: white;
+        background-color: transparent;
+        transition: transform 0.25s background-color 0.5s;
 
-/******************************************************************************/
-/******************************************************************************/
-/* #region pricing */
+        font-family: "Poppins-Regular";
 
-.pricing .pricing-title h2 {
-    position: relative;
-    font-family: "Poppins-Bold";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 49px;
-    color: var(--text-black);
-}
-.pricing .pricing-title h2::after {
-    content: "c";
-    position: absolute;
-    top: -30%;
-    left: 48%;
-    transform: scale(2.5);
-    color: rgba(0, 0, 0, 0.05);
-}
-.pricing .pricing-title p {
-    font-family: "SourceSans3";
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23px;
-    color: var(--text-light);
-}
-.pricing .card-item .inner h2 {
-    font-family: "Poppins-SemiBold";
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 72px;
-}
-.pricing .card-item .inner h2 .my-dollar {
-    font-family: "Poppins-Thin";
-    font-family: "Poppins-Regular";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 40px;
+    }
 
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-}
-.pricing .card-item .inner h4 {
-    font-family: "Poppins-Regular";
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 17px;
-}
-.pricing .card-item .inner .card-top .gold-badge {
-    font-family: "Poppins-Regular";
-    font-size: 9px;
-    font-weight: 500;
-    line-height: 14px;
-    background-color: #00c3da;
-    vertical-align: middle;
-    border-radius: 15px;
-}
-.pricing .card-item .inner .card-mid span {
-    font-family: "SourceSans3";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-}
-.pricing .card-item .inner button {
-    font-family: "Poppins-Regular";
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 40px;
-    border-radius: 5px;
-    padding: 0px 20px;
-    background-color: var(--btn-bg);
-    color: white;
-}
-.pricing .card-item .inner button:hover {
-    background-color: var(--btn-highlight);
-}
-/* #endregion pricing */
-/******************************************************************************/
-/******************************************************************************/
+    .btns-outline:hover {
+        transform: translateY(-1px);
+        background-color: white;
+        color: black;
+    }
 
-/******************************************************************************/
-/******************************************************************************/
-/* #region contact */
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+        20% {
+            left: 100%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
 
-.contact .card-item .card-content h4 {
-    font-family: "Poppins-Bold";
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 31px;
-}
-.contact .card-item .card-content span {
-    font-family: "Poppins-SemiBold";
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    color: var(--text-light);
-}
+    .home .layer::before {
+        content: "";
 
-.contact .card-item .card-content p {
-    font-family: "SourceSans3";
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 27px;
-}
-.contact h6 {
-    font-family: "Poppins-Regular";
-    font-family: "Poppins-SemiBold";
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 17px;
-}
-.contact .card-item img {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-}
-.contact .carousel-indicators {
-    /* margin-top: 50px; */
-    transform: translateY(150%);
-    /* background-color: blue; */
-}
-.contact .carousel-indicators [data-bs-target] {
-    text-indent: 0;
-    background-color: #dddddd;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-.contact .carousel-indicators .active {
-    background-color: var(--btn-highlight);
-}
-.contact .carousel .prev-btn,
-.contact .carousel .next-btn {
-    font-family: "SourceSans3";
-    /* font-family: "Poppins-Thin"; */
-    font-size: 52px;
-    font-weight: 400;
-    line-height: 50px;
-}
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-110%);
 
-.contact .carousel-control-next,
-.contact .carousel-control-prev {
-    top: auto;
-    display: flex;
-    transform: translate(0, -400%);
-    color: rgba(120, 120, 120, 0.3);
-    opacity: 1;
-}
-.contact .carousel-control-prev:hover .next-btn {
-    color: red;
-}
+        transition: transform .35s ease;
+    } 
 
-.contact [data-prev-btn]:hover {
-    color: var(--btn-highlight);
-    animation: move-left 0.25s ease forwards;
-}
-.contact [data-next-btn]:hover {
-    color: var(--btn-highlight);
-    animation: move-right 0.25s ease forwards;
-}
-@keyframes move-left {
-    0% {
+    .home .layer:hover::before {
+        transform: translateX(0%);
+    }
+    .carousel-prev-btn:hover,
+    .carousel-next-btn:hover {
+        color: #777777;
+    }
+    /* #endregion Home */
+    /******************************************************************************/
+    /******************************************************************************/
+
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region about */
+
+    .about .about-content #text-anim {
+        color: #09c;
+    }
+    .about .about-content h6 {
+        font-family: "Poppins-SemiBold";
+        color: var(--text-black);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+    .about .about-content p {
+        font-family: "SourceSans3";
+        color: var(--text-light);
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 36px;
+    }
+    .about .inner .btn1 {
+        font-family: "Poppins-Regular";
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 48px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 0;
+    }
+    .about .inner .btn1:hover {
+        background-color: black;
+        color: white;
+    }
+    /* #endregion about */
+    /******************************************************************************/
+    /******************************************************************************/
+
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region teams */
+    .teams .teams-title h2 {
+        position: relative;
+        font-family: "Poppins-Bold";
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 49px;
+        color: var(--text-black);
+    }
+    .teams .teams-title h2::after {
+        content: "c";
+        position: absolute;
+        top: 35%;
+        left: 49%;
+        transform: translateX(-100%);
+        transform: scale(2.5);
+        z-index: -1;
+        color: rgba(0, 0, 0, 0.05);
+    }
+    .teams .teams-title p {
+        font-family: "SourceSans3";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        color: var(--text-light);
+    }
+    .teams .card-item:hover .layer {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+    .teams .card-item .layer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 195, 218, 0.9);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: translateY(15px);
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all 0.35s ease;
+    }
+    .teams .card-item .layer .links_ a {
+        font-family: "SourceSans3";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .teams .card-item .layer .info_ h5 {
+        font-family: "Poppins-Regular";
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 17px;
+    }
+    .teams .card-item .layer .info_ p {
+        font-family: "Poppins-Regular";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    /* #endregion teams */
+    /******************************************************************************/
+    /******************************************************************************/
+
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region services */
+
+    .services .top-sec h4 {
+        color: white;
+        font-family: "Poppins-Regular";
+
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 17px;
+    }
+    .services .bottom-sec h2 {
+        font-family: "Poppins-Bold";
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 49px;
+        position: relative;
+    }
+    .services .bottom-sec h2::after {
+        content: "w";
+        position: absolute;
+        bottom: 30%;
+        left: 2%;
+        transform: scale(2);
+        color: rgba(255, 255, 255, 0.05);
+    }
+    .services .bottom-sec p {
+        width: 100%;
+        font-family: "SourceSans3";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    .services .bottom-sec ul li {
+        font-family: "SourceSans3";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    /* #endregion services */
+    /******************************************************************************/
+    /******************************************************************************/
+
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region pricing */
+
+    .pricing .pricing-title h2 {
+        position: relative;
+        font-family: "Poppins-Bold";
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 49px;
+        color: var(--text-black);
+    }
+    .pricing .pricing-title h2::after {
+        content: "c";
+        position: absolute;
+        top: -30%;
+        left: 48%;
+        transform: scale(2.5);
+        color: rgba(0, 0, 0, 0.05);
+    }
+    .pricing .pricing-title p {
+        font-family: "SourceSans3";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        color: var(--text-light);
+    }
+    .pricing .card-item .inner h2 {
+        font-family: "Poppins-SemiBold";
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 72px;
+    }
+    .pricing .card-item .inner h2 .my-dollar {
+        font-family: "Poppins-Thin";
+        font-family: "Poppins-Regular";
+
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    .pricing .card-item .inner h4 {
+        font-family: "Poppins-Regular";
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+    .pricing .card-item .inner .card-top .gold-badge {
+        font-family: "Poppins-Regular";
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 14px;
+        background-color: #00c3da;
+        vertical-align: middle;
+        border-radius: 15px;
+    }
+    .pricing .card-item .inner .card-mid span {
+        font-family: "SourceSans3";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    .pricing .card-item .inner button {
+        font-family: "Poppins-Regular";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 40px;
+        border-radius: 5px;
+        padding: 0px 20px;
+        background-color: var(--btn-bg);
+        color: white;
+    }
+    .pricing .card-item .inner button:hover {
+        background-color: var(--btn-highlight);
+    }
+    /* #endregion pricing */
+    /******************************************************************************/
+    /******************************************************************************/
+
+    /******************************************************************************/
+    /******************************************************************************/
+    /* #region contact */
+
+    .contact .card-item .card-content h4 {
+        font-family: "Poppins-Bold";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 31px;
+    }
+    .contact .card-item .card-content span {
+        font-family: "Poppins-SemiBold";
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        color: var(--text-light);
+    }
+
+    .contact .card-item .card-content p {
+        font-family: "SourceSans3";
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 27px;
+    }
+    .contact h6 {
+        font-family: "Poppins-Regular";
+        font-family: "Poppins-SemiBold";
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+    .contact .card-item img {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+    .contact .carousel-indicators {
+        transform: translateY(150%);
+    }
+    .contact .carousel-indicators [data-bs-target] {
+        text-indent: 0;
+        background-color: #dddddd;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .contact .carousel-indicators .active {
+        background-color: var(--btn-highlight);
+    }
+    .contact .carousel .prev-btn,
+    .contact .carousel .next-btn {
+        font-family: "SourceSans3";
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 50px;
+    }
+
+    .contact .carousel-control-next,
+    .contact .carousel-control-prev {
+        top: auto;
+        display: flex;
         transform: translate(0, -400%);
+        color: rgba(120, 120, 120, 0.3);
+        opacity: 1;
     }
-    50% {
-        /* transform: translate(-5%,-400%); */
-    }
-    100% {
-        transform: translate(-5%, -400%);
-    }
-}
-@keyframes move-right {
-    0% {
-        transform: translate(0, -400%);
-    }
-    50% {
-        /* transform: translate(-5%,-400%); */
-    }
-    100% {
-        transform: translate(+5%, -400%);
-    }
-}
 
-.contact-pt2 textarea {
-    min-height: 110px;
-    resize: none;
-}
+    .contact [data-prev-btn]:hover {
+        color: var(--btn-highlight);
+        animation: move-left 0.25s ease forwards;
+    }
+    .contact [data-next-btn]:hover {
+        color: var(--btn-highlight);
+        animation: move-right 0.25s ease forwards;
+    }
+    @keyframes move-left {
+        0% {
+            transform: translate(0, -400%);
+        }
+        100% {
+            transform: translate(-5%, -400%);
+        }
+    }
+    @keyframes move-right {
+        0% {
+            transform: translate(0, -400%);
+        }
+        100% {
+            transform: translate(+5%, -400%);
+        }
+    }
 
-.contact-pt2 form .btn {
-    background-color: var(--btn-bg);
-    color: white;
-}
-.contact-pt2 form .btn:hover {
-    background-color: var(--btn-highlight);
-}
-.contact-pt2 form input.form-control:focus {
-    border: 2px solid black;
-    border-radius: 0;
-    box-shadow: none;
-}
-.contact-pt2 .my-form form button[type="submit"] {
-    background-color: var(--btn-bg);
-}
+    .contact-pt2 textarea {
+        min-height: 110px;
+        resize: none;
+    }
 
-.contact-pt2 .my-form h2 {
-    position: relative;
-    font-family: "Poppins-Bold";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 49px;
-    color: var(--text-black);
-}
-.contact-pt2 .my-form h2::after {
-    content: "c";
-    position: absolute;
-    top: -0.5em;
-    left: 0.1em;
-    transform: scale(2.5);
-    color: rgba(0, 0, 0, 0.05);
-}
-/* #endregion contact */
-/******************************************************************************/
-/******************************************************************************/
+    .contact-pt2 form .btn {
+        background-color: var(--btn-bg);
+        color: white;
+    }
+    .contact-pt2 form .btn:hover {
+        background-color: var(--btn-highlight);
+    }
+    .contact-pt2 form input.form-control:focus {
+        border: 2px solid black;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .contact-pt2 .my-form form button[type="submit"] {
+        background-color: var(--btn-bg);
+    }
+
+    .contact-pt2 .my-form h2 {
+        position: relative;
+        font-family: "Poppins-Bold";
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 49px;
+        color: var(--text-black);
+    }
+    .contact-pt2 .my-form h2::after {
+        content: "c";
+        position: absolute;
+        top: -0.5em;
+        left: 0.1em;
+        transform: scale(2.5);
+        color: rgba(0, 0, 0, 0.05);
+    }
+    /* #endregion contact */
+    /******************************************************************************/
+    /******************************************************************************/

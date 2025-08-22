@@ -5,14 +5,14 @@
 
 @media (min-width: 576px) {
     nav.navbar {
-        background-color: lime !important;
+        /* background-color: lime !important; */
     }
     .carousel-caption-style h1 {
         font-family: "Poppins-Bold";
         font-size: 50px;
         font-weight: 700;
         line-height: 78px;
-        background-color: lime !important;
+        /* background-color: lime !important; */
 
     }
     .btns {
@@ -42,14 +42,14 @@
 /* -md- Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     nav.navbar {
-        background-color: blue !important;
+        /* background-color: blue !important; */
     }
         .carousel-caption-style h1 {
         font-family: "Poppins-Bold";
         font-size: 70px;
         font-weight: 700;
         line-height: 100px;
-        background-color: lime !important;
+        /* background-color: lime !important; */
 
     }
 
@@ -87,14 +87,14 @@
     }
     .services .bottom-sec p {
         width: 100%;
-        background-color: blue;
+        /* background-color: blue; */
     }
 }
 
 /* -lg- Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     nav.navbar {
-        background-color: violet !important;
+        /* background-color: violet !important; */
     }
 
         .carousel-caption-style h1 {
@@ -102,7 +102,7 @@
         font-size: 95px;
         font-weight: 700;
         line-height: 128px;
-        background-color: lime !important;
+        /* background-color: lime !important; */
 
     }
     .about .about-content {
