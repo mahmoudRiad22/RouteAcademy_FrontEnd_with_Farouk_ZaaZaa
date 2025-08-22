@@ -18,7 +18,7 @@ body {
     font-family: "SourceSans3";
 }
 ::selection {
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     color: white;
 }
 h1,
@@ -86,6 +86,51 @@ input[type="number"]::-webkit-inner-spin-button {
 /* #endregion CSS Global */
 /******************************************************************************/
 /******************************************************************************/
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region navbar */
+
+.navbar .logo-img{
+    max-height: 40px;
+}
+
+.navbar .nav-item .nav-link{
+    font-family: "Poppins-Regular";
+    font-family: "Poppins-SemiBold";
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(36, 36, 36);
+    padding-left: 25px;
+}
+.navbar .nav-item:hover .nav-link{
+    color: rgb(120, 120, 120);
+}
+.navbar .nav-item .active{
+    color: rgb(120, 120, 120);
+}
+.navbar .socials .nav-item .nav-link{
+    color:violet;
+    color: rgb(36, 36, 36);
+    font-family: "Poppins-SemiBold";
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+
+}
+.navbar .socials .nav-item:hover .nav-link{
+    color: rgb(120, 120, 120);
+    
+}
+
+/* #endregion navbar */
+/******************************************************************************/
+/******************************************************************************/
+
+
 
 /******************************************************************************/
 /******************************************************************************/
@@ -158,6 +203,7 @@ input[type="number"]::-webkit-inner-spin-button {
     color: white;
     border: 1px solid white;
     width: auto;
+    transition: color .35 ease;
 }
 .carousel-next-btn i,
 .carousel-prev-btn i {
@@ -211,6 +257,28 @@ input[type="number"]::-webkit-inner-spin-button {
     100% {
         left: 100%;
     }
+}
+
+.home .layer::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-110%);
+
+    transition: transform .35s ease;
+} 
+
+.home .layer:hover::before {
+    transform: translateX(0%);
+}
+.carousel-prev-btn:hover,
+.carousel-next-btn:hover {
+    color: #777777;
 }
 /* #endregion Home */
 /******************************************************************************/

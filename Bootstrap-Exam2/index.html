@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bezel | Creative Multi-purpose HTML Template</title>
-    
+
 
     <!-- ****************************** -->
     <!-- ****************************** -->
@@ -36,63 +36,63 @@
 
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#scroll-target">
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region navbar -->
 
-    <nav class="navbar navbar-expand-lg bg-white fixed-top opacity-0">
+    <nav class="navbar navbar-expand-lg bg-danger p-1 fixed-top" id="scroll-target">
         <div class="container">
 
-            <a class="navbar-brand" href="#">bezel</a>
+            <!-- <div class=" d-flex p-0 justify-content-between align-items-center w-100"> -->
+                <a class="navbar-brand py-1" href="#">
+                    <img class="w-100 d-block logo-img" src="./images/imgi_2_logo-dark.png"
+                        alt="imgi_2_logo-dark.png" />
+                </a>
+                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse py-1" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#teams">teams</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">services</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href=".">wroks</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">contact</a>
+                        </li>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                        <ul class=" socials d-flex p-0">
 
-            <div class="collapse navbar-collapse bg-danger" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">about</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#teams">teams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">wroks</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">contact</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">contact</a>
-                    </li>
-
-                    <li class="nav-item ps-4">
-                        <a class="nav-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                </ul>
-
-
-            </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            <!-- </div> -->
 
         </div>
 
@@ -118,7 +118,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item bg-slide-1 active vh-100 position-relative">
-                        <div class="carousel-caption carousel-caption-style d-none d-md-block position-absolute">
+                        <div class="carousel-caption carousel-caption-style d-md-block position-absolute">
                             <h1 class="fadeInUp-100ms">Get Awesome</h1>
                             <p class="fadeInUp-125ms">We are an innovative company making digital stuff.</p>
                             <div class="fadeInUp-165ms">
@@ -142,15 +142,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-btns position-absolute row flex-column">
-                    <button class=" carousel-prev-btn py-1 px-3 ms-2" type="button"
-                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <i class="fa-solid fa-arrow-left-long"></i>
-                    </button>
-                    <button class="carousel-next-btn py-1 px-3 ms-2" type="button"
-                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <i class="fa-solid fa-arrow-right-long"></i>
-                    </button>
+                <div class="carousel-btns position-absolute row flex-column d-none d-md-flex">
+
+                    <div class="w-100 h-100 p-0 layer position-relative">
+                        <button class=" carousel-prev-btn py-1 px-3 ms-2 position-relative" type="button"
+                            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                    </div>
+                    <div class="w-100 h-100 p-0 layer position-relative">
+                        <button class="carousel-next-btn py-1 px-3 ms-2 position-relative" type="button"
+                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -465,7 +471,7 @@
     <!-- ****************************** -->
     <!-- #region contact -->
 
-    <section class="contact  contact-pt1 bg-offwhite  pb-4" id="contact" >
+    <section class="contact  contact-pt1 bg-offwhite  pb-4">
         <div class="container  text-center pt-5">
             <h6 class="text-uppercase pt-5">happy customer</h6>
 
@@ -536,10 +542,10 @@
         </div>
     </section>
 
-    <section class="contact-pt2">
+    <section class="contact-pt2" id="contact">
         <div class="container-fluid">
             <div class="part2 row mb-0">
-                <div class="map bg-success col-6 p-0 overflow-hidden">
+                <div class="map col-6 p-0 overflow-hidden">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1767935.6764214148!2d31.3246591!3d30.0655526!3m2!1i1024!2i768!4f13.1!2m1!1sroute%20academy%20location!5e0!3m2!1sen!2seg!4v1755780340951!5m2!1sen!2seg"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
