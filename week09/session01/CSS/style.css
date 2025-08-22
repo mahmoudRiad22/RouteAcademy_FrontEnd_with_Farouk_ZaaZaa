@@ -10,11 +10,11 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
+    --bg: #D6A99D; /* middle color Dominant background */
+    --surface: #FBF3D5; /* 1st right Cards/surfaces */
     --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
+    --accent: #D6DAC8; /* 1st left For highlights */
+    --text: #52645f; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
@@ -110,6 +110,14 @@ a {
     font-size: 20px;
     margin: 10px 0px;
     padding-left: 8px;
+}
+
+.navbar .dropdown-item{
+    color: white;
+}
+.navbar .dropdown-item:hover{
+    background-color: var(--accent);
+    color: black;
 }
 /* #endregion nav-bar */
 /*****************************/

@@ -7,3 +7,10 @@ fontawesome-free-6.7.2-web
 session-template
 bootstrap-5.3.7-dist
 images
+.stylelintrc.json
+.eslintrc.js
+jsconfig.json
+package-lock.json
+package.json
+.vscode
+node_modules
