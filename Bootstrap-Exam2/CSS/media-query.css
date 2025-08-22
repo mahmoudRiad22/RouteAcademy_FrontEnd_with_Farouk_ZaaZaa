@@ -9,12 +9,34 @@
     }
     .carousel-caption-style h1 {
         font-family: "Poppins-Bold";
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
         line-height: 78px;
         background-color: lime !important;
 
     }
+    .btns {
+    color: white;
+    background-color: var(--btn-bg);
+    transition: transform 0.25s background-color 0.25s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 48px;
+}
+.btns-outline {
+    color: white;
+    background-color: transparent;
+    transition: transform 0.25s background-color 0.5s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 48px;
+}
 }
 
 /* -md- Medium devices (tablets, 768px and up) */
@@ -22,6 +44,37 @@
     nav.navbar {
         background-color: blue !important;
     }
+        .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 100px;
+        background-color: lime !important;
+
+    }
+
+    .btns {
+    color: white;
+    background-color: var(--btn-bg);
+    transition: transform 0.25s background-color 0.25s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.btns-outline {
+    color: white;
+    background-color: transparent;
+    transition: transform 0.25s background-color 0.5s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+}
     .about .about-content {
         width: 90%;
     }
@@ -42,6 +95,15 @@
 @media (min-width: 992px) {
     nav.navbar {
         background-color: violet !important;
+    }
+
+        .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 95px;
+        font-weight: 700;
+        line-height: 128px;
+        background-color: lime !important;
+
     }
     .about .about-content {
         width: 70%;
