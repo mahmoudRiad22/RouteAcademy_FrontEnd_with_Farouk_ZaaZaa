@@ -4,6 +4,9 @@
 /* -sm- Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
+        nav.navbar{
+        background-color: lime !important;
+    }
     .home .carousel-caption-style h1 {
         font-family: "Poppins-Bold";
         font-size: 60px;
@@ -14,6 +17,12 @@
 
 /* -md- Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+        nav.navbar{
+        background-color: blue !important;
+    }
+    .about .about-content{
+        width: 90%;
+    }
     .contact-pt2 .part2 .map iframe {
         height: 100% !important;
     }
@@ -30,12 +39,17 @@
 
 /* -lg- Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    nav.navbar{
+        background-color: violet !important;
+    }
+       .about .about-content{
+        width: 70%;
+    }
     .contact .part1 .carousel-inner .carousel-item .card-item {
         width: 75% !important;
     }
     .services .bottom-sec p {
         width: 80%;
-        background-color: red;
     }
 }
 
