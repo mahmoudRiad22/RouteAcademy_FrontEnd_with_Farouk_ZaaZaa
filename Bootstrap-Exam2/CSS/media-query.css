@@ -26,10 +26,17 @@
     .contact-pt2 .part2 .map iframe {
         height: 100% !important;
     }
+
+    .contact .part1 .carousel-inner .carousel-item .card-item {
+        width: 100% !important;
+    }
 }
 
 /* -lg- Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .contact .part1 .carousel-inner .carousel-item .card-item {
+        width: 75% !important;
+    }
 }
 
 /* -xl- X-Large devices (large desktops, 1200px and up) */
