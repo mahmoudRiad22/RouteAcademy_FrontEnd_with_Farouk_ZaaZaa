@@ -10,11 +10,11 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
-    --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
+    --bg: #58A0C8; /* middle color Dominant background */
+    --surface: #113F67; /* 1st right Cards/surfaces */
+    --buttons: #113F67; /* 2nd right Interactive elements */
+    --accent: #58A0C8; /* 1st left For highlights */
+    --text: #FDF5AA; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
