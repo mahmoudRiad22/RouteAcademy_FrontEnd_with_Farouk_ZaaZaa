@@ -114,9 +114,9 @@
     <h1 class="mt-5 pt-5">Week09 Session01</h1>
 
 
-    <div class="new-topic 1- why use ES? surface-bg" id="1">
+    <div class="new-topic 1- why use ES?" id="1">
 
-        <div class="container">
+        <div class="container surface-bg">
             <h3 class="mt-5 py-5 text-center"><b>1- why use ES? </b></h3>
             <p>
                 1- Capture User Events. <br />
@@ -127,14 +127,14 @@
                 6- Browser Object Model BOM (Browser). <br />
             </p><br />
             <div class="applying-section"></div>
-            <br />
+        <br/> <br/>
         </div>
     </div>
 
 
-    <div class="new-topic 2-where to write ES? surface-bg" id="2">
+    <div class="new-topic 2-where to write ES?" id="2">
 
-        <div class="container">
+        <div class="container surface-bg">
 
             <div class=" text-center">
                 <h3 class="mt-5 py-5">2-where to write ES?</h3>
@@ -145,13 +145,14 @@
             </div>
 
             <div class="applying-section"></div>
+        <br/> <br/>
         </div>
     </div>
 
 
-    <div class="new-topic 3- Build-ins [doc, win, console] surface-bg" id="3">
+    <div class="new-topic 3- Build-ins [doc, win, console]" id="3">
 
-        <div class="container">
+        <div class="container surface-bg">
 
             <h3 class="mt-5 py-5 text-center">3- Build-ins [doc, win, console]</h3>
 
@@ -174,14 +175,14 @@
                     <button type="button" class="btn btn-primary" onclick="showInputInConsole();">send</button>
                 </form>
             </div>
+        <br /> <br/>
         </div>
-        <br />
     </div>
 
 
-    <div class="new-topic 4-variables surface-bg" id="4">
+    <div class="new-topic 4-variables" id="4">
 
-        <div class="container">
+        <div class="container surface-bg">
 
             <h3 class="mt-5 py-5 text-center">4-variables in ES</h3>
 
@@ -191,12 +192,13 @@
                 3- using "const" which is given for a unchangable variables only. <br />
             </p>
             <div class="applying-section"></div>
+        <br/> <br/>
         </div>
     </div>
 
-    <div class="new-topic 5-data-types surface-bg" id="5">
+    <div class="new-topic 5-data-types" id="5">
 
-        <div class="container">
+        <div class="container surface-bg">
             <h3 class="mt-5 py-5 text-center">5-data-types</h3>
 
             <div class="applying-section">
@@ -219,14 +221,14 @@
                     </div>
 
                 </div>
-                <br />
             </div>
+        <br/> <br/>
         </div>
     </div>
 
-    <div class="new-topic 6-displaying var + typeof() surface-bg" id="6">
+    <div class="new-topic 6-displaying var + typeof()" id="6">
 
-        <div class="container">
+        <div class="container surface-bg">
 
             <h3 class="mt-5 py-5 text-center">6-displaying var + typeof()</h3>
 
@@ -235,7 +237,7 @@
                     <form action="" class="col-6">
                         <label for="userText"><b>type "Text" to Display</b></label>
                         <input class="form-control bg-primary-subtle mb-3 mt-2" type="text" name="userText"
-                            id="userText" maxlength="15" value="">
+                            id="userText" maxlength="40" value="">
 
                         <button type="button" class="btn btn-success" onclick="displayInput()">Display</button>
                         <button type="reset" class="btn btn-secondary">Reset</button>
@@ -243,21 +245,29 @@
                     </form>
 
                 </div>
-                <div class="msgArea p-5 mt-4 bg-black text-white text-center w-50 m-auto" id="msgArea"></div>
+                <div class="msgArea p-1 bg-black text-white text-center w-50 fixed-bottom ms-auto" id="msgArea"></div>
             </div>
-        </div>
         <br /><br />
+        </div>
     </div>
 
-    <div class="new-topic 7-Prompt surface-bg" id="7">
-    
-        <div class="container">
-    
+    <div class="new-topic 7-Prompt" id="7">
+
+        <div class="container surface-bg">
+
             <h3 class="mt-5 py-5 text-center">7-Prompt</h3>
-    
-            <div class="applying-section"></div>
+
+            <div class="applying-section">
+                <label for="">Use the buttom to trigger a prompt window</label> <br/>
+                <button type="button" class="btn btn-success" onclick="showPrompt();">Prompt</button>
+                <button type="button" class="btn btn-danger" onclick="clearInput()">Clear</button>
+            </div>
+        <br/> <br/>
         </div>
     </div>
+
+
+    <br/><br/><br/>
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts files -->

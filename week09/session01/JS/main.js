@@ -1,12 +1,10 @@
-/*
+// window ======> browser
 
-window ======> browser
+// document =====> HTML file
 
-document =====> HTML file
+// console =====> the console log
 
-console =====> the console log
-
-*/
+let msg;
 
 function showAlert() {
     window.alert(' mahmoud says "HI"');
@@ -27,20 +25,31 @@ function showInputInConsole() {
     console.log(userInput.value);
 }
 
-function readInput(){
-    let userText = document.getElementById('userText').value;
+function readInput() {
+    let userText = document.getElementById("userText").value;
     return userText;
 }
-
-function displayInput(){
+function displayInput(promptMsg) {
     let userMsg = readInput();
-    let type = typeof(userMsg);
-    console.log(userMsg, "type of: " + type);
 
-    document.getElementById('msgArea').innerHTML = `${userMsg} "type of : ${type}"`;
+    if (userMsg == "") {
+        userMsg = "nothing";
+    }
+    console.log(`Prompt message is : ${promptMsg}`);
+    console.log(`User Message is: ${userMsg}`);
+
+    document.getElementById("msgArea").innerHTML = `
+    User Message is: ${userMsg} <br />
+    Prompt message is : ${promptMsg} <br />
+    `;
 }
 
-function clearInput(){
-    document.getElementById('msgArea') = "";
-    document.getElementById('msgArea').innerHTML = "";
+function clearInput() {
+    document.getElementById("msgArea").innerHTML = "";
+}
+
+function showPrompt() {
+    let userName = window.prompt("Write you Name:");
+    console.log(userName);
+    displayInput(userName);
 }
