@@ -10,16 +10,10 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
-    --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
-
-    /* Optional extended palette */
-    --success: #4caf50; /* Positive actions */
-    --warning: #ffc107; /* Caution states */
-    --error: #f44336; /* Destructive actions */
+    --bg: #1B3C53; /* middle color Dominant background */
+    --surface: #456882; /* 1st right Cards/surfaces */
+    --accent: #D2C1B6; /* 1st left For highlights */
+    --text: #F9F3EF; /* 2nd left Primary text */
 }
 .my-bg{
     background-color: var(--bg)
@@ -36,7 +30,9 @@
 .text-clr{
     color: var(--text);
 }
-
+.text-my-bg{
+    color: var(--bg);
+}
 body {
     background-color: var(--bg);
     color: var(--text);
