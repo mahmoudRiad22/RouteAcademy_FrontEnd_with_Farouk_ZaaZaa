@@ -14,7 +14,7 @@ let allProducts = [];
 /******************************************************************************/
 // #region Functions
 
-//  Create
+//  Create functions
 function storeProductInfo() {
     if (
         ProductName.value &&
@@ -64,32 +64,38 @@ function createProductCard(product, i) {
                             <div class="col-md-6 col-lg-4" id="${i}">
                                 <div class="card-item">
                                     <div class="inner my-bg pb-3 rounded-3 overflow-hidden">
+
                                         <img style="height: 250px"  class="w-100 d-block" src="${product.image}"
                                             alt="imgi_19_08.jpg" />
+
                                         <div class="card-body my-3">
+
                                             <span class="badge bg-info d-inline-block mx-2 mb-2">index:
                                                 ${i}</span>
                                             <p class="title">Name: ${product.name}</p>
                                             <p>Category: ${product.category}</p>
                                             <p>Description: ${product.description}</p>
                                             <p>Price: ${product.price}</p>
+
                                         </div>
+
                                         <div class="card-footer text-center">
 
                                             <button class="btn btn-outline-warning" type="button" 
-                                            data-bs-toggle="offcanvas"
+                                                data-bs-toggle="offcanvas"
                                                 data-bs-target="#offcanvasScrolling${i}" 
                                                 aria-controls="offcanvasScrolling${i}"
                                                 onClick="editeProduct(${i})">
-                                                <i class="fa-solid fa-pen-to-square"></i> Edite</button>
+                                                <i class="fa-solid fa-pen-to-square"></i> Edite
+                                            </button>
 
 
                                             <button type="button" class="btn mx-1 btn-outline-danger"
                                                 onclick="removeProduct('${i}')">
                                                 <i class="fa-solid fa-trash-can"></i> Delete
-                                            </button>                  
+                                            </button>
+
                                             <div id="offCanvasBox${id}">
-                                                
 
                                             </div>
 
@@ -102,15 +108,7 @@ function createProductCard(product, i) {
     renderDesignToHTML(productCardDesign, productsBox);
 }
 
-// function showProductsWithFilter(filter) {
-//     switch (filter) {
-//         default:
-//             createAllProductsCards();
-//     }
-// }
-
-
-// Delete
+// Delete functions
 function clearInputs() {
     ProductName.value = "";
     ProductPrice.value = "";
@@ -133,11 +131,9 @@ function removeProduct(id) {
     createAllProductsCards();
 }
 
-
-
-// 
+// Edite Functions
 function editeProduct(id) {
-    console.log('Editting product with id :>> ', id);
+    console.log("Editting product with id :>> ", id);
     const allProducts = JSON.parse(sessionStorage.getItem("allProducts"));
     const product = allProducts[id];
     const correctImagePath = imagePathHandler(product.image);
@@ -156,7 +152,7 @@ function editeProduct(id) {
                                                             data-bs-dismiss="offcanvas" aria-label="Close">
                                                         </button>
                                                     </div>
-                                                    
+
                                                     <div class="offcanvas-body">
                                                         <section class="CRUD operations Input mb-3">
                                                             <div class="container-fluid bg-info p-3 rounded-4">
@@ -231,8 +227,6 @@ function editeProduct(id) {
                                                 </div>
 
     `;
-    // console.log(offcanvasDesign);
-    // offCanvasBox.innerHTML = '';
     renderDesignToHTML(offcanvasDesign, offCanvasBox);
 }
 
@@ -279,6 +273,7 @@ function saveChanges(id) {
     }
 }
 
+// Search Functions
 function searchProducts() {
     let word = [];
     const searchInput = document.getElementById("searchInput");
@@ -299,7 +294,6 @@ function searchByWord(word) {
             createProductCard(product, index);
         }
     });
-
 }
 function displaySearchedItem(itemList) {
     itemList.forEach((item) => {
