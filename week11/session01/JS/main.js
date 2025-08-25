@@ -23,15 +23,15 @@ function storeProductInfo() {
         ProductDescription.value &&
         ProductImage.value
     ) {
-        const correctImagePath = imagePathHandler(ProductImage.value);
+        console.log(IMAGE_PATH + ProductImage.files[0].name);
+        const fixedImagePath = IMAGE_PATH + ProductImage.files[0].name;
         const product = {
             name: ProductName.value,
             price: ProductPrice.value,
             category: ProductCategory.value,
             description: ProductDescription.value,
-            image: correctImagePath,
+            image: fixedImagePath,
         };
-        imagePathHandler(product.image);
         addToAllProductsList(product);
     } else {
         alert("Please Enter All Product Info");
@@ -136,7 +136,6 @@ function editeProduct(id) {
     console.log("Editting product with id :>> ", id);
     const allProducts = JSON.parse(sessionStorage.getItem("allProducts"));
     const product = allProducts[id];
-    const correctImagePath = imagePathHandler(product.image);
     const offCanvasBox = document.getElementById(`offCanvasBox${id}`);
     const offcanvasDesign = `
                                                 <div class="offcanvas offcanvas-end text-bg-info w-50" data-bs-scroll="true"
@@ -193,7 +192,7 @@ function editeProduct(id) {
                                                                 </div><br />
 
                                                                 <div class=" rounded-5 overflow-hidden">
-                                                                    <img style="height: 250px" class="w-100 d-block"
+                                                                    <img style="" class="w-100 d-block"
                                                                         src="${product.image}" alt="" />
                                                                 </div><br />
 
@@ -230,12 +229,6 @@ function editeProduct(id) {
     renderDesignToHTML(offcanvasDesign, offCanvasBox);
 }
 
-function imagePathHandler(imagePath) {
-    let imageName = imagePath.slice(imagePath.lastIndexOf("\\") + 1);
-    const correctImagePath = IMAGE_PATH + imageName;
-
-    return correctImagePath;
-}
 
 function saveChanges(id) {
     const newProductName = document.getElementById("newProductName");
@@ -252,7 +245,7 @@ function saveChanges(id) {
         newProductDescription.value
     ) {
         if (!(newProductImage.value == "")) {
-            correctImagePath = imagePathHandler(newProductImage.value);
+            correctImagePath = IMAGE_PATH + newProductImage.files[0].name;
         } else {
             correctImagePath = allProducts[id].image;
         }
