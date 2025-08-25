@@ -5,7 +5,6 @@
 const productsBox = document.getElementById("productsBox");
 const IMAGE_PATH = "./images/";
 let allProducts = [];
-// sessionStorage.setItem('allProducts', JSON.stringify(allProducts));
 
 // #endregion Variables
 /******************************************************************************/
@@ -15,6 +14,7 @@ let allProducts = [];
 /******************************************************************************/
 // #region Functions
 
+//  Create
 function storeProductInfo() {
     if (
         ProductName.value &&
@@ -42,19 +42,15 @@ function renderDesignToHTML(design, target) {
     target.insertAdjacentHTML("beforeend", design);
     return;
 }
-function clearDesign(target) {
-    target.innerHTML = "";
 
-    return;
-}
 function addToAllProductsList(product) {
     allProducts.push(product);
     sessionStorage.setItem("allProducts", JSON.stringify(allProducts));
-    createAllProductsCards();
+    createAllProductsCards(allProducts);
 }
 
 function createAllProductsCards() {
-    clearDesign(productsBox);
+    clearDesignAtTarget(productsBox);
     allProducts = JSON.parse(sessionStorage.getItem("allProducts"));
     allProducts.forEach((product) => {
         createProductCard(product, allProducts.indexOf(product));
@@ -82,8 +78,8 @@ function createProductCard(product, i) {
 
                                             <button class="btn btn-outline-warning" type="button" 
                                             data-bs-toggle="offcanvas"
-                                                data-bs-target="#offcanvasScrolling" 
-                                                aria-controls="offcanvasScrolling"
+                                                data-bs-target="#offcanvasScrolling${i}" 
+                                                aria-controls="offcanvasScrolling${i}"
                                                 onClick="editeProduct(${i})">
                                                 <i class="fa-solid fa-pen-to-square"></i> Edite</button>
 
@@ -92,7 +88,7 @@ function createProductCard(product, i) {
                                                 onclick="removeProduct('${i}')">
                                                 <i class="fa-solid fa-trash-can"></i> Delete
                                             </button>                  
-                                            <div id="offCanvasBox">
+                                            <div id="offCanvasBox${id}">
                                                 
 
                                             </div>
@@ -103,18 +99,18 @@ function createProductCard(product, i) {
                             </div>
 
     `;
-    // console.log("productCardDesign :>> ", productCardDesign);
     renderDesignToHTML(productCardDesign, productsBox);
 }
 
+// function showProductsWithFilter(filter) {
+//     switch (filter) {
+//         default:
+//             createAllProductsCards();
+//     }
+// }
 
-function showProductsWithFilter(filter) {
-    switch (filter) {
-        default:
-            createAllProductsCards();
-    }
-}
 
+// Delete
 function clearInputs() {
     ProductName.value = "";
     ProductPrice.value = "";
@@ -122,7 +118,11 @@ function clearInputs() {
     ProductCategory.value = "";
     ProductImage.value = "";
 }
+function clearDesignAtTarget(target) {
+    target.innerHTML = "";
 
+    return;
+}
 function clearAllProducts() {
     productsBox.innerHTML = "";
 }
@@ -133,32 +133,42 @@ function removeProduct(id) {
     createAllProductsCards();
 }
 
+
+
+// 
 function editeProduct(id) {
+    console.log('Editting product with id :>> ', id);
     const allProducts = JSON.parse(sessionStorage.getItem("allProducts"));
     const product = allProducts[id];
     const correctImagePath = imagePathHandler(product.image);
-    const offCanvasBox = document.getElementById("offCanvasBox");
+    const offCanvasBox = document.getElementById(`offCanvasBox${id}`);
     const offcanvasDesign = `
-                                                <div class="offcanvas offcanvas-end" data-bs-scroll="true"
-                                                    data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
-                                                    aria-labelledby="offcanvasScrollingLabel">
+                                                <div class="offcanvas offcanvas-end text-bg-info w-50" data-bs-scroll="true"
+                                                    data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling${id}"
+                                                    aria-labelledby="offcanvasScrolling${id}Label">
+
                                                     <div class="offcanvas-header">
-                                                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                                                        <h5 class="offcanvas-title" id="offcanvasScrolling${id}Label">
                                                             Edite Product: ${id}</h5>
-                                                        <button type="button" class="btn-close"
-                                                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                                                        <button type="button" class="btn-close "
+                                                            data-bs-dismiss="offcanvas" aria-label="Close">
+                                                        </button>
                                                     </div>
+                                                    
                                                     <div class="offcanvas-body">
                                                         <section class="CRUD operations Input mb-3">
                                                             <div class="container-fluid bg-info p-3 rounded-4">
-                                                                <!-- <h4 class="text-center text-black fw-bold mb-4">CRUD
-                                                                    Operation</h4> -->
+
+                                                                
                                                                 <div class="form-floating">
                                                                     <input class="form-control" placeholder=""
                                                                         type="text" id="newProductName"
                                                                         value="${product.name}" required>
                                                                     <label for="ProductName"> Product Name</label>
                                                                 </div><br />
+
                                                                 <div class="form-floating">
                                                                     <input class="form-control" placeholder=""
                                                                         type="number" name="ProductPrice"
@@ -166,6 +176,7 @@ function editeProduct(id) {
                                                                         required>
                                                                     <label for="ProductPrice">Product Price</label>
                                                                 </div><br />
+
                                                                 <div class="form-floating">
                                                                     <input class="form-control" placeholder=""
                                                                         type="text" name="ProductCategory"
@@ -174,6 +185,7 @@ function editeProduct(id) {
                                                                     <label for="ProductCategory">Product
                                                                         Category</label>
                                                                 </div><br />
+
                                                                 <div class="form-floating">
                                                                     <textarea style="height: 120px;"
                                                                         class="form-control" placeholder=""
@@ -183,10 +195,12 @@ function editeProduct(id) {
                                                                     <label for="ProductDescription">Product
                                                                         Description</label>
                                                                 </div><br />
+
                                                                 <div class=" rounded-5 overflow-hidden">
                                                                     <img style="height: 250px" class="w-100 d-block"
                                                                         src="${product.image}" alt="" />
                                                                 </div><br />
+
                                                                 <div class="form-floating">
                                                                     <input class="form-control" placeholder=""
                                                                         type="file" name="newProductImage"
@@ -194,24 +208,31 @@ function editeProduct(id) {
                                                                         required>
                                                                     <label for="ProductImage">Product Image</label>
                                                                 </div><br />
+
                                                                 <button class="btn btn-success" type="button"
                                                                     data-bs-toggle="offcanvs"
                                                                     data-bs-target="#offcanvasRight"
                                                                     aria-controls="offcanvasRight"
-                                                                    onClick="saveChanges(${id})">Save Changes</button>
+                                                                    onClick="saveChanges(${id})">
+                                                                    Save Changes
+                                                                </button>
+
                                                                 <button class="btn btn-danger" type="button"
                                                                     data-bs-toggle="offcanvas"
                                                                     data-bs-target="#offcanvasRight"
                                                                     aria-controls="offcanvasRight"
-                                                                    onClick="">Cancel</button>
+                                                                    onClick="">
+                                                                    Cancel
+                                                                </button>
+
                                                             </div>
                                                         </section>
                                                     </div>
                                                 </div>
 
     `;
-
-    // offCanvasBox.innerHTML = offcanvasDesign;
+    // console.log(offcanvasDesign);
+    // offCanvasBox.innerHTML = '';
     renderDesignToHTML(offcanvasDesign, offCanvasBox);
 }
 
@@ -258,22 +279,39 @@ function saveChanges(id) {
     }
 }
 
+function searchProducts() {
+    let word = [];
+    const searchInput = document.getElementById("searchInput");
+    const char = searchInput.value.toLowerCase();
+    word.push(char);
+
+    if (word != "") searchByWord(word);
+    else {
+        console.warn("search is Epmty!!!");
+        createAllProductsCards();
+    }
+}
+
+function searchByWord(word) {
+    clearAllProducts();
+    allProducts.forEach((product, index) => {
+        if (product.name.toLowerCase().includes(word)) {
+            createProductCard(product, index);
+        }
+    });
+
+}
+function displaySearchedItem(itemList) {
+    itemList.forEach((item) => {
+        let index = allProducts.indexOf(item);
+        clearAllProducts();
+        createProductCard(item, index);
+    });
+}
 // #endregion Functions
 /******************************************************************************/
 /******************************************************************************/
 
-console.log('sessionStorage.getItem("allProducts") :>> ', 
-    JSON.parse(sessionStorage.getItem("allProducts")));
 if (JSON.parse(sessionStorage.getItem("allProducts")) != null) {
     createAllProductsCards();
 }
-
-// // Listen for all offcanvas show events
-// document.addEventListener("show.bs.offcanvas", function (event) {
-//     if (event.target.id === "offcanvasScrolling") {
-//         // Get the button that triggered the offcanvas
-//         const button = event.relatedTarget;
-//         const index = button.dataset.index;
-//         editeProduct(index);
-//     }
-// });
