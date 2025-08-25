@@ -11,28 +11,28 @@
 /* Color Variables */
 :root {
     --bg: #124170; /* middle color Dominant background */
-    --surface: #26667F; /* 1st right Cards/surfaces */
-    --accent: #67C090; /* 1st left For highlights */
-    --text: #DDF4E7; /* 2nd left Primary text */
+    --surface: #26667f; /* 1st right Cards/surfaces */
+    --accent: #67c090; /* 1st left For highlights */
+    --text: #ddf4e7; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
     --warning: #ffc107; /* Caution states */
     --error: #f44336; /* Destructive actions */
 }
-.my-bg{
-    background-color: var(--bg)
+.my-bg {
+    background-color: var(--bg);
 }
-.surface-bg{
+.surface-bg {
     background-color: var(--surface);
 }
-.buttons-bg{
+.buttons-bg {
     background-color: var(--buttons);
 }
-.accent-bg{
+.accent-bg {
     background-color: var(--accent);
 }
-.text-clr{
+.text-clr {
     color: var(--text);
 }
 
@@ -43,7 +43,7 @@ body {
     font-size: medium;
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 15px 0px;
     font-family: "Playwrite IT Moderna";
@@ -69,7 +69,6 @@ p {
     font-size: medium;
 }
 
-
 a {
     text-decoration: none;
     display: block;
@@ -77,7 +76,6 @@ a {
     text-align: center;
     color: var(--text);
 }
-
 
 /* #endregion Global CSS */
 /*****************************/
@@ -119,24 +117,24 @@ a {
 /* #region nav-bar-icons */
 
 .nav-bar-icons .fa-facebook:hover {
-    color: rgb(31, 109, 243) !important; 
+    color: rgb(31, 109, 243) !important;
     transform: scale(1.3);
 }
 .nav-bar-icons .fa-linkedin:hover {
     transform: scale(1.3);
-    color: rgb(0, 0, 168)!important;
+    color: rgb(0, 0, 168) !important;
 }
 .nav-bar-icons .fa-x-twitter:hover {
     transform: scale(1.3);
-    color: rgb(174, 174, 177)!important;
+    color: rgb(174, 174, 177) !important;
 }
 .nav-bar-icons .fa-google:hover {
     transform: scale(1.3);
-    color: rgb(219, 63, 99)!important;
+    color: rgb(219, 63, 99) !important;
 }
 .nav-bar-icons .fa-github:hover {
     transform: scale(1.3);
-    color: rgb(200, 200, 200)!important;
+    color: rgb(200, 200, 200) !important;
 }
 /* #endregion nav-bar-icons */
 /*****************************/

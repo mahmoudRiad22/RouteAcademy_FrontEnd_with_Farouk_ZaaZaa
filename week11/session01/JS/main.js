@@ -229,7 +229,6 @@ function editeProduct(id) {
     renderDesignToHTML(offcanvasDesign, offCanvasBox);
 }
 
-
 function saveChanges(id) {
     const newProductName = document.getElementById("newProductName");
     const newProductPrice = document.getElementById("newProductPrice");
