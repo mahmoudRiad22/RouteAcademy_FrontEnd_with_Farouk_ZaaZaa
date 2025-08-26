@@ -78,11 +78,11 @@ function displayQuote(id) {
     console.log("counter :>> ", ++counter, "random :>> ", id);
 
     const content = `
-        <div class="col-2">
+        <div class="col-sm-12 col-md-2">
             <img class="d-block cicle" src="${quotesList[id].image}" alt="" />
         </div>
-        <p class="col-10">${quotesList[id].quote}</p><br/>
-        <p class="col-12">${quotesList[id].owner}</p>
+        <p class="col-sm-12 col-md-10 ">${quotesList[id].quote}</p><br/>
+        <p class="col-sm-12 col-md-12 ">${quotesList[id].owner}</p>
 `;
     const quoteBox = document.getElementById("quoteBox");
     quoteBox.innerHTML = "";
