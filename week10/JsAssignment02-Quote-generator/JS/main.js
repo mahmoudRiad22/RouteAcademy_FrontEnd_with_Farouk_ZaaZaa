@@ -73,9 +73,9 @@ function noRepeate(oldRandom) {
 }
 
 function displayQuote(id) {
-    console.log("Qoute :>> ", quotesList[id].quote);
-    console.log("Owner: :>> ", quotesList[id].owner);
-    console.log("counter :>> ", ++counter, "random :>> ", id);
+    // console.log("Qoute :>> ", quotesList[id].quote);
+    // console.log("Owner: :>> ", quotesList[id].owner);
+    // console.log("counter :>> ", ++counter, "random :>> ", id);
 
     const content = `
         <div class="col-sm-12 col-md-2">
