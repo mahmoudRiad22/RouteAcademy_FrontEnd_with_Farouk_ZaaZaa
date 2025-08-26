@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test area</title>
+    <title>Week11 Session02</title>
 
 
     <!-- ****************************** -->
@@ -30,19 +30,19 @@
 
     <!-- Fonts.CSS -->
     <link rel="stylesheet" href="./CSS/fonts.css" />
-    
+
     <!-- bootstrap.css -->
     <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
-    
+
     <!-- FontAwesome Icons.css -->
     <link rel="stylesheet" href="./CSS/all.css" />
-    
+
     <!-- My style.css -->
     <link rel="stylesheet" href="./CSS/style.css" />
-    
+
     <!-- Media Queries.css -->
     <link rel="stylesheet" href="./CSS/media-classes.css" />
-    
+
 
 
     <!-- #endregion CSS files -->
@@ -55,7 +55,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg bg-black  opacity-75 fixed-top p-0">
+    <nav class="navbar navbar-expand-lg bg-black  opacity- fixed-top p-0">
         <div class="container-fluid">
             <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -63,27 +63,23 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
-                <ul class="navbar-nav text-capitalize text-white">
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <span class="fs-6 text-white">week# session#</span>
-                        </a>
-                        <ul class="dropdown-menu text-white bg-dark-subtle">
-                            <!-- <li><a class="dropdown-item" href="#1"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#2"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#3"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#4"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#5"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#6"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#7"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#8"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#9"></a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#10"></a></li> -->
-                        </ul>
-                    </li>
-                </ul>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle bg-black border-0"
+                        data-bs-toggle="dropdown">Week 11 Session 02</button>
 
+                    <ul class="dropdown-menu dropdown-menu-dark mt-0">
+                        <li><a class="dropdown-item" href="#1">1-Mini Qutoer</a></li>
+                        <!-- <li><a class="dropdown-item" href="#2"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#3"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#4"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#5"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#6"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#7"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#8"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#9"></a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#10"></a></li> -->
+                    </ul>
+                </div>
                 <ul class="navbar-nav">
 
                     <li class="nav-item ">
@@ -115,9 +111,64 @@
         </div>
     </nav>
 
-    <h1 class="mt-5 pt-5 pb-3">title</h1>
+    <h1 class="mt-5 pt-5 pb-3">Week11 Session02</h1>
 
 
+
+    <div class="new-topic 1-Mini Qutoer" id="1">
+
+        <div class="container  surface-bg">
+
+            <h3 class="mt-5 py-5 text-center">1-Mini Qutoer</h3>
+
+            <!-- <p>Brain storming: <br />
+                1- create an array or objects contain the quotes. <br />
+                2- loop over all of it and console log it. <br />
+                3- display the quote to doc. <br />
+                4- add a btn to trigger the function. <br />
+                5- add some stylings. <br />
+            </p><br /> -->
+
+            <div class="applying-section">
+                <div class=" text-center pb-5">
+                    <h1 class="fw-bold py-5 impact-font">Quote of the day</h1><br/>
+                    <h2 class="roman-font">Press below button to recieve new quote</h2>
+                </div>
+
+                <!-- Button trigger modal -->
+                <div class="text-center">
+                    <button onclick="noRepeate()" type="button" class="gen-btn btn btn-primary px-5 py-3 border-0" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Generate Qoutes
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-black text-white border-black">
+                                <h1 class="modal-title" id="staticBackdropLabel">Today's Qoute</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-info">
+                                <div class="row align-items-top" id="quoteBox">
+                                    <!-- Qoute Content Goes Here -->
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-dark border-black">
+                                <button type="button" class="btn btn-secondary border-0 close-btn" data-bs-dismiss="modal">Close</button>
+                                <button onclick="noRepeate()" type="button" class="btn btn-primary gen-btn border-0">New Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /> <br />
+        </div>
+    </div>
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts files -->

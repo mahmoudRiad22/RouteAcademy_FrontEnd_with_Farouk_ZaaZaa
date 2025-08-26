@@ -1,0 +1,41 @@
+:root {
+    --bg: #bc9cb0; /* middle color Dominant background */
+    --surface: #d3cdd7; /* 1st right Cards/surfaces */
+    --buttons: #ddf2eb; /* 2nd right Interactive elements */
+    --accent: #606d5d; /* 1st left For highlights */
+    --text: #48564e; /* 2nd left Primary text */
+
+    /* Optional extended palette */
+    --success: #4caf50; /* Positive actions */
+    --warning: #ffc107; /* Caution states */
+    --error: #f44336; /* Destructive actions */
+}
+body{
+    background-color: var(--bg);
+}
+
+
+.cicle {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+}
+.impact-font{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: black;
+}
+.roman-font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: black;
+}
+.gen-btn:hover{
+    background-color: var(--success);
+
+}
+.close-btn:hover{
+    background-color: black;
+}

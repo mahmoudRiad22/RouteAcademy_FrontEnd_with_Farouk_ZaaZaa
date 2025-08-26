@@ -79,7 +79,30 @@ a {
     color: var(--text);
 }
 
+.cicle {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+}
+.impact-font{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: black;
+}
+.roman-font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: black;
+}
+.gen-btn:hover{
+    background-color: var(--success);
 
+}
+.close-btn:hover{
+    background-color: black;
+}
 /* #endregion Global CSS */
 /*****************************/
 /*****************************/
