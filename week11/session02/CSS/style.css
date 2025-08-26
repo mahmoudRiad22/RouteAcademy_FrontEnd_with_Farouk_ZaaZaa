@@ -10,12 +10,13 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
-    --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
-
+    --bg: #934790; /* middle color Dominant background */
+    --surface: #E8D4B7; /* 1st right Cards/surfaces */
+    --buttons: #E8D4B7; /* 2nd right Interactive elements */
+    --accent: #FF0066; /* 1st left For highlights */
+    --text: #6A0066; /* 2nd left Primary text */
+    --text-bg-accent: #6A0066;
+    --h1-text-color: #E8D4B7;
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
     --warning: #ffc107; /* Caution states */
@@ -50,6 +51,7 @@ h1{
     font-family: "Playwrite IT Moderna";
     font-weight: 400;
     text-transform: capitalize;
+    color: var(--h1-text-color);
 }
 h2,
 h3,
