@@ -72,10 +72,13 @@
                             <input
                                 class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
                                 type="text" name="websiteUrl" id="websiteUrl"><br />
-                        </div><br/>
+                        </div><br />
                         <div class="text-center">
-                            <button class="btn my-btn-bg-orange-red px-5 py-2">Submit</button>
+                            <button class="btn my-btn-bg-orange-red px-5 py-2" onclick="createRow()">Submit</button>
                         </div>
+                        <!-- <div class="text-center">
+                            <button class="btn my-btn-bg-orange-red px-5 py-2" onclick="createAllRows()">ALL</button>
+                        </div> -->
                     </div>
                 </div>
 
@@ -90,21 +93,21 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                            <tr>
+                        <tbody id="tBody">
+                            <!-- <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>
-                                    <button class="btn btn-success visite-btn border-0">
+                                    <a href="#" target="_blank" class="btn btn-success visite-btn border-0">
                                         <i class="fa-solid fa-eye"></i> Visite
-                                    </button>
+                                    </a>
                                 </td>
                                 <td>
-                                    <button class="btn btn-success delete-btn border-0">
+                                    <button class="btn btn-success delete-btn border-0" onclick="deleteRow()">
                                         <i class="fa-solid fa-trash"></i> Delete
                                     </button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
