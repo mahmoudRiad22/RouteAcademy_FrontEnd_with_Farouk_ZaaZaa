@@ -60,9 +60,7 @@
 //         url: "https://developer.mozilla.org",
 //     },
 
-
 // ];
-
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 const tooltipList = [...tooltipTriggerList].map(
@@ -111,7 +109,7 @@ function deleteRow(index) {
     websites.splice(index, 1); // delete at index
     // console.log("new websites lenght :>> ", websites.length);
     // JSON.stringify(sessionStorage.setItem('websites', websites))
-    sessionStorage.setItem('websites', JSON.stringify(websites))
+    sessionStorage.setItem("websites", JSON.stringify(websites));
     createAllRows();
 }
 
@@ -142,7 +140,8 @@ function submitInput() {
 }
 
 function validateInput(website) {
-    const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
+    // const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
+    const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
     const nameRegExp = /^.{3,50}$/; // min 3char max
     // const nameMsg = "Site name must contain at least 3 characters";
     // const urlMsg = "Site URL must be a valid one";
@@ -178,7 +177,7 @@ function saveData(website) {
         console.log("websites.push(website) :>> ", websites.push(website));
         // console.log("after push websites :>> ", websites);
     } else {
-        websites = JSON.parse(sessionStorage.getItem('websites'));
+        websites = JSON.parse(sessionStorage.getItem("websites"));
         // console.log("false if : before push websites :>> ", websites);
         console.log("websites.push(website) :>> ", websites.push(website));
         // console.log("after push websites :>> ", websites);
@@ -200,4 +199,42 @@ function displayAlert(websiteName, websiteUrl) {
     });
     websiteName.value = "";
     websiteUrl.value = "";
+}
+
+function checkNameInput() {
+    const websiteName = document.getElementById("websiteName")
+        ? document.getElementById("websiteName")
+        : "";
+    const nameRegExp = /^.{3,50}$/; // min 3char max
+    console.log('websiteName :>> ', websiteName.value);
+    if (nameRegExp.test(websiteName.value)){
+        console.log("valid:",websiteName.value);
+        websiteName.classList.remove('is-invalid');
+        websiteName.classList.add('is-valid');
+    }
+    else {
+        console.log("invalid:",websiteName.value);
+
+        websiteName.classList.remove('is-valid');
+        websiteName.classList.add('is-invalid');
+    }
+}
+function checkUrlInput() {
+    const websiteUrl = document.getElementById("websiteUrl")
+        ? document.getElementById("websiteUrl")
+        : "";
+    const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
+    // console.log('websiteUrl :>> ', websiteUrl.value);
+    if (urlRegExp.test(websiteUrl.value)){
+        // console.log("valid:",websiteUrl.value);
+        websiteUrl.classList.remove('is-invalid');
+        websiteUrl.classList.add('is-valid');
+    }
+    else {
+        console.log("invalid:",websiteUrl.value);
+        websiteUrl.classList.remove('is-valid');
+        websiteUrl.classList.add('is-invalid');
+
+
+    }
 }

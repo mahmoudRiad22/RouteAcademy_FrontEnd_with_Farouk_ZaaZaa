@@ -66,7 +66,7 @@
                                 type="text" data-bs-toggle="tooltip1" data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-title="This top tooltip is themed via CSS variables." name="websiteName"
-                                id="websiteName"><br />
+                                id="websiteName" oninput="checkNameInput()"><br />
                         </div>
                         <div class="">
                             <label for="websiteUrl">
@@ -76,7 +76,8 @@
                                 class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
                                 type="text" name="websiteUrl" id="websiteUrl" data-bs-toggle="tooltip2"
                                 data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                                data-bs-title="This top tooltip is themed via CSS variables."><br />
+                                data-bs-title="This top tooltip is themed via CSS variables."
+                                oninput="checkUrlInput()"><br />
                         </div><br />
                         <div class="text-center">
                             <button class="btn my-btn-bg-orange-red px-5 py-2" onclick="submitInput()">Submit</button>
