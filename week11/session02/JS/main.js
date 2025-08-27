@@ -179,92 +179,151 @@ const DEFAULT_IMG_SRC = "./images/images3/imgi_26_09.jpg";
 
 function formReadInput() {
     const user = {
-        name: Name.value ? Name.value : "Unknown",
-        email: email.value ? email.value : "Unknown",
-        password: password.value ? password.value : "Unknown1",
-        rePassword: rePassword.value ? rePassword.value : "Unknown2",
+        name: Name.value ? Name.value : "error404",
+        email: email.value ? email.value : "error404",
+        password: password.value ? password.value : "error4041",
+        rePassword: rePassword.value ? rePassword.value : "error4042",
         phone: phone.value ? phone.value : 0,
         img: img.value ? IMAGES_PATH + img.value.name : DEFAULT_IMG_SRC,
-        msg: msg.value ? msg.value : "Unknown",
+        msg: msg.value ? msg.value : "error404",
     };
 
-    if (
-        user.name != "Unknown" &&
-        user.email != "Unknown" &&
-        user.password != "Unknown1" &&
-        user.phone != 0 &&
-        user.img != "Unknown" &&
-        user.msg != "Unknown"
-    ) {
-        console.log("All data are recieved");
-        console.log("user :>> ", user);
-        if (validateAll) {
-            console.log("allUsers.length :>> ", allUsers.push(user));
-            sessionStorage.setItem("allUsers", JSON.stringify(allUsers));
-            console.log("User data is saved in sorage :>> ", true);
-            formClearInput();
-        }
+    if (validateAll()) {
+        saveUser(user);
     } else {
         console.warn("Not all data are given");
-        formClearInput();
+        submitBtn.setAttribute("disabled", "");
     }
-}
 
+    // if (
+    //     user.name != "error404" &&
+    //     user.email != "error404" &&
+    //     user.password != "error4041" &&
+    //     user.phone != 0 &&
+    //     user.img != "error404" &&
+    //     user.msg != "error404"
+    // ) {
+    //     saveUser(user);
+    // } else {
+    //     console.warn("Not all data are given");
+    //     formClearInput();
+    // }
+}
+function saveUser(user) {
+    console.log("Sucess Validation");
+    console.log("New allUsers.length :>> ", allUsers.push(user));
+    sessionStorage.setItem("allUsers", JSON.stringify(allUsers));
+    formClearInput();
+}
 function validateAll() {
-    return validateName() * validateEmail();
+    return (
+        validateName() * validateEmail() * validatePassword() * passwordMatch() * validatePhone()
+    );
 }
 function validateName() {
-    // const name = Name.value;
-    // console.log('name :>> ', name);
-    const nameRegExp = /^[A-Z]\w{2,20}$/i; //any word with min 3chars and max 20chars
-
+    const nameRegExp = /^[A-Z]\w{2,20}$/; //any word with min 3chars and max 20chars
+    const msg = "start with Captial letter and be 3-20 word-char long";
     if (nameRegExp.test(Name.value)) {
-        submitBtn.removeAttribute("disabled", "");
         Name.classList.add("is-valid");
         Name.classList.remove("is-invalid");
         removeAlert("userNameAlert");
         return 1;
     } else {
-        submitBtn.setAttribute("disabled", "");
         Name.classList.remove("is-valid");
         Name.classList.add("is-invalid");
-        displayALert("userNameAlert", "Invalid Name", "danger");
+        displayALert("userNameAlert", msg, "danger");
         return 0;
     }
 }
 
 function validateEmail() {
-    const emailRegExp = /^\w+@[a-z]+\.[a-z]{2,}$/i;
-
+    const emailRegExp = /^\w+@[a-z]+\.[a-z]{2,}$/i; //word@word.word
+    const msg = "should be: example@example.example";
     if (emailRegExp.test(email.value)) {
         email.classList.add("is-valid");
         email.classList.remove("is-invalid");
         removeAlert("userEmailAlert");
-        submitBtn.removeAttribute("disabled", "");
+        return 1;
     } else {
         email.classList.add("is-invalid");
         email.classList.remove("is-valid");
-        displayALert("userEmailAlert", "Invalid Email", "danger");
-        submitBtn.setAttribute("disabled", "");
+        displayALert("userEmailAlert", msg, "danger");
     }
-    return;
+    return 0;
 }
 // TODO:
-// 1- validate password
-// 2- repassword matches
-// 3- validate phone number
 
+// 1- validate password ====> DONE
+// 2- repassword matches ===> Done
+// 3- validate phone number > Done
+// 4- user sweet alert for submit error ==> to do
+
+function validatePassword() {
+    const passwordRegExp = /^.{8,40}$/; // anything between 8 to 40 chars
+    const msg = "must be 8-40 chars long long";
+    // console.log('passwordRegExp.test(password.value) :>> ', passwordRegExp.test(password.value));
+    if (passwordRegExp.test(password.value)) {
+        removeAlert("userPasswordAlert");
+        password.classList.add("is-valid");
+        password.classList.remove("is-invalid");
+        passwordMatch();
+        return 1;
+    } else {
+        displayALert("userPasswordAlert", msg, "danger");
+        password.classList.add("is-invalid");
+        password.classList.remove("is-valid");
+        return 0;
+    }
+}
+
+function passwordMatch() {
+    const userRePasswordAlert = document.getElementById("userRePasswordAlert");
+    const msg = "NOT a match";
+    // console.log("rePassword === password :>> ", rePassword.value === password.value);
+    if (rePassword.value === password.value) {
+        rePassword.classList.add("is-valid");
+        rePassword.classList.remove("is-invalid");
+        removeAlert("userRePasswordAlert");
+        return 1;
+    } else {
+        rePassword.classList.add("is-invalid");
+        rePassword.classList.remove("is-valid");
+        displayALert("userRePasswordAlert", msg, "danger");
+        return 0;
+    }
+}
+function validatePhone() {
+    const userPhoneAlert = document.getElementById("userPhoneAlert");
+    const phoneRegExp = /^(\+20)?\ (\(?[\d]{3}\)?)\ ([\d]{3}-[\d]{4})$/; // +20 (xxx) xxx-xxxx
+    // console.log('phoneRegExp.test("+2001023258052") :>> ', phoneRegExp.test("+2001023258052"));
+    const msg = "should be 11-digits with format 01{0,1,2,5} XXXXXXX";
+    const msg2 = "formal: +20 (xxx) xxx-xxxx";
+
+    if (phoneRegExp.test(phone.value)) {
+        phone.classList.add("is-valid");
+        phone.classList.remove("is-invalid");
+        removeAlert("userPhoneAlert");
+        return 1;
+    } else {
+        phone.classList.add("is-invalid");
+        phone.classList.remove("is-valid");
+        displayALert("userPhoneAlert", msg2, "danger");
+        return 0;
+    }
+}
 function displayALert(target, message, type) {
+    // console.log("displayAlert :>> ", true);
+    // submitBtn.removeAttribute('disabled');
+    submitBtn.setAttribute("disabled", "");
     const alertPlaceholder = document.getElementById(target);
 
-    // const wrapper = document.createElement("div");
     alertPlaceholder.innerHTML = `<div class="alert alert-${type} alert-dismissible mt-1" role="alert">
             <div>${message}</div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>`;
-    // alertPlaceholder.append(wrapper);
 }
 function removeAlert(target) {
+    submitBtn.removeAttribute("disabled");
     const alertPlaceholder = document.getElementById(target);
     alertPlaceholder.innerHTML = "";
 }
@@ -274,12 +333,21 @@ function formClearInput() {
     email.value = "";
     password.value = "";
     rePassword.value = "";
-    phone.value = 0;
+    phone.value = null;
     img.value = "";
     msg.value = "";
-}
 
-// validateWithKeyWord("number", Number("1231341312"));
+    Name.classList.remove("is-invalid");
+    Name.classList.remove("is-valid");
+    email.classList.remove("is-invalid");
+    email.classList.remove("is-valid");
+    password.classList.remove("is-invalid");
+    password.classList.remove("is-valid");
+    rePassword.classList.remove("is-invalid");
+    rePassword.classList.remove("is-valid");
+    phone.classList.remove("is-invalid");
+    phone.classList.remove("is-valid");
+}
 
 function validateWithKeyWord(key, input0) {
     const regExp = /^[0-9]+$/;
@@ -289,7 +357,7 @@ function validateWithKeyWord(key, input0) {
         case "number":
             console.log("regExp :>> ", regExp.test(input0));
             break;
-        case 'email':
+        case "email":
             validateEmail();
         default:
             console.log("validateWithKeyWord() :>> No proper Key is send");
@@ -298,3 +366,4 @@ function validateWithKeyWord(key, input0) {
 // #endregion Input Form
 /********************************************/
 /********************************************/
+
