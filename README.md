@@ -4,7 +4,7 @@ https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/ + rele
 ### BaseURL for code-Source
 https://github.com/mahmoudRiad22/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/tree/main/ + relevant path
 
-###### Change the "\" to "/"
+###### Change the "\\" to "/"
 
 
 # jsAssignment3-Bookmarker
