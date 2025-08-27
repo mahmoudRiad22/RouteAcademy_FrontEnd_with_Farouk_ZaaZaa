@@ -40,15 +40,87 @@
 
 
 
+    <section>
+        <div class="container m-5">
+            <div class="title">
+                <h1 class="text-center pb-4">
+                    <span>Bookmarker</span>
+                </h1>
+
+
+                <div class="content mt-5 py-4">
+                    <div class="content-title text-center pb-4 m-2 mt-0">
+                        <i class="icon1 fa-solid fa-bookmark"></i>
+                        <h2 class="d-inline">
+                            <span>Bookmark your favorite sites</span>
+                        </h2>
+                        <i class="icon2 fa-solid ps-1 fa-bookmark"></i>
+                    </div>
+                    <div class="add-website ">
+                        <div class="">
+                            <label for="websiteName">
+                                <i class="fa-solid fa-book-bookmark"></i> Site Name
+                            </label><br />
+                            <input
+                                class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                type="text" name="websiteName" id="websiteName"><br />
+                        </div>
+                        <div class="">
+                            <label for="websiteUrl">
+                                <i class="fa-solid fa-link"></i> Site URL
+                            </label><br />
+                            <input
+                                class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                type="text" name="websiteUrl" id="websiteUrl"><br />
+                        </div><br/>
+                        <div class="text-center">
+                            <button class="btn my-btn-bg-orange-red px-5 py-2">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive text-center py-4">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Index</th>
+                                <th scope="col">Website Name</th>
+                                <th scope="col">Visite</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>
+                                    <button class="btn btn-success visite-btn border-0">
+                                        <i class="fa-solid fa-eye"></i> Visite
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-success delete-btn border-0">
+                                        <i class="fa-solid fa-trash"></i> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts files -->
 
-    
+
     <!-- SweetALert2 -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Bootstrap.js -->
     <script src="./JS/bootstrap.bundle.min.js"></script>
 

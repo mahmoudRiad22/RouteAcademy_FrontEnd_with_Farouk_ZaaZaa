@@ -1,0 +1,84 @@
+:root {
+    --my-bg: #f7ecde;
+    --h1-bg: #fec260;
+    --light-green: #3fa65c;
+    --yello-green: #b4ac49;
+}
+h1 span {
+    font-family: "Pacifico";
+    z-index: 3;
+    background-color: #fec260;
+
+    background: linear-gradient(to top,var(--h1-bg), var(--my-bg), transparent,transparent );
+}
+h1:hover span{
+    background: linear-gradient(to top, var(--h1-bg) );
+}
+h2 span {
+    font-family: "Righteous";
+    font-size: 25px;
+    font-weight: 500;
+    /* line-height: 30px; */
+    background: linear-gradient(to right, #3fa65c, #b4ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+body {
+    background-color: #f7ecde;
+}
+.my-bg-body {
+    background-color: #f7ecde;
+}
+.my-h1-bg {
+    background-color: #fec260;
+}
+.my-light-green {
+    color: #3fa65c;
+}
+.my-yellow-green {
+    color: #b4ac49;
+}
+.my-bg-light-green {
+    background-color: #3fa65c;
+}
+.my-bg-yellow-green {
+    background-color: #b4ac49;
+}
+.my-btn-bg-orange-red {
+    background-color: #d1512d;
+    color: white;
+}
+.my-btn-bg-orange-red:hover {
+    background-color: #bb4120;
+    color: white;
+}
+.content {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+.visite-btn {
+    /* border: 0; */
+    transition: all 0.25s ease;
+    background-color: #9eb23b;
+}
+.visite-btn:hover {
+    background-color: #8a9e23;
+}
+
+.delete-btn {
+    background-color: #eb1d36;
+    transition: all 0.25s;
+}
+.delete-btn:hover {
+    background-color: #d30820;
+}
+
+.content .content-title .icon1{
+    color: var(--light-green);
+    font-size: larger;
+}
+.content .content-title .icon2{
+    color: var(--yello-green);
+    font-size: larger;
+}
