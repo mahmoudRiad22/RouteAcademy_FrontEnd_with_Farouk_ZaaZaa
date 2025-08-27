@@ -121,11 +121,9 @@ const people = [
     {name: "Henry Wilson", city: "Columbus"},
     {name: "Amelia Anderson", city: "Charlotte"},
 ];
-// sessionStorage.clear();
 sessionStorage.setItem("people.json", JSON.stringify(people));
 console.log("sessionStorage :>> ", sessionStorage.getItem("people.json"));
 
-// sessionStorage.setItem('people.obj', people); // does not worrk at all its just all objects
 console.log("get key name using index  :>> ", sessionStorage.getItem("people.obj"));
 
 const myPpl = JSON.parse(sessionStorage.getItem("people.json"));
@@ -196,19 +194,7 @@ function formReadInput() {
         submitBtn.setAttribute("disabled", "");
     }
 
-    // if (
-    //     user.name != "error404" &&
-    //     user.email != "error404" &&
-    //     user.password != "error4041" &&
-    //     user.phone != 0 &&
-    //     user.img != "error404" &&
-    //     user.msg != "error404"
-    // ) {
-    //     saveUser(user);
-    // } else {
-    //     console.warn("Not all data are given");
-    //     formClearInput();
-    // }
+
 }
 function saveUser(user) {
     console.log("Sucess Validation");
@@ -257,17 +243,16 @@ function validateEmail() {
     }
     return 0;
 }
-// TODO:
+// TODO: DONE!!
 
 // 1- validate password ====> DONE
 // 2- repassword matches ===> Done
 // 3- validate phone number > Done
-// 4- user sweet alert for submit error ==> to do
+// 4- user sweet alert for submit error ==> Done
 
 function validatePassword() {
     const passwordRegExp = /^.{8,40}$/; // anything between 8 to 40 chars
     const msg = "must be 8-40 chars long long";
-    // console.log('passwordRegExp.test(password.value) :>> ', passwordRegExp.test(password.value));
     if (passwordRegExp.test(password.value)) {
         removeAlert("userPasswordAlert");
         password.classList.add("is-valid");
@@ -285,7 +270,6 @@ function validatePassword() {
 function passwordMatch() {
     const userRePasswordAlert = document.getElementById("userRePasswordAlert");
     const msg = "NOT a match";
-    // console.log("rePassword === password :>> ", rePassword.value === password.value);
     if (rePassword.value === password.value) {
         rePassword.classList.add("is-valid");
         rePassword.classList.remove("is-invalid");
@@ -301,7 +285,6 @@ function passwordMatch() {
 function validatePhone() {
     const userPhoneAlert = document.getElementById("userPhoneAlert");
     const phoneRegExp = /^(\+20)?\ (\(?[\d]{3}\)?)\ ([\d]{3}-[\d]{4})$/; // +20 (xxx) xxx-xxxx
-    // console.log('phoneRegExp.test("+2001023258052") :>> ', phoneRegExp.test("+2001023258052"));
     const msg = "should be 11-digits with format 01{0,1,2,5} XXXXXXX";
     const msg2 = "formal: +20 (xxx) xxx-xxxx";
 
@@ -318,8 +301,6 @@ function validatePhone() {
     }
 }
 function displayALert(target, message, type) {
-    // console.log("displayAlert :>> ", true);
-    // submitBtn.removeAttribute('disabled');
     submitBtn.setAttribute("disabled", "");
     const alertPlaceholder = document.getElementById(target);
 
@@ -355,20 +336,6 @@ function formClearInput() {
     phone.classList.remove("is-valid");
 }
 
-function validateWithKeyWord(key, input0) {
-    const regExp = /^[0-9]+$/;
-    // const nameRegExp = new RegExp();
-
-    switch (key) {
-        case "number":
-            console.log("regExp :>> ", regExp.test(input0));
-            break;
-        case "email":
-            validateEmail();
-        default:
-            console.log("validateWithKeyWord() :>> No proper Key is send");
-    }
-}
 // #endregion Input Form
 /********************************************/
 /********************************************/
@@ -379,19 +346,10 @@ function validateWithKeyWord(key, input0) {
 console.clear();
 
 document.getElementById("btn5").addEventListener("click", () => {
-    // Swal.fire("Hello!", "This is a simple alert", "info");
-
-    const aletInfo = {
+    Swal.fire({
         title: "The Internet?",
         text: "That thing is still around?",
         icon: "error",
-    };
-
-    // const namestr = `Hello, ${Name.value}`;
-    // const namestr = ["Hello", Name.value].toString();
-    Swal.fire({
-        title: namestr,
-        icon: "success",
     });
 });
 
