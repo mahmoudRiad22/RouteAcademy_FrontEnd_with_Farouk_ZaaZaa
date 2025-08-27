@@ -69,12 +69,13 @@ const tooltipList = [...tooltipTriggerList].map(
 let websites;
 
 // Create
-function createRow(website) {
+function createRow(website, index) {
+    // console.log(`websites.name :>> ${website.name} \n website.index :>> ${index}`);
     const tBody = document.getElementById("tBody");
 
     const rowDesign = `
 <tr>
-    <th scope="row">${websites.indexOf(website) + 1}</th>
+    <th scope="row">${index + 1}</th>
     <td>${website.name}</td>
     <td>
         <a href="${website.url}" target="_blank" class="btn btn-success visite-btn border-0">
@@ -82,9 +83,8 @@ function createRow(website) {
         </a>
     </td>
     <td>
-        <button class="btn btn-success delete-btn border-0" onClick="deleteRow(${websites.indexOf(
-            website
-        )})">
+        <button class="btn btn-success delete-btn border-0" 
+        onClick="deleteRow(${index})">
             <i class="fa-solid fa-trash"></i> Delete
         </button>
     </td>
@@ -94,23 +94,21 @@ function createRow(website) {
     tBody.innerHTML += rowDesign;
 }
 
-function createAllRows() {
+function createAllRows(websites) {
     tBody.innerHTML = "";
     for (const website of websites) {
-        // console.log("websites.indexOf(website) :>> ", websites.indexOf(website));
-        createRow(website);
+        createRow(website, websites.indexOf(website));
     }
 }
-
 // delete
 function deleteRow(index) {
-    // console.log("deleteRow is called");
-    // console.log(`websites[${index}] :>> `, websites[index]);
+    // console.log("index-1 :>> ", index - 1);
     websites.splice(index, 1); // delete at index
-    // console.log("new websites lenght :>> ", websites.length);
-    // JSON.stringify(sessionStorage.setItem('websites', websites))
-    sessionStorage.setItem("websites", JSON.stringify(websites));
-    createAllRows();
+    updateSessionStorage(websites);
+
+    let webs = loadSessionSotrage();
+    // console.log("webs :>> ", webs);
+    createAllRows(loadSessionSotrage());
 }
 
 function submitInput() {
@@ -121,76 +119,46 @@ function submitInput() {
         ? document.getElementById("websiteUrl")
         : "";
 
-    // console.log("websiteName.value :>> ", !!websiteName);
-    // console.log("websiteUrl.value :>> ", !!websiteUrl);
     const website = {
         name: websiteName.value ? websiteName.value : "Error404",
         url: websiteUrl.value ? websiteUrl.value : "Error404",
     };
-    // console.log("submitInput ==> website :>> ", website);
-    // next validate the data
-    // console.log("validateInput(website) :>> ", validateInput(website));
     if (validateInput(website)) {
         saveData(website);
-        websiteName.value = "";
-        websiteUrl.value = "";
+        clearInputs();
     } else {
         document.getElementById("modalTriger").click();
     }
 }
 
 function validateInput(website) {
-    // const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
     const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
     const nameRegExp = /^.{3,50}$/; // min 3char max
-    // const nameMsg = "Site name must contain at least 3 characters";
-    // const urlMsg = "Site URL must be a valid one";
-    // console.log("nameRegExp.test() :>> ", nameRegExp.test("https://www.baleqyvep.tv"));
 
     if (nameRegExp.test(website.name)) {
-        // console.log("Valid Name");
-        // console.log("website.name :>> ", website.name);
         if (urlRegExp.test(website.url)) {
-            // console.log("valid name and url");
-            // console.log("website:>> ", website);
             return 1;
         } else {
-            // console.log("Invalid URL");
-            // Trigger modal via data attributes
             return 0;
         }
     } else {
-        // console.log("Invalid Name");
         return 0;
     }
 }
 
 function saveData(website) {
-    // console.log("check here", JSON.stringify(sessionStorage.getItem("websites")));
-    websitesStr = JSON.parse(sessionStorage.getItem("websites"))
-        ? JSON.parse(sessionStorage.getItem("websites"))
-        : "";
-
-    if (websitesStr == "") {
+    if (loadSessionSotrage() == null) {
         websites = [];
-        // console.log("true if:  before push websites :>> ", websites);
-        console.log("websites.push(website) :>> ", websites.push(website));
-        // console.log("after push websites :>> ", websites);
+        websites.push(website)
+        // console.log("websites.length :>> ", websites.push(website));
     } else {
         websites = JSON.parse(sessionStorage.getItem("websites"));
-        // console.log("false if : before push websites :>> ", websites);
-        console.log("websites.push(website) :>> ", websites.push(website));
-        // console.log("after push websites :>> ", websites);
+        websites.push(website)
+        // console.log("websites.length :>> ", websites.push(website));
     }
 
-    // console.log("websitesStr :>> ", websitesStr);
-    // console.log("websites :>> ", websites);
-    // throw  console.error("Stop HERE");
-
-    // websites.push(website);
-    sessionStorage.setItem("websites", JSON.stringify(websites));
-    // createRow(website);
-    createAllRows();
+    updateSessionStorage(websites);
+    createAllRows(websites);
 }
 function displayAlert(websiteName, websiteUrl) {
     Swal.fire({
@@ -206,17 +174,16 @@ function checkNameInput() {
         ? document.getElementById("websiteName")
         : "";
     const nameRegExp = /^.{3,50}$/; // min 3char max
-    console.log('websiteName :>> ', websiteName.value);
-    if (nameRegExp.test(websiteName.value)){
-        console.log("valid:",websiteName.value);
-        websiteName.classList.remove('is-invalid');
-        websiteName.classList.add('is-valid');
-    }
-    else {
-        console.log("invalid:",websiteName.value);
+    console.log("websiteName :>> ", websiteName.value);
+    if (nameRegExp.test(websiteName.value)) {
+        console.log("valid:", websiteName.value);
+        websiteName.classList.remove("is-invalid");
+        websiteName.classList.add("is-valid");
+    } else {
+        console.log("invalid:", websiteName.value);
 
-        websiteName.classList.remove('is-valid');
-        websiteName.classList.add('is-invalid');
+        websiteName.classList.remove("is-valid");
+        websiteName.classList.add("is-invalid");
     }
 }
 function checkUrlInput() {
@@ -225,16 +192,72 @@ function checkUrlInput() {
         : "";
     const urlRegExp = /^https?:\/\/(?:www\.)?[a-z0-9-]+\.[a-z]{2,}(?:\/[^\s]*)?$/i; // must be valid url
     // console.log('websiteUrl :>> ', websiteUrl.value);
-    if (urlRegExp.test(websiteUrl.value)){
+    if (urlRegExp.test(websiteUrl.value)) {
         // console.log("valid:",websiteUrl.value);
-        websiteUrl.classList.remove('is-invalid');
-        websiteUrl.classList.add('is-valid');
-    }
-    else {
-        console.log("invalid:",websiteUrl.value);
-        websiteUrl.classList.remove('is-valid');
-        websiteUrl.classList.add('is-invalid');
-
-
+        websiteUrl.classList.remove("is-invalid");
+        websiteUrl.classList.add("is-valid");
+    } else {
+        console.log("invalid:", websiteUrl.value);
+        websiteUrl.classList.remove("is-valid");
+        websiteUrl.classList.add("is-invalid");
     }
 }
+
+function updateSessionStorage(websites) {
+    sessionStorage.setItem("websites", JSON.stringify(websites));
+}
+function loadSessionSotrage() {
+    const  loadSessionSotrage = JSON.parse(sessionStorage.getItem('websites'));
+    // console.log('loadSessionStorage :>> ', loadSessionSotrage);
+    return loadSessionSotrage; // : string or null
+}
+function checkSessionStorage() {
+    if (loadSessionSotrage() == null) {
+        websites = [];
+        console.log("websites.length :>> ", websites.length);
+    } else {
+        websites = JSON.parse(sessionStorage.getItem("websites"));
+        console.log("websites.length :>> ", websites.length);
+    }
+
+    return websites.length;
+}
+function clearInputs() {
+    websiteName.value = "";
+    websiteUrl.value = "";
+    websiteName.classList.remove("is-valid");
+    websiteUrl.classList.remove("is-valid");
+
+    websiteName.classList.remove("is-invalid");
+    websiteUrl.classList.remove("is-invalid");
+}
+
+
+/*
+performace obj:
+browser build-in performance monitor =====> typeof obj
+
+"navigation": an array of the page timing entries ==> typeof array that has one item in it
+
+"type":  most useful properity of tht single item
+
+type :>> {
+        "navigate": first visit using url or a link-clicked.
+        'reload':   page refresh using crtl+R or reload btn.
+        'back_forward': for back and forward navigation.
+        'prerender': preloaded by the browser.
+}
+    performance.getEntriesByType('navigation')[0];
+*/ 
+
+window.addEventListener("load", function(){
+    const navigator = this.performance.getEntriesByType("navigation")[0];
+
+        console.log('navigator.type :>> ', navigator.type);
+        if(navigator.type === 'reload'){
+            console.log("page has beed reloaded");
+            if (checkSessionStorage())  //if there is something saved
+                createAllRows(loadSessionSotrage()) //load the data and create it.
+        }
+
+})
