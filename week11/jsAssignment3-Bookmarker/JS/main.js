@@ -214,10 +214,10 @@ function loadSessionSotrage() {
 function checkSessionStorage() {
     if (loadSessionSotrage() == null) {
         websites = [];
-        console.log("websites.length :>> ", websites.length);
+        // console.log("websites.length :>> ", websites.length);
     } else {
         websites = JSON.parse(sessionStorage.getItem("websites"));
-        console.log("websites.length :>> ", websites.length);
+        // console.log("websites.length :>> ", websites.length);
     }
 
     return websites.length;
@@ -253,9 +253,9 @@ type :>> {
 window.addEventListener("load", function(){
     const navigator = this.performance.getEntriesByType("navigation")[0];
 
-        console.log('navigator.type :>> ', navigator.type);
+        // console.log('navigator.type :>> ', navigator.type);
         if(navigator.type === 'reload'){
-            console.log("page has beed reloaded");
+            // console.log("page has beed reloaded");
             if (checkSessionStorage())  //if there is something saved
                 createAllRows(loadSessionSotrage()) //load the data and create it.
         }
