@@ -121,7 +121,7 @@ const people = [
     {name: "Henry Wilson", city: "Columbus"},
     {name: "Amelia Anderson", city: "Charlotte"},
 ];
-sessionStorage.clear();
+// sessionStorage.clear();
 sessionStorage.setItem("people.json", JSON.stringify(people));
 console.log("sessionStorage :>> ", sessionStorage.getItem("people.json"));
 
@@ -173,7 +173,8 @@ const msg = document.getElementById("userMsg");
 
 const submitBtn = document.getElementById("submitBtn");
 
-const allUsers = [];
+const allUsers = JSON.parse(sessionStorage.getItem("allUsers"));
+
 const IMAGES_PATH = "./images";
 const DEFAULT_IMG_SRC = "./images/images3/imgi_26_09.jpg";
 
@@ -213,6 +214,11 @@ function saveUser(user) {
     console.log("Sucess Validation");
     console.log("New allUsers.length :>> ", allUsers.push(user));
     sessionStorage.setItem("allUsers", JSON.stringify(allUsers));
+    Swal.fire({
+        title: `Welcome ${user.name} !`,
+        icon: "success",
+    });
+
     formClearInput();
 }
 function validateAll() {
@@ -367,3 +373,28 @@ function validateWithKeyWord(key, input0) {
 /********************************************/
 /********************************************/
 
+/********************************************/
+/********************************************/
+// #region Using Sweet Alert
+console.clear();
+
+document.getElementById("btn5").addEventListener("click", () => {
+    // Swal.fire("Hello!", "This is a simple alert", "info");
+
+    const aletInfo = {
+        title: "The Internet?",
+        text: "That thing is still around?",
+        icon: "error",
+    };
+
+    // const namestr = `Hello, ${Name.value}`;
+    // const namestr = ["Hello", Name.value].toString();
+    Swal.fire({
+        title: namestr,
+        icon: "success",
+    });
+});
+
+// #endregion Using Sweet Alert
+/********************************************/
+/********************************************/
