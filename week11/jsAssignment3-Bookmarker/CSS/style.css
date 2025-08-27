@@ -9,10 +9,10 @@ h1 span {
     z-index: 3;
     background-color: #fec260;
 
-    background: linear-gradient(to top,var(--h1-bg), var(--my-bg), transparent,transparent );
+    background: linear-gradient(to top, var(--h1-bg), var(--my-bg), transparent, transparent);
 }
-h1:hover span{
-    background: linear-gradient(to top, var(--h1-bg) );
+h1:hover span {
+    background: linear-gradient(to top, var(--h1-bg));
 }
 h2 span {
     font-family: "Righteous";
@@ -74,11 +74,16 @@ body {
     background-color: #d30820;
 }
 
-.content .content-title .icon1{
+.content .content-title .icon1 {
     color: var(--light-green);
     font-size: larger;
 }
-.content .content-title .icon2{
+.content .content-title .icon2 {
     color: var(--yello-green);
     font-size: larger;
+}
+.custom-tooltip {
+    /* background-color: darkorchid; */
+    --bs-tooltip-bg: darkorchid;
+    --bs-tooltip-color: white;
 }

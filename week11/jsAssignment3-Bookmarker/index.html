@@ -56,14 +56,17 @@
                         </h2>
                         <i class="icon2 fa-solid ps-1 fa-bookmark"></i>
                     </div>
-                    <div class="add-website ">
+                    <div class="add-website">
                         <div class="">
                             <label for="websiteName">
                                 <i class="fa-solid fa-book-bookmark"></i> Site Name
                             </label><br />
                             <input
                                 class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
-                                type="text" name="websiteName" id="websiteName"><br />
+                                type="text" data-bs-toggle="tooltip1" data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="This top tooltip is themed via CSS variables." name="websiteName"
+                                id="websiteName"><br />
                         </div>
                         <div class="">
                             <label for="websiteUrl">
@@ -71,10 +74,12 @@
                             </label><br />
                             <input
                                 class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
-                                type="text" name="websiteUrl" id="websiteUrl"><br />
+                                type="text" name="websiteUrl" id="websiteUrl" data-bs-toggle="tooltip2"
+                                data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                data-bs-title="This top tooltip is themed via CSS variables."><br />
                         </div><br />
                         <div class="text-center">
-                            <button class="btn my-btn-bg-orange-red px-5 py-2" onclick="createRow()">Submit</button>
+                            <button class="btn my-btn-bg-orange-red px-5 py-2" onclick="submitInput()">Submit</button>
                         </div>
                         <!-- <div class="text-center">
                             <button class="btn my-btn-bg-orange-red px-5 py-2" onclick="createAllRows()">ALL</button>
@@ -115,6 +120,39 @@
         </div>
     </section>
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modalTriger">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="fa-solid fa-circle" style="color: #F15F5D;"></i>
+                        <i class="fa-solid fa-circle" style="color: #FEBE2E;"></i>
+                        <i class="fa-solid fa-circle" style="color: #4DB748;"></i>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><b>Site Name or Url is not valid, Please follow the rules below :</b></p>
+                    <ul class="list-unstyled">
+                        <li class="p-2">
+                        <i class="fa-regular fa-circle-up fa-rotate-90" style="color: #BB4120;"></i>
+                            Site name must contain at least 3 characters
+                        </li>
+                        <li class="p-2">
+                        <i class="fa-regular fa-circle-up fa-rotate-90" style="color: #BB4120;"></i>
+                            Site URL must be a valid one
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ****************************** -->
     <!-- ****************************** -->
