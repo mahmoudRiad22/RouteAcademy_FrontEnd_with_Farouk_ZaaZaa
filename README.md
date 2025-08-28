@@ -1,15 +1,18 @@
-### BaseURL for live-page:
-https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/ + relevant path
+
+# README
+
+## BaseURL for live-page
+
+[https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/]+[relevant_path]
 
 ### BaseURL for code-Source
-https://github.com/mahmoudRiad22/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/tree/main/ + relevant path
 
-###### Change the "\\" to "/"
+[https://github.com/mahmoudRiad22/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/tree/main/]+[relevant_path]
 
+#### Change the "\\" to "/"
 
-# jsAssignment3-Bookmarker
+### jsAssignment3-Bookmarker
 
-## Live-Review:
+### Live-Review
 
-## Code-Source:
-
+### Code-Source
