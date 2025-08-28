@@ -79,7 +79,10 @@ a {
     color: var(--text);
 }
 
-
+li::marker{
+    content: "\-";
+    background-color: red;
+}
 /* #endregion Global CSS */
 /*****************************/
 /*****************************/
