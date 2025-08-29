@@ -22,7 +22,7 @@ function problem1(x) {
     }
 }
 
-/////////////////////////////////////////////////////// NOT Done
+/////////////////////////////////////////////////////// Done
 
 // 2- Write a program that take number from user then print yes if that number can
 // divide by 3 and 4 otherwise print no
@@ -42,7 +42,7 @@ function problem2(input) {
     }
     return "no";
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 3- Write a program that allows the user to insert 2 integers then print the max Example1
 // Input: 3 5
@@ -58,7 +58,7 @@ function problem3(n1, n2) {
         } else return "Error";
     } else return "Error";
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 4- Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
 // Example 1
@@ -75,7 +75,7 @@ function problem4(x) {
         } else return "error";
     } else return "error";
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 5- Write a program that take 3 integers from user then print the max element and the min element.
 // Example 1
@@ -111,7 +111,7 @@ function problem5(n1, n2, n3) {
     } else return "error";
 }
 
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 6- Write a program that allows the user to insert integer number
 // then check If a number is oven or odd
@@ -269,8 +269,8 @@ function problem12_2(grades) {
     let sum = 0,
         avg = 0;
     for (let i = 0; i < grades.length; i++) {
-        if((!Number(grades[i]) && grades[i] !== 0) || grades[i] === ''|| grades[i] === ' ')
-            return 'error'
+        if ((!Number(grades[i]) && grades[i] !== 0) || grades[i] === "" || grades[i] === " ")
+            return "error";
         sum += grades[i];
     }
     avg = sum / grades.length;
@@ -282,25 +282,25 @@ function problem12_2(grades) {
 // Example:
 // Input: - Month Number: 1
 // Output:-. Days in Month: 31
-function problem13(x){
-    const daysInMonths ={
-        "1": 31,
-        "2": 28,
-        "3": 31,
-        "4": 30,
-        "5": 31,
-        "6": 30,
-        "7": 31,
-        "8": 31,
-        "9": 30,
-        "10": 31,
-        "11": 30,
-        "12": 31,
-    }
+function problem13(x) {
+    const daysInMonths = {
+        1: 31,
+        2: 28,
+        3: 31,
+        4: 30,
+        5: 31,
+        6: 30,
+        7: 31,
+        8: 31,
+        9: 30,
+        10: 31,
+        11: 30,
+        12: 31,
+    };
 
-    return `Days in month: ${daysInMonths[x]}`
+    return `Days in month: ${daysInMonths[x]}`;
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 14- Write a program to input marks of five subjects
 // Physics, Chemistry, Biology, Mathematics and Computer
@@ -311,7 +311,40 @@ function problem13(x){
 // Percentage >= 60%: Grad D
 // Percentage >= 40%: Grad E
 // Percentage < 40%: Grad F
-/////////////////////////////////////////////////////// NOT DONE
+
+function problem14Input() {
+    let grades = [];
+    grades.push({Physics: prompt("Grade of Physics :")});
+    grades.push({Chemisrty: prompt("Grade of Chemisrty :")});
+    grades.push({Biology: prompt("Grade of Biology :")});
+    grades.push({Mathmatics: prompt("Grade of Mathmatics :")});
+    grades.push({Computer: prompt("Grade of Computer :")});
+    return grades;
+}
+function problem14(grades) {
+    let sum = 0,
+        percent = 0,
+        grad = "";
+    console.log("grades, grades.length :>> ", grades, grades.length);
+    for (const subject in grades) {
+        if (
+            (!Number(grades[subject]) && grades[subject] !== 0 && grades[subject] < 0) ||
+            grades[subject] === "" ||
+            grades[subject] === " "
+        )
+            return "error";
+        sum += grades[subject];
+    }
+    percent = sum / grades.length;
+    if (percent >= 90) grad = "A";
+    else if (percent >= 80) grad = "B";
+    else if (percent >= 70) grad = "C";
+    else if (percent >= 60) grad = "D";
+    else if (percent >= 40) grad = "E";
+    else grad = "F";
+    return `percentage = ${percent}%,  grade: ${grad}`;
+}
+/////////////////////////////////////////////////////// DONE
 
 // ******************************** Using switch case*******************************
 // 15- Write a program to print total number of days in month
@@ -345,5 +378,7 @@ module.exports = {
     problem10,
     problem11,
     problem12,
-    problem12_2,problem13,
+    problem12_2,
+    problem13,
+    problem14,
 };

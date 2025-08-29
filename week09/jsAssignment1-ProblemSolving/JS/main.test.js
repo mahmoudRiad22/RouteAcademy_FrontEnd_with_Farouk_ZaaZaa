@@ -256,6 +256,19 @@ expect(main.problem13(7)).toBe("Days in month: 31");
 // Percentage >= 60%: Grad D
 // Percentage >= 40%: Grad E
 // Percentage < 40%: Grad F
+test('test for problem14', ()=>{
+let grades;
+
+grades = [55,69,41,75,80];
+expect(main.problem14(grades)).toBe(`percentage = 64%,  grade: D`);
+
+grades = [0,0,0,0,0];
+expect(main.problem14(grades)).toBe(`percentage = 0%,  grade: F`);
+
+grades = [55,69,4,'',-75];
+expect(main.problem14(grades)).toBe(`error`);
+
+})
 /////////////////////////////////////////////////////// NOT DONE
 
 // ******************************** Using switch case*******************************
