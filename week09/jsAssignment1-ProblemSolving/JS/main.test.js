@@ -231,7 +231,7 @@ expect(main.problem12_2([40,56,'',0,' '])).toBe(`error`);
 expect(main.problem12_2([40,56,'',0,' '])).toBe(`error`);
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 13-Write a program to input month number and print number of days in that month.
 // Example:
@@ -245,7 +245,7 @@ expect(main.problem13(5)).toBe("Days in month: 31");
 expect(main.problem13(2)).toBe("Days in month: 28");
 expect(main.problem13(7)).toBe("Days in month: 31");
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 14- Write a program to input marks of five subjects
 // Physics, Chemistry, Biology, Mathematics and Computer
@@ -273,6 +273,15 @@ expect(main.problem14(grades)).toBe(`error`);
 
 // ******************************** Using switch case*******************************
 // 15- Write a program to print total number of days in month
+test('test for problem15', ()=>{
+
+expect(main.problem15('1')).toBe('Days in month: 31');
+expect(main.problem15('18')).toBe("error");
+expect(main.problem15('11')).toBe("Days in month: 30");
+expect(main.problem15('5')).toBe("Days in month: 31");
+expect(main.problem15('2')).toBe("Days in month: 28");
+expect(main.problem15('7')).toBe("Days in month: 31");
+})
 /////////////////////////////////////////////////////// NOT DONE
 
 // 16- Write a program to check whether an alphabet is vowel or consonant

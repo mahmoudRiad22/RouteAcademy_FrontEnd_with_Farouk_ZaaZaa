@@ -348,6 +348,51 @@ function problem14(grades) {
 
 // ******************************** Using switch case*******************************
 // 15- Write a program to print total number of days in month
+
+function problem15(x) {
+    let days = '';
+    switch (x) {
+        case "1":
+            days = 'Days in month: 31';
+            break;
+        case "2":
+            days = 'Days in month: 28';
+            break;
+        case "3":
+            days = 'Days in month: 31';
+            break;
+        case "4":
+            days = 'Days in month: 30';
+            break;
+        case "5":
+            days = 'Days in month: 31';
+            break;
+        case "6":
+            days = 'Days in month: 30';
+            break;
+        case "7":
+            days = 'Days in month: 31';
+            break;
+        case "8":
+            days = 'Days in month: 31';
+            break;
+        case "9":
+            days = 'Days in month: 30';
+            break;
+        case "10":
+            days = 'Days in month: 31';
+            break;
+        case "11":
+            days = 'Days in month: 30';
+            break;
+        case "12":
+            days = 'Days in month: 31';
+            break;
+        default:
+            days = 'error';
+    }
+    return days;
+}
 /////////////////////////////////////////////////////// NOT DONE
 
 // 16- Write a program to check whether an alphabet is vowel or consonant
@@ -380,5 +425,7 @@ module.exports = {
     problem12,
     problem12_2,
     problem13,
-    problem14,
+    problem14,problem15,
 };
+
+// jsAssignment1-ProblemSolving
