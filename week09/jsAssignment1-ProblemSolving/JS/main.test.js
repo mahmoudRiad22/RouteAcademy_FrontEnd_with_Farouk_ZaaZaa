@@ -1,14 +1,11 @@
-// 1. Fix your test runner function name
-// The function should be called 'test' (all lowercase), not 'Test'.
-// 2. Your main function should return the string, not just log it.
-
 const main = require("./main");
 
+/////////////////////////////////////////////////////// DONE
 test("init test", () => {
     expect(main.main("WTF")).toBe("WTF");
 });
 
-////////////////////////////////
+/////////////////////////////////////////////////////// DONE
 // 1- Write a program that allow to user enter number then print it 
 test("test for problem1", () => {
     expect(main.problem1("ddd")).toBe("not number");
@@ -17,7 +14,7 @@ test("test for problem1", () => {
 
 });
 
-////////////////////////////////////
+/////////////////////////////////////////////////////// DONE
 // 2- Write a program that take number from user then print yes if that number can
 // divide by 3 and 4 otherwise print no
 
@@ -31,7 +28,7 @@ test("test for problem2", () => {
     expect(main.problem2(9)).toBe("no");
     expect(main.problem2(24)).toBe("yes");
 });
-////////////////////////////////////
+/////////////////////////////////////////////////////// DONE
 
 
 // 3- Write a program that allows the user to insert 2 integers then print the max Example1
@@ -46,7 +43,7 @@ expect(main.problem3(3,5)).toBe(5);
 expect(main.problem3(10,7)).toBe(10);
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 4- Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
 // Example 1
@@ -68,7 +65,7 @@ expect(main.problem4("gg")).toBe("error");
 
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 5- Write a program that take 3 integers from user 
 // then print the max element and the min element.
@@ -90,7 +87,7 @@ expect(main.problem5(0,0,0)).toBe("max element = 0 , min element = 0");
 expect(main.problem5(-1,-5,-9)).toBe("max element = -1 , min element = -9");
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 6- Write a program that allows the user to insert integer number 
 // then check If a number is even or odd
@@ -108,7 +105,7 @@ expect(main.problem6(0.2)).toBe("even");
 expect(main.problem6(89.2)).toBe("odd");
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 
 // 8- Write a program that take character from user 
@@ -147,7 +144,7 @@ expect(main.problem8('_')).toBe('error');
 
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 9- Write a program that allows user to insert integer 
 // then print all numbers between 1 to that’s number
@@ -159,7 +156,7 @@ test('test for problem9', ()=>{
 expect(main.problem9(5)).toBe("1,2,3,4,5");
 expect(main.problem9(10)).toBe("1,2,3,4,5,6,7,8,9,10");
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 10- Write a program that allows user to insert integer 
 // then print a multiplication table up to 12.
@@ -174,7 +171,7 @@ expect(main.problem10(0)).toBe("0 0 0 0 0 0 0 0 0 0 0 0");
 expect(main.problem10('g')).toBe("error");
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 11- Write a program that allows to user to insert number 
 // then print all even numbers between 1 to this number
@@ -191,7 +188,7 @@ expect(main.problem11("bn")).toBe("error");
 
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 12- Write a program that take two integers then print the power Example:
 // Input: 4 3
@@ -209,9 +206,10 @@ expect(main.problem12(800, 0)).toBe('1');
 
 
 })
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
-// 12- Write a program to enter marks of five subjects and calculate total, average and percentage.
+// 12_2- Write a program to enter marks of five subjects and 
+// calculate total, average and percentage.
 // Example
 // Input: - Enter Marks of five subjects:
 // 95
@@ -222,12 +220,31 @@ expect(main.problem12(800, 0)).toBe('1');
 // Output:-.Total marks = 435
 // Average Marks =87
 // Percentage =87
+test('test for problem12_2', ()=>{
+
+expect(main.problem12_2([95,76,58,90,89])).toBe(`Total marks = 408, Average Marks = 81.6, Percentage = 81.6%`);
+expect(main.problem12_2([100,100,100,100,100])).toBe(`Total marks = 500, Average Marks = 100, Percentage = 100%`);
+expect(main.problem12_2([0,0,0,0,0])).toBe(`Total marks = 0, Average Marks = 0, Percentage = 0%`);
+expect(main.problem12_2([0,0,0,0,0])).toBe(`Total marks = 0, Average Marks = 0, Percentage = 0%`);
+expect(main.problem12_2([0,0,'',0,0])).toBe(`error`);
+expect(main.problem12_2([40,56,'',0,' '])).toBe(`error`);
+expect(main.problem12_2([40,56,'',0,' '])).toBe(`error`);
+
+})
 /////////////////////////////////////////////////////// NOT DONE
 
 // 13-Write a program to input month number and print number of days in that month.
 // Example:
 // Input: - Month Number: 1
 // Output:-. Days in Month: 31
+test('test for problem13', ()=>{
+
+expect(main.problem13(1)).toBe("Days in month: 31");
+expect(main.problem13(11)).toBe("Days in month: 30");
+expect(main.problem13(5)).toBe("Days in month: 31");
+expect(main.problem13(2)).toBe("Days in month: 28");
+expect(main.problem13(7)).toBe("Days in month: 31");
+})
 /////////////////////////////////////////////////////// NOT DONE
 
 // 14- Write a program to input marks of five subjects

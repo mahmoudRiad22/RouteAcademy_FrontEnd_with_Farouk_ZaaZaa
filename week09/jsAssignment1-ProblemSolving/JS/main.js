@@ -4,7 +4,6 @@
 function main(msg) {
     return msg;
 }
-
 /////////////////////////////////////////////////////// DONE
 
 // 1- Write a program that allow to user enter number then print it Example
@@ -12,6 +11,7 @@ function main(msg) {
 // Output: 5
 
 // let input = prompt("Enter a number");
+// alert("you Entered : " + problem1(input));
 function problem1(x) {
     if (Number(x)) {
         return x;
@@ -21,7 +21,6 @@ function problem1(x) {
         return "not number";
     }
 }
-// alert("you Entered : " + problem1(input));
 
 /////////////////////////////////////////////////////// NOT Done
 
@@ -32,8 +31,9 @@ function problem1(x) {
 // Input: 9 Output No
 
 // let input = prompt("Enter a number");
+// alert(problem2(prompt("Enter a number")));
+
 function problem2(input) {
-    // let input = prompt("Enter a number");
     if (input !== "") {
         if (Number(input)) {
             if (input % 3 == 0 && input % 4 == 0) return "yes";
@@ -42,7 +42,6 @@ function problem2(input) {
     }
     return "no";
 }
-// alert(problem2(prompt("Enter a number")));
 /////////////////////////////////////////////////////// NOT DONE
 
 // 3- Write a program that allows the user to insert 2 integers then print the max Example1
@@ -250,7 +249,7 @@ function problem12(x, y) {
 }
 /////////////////////////////////////////////////////// DONE
 
-// 12- Write a program to enter marks of five subjects and calculate total, average and percentage.
+// 12_2- Write a program to enter marks of five subjects and calculate total, average and percentage.
 // Example
 // Input: - Enter Marks of five subjects:
 // 95
@@ -258,15 +257,49 @@ function problem12(x, y) {
 // 58
 // 90
 // 89
-// Output:-.Total marks = 435
+// Output:-.Total marks = 408
 // Average Marks =87
 // Percentage =87
-/////////////////////////////////////////////////////// NOT DONE
+
+// let grades = [];
+// for (i = 0; i < 5; i++)
+//     grades[i] = prompt(`Grade ${i + 1} = `);
+// problem12_2(grades);
+function problem12_2(grades) {
+    let sum = 0,
+        avg = 0;
+    for (let i = 0; i < grades.length; i++) {
+        if((!Number(grades[i]) && grades[i] !== 0) || grades[i] === ''|| grades[i] === ' ')
+            return 'error'
+        sum += grades[i];
+    }
+    avg = sum / grades.length;
+    return `Total marks = ${sum}, Average Marks = ${avg}, Percentage = ${avg}%`;
+}
+/////////////////////////////////////////////////////// DONE
 
 // 13-Write a program to input month number and print number of days in that month.
 // Example:
 // Input: - Month Number: 1
 // Output:-. Days in Month: 31
+function problem13(x){
+    const daysInMonths ={
+        "1": 31,
+        "2": 28,
+        "3": 31,
+        "4": 30,
+        "5": 31,
+        "6": 30,
+        "7": 31,
+        "8": 31,
+        "9": 30,
+        "10": 31,
+        "11": 30,
+        "12": 31,
+    }
+
+    return `Days in month: ${daysInMonths[x]}`
+}
 /////////////////////////////////////////////////////// NOT DONE
 
 // 14- Write a program to input marks of five subjects
@@ -312,4 +345,5 @@ module.exports = {
     problem10,
     problem11,
     problem12,
+    problem12_2,problem13,
 };
