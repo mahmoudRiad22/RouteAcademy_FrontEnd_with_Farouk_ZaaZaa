@@ -212,19 +212,18 @@ function problem11(x) {
             minusFlag = 1;
             x *= -1;
         }
-        console.log('minusFlag :>> ', minusFlag);
+        console.log("minusFlag :>> ", minusFlag);
         let numbers = [];
         for (let i = 1; i <= x; i++) {
             if (minusFlag) {
                 if (i % 2 == 0) {
                     numbers.push("-" + i);
-                }
-                else continue;
+                } else continue;
             } else {
                 if (i % 2 == 0) {
                     numbers.push(i);
-                    numbers.unshift
-                } else  continue;
+                    numbers.unshift;
+                } else continue;
             }
         }
         return numbers.join(" ");
@@ -236,12 +235,18 @@ function problem11(x) {
 // 12- Write a program that take two integers then print the power Example:
 // Input: 4 3
 // Output: 64 Hint how to calculate 4^3 = 4 * 4 * 4 =64
-function problem12(x, y){
-    let n = 0
-    if (Number(x) && Number(y) && x != '' && y != ''){
-        return x**y;
+function problem12(x, y) {
+    // ' ', ''
+    let n = 0;
+    if (
+        (Number(x) || x === 0) &&
+        (Number(y) || y === 0) &&
+        (x !== "" || x !== " ") &&
+        (y !== "" || y !== " ")
+    ) {
+        return (x ** y).toString();
     }
-    return 'error'
+    return "error";
 }
 /////////////////////////////////////////////////////// DONE
 
@@ -305,5 +310,6 @@ module.exports = {
     problem8,
     problem9,
     problem10,
-    problem11,problem12,
+    problem11,
+    problem12,
 };

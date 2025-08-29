@@ -199,9 +199,14 @@ expect(main.problem11("bn")).toBe("error");
 
 test('test for problem12', ()=>{
 
-expect(main.problem12(4,3)).toBe(64);
+expect(main.problem12(4,3)).toBe('64');
 expect(main.problem12('x','v')).toBe('error');
 expect(main.problem12(' ', '')).toBe('error');
+expect(main.problem12(-1, 4)).toBe('1');
+expect(main.problem12(0, 8)).toBe('0');
+expect(main.problem12(800, 0)).toBe('1');
+
+
 
 })
 /////////////////////////////////////////////////////// NOT DONE
