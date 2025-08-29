@@ -13,6 +13,8 @@ function main(msg) {
 // let input = prompt("Enter a number");
 // alert("you Entered : " + problem1(input));
 function problem1(x) {
+    if (x === 0) return 0;
+    if (typeof x === "boolean") return "not number";
     if (Number(x)) {
         return x;
     } else if (Number(x) && x !== "") {
@@ -35,6 +37,7 @@ function problem1(x) {
 
 function problem2(input) {
     if (input !== "") {
+        if (input == 0) return "yes";
         if (Number(input)) {
             if (input % 3 == 0 && input % 4 == 0) return "yes";
             else return "no";
@@ -51,16 +54,23 @@ function problem2(input) {
 // Input: 10 7
 // Output: 10
 function problem3(n1, n2) {
-    if ((n1 !== "", n2 != "")) {
-        if (Number(n1) && Number(n2)) {
+    // console.log("n1, n2 :>> ", n1, n2);
+    if (n1 == 0 && n2 == 0) return 0;
+
+    if (n1 !== "" && n2 != "") {
+        // console.log("n1, n2 :>> ", n1, n2);
+
+        if ((!!Number(n1) || n1 === 0) && (!!Number(n2) || n2 === 0)) {
+            // console.log("n1, n2 :>> ", n1, n2);
             if (n1 >= n2) return n1;
             else return n2;
-        } else return "Error";
-    } else return "Error";
+        } else return "error";
+    } else return "error";
 }
 /////////////////////////////////////////////////////// DONE
 
-// 4- Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
+// 4- Write a program that allows the user to insert an integer
+// then print negative if it is negative number otherwise print positive.
 // Example 1
 // Input: -5
 // Output negative Example2
@@ -68,12 +78,15 @@ function problem3(n1, n2) {
 // Output positive
 
 function problem4(x) {
-    if (x !== "") {
-        if (Number(x)) {
-            if (Number(x) >= 0) return "positive";
-            else return "negative";
+    if (typeof x !== "boolean") {
+        if (x !== "") {
+            if (Number(x)) {
+                if (Number(x) >= 0) return "positive";
+                else return "negative";
+            } else return "error";
         } else return "error";
-    } else return "error";
+    }
+    return "error";
 }
 /////////////////////////////////////////////////////// DONE
 
@@ -88,27 +101,31 @@ function problem4(x) {
 // Max element = 9 Min element = 3
 
 function problem5(n1, n2, n3) {
-    // 7,8,5
     let min = 0,
         max = 0;
-    if (n1 !== "" && n2 !== "" && n3 !== "") {
-        if (Number(n1) && Number(n2) && Number(n3)) {
-            if (n1 >= n2) {
-                max = n1;
-                min = n2;
-            } else {
-                max = n2;
-                min = n1;
-            }
-            if (n1 >= max) max = n1;
-            if (n1 < min) min = n1;
-            if (n2 >= max) max = n2;
-            if (n2 < min) min = n2;
-            if (n3 >= max) max = n3;
-            if (n3 < min) min = n3;
-            return `max element = ${max} , min element = ${min}`;
-        } else return `max element = ${max} , min element = ${min}`;
-    } else return "error";
+    if (n1 === 0 && n2 === 0) return `max element = 0 , min element = 0`;
+
+    if (!!n1 && !!n2 && n3) {
+        if (n1 !== "" && n2 !== "" && n3 !== "") {
+            if (Number(n1) && Number(n2) && Number(n3)) {
+                if (n1 >= n2) {
+                    max = n1;
+                    min = n2;
+                } else {
+                    max = n2;
+                    min = n1;
+                }
+                if (n1 >= max) max = n1;
+                if (n1 < min) min = n1;
+                if (n2 >= max) max = n2;
+                if (n2 < min) min = n2;
+                if (n3 >= max) max = n3;
+                if (n3 < min) min = n3;
+                return `max element = ${max} , min element = ${min}`;
+            } else return `max element = ${max} , min element = ${min}`;
+        } else return "error";
+    }
+    return "error";
 }
 
 /////////////////////////////////////////////////////// DONE
@@ -118,13 +135,16 @@ function problem5(n1, n2, n3) {
 
 function problem6(x) {
     // -0.5
-    if (x !== "") {
-        if (Number(x)) {
-            if (x % 1) x -= x % 1; // take the int part only
-            if (!(x % 2)) return "even";
-            else return "odd";
-        } else return "even";
-    } else return "error";
+    if (x || x === 0) {
+        if (x !== "") {
+            if (Number(x)) {
+                if (x % 1) x -= x % 1; // take the int part only
+                if (!(x % 2)) return "even";
+                else return "odd";
+            } else return "even";
+        } else return "error";
+    }
+    return "error";
 }
 
 /////////////////////////////////////////////////////// DONE
@@ -138,19 +158,22 @@ function problem6(x) {
 // Output:
 // Consonant
 function problem8(c) {
-    if (c.length >= 1 && !Number(c) && c != "") {
-        let flag = 0;
-        letters = [..."abcdefghijklmnopqrstuvwxyz"]; // make the string into array of letters;
-        for (let i = 0; i < letters.length; i++) {
-            if (c == letters[i])
-                // it is a letter
-                flag = 1;
-        }
-        if (!flag) return "error";
+    if (c) {
+        if (c.length >= 1 && !Number(c) && c != "") {
+            let flag = 0;
+            letters = [..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]; // make the string into array of letters;
+            for (let i = 0; i < letters.length; i++) {
+                if (c == letters[i])
+                    // it is a letter
+                    flag = 1;
+            }
+            if (!flag) return "error";
 
-        let voewls = [..."aeiou"];
-        for (let i = 0; i < voewls.length; i++) if (voewls[i] == c) return "vowel";
-        return "consonant";
+            let voewls = [..."aeiouAEIOU"];
+            for (let i = 0; i < voewls.length; i++) if (voewls[i] == c) return "vowel";
+            return "consonant";
+        }
+        return "error";
     }
     return "error";
 }
@@ -182,7 +205,8 @@ function problem9(x) {
 }
 /////////////////////////////////////////////////////// DONE
 
-// 10- Write a program that allows user to insert integer then print a multiplication table up to 12.
+// 10- Write a program that allows user to insert integer
+// then print a multiplication table up to 12.
 // Example Input: 5 Outputs:
 // 5 10 15 20 25 30 35 40 45 50 55 60
 
@@ -205,13 +229,13 @@ function problem10(x) {
 
 function problem11(x) {
     let minusFlag = 0;
-    console.log("x :>> ", Number(x) && x != "" && x != 0);
+    // console.log("x :>> ", Number(x) && x != "" && x != 0);
     if (Number(x) && x != "" && x != 0) {
         if (x < 0) {
             minusFlag = 1;
             x *= -1;
         }
-        console.log("minusFlag :>> ", minusFlag);
+        // console.log("minusFlag :>> ", minusFlag);
         let numbers = [];
         for (let i = 1; i <= x; i++) {
             if (minusFlag) {
@@ -268,13 +292,16 @@ function problem12(x, y) {
 function problem12_2(grades) {
     let sum = 0,
         avg = 0;
-    for (let i = 0; i < grades.length; i++) {
-        if ((!Number(grades[i]) && grades[i] !== 0) || grades[i] === "" || grades[i] === " ")
-            return "error";
-        sum += grades[i];
+    if (grades.length == 5) {
+        for (let i = 0; i < grades.length; i++) {
+            if ((!Number(grades[i]) && grades[i] !== 0) || grades[i] === "" || grades[i] === " ")
+                return "error";
+            sum += grades[i];
+        }
+        avg = sum / grades.length;
+        return `Total marks = ${sum}, Average Marks = ${avg}, Percentage = ${avg}%`;
     }
-    avg = sum / grades.length;
-    return `Total marks = ${sum}, Average Marks = ${avg}, Percentage = ${avg}%`;
+    return "error";
 }
 /////////////////////////////////////////////////////// DONE
 
@@ -298,6 +325,8 @@ function problem13(x) {
         12: 31,
     };
 
+    if (!x || !Number(x) || x === " ") return "error";
+    if (Number(x) > 12) return "error";
     return `Days in month: ${daysInMonths[x]}`;
 }
 /////////////////////////////////////////////////////// DONE
@@ -325,12 +354,17 @@ function problem14(grades) {
     let sum = 0,
         percent = 0,
         grad = "";
-    console.log("grades, grades.length :>> ", grades, grades.length);
+    // console.log("grades, grades.length :>> ", grades, grades.length);
+    if (grades.length < 5 || grades.length > 5) return "error";
     for (const subject in grades) {
+        // if (
+        //     (!Number(grades[subject]) && grades[subject] !== 0 && grades[subject] < 0) ||
+        //     grades[subject] === "" ||
+        //     grades[subject] === " "
+        // );
         if (
-            (!Number(grades[subject]) && grades[subject] !== 0 && grades[subject] < 0) ||
-            grades[subject] === "" ||
-            grades[subject] === " "
+            (!grades[subject] && grades[subject] !== 0) ||
+            (!Number(grades[subject]) && grades[subject] !== 0)
         )
             return "error";
         sum += grades[subject];
@@ -350,48 +384,64 @@ function problem14(grades) {
 // 15- Write a program to print total number of days in month
 
 function problem15(x) {
-    let days = '';
+    let days = "";
     switch (x) {
         case "1":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         case "2":
-            days = 'Days in month: 28';
+            days = "Days in month: 28";
             break;
         case "3":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         case "4":
-            days = 'Days in month: 30';
+            days = "Days in month: 30";
             break;
         case "5":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         case "6":
-            days = 'Days in month: 30';
+            days = "Days in month: 30";
             break;
         case "7":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         case "8":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         case "9":
-            days = 'Days in month: 30';
+            days = "Days in month: 30";
             break;
         case "10":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         case "11":
-            days = 'Days in month: 30';
+            days = "Days in month: 30";
             break;
         case "12":
-            days = 'Days in month: 31';
+            days = "Days in month: 31";
             break;
         default:
-            days = 'error';
+            days = "error";
     }
     return days;
+}
+truthyVsFalsy();
+
+function truthyVsFalsy(){
+    if (!!(-4)){
+console.log("yes its truthy");}
+else console.log("no its falsy");
+    console.log(
+        `!!null = ${null}, 
+!!undefined = ${!!undefined}, 
+!!NaN = ${!!NaN}, 
+!!'' = ${!!""}, 
+!!" " = ${!!" "}, 
+Number('-4') = ${!!Number(-4)}
+if (null) :>> `
+    );
 }
 /////////////////////////////////////////////////////// NOT DONE
 
@@ -425,7 +475,8 @@ module.exports = {
     problem12,
     problem12_2,
     problem13,
-    problem14,problem15,
+    problem14,
+    problem15,
 };
 
-// jsAssignment1-ProblemSolving
+// week09 jsAssignment1-ProblemSolving

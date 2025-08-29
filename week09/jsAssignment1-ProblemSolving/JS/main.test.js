@@ -298,3 +298,179 @@ expect(main.problem15('7')).toBe("Days in month: 31");
 
 // 20- Write a program to create Simple Calculator
 /////////////////////////////////////////////////////// NOT DONE
+
+
+
+// ...existing code...
+
+// Edge cases for problem1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////// DONE
+test("problem1 edge cases", () => {
+    expect(main.problem1(null)).toBe("not number");
+    expect(main.problem1(undefined)).toBe("not number");
+    expect(main.problem1(NaN)).toBe("not number");
+    expect(main.problem1(Infinity)).toBe(Infinity);
+    expect(main.problem1(-Infinity)).toBe(-Infinity);
+    expect(main.problem1(0)).toBe(0);
+    expect(main.problem1("123")).toBe("123");
+    expect(main.problem1(true)).toBe("not number");
+    expect(main.problem1([])).toBe("not number");
+    expect(main.problem1({})).toBe("not number");
+});
+
+// Edge cases for problem2
+test("problem2 edge cases", () => {
+    expect(main.problem2(0)).toBe("yes");
+    expect(main.problem2(-12)).toBe("yes");
+    expect(main.problem2(3)).toBe("no");
+    expect(main.problem2(4)).toBe("no");
+    expect(main.problem2(-3)).toBe("no");
+    expect(main.problem2(-4)).toBe("no");
+    expect(main.problem2(null)).toBe("no");
+    expect(main.problem2(undefined)).toBe("no");
+    expect(main.problem2(NaN)).toBe("no");
+    expect(main.problem2("12")).toBe("yes");
+});
+
+// Edge cases for problem3
+test("problem3 edge cases", () => {
+    expect(main.problem3(5,5)).toBe(5);
+    expect(main.problem3(-5,-10)).toBe(-5);
+    expect(main.problem3(0,5)).toBe(5);
+    expect(main.problem3(0,0)).toBe(0);
+    expect(main.problem3('a',5)).toBe("error");
+    expect(main.problem3(5,'b')).toBe("error");
+});
+
+// Edge cases for problem4
+test("problem4 edge cases", () => {
+    expect(main.problem4(0)).toBe("error");
+    expect(main.problem4(null)).toBe("error");
+    expect(main.problem4(undefined)).toBe("error");
+    expect(main.problem4(NaN)).toBe("error");
+    expect(main.problem4('0')).toBe("error");
+    expect(main.problem4(true)).toBe("error");
+});
+
+// Edge cases for problem5
+test("problem5 edge cases", () => {
+    expect(main.problem5(2,2,2)).toBe("max element = 2 , min element = 2");
+    expect(main.problem5(-1,-2,-3)).toBe("max element = -1 , min element = -3");
+    expect(main.problem5('1',2,3)).toBe("max element = 3 , min element = 1");
+    expect(main.problem5(null,2,3)).toBe("error");
+});
+
+// Edge cases for problem6
+test("problem6 edge cases", () => {
+    expect(main.problem6(0)).toBe("even");
+    expect(main.problem6(-2)).toBe("even");
+    expect(main.problem6(-3)).toBe("odd");
+    expect(main.problem6(null)).toBe("error");
+    expect(main.problem6(undefined)).toBe("error");
+    expect(main.problem6(NaN)).toBe("error");
+    expect(main.problem6("2")).toBe("even");
+});
+
+// Edge cases for problem8
+test("problem8 edge cases", () => {
+    expect(main.problem8('A')).toBe('vowel');
+    expect(main.problem8('E')).toBe('vowel');
+    expect(main.problem8('I')).toBe('vowel');
+    expect(main.problem8('O')).toBe('vowel');
+    expect(main.problem8('U')).toBe('vowel');
+    expect(main.problem8('1')).toBe('error');
+    expect(main.problem8('@')).toBe('error');
+    expect(main.problem8('')).toBe('error');
+    expect(main.problem8(null)).toBe('error');
+    expect(main.problem8(undefined)).toBe('error');
+    expect(main.problem8('ae')).toBe('error');
+    expect(main.problem8('abc')).toBe('error');
+});
+
+// Edge cases for problem9
+test("problem9 edge cases", () => {
+    expect(main.problem9(0)).toBe("error");
+    expect(main.problem9(-5)).toBe("error");
+    expect(main.problem9(null)).toBe("error");
+    expect(main.problem9(undefined)).toBe("error");
+    expect(main.problem9('5')).toBe("1,2,3,4,5");
+});
+
+// Edge cases for problem10
+test("problem10 edge cases", () => {
+    expect(main.problem10(-5)).toBe("-5 -10 -15 -20 -25 -30 -35 -40 -45 -50 -55 -60");
+    expect(main.problem10('a')).toBe("error");
+    expect(main.problem10(null)).toBe("error");
+    expect(main.problem10(undefined)).toBe("error");
+});
+
+// Edge cases for problem11
+test("problem11 edge cases", () => {
+    expect(main.problem11(1)).toBe("");
+    expect(main.problem11(-1)).toBe("");
+    expect(main.problem11(null)).toBe("error");
+    expect(main.problem11(undefined)).toBe("error");
+    expect(main.problem11('10')).toBe("2 4 6 8 10");
+});
+
+// Edge cases for problem12
+test("problem12 edge cases", () => {
+    expect(main.problem12(null, 3)).toBe("error");
+    expect(main.problem12(4, null)).toBe("error");
+    expect(main.problem12(undefined, 3)).toBe("error");
+    expect(main.problem12(4, undefined)).toBe("error");
+    expect(main.problem12(NaN, 3)).toBe("error");
+    expect(main.problem12(4, NaN)).toBe("error");
+});
+
+// Edge cases for problem12_2
+test("problem12_2 edge cases", () => {
+    expect(main.problem12_2([null,0,0,0,0])).toBe("error");
+    expect(main.problem12_2([undefined,0,0,0,0])).toBe("error");
+    expect(main.problem12_2([NaN,0,0,0,0])).toBe("error");
+    expect(main.problem12_2([1,2,3,4])).toBe("error");
+    expect(main.problem12_2([1,2,3,4,5,6])).toBe("error");
+});
+
+// Edge cases for problem13
+test("problem13 edge cases", () => {
+    expect(main.problem13(0)).toBe("error");
+    expect(main.problem13(13)).toBe("error");
+    expect(main.problem13(null)).toBe("error");
+    expect(main.problem13(undefined)).toBe("error");
+    expect(main.problem13('2')).toBe("Days in month: 28");
+});
+
+// Edge cases for problem14
+test("problem14 edge cases", () => {
+    expect(main.problem14([null,0,0,0,0])).toBe("error");
+    expect(main.problem14([undefined,0,0,0,0])).toBe("error");
+    expect(main.problem14([NaN,0,0,0,0])).toBe("error");
+    expect(main.problem14([1,2,3,4])).toBe("error");
+    expect(main.problem14([1,2,3,4,5,6])).toBe("error");
+});
+
+// Edge cases for problem15
+test("problem15 edge cases", () => {
+    expect(main.problem15('0')).toBe("error");
+    expect(main.problem15('13')).toBe("error");
+    expect(main.problem15(null)).toBe("error");
+    expect(main.problem15(undefined)).toBe("error");
+    expect(main.problem15('')).toBe("error");
+});
+
+// ...existing code...
