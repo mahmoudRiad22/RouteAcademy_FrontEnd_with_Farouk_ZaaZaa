@@ -4,6 +4,8 @@ let searchInput = document.getElementById("searchBar");
     const offCanvasImage = document.getElementById('offcanvasExampleImage');
     const offcanvasInfo = document.getElementById('offcanvasExampleInfo');
     const offcanvasSource = document.getElementById('offcanvasExampleSource');
+    const errorBar = document.getElementById('errorBar');
+
 
 function requestApi(key = "") {
     let api;
@@ -23,15 +25,18 @@ function requestApi(key = "") {
 
     GET_req.addEventListener("load", function () {
         if (GET_req.status >= 200 && GET_req.status < 400) {
+            errorBar.classList.add('d-none');
             console.log("Sucessfull request \n");
             createCards(GET_req.response);
         } else {
             console.log("Bad request \n");
+            errorBar.innerHTML =  `<p>${GET_req.response.error}</p>`
+            errorBar.classList.remove('d-none');
         }
     });
 }
 
-requestApi();
+// requestApi();
 
 function createCards(cardsArray) {
     let box = "";
