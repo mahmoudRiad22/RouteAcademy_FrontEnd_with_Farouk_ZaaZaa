@@ -427,28 +427,66 @@ function problem15(x) {
     }
     return days;
 }
-truthyVsFalsy();
 
-function truthyVsFalsy(){
-    if (!!(-4)){
-console.log("yes its truthy");}
-else console.log("no its falsy");
-    console.log(
-        `!!null = ${null}, 
-!!undefined = ${!!undefined}, 
-!!NaN = ${!!NaN}, 
-!!'' = ${!!""}, 
-!!" " = ${!!" "}, 
-Number('-4') = ${!!Number(-4)}
-if (null) :>> `
-    );
+/////////////////////////////////////////////////////// DONE
+
+// 16- Write a program to check whether an alphabet is vowel or consonant
+function problem16(x) {
+    let alphabet = "qazxswedcvfrtgbnhyujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP";
+
+    if (!x) return "error";
+
+    if (x === " ") return "error";
+    if (alphabet.includes(x)) {
+        switch (x) {
+            case "a":
+                return "vowel";
+            case "A":
+                return "vowel";
+            case "e":
+                return "vowel";
+            case "E":
+                return "vowel";
+            case "i":
+                return "vowel";
+            case "I":
+                return "vowel";
+            case "o":
+                return "vowel";
+            case "O":
+                return "vowel";
+            case "u":
+                return "vowel";
+            case "U":
+                return "vowel";
+            default:
+                return "consonant";
+        }
+    } else return "error";
 }
 /////////////////////////////////////////////////////// NOT DONE
 
-// 16- Write a program to check whether an alphabet is vowel or consonant
-/////////////////////////////////////////////////////// NOT DONE
-
 // 17- Write a program to find maximum between two numbers
+function problem17(n1, n2) {
+
+    // if (!!n1 || !!n2) return 'error'
+    if (!!n1 && !!n2) {
+        console.log("n1 , n2 = ", !!Number(n1), "-5" == 0);
+        if ((!!Number(n1) || n1 === 0) && (!!Number(n2) || n2 === 0)) {
+            if (n1 !== " " || n2 !== " ") {
+                if (n1 < 0 && n2 < 0) {
+                    // both negative reverse is required
+                    if (Number(n1) >= Number(n2)) return `max = ${n1}, min = ${n2}`;
+                    else return `max = ${n2}, min = ${n1}`;
+                } else {
+                    // otherwise continue
+                    if (Number(n1) >= Number(n2)) return `max = ${n1}, min = ${n2}`;
+                    else return `max = ${n2}, min = ${n1}`;
+                } 
+            }else return 'error'
+        } else return "error";
+    } else return "error";
+}
 /////////////////////////////////////////////////////// NOT DONE
 
 // 18- Write a program to check whether a number is even or odd
@@ -460,6 +498,22 @@ if (null) :>> `
 // 20- Write a program to create Simple Calculator
 /////////////////////////////////////////////////////// NOT DONE
 
+truthyVsFalsy();
+
+function truthyVsFalsy() {
+    if (!!-4) {
+        console.log("yes its truthy");
+    } else console.log("no its falsy");
+    console.log(
+        `!!null = ${null}, 
+!!undefined = ${!!undefined}, 
+!!NaN = ${!!NaN}, 
+!!'' = ${!!""}, 
+!!" " = ${!!" "}, 
+Number('-4') = ${!!Number(-4)}
+if (null) :>> `
+    );
+}
 module.exports = {
     main,
     problem1,
@@ -477,6 +531,8 @@ module.exports = {
     problem13,
     problem14,
     problem15,
+    problem16,
+    problem17,
 };
 
 // week09 jsAssignment1-ProblemSolving
