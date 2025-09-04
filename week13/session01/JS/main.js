@@ -1,20 +1,19 @@
 const API = "https://forkify-api.herokuapp.com/api/search?q=";
-let searchInput = document.getElementById("searchBar");
-    const offCanvasTitle = document.getElementById('offcanvasExampleLabel');
-    const offCanvasImage = document.getElementById('offcanvasExampleImage');
-    const offcanvasInfo = document.getElementById('offcanvasExampleInfo');
-    const offcanvasSource = document.getElementById('offcanvasExampleSource');
-    const errorBar = document.getElementById('errorBar');
-
+const searchInput = document.getElementById("searchBar");
+const offCanvasTitle = document.getElementById("offcanvasExampleLabel");
+const offCanvasImage = document.getElementById("offcanvasExampleImage");
+const offcanvasInfo = document.getElementById("offcanvasExampleInfo");
+const offcanvasSource = document.getElementById("offcanvasExampleSource");
+const errorBar = document.getElementById("errorBar");
 
 function requestApi(key = "") {
     let api;
     if (!!key && key.trim()) {
         api = API + key;
-        console.log("api :>> ", api);
+        // console.log("api :>> ", api);
     } else {
         api = API;
-        console.log("api :>> ", api);
+        // console.log("api :>> ", api);
     }
     let GET_req = new XMLHttpRequest();
 
@@ -25,18 +24,16 @@ function requestApi(key = "") {
 
     GET_req.addEventListener("load", function () {
         if (GET_req.status >= 200 && GET_req.status < 400) {
-            errorBar.classList.add('d-none');
-            console.log("Sucessfull request \n");
+            // console.log("Sucessfull request \n");
+            errorBar.classList.add("d-none");
             createCards(GET_req.response);
         } else {
-            console.log("Bad request \n");
-            errorBar.innerHTML =  `<p>${GET_req.response.error}</p>`
-            errorBar.classList.remove('d-none');
+            // console.log("Bad request \n");
+            errorBar.innerHTML = `<p>${GET_req.response.error}</p>`;
+            errorBar.classList.remove("d-none");
         }
     });
 }
-
-// requestApi();
 
 function createCards(cardsArray) {
     let box = "";
@@ -90,25 +87,26 @@ function getRecipeById(id) {
             // console.log("getReq.response :>> ", getReq.response.recipe);
             // console.log("getReq.response :>> ", getReq.response.recipe.title);
             // console.log("getReq.response :>> ", getReq.response.recipe.ingredients);
-            updateOffCanvas(getReq.response.recipe)
+            errorBar.classList.add("d-none");
+            updateOffCanvas(getReq.response.recipe);
         } else {
-            console.log("BAD request for single recipe");
-            console.log("getReq.response :>> ", getReq.response);
+            // console.log("BAD request for single recipe");
+            // console.log("getReq.response :>> ", getReq.response);
+            errorBar.innerHTML = `<p>${getReq.response.error}</p>`;
+            errorBar.classList.remove("d-none");
         }
     });
 }
 
 function updateOffCanvas(recipe) {
-
     offCanvasTitle.innerHTML = recipe.title;
     offCanvasImage.src = recipe.image_url;
-    offcanvasInfo.innerHTML = '';
+    offcanvasInfo.innerHTML = "";
     offcanvasSource.innerHTML = `
         <a class="text-black text-decoration-underline" href="${recipe.source_url}" target = _blank>
         Source: <b><i>${recipe.publisher}</i></b></a>
-`
-    for (let i=0; i< recipe.ingredients.length; i++){
+`;
+    for (let i = 0; i < recipe.ingredients.length; i++) {
         offcanvasInfo.innerHTML += `<li class="list-group-item list-group-item-success">${recipe.ingredients[i]}</li>`;
     }
-
 }
