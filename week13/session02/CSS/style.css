@@ -142,3 +142,12 @@ a {
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
+
+.async-await-applying-section img{
+    height: 250px;
+}
+.async-await-applying-section .inner button{
+    transition: color .15s;
+}
+.async-await-applying-section .inner button:hover{
+    color: white}
