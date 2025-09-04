@@ -10,11 +10,11 @@
 
 /* Color Variables */
 :root {
-    --bg: #bc9cb0; /* middle color Dominant background */
-    --surface: #d3cdd7; /* 1st right Cards/surfaces */
+    --bg: #91ADC8; /* middle color Dominant background */
+    --surface: #647FBC; /* 1st right Cards/surfaces */
     --buttons: #ddf2eb; /* 2nd right Interactive elements */
-    --accent: #606d5d; /* 1st left For highlights */
-    --text: #48564e; /* 2nd left Primary text */
+    --accent: #AED6CF; /* 1st left For highlights */
+    --text: #FAFDD6; /* 2nd left Primary text */
 
     /* Optional extended palette */
     --success: #4caf50; /* Positive actions */
@@ -142,3 +142,15 @@ a {
 /* #endregion nav-bar-icons */
 /*****************************/
 /*****************************/
+
+
+.card-item .image img, #offcanvasExampleImage{
+    height: 200px;
+}
+.card-item .image{
+    transition: transform .5s;
+}
+.card-item .image:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
