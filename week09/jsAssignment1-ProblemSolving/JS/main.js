@@ -10,8 +10,12 @@ function main(msg) {
 // Input: 5
 // Output: 5
 
-// let input = prompt("Enter a number");
-// alert("you Entered : " + problem1(input));
+// problem1Input();
+
+function problem1Input() {
+    let input = prompt("Enter a number");
+    alert(`${problem1(input)}`);
+}
 function problem1(x) {
     if (x === 0) return 0;
     if (typeof x === "boolean") return "not number";
@@ -32,8 +36,12 @@ function problem1(x) {
 // Input: 12 Output Yes Example 2
 // Input: 9 Output No
 
-// let input = prompt("Enter a number");
-// alert(problem2(prompt("Enter a number")));
+// problem2Input();
+
+function problem2Input() {
+    let input = prompt("Enter a number:");
+    alert(problem2(input));
+}
 
 function problem2(input) {
     if (input !== "") {
@@ -53,14 +61,22 @@ function problem2(input) {
 // Example 2
 // Input: 10 7
 // Output: 10
+
+// problem3Input()
+function problem3Input() {
+    let n1 = prompt("Enter 1st number:");
+    let n2 = prompt("Enter 2nd number:");
+    let output = problem3(n1, n2);
+    alert(output);
+}
 function problem3(n1, n2) {
     if (n1 == 0 && n2 == 0) return 0;
 
     if (n1 !== "" && n2 != "") {
-
         if ((!!Number(n1) || n1 === 0) && (!!Number(n2) || n2 === 0)) {
-            if (n1 >= n2) return n1;
-            else return n2;
+            console.log("n1, n2 :>> ", n1, n2);
+            if (Number(n1) >= Number(n2)) return Number(n1);
+            else if (Number(n1) < Number(n2)) return Number(n2);
         } else return "error";
     } else return "error";
 }
@@ -73,7 +89,12 @@ function problem3(n1, n2) {
 // Output negative Example2
 // Input: 10
 // Output positive
-
+// problem4Input();
+function problem4Input() {
+    let n1 = prompt("Enter a number:");
+    let output = problem4(n1);
+    alert(output);
+}
 function problem4(x) {
     if (typeof x !== "boolean") {
         if (x !== "") {

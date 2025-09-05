@@ -66,6 +66,7 @@ test("problem2 edge cases", () => {
 test("test for problem3", () => {
     expect(main.problem3(3, 5)).toBe(5);
     expect(main.problem3(10, 7)).toBe(10);
+    expect(main.problem3("10", "7")).toBe(10);
 });
 // Edge cases for problem3
 test("problem3 edge cases", () => {
