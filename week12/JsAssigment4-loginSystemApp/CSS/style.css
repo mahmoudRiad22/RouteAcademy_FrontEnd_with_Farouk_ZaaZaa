@@ -1,0 +1,75 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #1852c7, #d759c0);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    /* border-radius: 16px; */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    color: #fff;
+}
+
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+.shine::before {
+    content: "";
+
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-40deg);
+    pointer-events: none;
+}
+
+.shine:hover::before{
+    animation: shine 0.5s;
+}
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+.login-form input {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px;
+    /* border-radius: 5px; */
+    /* padding: 25px; */
+}
+.login-form input:focus {
+    background: rgba(255, 255, 255, 0.15);
+}
+.login-btn {
+    background: linear-gradient(to right, #2cb6ff, #fe56ce);
+}
+.logout-btn:hover{
+    color: white;
+}
+.errorBar{
+    color: rgb(161, 0, 0);
+    text-align: center;
+    padding-bottom: 8px;
+}
+.successBar{
+    color: rgb(0, 206, 0);
+    text-align: center;
+    padding-bottom: 8px;
+}

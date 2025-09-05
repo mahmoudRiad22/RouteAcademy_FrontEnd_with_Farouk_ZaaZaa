@@ -39,9 +39,14 @@
 
 
     <section class="d-flex justify-content-center align-items-center min-vh-100">
-        <div class="container">
+        <div class="container py-5">
             <div class="glass shine login-form w-50 m-auto shadow rounded-4">
-                <h2 class="text-center text-capitalize">log in</h2><br />
+                <h2 class="text-center text-capitalize">Sign Up</h2><br />
+                <div class=" form-floating">
+                    <input class="form-control rounded-4" type="text" name="userName" id="userName"
+                        placeholder="Enter your name"> <br />
+                    <label for="userName">Enter your name</label>
+                </div>
                 <div class=" form-floating">
                     <input class="form-control rounded-4" type="email" name="userEmail" id="userEmail"
                         placeholder="Enter your email"> <br />
@@ -54,16 +59,16 @@
                 </div>
                 <div class="" id="infoBar"></div>
 
-                <div class=" login-btn shine rounded-4 d-flex justify-content-center w-75 m-auto">
-                    <button class="btn w-100 rounded-4" id="login-btn">Log In</button>
+                <div class="login-btn shine rounded-4 d-flex justify-content-center w-75 m-auto">
+                    <button class="btn w-100 rounded-4" id="signup-btn">Sign Up</button>
                 </div>
+
                 <div class="text-center mt-3">
-                    <p>Don't have an account? <b><a class="text-decoration-none" href="./signUp.html">Sign Up</a></b>
-                    </p>
+                    <p>Don't have an account? <b><a class="text-decoration-none" href="./index.html">Log In</a></b></p>
                 </div>
             </div>
         </div>
->
+
     </section>
 
 
@@ -79,7 +84,7 @@
     <script src="./JS/all.min.js"></script>
 
     <!-- my scripts.js -->
-    <script src="./JS/login.js"></script>
+    <script src="./JS/signup.js"></script>
 
 
     <!-- #endregion Scripts files -->
