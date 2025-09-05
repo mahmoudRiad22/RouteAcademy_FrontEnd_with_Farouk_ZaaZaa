@@ -54,14 +54,11 @@ function problem2(input) {
 // Input: 10 7
 // Output: 10
 function problem3(n1, n2) {
-    // console.log("n1, n2 :>> ", n1, n2);
     if (n1 == 0 && n2 == 0) return 0;
 
     if (n1 !== "" && n2 != "") {
-        // console.log("n1, n2 :>> ", n1, n2);
 
         if ((!!Number(n1) || n1 === 0) && (!!Number(n2) || n2 === 0)) {
-            // console.log("n1, n2 :>> ", n1, n2);
             if (n1 >= n2) return n1;
             else return n2;
         } else return "error";
@@ -193,10 +190,6 @@ function problem9(x) {
                 numbers += `${i}`;
                 if (i < x) numbers += `,`;
             }
-            //remove last comma
-            // numbers[numbers.length - 1] = '';
-            // console.log('numbers[numbers.length - 1] :>> ', numbers[numbers.length - 1]);
-            // console.log("numbers :>> ", numbers);
             return numbers;
         }
         if (x == 0) return "0";
@@ -232,13 +225,11 @@ function problem10(x) {
 
 function problem11(x) {
     let minusFlag = 0;
-    // console.log("x :>> ", Number(x) && x != "" && x != 0);
     if (Number(x) && x != "" && x != 0) {
         if (x < 0) {
             minusFlag = 1;
             x *= -1;
         }
-        // console.log("minusFlag :>> ", minusFlag);
         let numbers = "";
         let newNumbers = "";
         if (minusFlag) {
@@ -252,7 +243,6 @@ function problem11(x) {
             for (let i = 1; i <= x; i++) {
                 if (i % 2 == 0) {
                     numbers += i;
-                    // console.log("i :>> ", i + 2, x);
                     // if there is a next even add the space
                     if (i < x) {
                         numbers += " ";
@@ -363,7 +353,6 @@ function problem14Input() {
     for (let i = 0; i < subjects.length; i++) {
         grades[i] = prompt(`Enter grade for ${subjects[i]}`);
     }
-    // console.log('grades :>> ', grades);
     return grades;
 }
 // problem14Input()
@@ -371,7 +360,6 @@ function problem14(grades) {
     let sum = 0,
         percent = 0,
         grad = "";
-    // console.log("grades, grades.length :>> ", grades, grades.length);
     if (grades.length < 5 || grades.length > 5) return "error";
     for (const subject in grades) {
         // if (
@@ -495,16 +483,13 @@ function problem17(n1, n2) {
                     case Number(n1) > Number(n2):
                         max = Number(n1);
                         min = Number(n2);
-                        // console.log("31- Number(n1), max, min :>> ", Number(n1), max, min);
                         break;
                     case Number(n1) < Number(n2):
                         max = Number(n2);
                         min = Number(n1);
-                        // console.log("32- Number(n1),max, min :>> ", Number(n1), max, min);
                         break;
                     case Number(n1) === Number(n2):
                         max = min = Number(n1);
-                        // console.log("33- Number(n1),max, min :>> ", Number(n1), max, min);
                         break;
                 }
                 return `max = ${Number(max)}, min = ${Number(min)}`;
@@ -542,7 +527,6 @@ function problem18(x) {
 
 // 19- Write a program to check whether a number is positive or negative or zero
 function problem19(x) {
-    // console.log("Number(x) :>> ", x, Number(x));
     switch (true) {
         case x == Infinity:
             return "positive";
@@ -576,23 +560,14 @@ function problem19(x) {
 
 // 20- Write a program to create Simple Calculator
 function problem20(n1, exp, n2) {
-    // console.log("problem20 \n");
     let result = 0;
-    // console.log("n1, n2 :>> ", n1, n2);
 
     // check the input for invalidation
     if (typeof n1 === "undefined" || typeof n2 === "undefined") return "error";
-    // console.log("n1, n2 :>> ", n1, n2);
     if (n1 === null || n2 === null) return "error";
-    // console.log("n1, n2 :>> ", n1, n2);
     if (n1 === true || n2 === true) return "error";
-    // console.log("n1, n2 :>> ", n1, n2);
     if (n1 === false || n2 === false) return "error";
-    // console.log("n1, n2 :>> ", n1, n2);
     if ((!Number(n1) && n1 != "0") || (!Number(n2) && n2 != "0")) return "error";
-    // console.log("n1, n2 :>> ", n1, n2);
-    //check operator for invalidation
-    // if (exp !== "-" || exp !== "+" || exp !== "*" || exp !== "/") return "error";
 
     // must be a number then
     switch (exp) {
@@ -613,7 +588,7 @@ function problem20(n1, exp, n2) {
             return "error";
     }
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // truthyVsFalsy();
 // truthyVsFalsy()
