@@ -1,4 +1,4 @@
-//////////////////////////////
+/////////////////////////allowed [Number(), ]/////
 // init a test file and make it fail for the good reasons
 
 function main(msg) {
@@ -179,24 +179,25 @@ function problem8(c) {
 }
 /////////////////////////////////////////////////////// DONE
 
-// 9- Write a program that allows user to insert integer then print all numbers between 1 to that’s number
+// 9- Write a program that allows user to insert integer
+// then print all numbers between 1 to that’s number
 // Example Input 5
 // Output 1, 2, 3, 4, 5
 
 function problem9(x) {
     let first_number = 1;
-    let numbers = [];
+    let numbers = "";
     if (Number(x) && x != "") {
         if (x >= 0) {
             for (let i = 1; i <= x; i++) {
-                if (first_number && i < x) numbers[i - 1] = ",";
-                // console.log(typeof (i + ","));
-
-                numbers[i - 1] = i + "";
-                first_number = 0;
+                numbers += `${i}`;
+                if (i < x) numbers += `,`;
             }
-            // console.log('numbers :>> ', numbers);
-            return numbers.toString();
+            //remove last comma
+            // numbers[numbers.length - 1] = '';
+            // console.log('numbers[numbers.length - 1] :>> ', numbers[numbers.length - 1]);
+            // console.log("numbers :>> ", numbers);
+            return numbers;
         }
         if (x == 0) return "0";
         else return "error";
@@ -211,12 +212,14 @@ function problem9(x) {
 // 5 10 15 20 25 30 35 40 45 50 55 60
 
 function problem10(x) {
-    let numbers = [];
+    let numbers = "";
     let last = 0;
     if ((Number(x) && x != "") || x === 0) {
-        for (let i = 1; i <= 12; i++) numbers[i - 1] = i * x;
-
-        return numbers.join(" ");
+        for (let i = 1; i <= 12; i++) {
+            numbers += i * x;
+            if (i < 12) numbers += " ";
+        }
+        return numbers;
     } else return "error";
 }
 /////////////////////////////////////////////////////// DONE
@@ -236,20 +239,32 @@ function problem11(x) {
             x *= -1;
         }
         // console.log("minusFlag :>> ", minusFlag);
-        let numbers = [];
-        for (let i = 1; i <= x; i++) {
-            if (minusFlag) {
+        let numbers = "";
+        let newNumbers = "";
+        if (minusFlag) {
+            for (let i = 1; i <= x; i++) {
                 if (i % 2 == 0) {
-                    numbers.push("-" + i);
+                    numbers += "-" + i;
+                    if (i < x) numbers += " ";
                 } else continue;
-            } else {
+            }
+        } else {
+            for (let i = 1; i <= x; i++) {
                 if (i % 2 == 0) {
-                    numbers.push(i);
-                    numbers.unshift;
+                    numbers += i;
+                    // console.log("i :>> ", i + 2, x);
+                    // if there is a next even add the space
+                    if (i < x) {
+                        numbers += " ";
+                    }
                 } else continue;
             }
         }
-        return numbers.join(" ");
+        //remove last space
+        if (numbers[numbers.length - 1] === " ") {
+            for (let i = 0; i < numbers.length - 1; i++) newNumbers += numbers[i];
+            return newNumbers;
+        } else return numbers;
     }
     return "error";
 }
@@ -267,7 +282,7 @@ function problem12(x, y) {
         (x !== "" || x !== " ") &&
         (y !== "" || y !== " ")
     ) {
-        return (x ** y).toString();
+        return `${x ** y}`;
     }
     return "error";
 }
@@ -342,14 +357,16 @@ function problem13(x) {
 // Percentage < 40%: Grad F
 
 function problem14Input() {
+    let subjects = ["Physics", "Chemisrty", "Biology", "Mathmatics", "Computer"];
     let grades = [];
-    grades.push({Physics: prompt("Grade of Physics :")});
-    grades.push({Chemisrty: prompt("Grade of Chemisrty :")});
-    grades.push({Biology: prompt("Grade of Biology :")});
-    grades.push({Mathmatics: prompt("Grade of Mathmatics :")});
-    grades.push({Computer: prompt("Grade of Computer :")});
+
+    for (let i = 0; i < subjects.length; i++) {
+        grades[i] = prompt(`Enter grade for ${subjects[i]}`);
+    }
+    // console.log('grades :>> ', grades);
     return grades;
 }
+// problem14Input()
 function problem14(grades) {
     let sum = 0,
         percent = 0,
@@ -433,11 +450,12 @@ function problem15(x) {
 // 16- Write a program to check whether an alphabet is vowel or consonant
 function problem16(x) {
     let alphabet = "qazxswedcvfrtgbnhyujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP";
-
-    if (!x) return "error";
-
-    if (x === " ") return "error";
-    if (alphabet.includes(x)) {
+    let isAlphapet = 0;
+    if (!x || x.length > 1) return "error";
+    for (let i = 0; i < alphabet.length; i++) {
+        if (alphabet[i] === x) isAlphapet = 1;
+    }
+    if (isAlphapet) {
         switch (x) {
             case "a":
                 return "vowel";
@@ -464,54 +482,153 @@ function problem16(x) {
         }
     } else return "error";
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 17- Write a program to find maximum between two numbers
 function problem17(n1, n2) {
-
-    // if (!!n1 || !!n2) return 'error'
-    if (!!n1 && !!n2) {
-        console.log("n1 , n2 = ", !!Number(n1), "-5" == 0);
-        if ((!!Number(n1) || n1 === 0) && (!!Number(n2) || n2 === 0)) {
+    let max = 0,
+        min = 0;
+    if (n1 !== "" && n1 !== " " && n2 !== "") {
+        if ((!!Number(n1) || n1 == 0) && (!!Number(n2) || n2 == 0)) {
             if (n1 !== " " || n2 !== " ") {
-                if (n1 < 0 && n2 < 0) {
-                    // both negative reverse is required
-                    if (Number(n1) >= Number(n2)) return `max = ${n1}, min = ${n2}`;
-                    else return `max = ${n2}, min = ${n1}`;
-                } else {
-                    // otherwise continue
-                    if (Number(n1) >= Number(n2)) return `max = ${n1}, min = ${n2}`;
-                    else return `max = ${n2}, min = ${n1}`;
-                } 
-            }else return 'error'
+                switch (true) {
+                    case Number(n1) > Number(n2):
+                        max = Number(n1);
+                        min = Number(n2);
+                        // console.log("31- Number(n1), max, min :>> ", Number(n1), max, min);
+                        break;
+                    case Number(n1) < Number(n2):
+                        max = Number(n2);
+                        min = Number(n1);
+                        // console.log("32- Number(n1),max, min :>> ", Number(n1), max, min);
+                        break;
+                    case Number(n1) === Number(n2):
+                        max = min = Number(n1);
+                        // console.log("33- Number(n1),max, min :>> ", Number(n1), max, min);
+                        break;
+                }
+                return `max = ${Number(max)}, min = ${Number(min)}`;
+            } else return "error";
         } else return "error";
     } else return "error";
 }
-/////////////////////////////////////////////////////// NOT DONE
+/////////////////////////////////////////////////////// DONE
 
 // 18- Write a program to check whether a number is even or odd
-/////////////////////////////////////////////////////// NOT DONE
+function problem18(x) {
+    if (x < 0) x *= -1; //reverse to positive as the sign doesn't matter
+    switch (true) {
+        case x == "0":
+            return "even";
+        case x == Infinity:
+            return "even";
+        case x == -Infinity:
+            return "even";
+        case !Number(x):
+            return "error";
+        case x === "":
+            return "error";
+        case x === " ":
+            return "error";
+        case Number(x) % 2 == 0:
+            return "even";
+        case Number(x) % 2 > 0:
+            return "odd";
+        default:
+            return "error";
+    }
+}
+/////////////////////////////////////////////////////// DONE
 
 // 19- Write a program to check whether a number is positive or negative or zero
-/////////////////////////////////////////////////////// NOT DONE
+function problem19(x) {
+    // console.log("Number(x) :>> ", x, Number(x));
+    switch (true) {
+        case x == Infinity:
+            return "positive";
+        case x == -Infinity:
+            return "negative";
+        case typeof x === "undefined":
+            return "error";
+        case x === null:
+            return "error";
+        case x === true:
+            return "error";
+        case x === false:
+            return "error";
+        case x === "":
+            return "error";
+        case x === " ":
+            return "error";
+        case x === "0":
+            return "zero";
+        case Number(x) > 0:
+            return "positive";
+        case Number(x) < 0:
+            return "negative";
+        case Number(x) === 0:
+            return "zero";
+        default:
+            return "error";
+    }
+}
+/////////////////////////////////////////////////////// DONE
 
 // 20- Write a program to create Simple Calculator
+function problem20(n1, exp, n2) {
+    // console.log("problem20 \n");
+    let result = 0;
+    // console.log("n1, n2 :>> ", n1, n2);
+
+    // check the input for invalidation
+    if (typeof n1 === "undefined" || typeof n2 === "undefined") return "error";
+    // console.log("n1, n2 :>> ", n1, n2);
+    if (n1 === null || n2 === null) return "error";
+    // console.log("n1, n2 :>> ", n1, n2);
+    if (n1 === true || n2 === true) return "error";
+    // console.log("n1, n2 :>> ", n1, n2);
+    if (n1 === false || n2 === false) return "error";
+    // console.log("n1, n2 :>> ", n1, n2);
+    if ((!Number(n1) && n1 != "0") || (!Number(n2) && n2 != "0")) return "error";
+    // console.log("n1, n2 :>> ", n1, n2);
+    //check operator for invalidation
+    // if (exp !== "-" || exp !== "+" || exp !== "*" || exp !== "/") return "error";
+
+    // must be a number then
+    switch (exp) {
+        case "+":
+            result = Number(n1) + Number(n2);
+            return result;
+        case "-":
+            result = Number(n1) - Number(n2);
+            return result;
+        case "*":
+            result = Number(n1) * Number(n2);
+            return result;
+        case "/":
+            if (Number(n2) == 0) return "error";
+            result = Number(n1) / Number(n2);
+            return result;
+        default:
+            return "error";
+    }
+}
 /////////////////////////////////////////////////////// NOT DONE
 
-truthyVsFalsy();
-
+// truthyVsFalsy();
+// truthyVsFalsy()
 function truthyVsFalsy() {
     if (!!-4) {
         console.log("yes its truthy");
     } else console.log("no its falsy");
     console.log(
-        `!!null = ${null}, 
+        `!!null = ${!!null}, 
 !!undefined = ${!!undefined}, 
 !!NaN = ${!!NaN}, 
 !!'' = ${!!""}, 
 !!" " = ${!!" "}, 
 Number('-4') = ${!!Number(-4)}
-if (null) :>> `
+`
     );
 }
 module.exports = {
@@ -533,6 +650,9 @@ module.exports = {
     problem15,
     problem16,
     problem17,
+    problem18,
+    problem19,
+    problem20,
 };
 
 // week09 jsAssignment1-ProblemSolving
