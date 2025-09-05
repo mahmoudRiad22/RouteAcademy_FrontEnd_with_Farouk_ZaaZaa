@@ -9,7 +9,7 @@ const userPassword = document.getElementById("userPassword");
 const infoBar = document.getElementById("infoBar");
 const signUpBtn = document.getElementById("signup-btn");
 const LogInBtn = document.getElementById("login-btn");
-const users = JSON.parse(sessionStorage.getItem('allUsers'));
+const users = JSON.parse(sessionStorage.getItem("allUsers"));
 
 // console.log('users :>> ', users);
 // Letters and spaces, 2-30 chars
@@ -35,9 +35,9 @@ function SignUpValidation() {
     const isNameValid = NameRegex.test(user.name);
     const isEmailValid = EmailRegex.test(user.email);
     const isPasswordValid = PasswordRegex.test(user.password);
-    console.log('isNameValid :>> ', isNameValid);
-    console.log('isEmailValid :>> ', isEmailValid);
-    console.log('isPasswordValid :>> ', isPasswordValid);
+    console.log("isNameValid :>> ", isNameValid);
+    console.log("isEmailValid :>> ", isEmailValid);
+    console.log("isPasswordValid :>> ", isPasswordValid);
 
     infoBar.innerHTML = "";
     if (isNameValid)
@@ -49,40 +49,44 @@ function SignUpValidation() {
             } else {
                 infoBar.innerHTML += "<p>Error: In-valid Password</p";
                 infoBar.classList.add("errorBar");
-                console.log("user.password :>> ", user.password);
+                // console.log("user.password :>> ", user.password);
                 return 0;
             }
         else {
             infoBar.innerHTML += "<p>Error: In-valid Email</p";
             infoBar.classList.add("errorBar");
-            console.log("user.email :>> ", user.email);
+            // console.log("user.email :>> ", user.email);
             return 0;
         }
     else {
         infoBar.innerHTML += "<p>Error: In-valid Name</p";
         infoBar.classList.add("errorBar");
-        console.log("user.name :>> ", user.name);
+        // console.log("user.name :>> ", user.name);
         return 0;
     }
 }
 
-
 try {
     signUpBtn.addEventListener("click", function (e) {
-    // console.log("signupbtn event", e.target);
-    const isPass= SignUpValidation();
-    // console.log('isPass :>> ', isPass);
-    if(isPass){
-        users.push(isPass);       
-        console.log('users :>> ', users);
-        sessionStorage.setItem('allUsers', JSON.stringify(users));
-    }
-});
+        // console.log("signupbtn event", e.target);
+        const isPass = SignUpValidation();
+        // console.log('isPass :>> ', isPass);
+        if (isPass) {
+            users.push(isPass);
+            // console.log("users :>> ", users);
+            clearInputs()
+            sessionStorage.setItem("allUsers", JSON.stringify(users));
+        }
+    });
 } catch (error) {
-    console.log('error @ signup eventListener :>> ', error);
+    console.log("error @ signup eventListener :>> ", error);
 }
 
-
+function clearInputs() {
+    userName.value = ''
+    userEmail.value = '';
+    userPassword.value = '';
+}
 // #endregion Login section
 /********************************************/
 /********************************************/
