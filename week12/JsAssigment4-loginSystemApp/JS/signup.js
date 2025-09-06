@@ -12,8 +12,7 @@ const LogInBtn = document.getElementById("login-btn");
 
 let users = JSON.parse(sessionStorage.getItem("allUsers"));
 
-if (users == null)
-    users = [];
+if (users == null) users = [];
 // console.log('users :>> ', users);
 // Letters and spaces, 2-30 chars
 const NameRegex = /^[a-zA-Z\s]{2,30}$/;
@@ -43,6 +42,14 @@ function SignUpValidation() {
     console.log("isPasswordValid :>> ", isPasswordValid);
 
     infoBar.innerHTML = "";
+
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].email === user.email) {
+            infoBar.classList.add("errorBar");
+            infoBar.innerHTML += "<p>Error: Email Already Exists</p";
+            return 0;
+        }
+    }
     if (isNameValid)
         if (isEmailValid)
             if (isPasswordValid) {
@@ -77,7 +84,7 @@ try {
         if (isPass) {
             users.push(isPass);
             // console.log("users :>> ", users);
-            clearInputs()
+            clearInputs();
             sessionStorage.setItem("allUsers", JSON.stringify(users));
         }
     });
@@ -86,9 +93,9 @@ try {
 }
 
 function clearInputs() {
-    userName.value = ''
-    userEmail.value = '';
-    userPassword.value = '';
+    userName.value = "";
+    userEmail.value = "";
+    userPassword.value = "";
 }
 // #endregion Login section
 /********************************************/
