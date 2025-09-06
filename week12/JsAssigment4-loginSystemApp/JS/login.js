@@ -24,7 +24,7 @@ function takeInput() {
 function logInValidation() {
     const currentUser = takeInput();
     for (const index in users) {
-        if (users[index].email === currentUser.email) {
+        if (users[index].email === currentUser.email && users[index].password === currentUser.password) {
             const user = users[index];
             console.log("user is found:>> ", user);
             return user;
