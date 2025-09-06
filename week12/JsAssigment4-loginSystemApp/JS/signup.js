@@ -38,9 +38,9 @@ function SignUpValidation() {
     const isNameValid = NameRegex.test(user.name);
     const isEmailValid = EmailRegex.test(user.email);
     const isPasswordValid = PasswordRegex.test(user.password);
-    console.log("isNameValid :>> ", isNameValid);
-    console.log("isEmailValid :>> ", isEmailValid);
-    console.log("isPasswordValid :>> ", isPasswordValid);
+    // console.log("isNameValid :>> ", isNameValid);
+    // console.log("isEmailValid :>> ", isEmailValid);
+    // console.log("isPasswordValid :>> ", isPasswordValid);
 
     infoBar.innerHTML = "";
 
@@ -116,3 +116,4 @@ function clearInputs() {
 // #endregion Login section
 /********************************************/
 /********************************************/
+
