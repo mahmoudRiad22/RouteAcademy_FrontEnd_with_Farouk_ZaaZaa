@@ -9,8 +9,11 @@ const userPassword = document.getElementById("userPassword");
 const infoBar = document.getElementById("infoBar");
 const signUpBtn = document.getElementById("signup-btn");
 const LogInBtn = document.getElementById("login-btn");
-const users = JSON.parse(sessionStorage.getItem("allUsers"));
 
+let users = JSON.parse(sessionStorage.getItem("allUsers"));
+
+if (users == null)
+    users = [];
 // console.log('users :>> ', users);
 // Letters and spaces, 2-30 chars
 const NameRegex = /^[a-zA-Z\s]{2,30}$/;

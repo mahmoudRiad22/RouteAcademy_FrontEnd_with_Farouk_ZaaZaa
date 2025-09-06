@@ -9,6 +9,8 @@ const infoBar = document.getElementById("infoBar");
 const LogInBtn = document.getElementById("login-btn");
 
 const users = JSON.parse(sessionStorage.getItem("allUsers"));
+if (users == null)
+    users = [];
 
 function takeInput() {
     const currentUser = {
