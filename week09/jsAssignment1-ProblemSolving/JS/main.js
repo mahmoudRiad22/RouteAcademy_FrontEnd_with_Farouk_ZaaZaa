@@ -128,7 +128,6 @@ function problem1(x) {
 /********************************************/
 /********************************************/
 // #region Problem 02
-console.clear();
 
 // 2- Write a program that take number from user then print yes if that number can
 // divide by 3 and 4 otherwise print no
@@ -161,7 +160,6 @@ function problem2(input) {
 /********************************************/
 /********************************************/
 // #region Problem 03
-console.clear();
 
 // 3- Write a program that allows the user to insert 2 integers then print the max Example1
 // Input: 3 5
@@ -195,7 +193,6 @@ function problem3(n1, n2) {
 /********************************************/
 /********************************************/
 // #region Problem 04
-console.clear();
 
 // 4- Write a program that allows the user to insert an integer
 // then print negative if it is negative number otherwise print positive.
@@ -230,7 +227,6 @@ function problem4(x) {
 /********************************************/
 /********************************************/
 // #region Problem 05
-console.clear();
 
 // 5- Write a program that take 3 integers from user
 // then print the max element and the min element.
@@ -285,7 +281,6 @@ function problem5(n1, n2, n3) {
 /********************************************/
 /********************************************/
 // #region Problem 06
-console.clear();
 
 // 6- Write a program that allows the user to insert integer number
 // then check If a number is oven or odd
@@ -316,7 +311,6 @@ function problem6(x) {
 /********************************************/
 /********************************************/
 // #region Problem 07
-console.clear();
 
 // 8- Write a program that take character from user then if it is vowel chars (a,e,I,o,u) then print vowel otherwise print consonant
 // Example1
@@ -360,7 +354,6 @@ function problem8(c) {
 /********************************************/
 /********************************************/
 // #region Problem 08
-console.clear();
 
 // 9- Write a program that allows user to insert integer
 // then print all numbers between 1 to that’s number
@@ -396,7 +389,6 @@ function problem9(x) {
 /********************************************/
 /********************************************/
 // #region Problem 09
-console.clear();
 
 // 10- Write a program that allows user to insert integer
 // then print a multiplication table up to 12.
@@ -427,7 +419,6 @@ function problem10(x) {
 /********************************************/
 /********************************************/
 // #region Problem 10
-console.clear();
 
 // 11- Write a program that allows to user to insert number
 // then print all even numbers between 1 to this number
@@ -482,7 +473,6 @@ function problem11(x) {
 /********************************************/
 /********************************************/
 // #region Problem 11
-console.clear();
 
 // 12- Write a program that take two integers then print the power Example:
 // Input: 4 3
@@ -515,7 +505,6 @@ function problem12(x, y) {
 /********************************************/
 /********************************************/
 // #region Problem 12
-console.clear();
 
 // 12_2- Write a program to enter marks of five subjects and
 // calculate total, average and percentage.
@@ -564,7 +553,6 @@ function problem12_2(grades) {
 /********************************************/
 /********************************************/
 // #region Problem 13
-console.clear();
 
 // 13-Write a program to input month number and print number of days in that month.
 // Example:
@@ -604,7 +592,6 @@ function problem13(x) {
 /********************************************/
 /********************************************/
 // #region Problem 14
-console.clear();
 
 // 14- Write a program to input marks of five subjects
 // Physics, Chemistry, Biology, Mathematics and Computer
@@ -665,7 +652,6 @@ function problem14(grades) {
 /********************************************/
 /********************************************/
 // #region Probelm 15
-console.clear();
 
 // 15- Write a program to print total number of days in month
 
@@ -726,7 +712,6 @@ function problem15(x) {
 /********************************************/
 /********************************************/
 // #region Problem 16
-console.clear();
 
 // 16- Write a program to check whether an alphabet is vowel or consonant
 
@@ -777,7 +762,6 @@ function problem16(x) {
 /********************************************/
 /********************************************/
 // #region Problem 17
-console.clear();
 
 // 17- Write a program to find maximum between two numbers
 function problem17Input() {
@@ -818,7 +802,6 @@ function problem17(n1, n2) {
 /********************************************/
 /********************************************/
 // #region Problem 18
-console.clear();
 
 // 18- Write a program to check whether a number is even or odd
 function problem18Input() {
@@ -857,7 +840,6 @@ function problem18(x) {
 /********************************************/
 /********************************************/
 // #region Problem 19
-console.clear();
 
 // 19- Write a program to check whether a number is positive or negative or zero
 function problem19Input() {
@@ -903,7 +885,6 @@ function problem19(x) {
 /********************************************/
 /********************************************/
 // #region Problem 20
-console.clear();
 
 // 20- Write a program to create Simple Calculator
 function problem20Input() {
