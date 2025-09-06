@@ -1,0 +1,100 @@
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region Custom Accordion Style 3 */
+
+.accordion-button {
+    /* background: linear-gradient(to right, #833ab4 0%, #fd1d1d 100%, #feac3a 100%); */
+    background: linear-gradient(90deg, #bc2b48 0%, #3f5efb 100%);
+    color: lightgray;
+    border: none;
+    transition: all 0.3s;
+}
+
+.accordion-button:hover {
+    background: linear-gradient(to right, #833ab4 0%, #fd1d1d 100%);
+    color: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(to right, #833ab4 0%, #fd1d1d 50%, #feac3a 100%);
+    /* color: #833ab4; */
+    color: black;
+    box-shadow: 0 2px 8px rgba(131, 58, 180, 0.15);
+}
+
+.accordion-button:focus {
+    background: linear-gradient(to right, #833ab4 0%, #fd1d1d 50%, #feac3a 100%);
+    border-color: #833ab4;
+    box-shadow: 0 0 0 0.2rem rgba(253, 29, 29, 0.25);
+}
+
+.accordion-body {
+    /* background: linear-gradient(to right , #fcb04522 0%, #fd1d1d11 100%); */
+    /* background: linear-gradient(to bottom, #833ab4); */
+    /* background: linear-gradient(45deg,rgba(0, 0, 135, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+    background: linear-gradient(90deg, rgba(55, 4, 89, 1) 0%, rgba(128, 56, 176, 1) 100%);
+    color: white;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* #endregion Custom Accordion Style 3 */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region bgc Gradients */
+
+.gradient01 {
+    background: linear-gradient(to bottom, #833ab4 0%, #4b6cb7 50%, #182848 100%);
+    /* background: linear-gradient(to right, #4b6cb7 0%, #182848 100%); */
+}
+.text-gradient01 {
+    background: linear-gradient(to right, #833ab4 0%, #cf1b1b 50%, #b6771e 100%);
+    background-clip: text;
+    color: transparent;
+}
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+.shine::before {
+    content: "";
+
+    width: 50%;
+    height: 100%;
+    transform: skew(-60deg);
+
+    background-color: rgba(255, 255, 255, .15);
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: -150%;
+}
+.shine:hover::before{
+    animation: shine .6s;
+}
+.shine:hover .accordion-button{
+    background: linear-gradient(to right, #833ab4 0%, #fd1d1d 100%);
+    color: #fff;
+}
+
+@keyframes shine {
+    0%{
+        left: -150%;
+    }
+    100%{
+        left: 150%;
+    }
+}
+/* #endregion bgc Gradients */
+/******************************************************************************/
+/******************************************************************************/

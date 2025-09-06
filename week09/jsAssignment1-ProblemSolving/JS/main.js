@@ -4,6 +4,116 @@
 function main(msg) {
     return msg;
 }
+
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+const btn5 = document.getElementById('btn5');
+const btn6 = document.getElementById('btn6');
+// const btn7 = document.getElementById('btn7');
+const btn8 = document.getElementById('btn8');
+const btn9 = document.getElementById('btn9');
+const btn10 = document.getElementById('btn10');
+const btn11 = document.getElementById('btn11');
+const btn12 = document.getElementById('btn12');
+const btn12_2 = document.getElementById('btn12_2');
+const btn13 = document.getElementById('btn13');
+const btn14 = document.getElementById('btn14');
+const btn15 = document.getElementById('btn15');
+const btn16 = document.getElementById('btn16');
+const btn17 = document.getElementById('btn17');
+const btn18 = document.getElementById('btn18');
+const btn19 = document.getElementById('btn19');
+const btn20 = document.getElementById('btn20');
+
+btn1.addEventListener('click', function(){
+    problem1Input();
+})
+btn2.addEventListener('click', function(){
+    problem2Input();
+})
+btn3.addEventListener('click', function(){
+    problem3Input();
+})
+btn4.addEventListener('click', function(){
+    problem4Input();
+})
+btn5.addEventListener('click', function(){
+    problem5Input();
+})
+btn6.addEventListener('click', function(){
+    problem6Input();
+})
+btn8.addEventListener('click', function(){
+    problem8Input();
+})
+btn9.addEventListener('click', function(){
+    problem9Input();
+})
+btn10.addEventListener('click', function(){
+    problem10Input();
+})
+btn11.addEventListener('click', function(){
+    problem11Input();
+})
+btn12.addEventListener('click', function(){
+    problem12Input();
+})
+btn12_2.addEventListener('click', function(){
+    problem12_2Input();
+})
+btn13.addEventListener('click', function(){
+    problem13Input();
+})
+btn14.addEventListener('click', function(){
+    problem14Input();
+})
+btn15.addEventListener('click', function(){
+    problem15Input();
+})
+btn16.addEventListener('click', function(){
+    problem16Input();
+})
+btn17.addEventListener('click', function(){
+    problem17Input();
+})
+btn18.addEventListener('click', function(){
+    problem18Input();
+})
+btn19.addEventListener('click', function(){
+    problem19Input();
+})
+btn20.addEventListener('click', function(){
+    problem20Input();
+})
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// problem1Input()
+// problem2Input()
+// problem3Input()
+// problem4Input()
+// problem5Input()
+// problem6Input()
+// problem8Input()
+// problem9Input()
+// problem10Input()
+// problem11Input()
+// problem11Input()
+// problem12_2Input()
+// problem13Input()
+// problem14Input()
+// problem15Input()
+// problem16Input()
+// problem17Input()
+// problem18Input()
+// problem19Input()
+// problem20Input()
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+;
 /////////////////////////////////////////////////////// DONE
 
 // 1- Write a program that allow to user enter number then print it Example
@@ -62,7 +172,6 @@ function problem2(input) {
 // Input: 10 7
 // Output: 10
 
-// problem3Input()
 function problem3Input() {
     let n1 = prompt("Enter 1st number:");
     let n2 = prompt("Enter 2nd number:");
@@ -89,6 +198,7 @@ function problem3(n1, n2) {
 // Output negative Example2
 // Input: 10
 // Output positive
+
 // problem4Input();
 function problem4Input() {
     let n1 = prompt("Enter a number:");
@@ -108,7 +218,8 @@ function problem4(x) {
 }
 /////////////////////////////////////////////////////// DONE
 
-// 5- Write a program that take 3 integers from user then print the max element and the min element.
+// 5- Write a program that take 3 integers from user
+// then print the max element and the min element.
 // Example 1
 // Input:7,8,5
 // Output:
@@ -117,7 +228,14 @@ function problem4(x) {
 // Example2
 // Input: 3 6 9 Outputs:
 // Max element = 9 Min element = 3
+function problem5Input() {
+    let n1 = prompt("Enter 1st number:");
+    let n2 = prompt("Enter 2nd number:");
+    let n3 = prompt("Enter 3rd number:");
+    let output = problem5(n1, n2, n3);
 
+    alert(output);
+}
 function problem5(n1, n2, n3) {
     let min = 0,
         max = 0;
@@ -151,6 +269,11 @@ function problem5(n1, n2, n3) {
 // 6- Write a program that allows the user to insert integer number
 // then check If a number is oven or odd
 
+function problem6Input() {
+    let x = prompt("Enter a Number");
+    let output = problem6(x);
+    alert(output);
+}
 function problem6(x) {
     // -0.5
     if (x || x === 0) {
@@ -175,6 +298,12 @@ function problem6(x) {
 // Input: b
 // Output:
 // Consonant
+
+function problem8Input() {
+    let c = prompt("Enter a single letter");
+    let output = problem8(c);
+    alert(output);
+}
 function problem8(c) {
     if (c) {
         if (c.length >= 1 && !Number(c) && c != "") {
@@ -202,6 +331,11 @@ function problem8(c) {
 // Example Input 5
 // Output 1, 2, 3, 4, 5
 
+function problem9Input() {
+    let x = prompt("Enter a Number");
+    let output = problem9(x);
+    alert(output);
+}
 function problem9(x) {
     let first_number = 1;
     let numbers = "";
@@ -225,6 +359,11 @@ function problem9(x) {
 // Example Input: 5 Outputs:
 // 5 10 15 20 25 30 35 40 45 50 55 60
 
+function problem10Input() {
+    let x = prompt("Enter a Number");
+    let output = problem10(x);
+    alert(output);
+}
 function problem10(x) {
     let numbers = "";
     let last = 0;
@@ -243,7 +382,11 @@ function problem10(x) {
 // Example:
 // Input: 15
 // Output: 2 4 6 8 10 12 14
-
+function problem11Input() {
+    let x = prompt("Enter a Number");
+    let output = problem11(x);
+    alert(output);
+}
 function problem11(x) {
     let minusFlag = 0;
     if (Number(x) && x != "" && x != 0) {
@@ -284,6 +427,13 @@ function problem11(x) {
 // 12- Write a program that take two integers then print the power Example:
 // Input: 4 3
 // Output: 64 Hint how to calculate 4^3 = 4 * 4 * 4 =64
+
+function problem12Input() {
+    let x = prompt("Enter 1st Number");
+    let y = prompt("Enter 2nd Number");
+    let output = problem12(x, y);
+    alert(output);
+}
 function problem12(x, y) {
     // ' ', ''
     let n = 0;
@@ -299,7 +449,8 @@ function problem12(x, y) {
 }
 /////////////////////////////////////////////////////// DONE
 
-// 12_2- Write a program to enter marks of five subjects and calculate total, average and percentage.
+// 12_2- Write a program to enter marks of five subjects and 
+// calculate total, average and percentage.
 // Example
 // Input: - Enter Marks of five subjects:
 // 95
@@ -311,21 +462,30 @@ function problem12(x, y) {
 // Average Marks =87
 // Percentage =87
 
-// let grades = [];
-// for (i = 0; i < 5; i++)
-//     grades[i] = prompt(`Grade ${i + 1} = `);
-// problem12_2(grades);
+function problem12_2Input() {
+    let grades = [];
+    for (i = 0; i < 5; i++){
+
+        grades[i] = prompt(`Grade ${i + 1} = `);
+    }
+    
+    let output = problem12_2(grades);
+    alert(output);
+}
 function problem12_2(grades) {
+    let maxMark = 150;
     let sum = 0,
-        avg = 0;
+        avg = 0,
+        percent = 0;
     if (grades.length == 5) {
         for (let i = 0; i < grades.length; i++) {
             if ((!Number(grades[i]) && grades[i] !== 0) || grades[i] === "" || grades[i] === " ")
                 return "error";
-            sum += grades[i];
+            sum += Number(grades[i]);
         }
         avg = sum / grades.length;
-        return `Total marks = ${sum}, Average Marks = ${avg}, Percentage = ${avg}%`;
+        percent = (sum / (5*maxMark)) *100;
+        return `Total marks = ${sum}, Average Marks = ${avg}, Percentage = ${percent}%`;
     }
     return "error";
 }
@@ -335,6 +495,12 @@ function problem12_2(grades) {
 // Example:
 // Input: - Month Number: 1
 // Output:-. Days in Month: 31
+
+function problem13Input() {
+    let x = prompt("Month Number: ");
+    let output = problem13(x);
+    alert(output);
+}
 function problem13(x) {
     const daysInMonths = {
         1: 31,
@@ -374,9 +540,9 @@ function problem14Input() {
     for (let i = 0; i < subjects.length; i++) {
         grades[i] = prompt(`Enter grade for ${subjects[i]}`);
     }
-    return grades;
+    let output = problem14(grades)
+    alert(output);
 }
-// problem14Input()
 function problem14(grades) {
     let sum = 0,
         percent = 0,
@@ -393,7 +559,7 @@ function problem14(grades) {
             (!Number(grades[subject]) && grades[subject] !== 0)
         )
             return "error";
-        sum += grades[subject];
+        sum += Number(grades[subject]);
     }
     percent = sum / grades.length;
     if (percent >= 90) grad = "A";
@@ -409,6 +575,11 @@ function problem14(grades) {
 // ******************************** Using switch case*******************************
 // 15- Write a program to print total number of days in month
 
+function problem15Input() {
+    let x = prompt("Enter a month number");
+    let output = problem15(x);
+    alert(output);
+}
 function problem15(x) {
     let days = "";
     switch (x) {
@@ -457,6 +628,12 @@ function problem15(x) {
 /////////////////////////////////////////////////////// DONE
 
 // 16- Write a program to check whether an alphabet is vowel or consonant
+
+function problem16Input() {
+    let c = prompt("Enter a letter");
+    let output = problem16(c);
+    alert(output);
+}
 function problem16(x) {
     let alphabet = "qazxswedcvfrtgbnhyujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP";
     let isAlphapet = 0;
@@ -494,6 +671,12 @@ function problem16(x) {
 /////////////////////////////////////////////////////// DONE
 
 // 17- Write a program to find maximum between two numbers
+function problem17Input() {
+    let x = prompt("Enter 1st number");
+    let y = prompt('Enter 2nd Number')
+    let output = problem17(x, y);
+    alert(output);
+}
 function problem17(n1, n2) {
     let max = 0,
         min = 0;
@@ -521,6 +704,11 @@ function problem17(n1, n2) {
 /////////////////////////////////////////////////////// DONE
 
 // 18- Write a program to check whether a number is even or odd
+function problem18Input() {
+    let x = prompt("Enter a number");
+    let output = problem18(x);
+    alert(output);
+}
 function problem18(x) {
     if (x < 0) x *= -1; //reverse to positive as the sign doesn't matter
     switch (true) {
@@ -547,6 +735,11 @@ function problem18(x) {
 /////////////////////////////////////////////////////// DONE
 
 // 19- Write a program to check whether a number is positive or negative or zero
+function problem19Input() {
+    let x = prompt("Enter a number");
+    let output = problem19(x);
+    alert(output);
+}
 function problem19(x) {
     switch (true) {
         case x == Infinity:
@@ -580,6 +773,13 @@ function problem19(x) {
 /////////////////////////////////////////////////////// DONE
 
 // 20- Write a program to create Simple Calculator
+function problem20Input() {
+    let n1 = prompt("Enter 1st number");
+    let exp = prompt("Enter an operation");
+    let n2 = prompt("Enter 2nd number");
+    let output = problem20(n1, exp, n2);
+    alert(output);
+}
 function problem20(n1, exp, n2) {
     let result = 0;
 
@@ -627,6 +827,8 @@ Number('-4') = ${!!Number(-4)}
 `
     );
 }
+
+
 module.exports = {
     main,
     problem1,
@@ -652,3 +854,4 @@ module.exports = {
 };
 
 // week09 jsAssignment1-ProblemSolving
+
