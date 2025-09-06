@@ -1,11 +1,13 @@
 const main = require("./main");
 
-/////////////////////////////////////////////////////// DONE
 test("init test", () => {
     expect(main.main("WTF")).toBe("WTF");
 });
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 01
+
 // 1- Write a program that allow to user enter number then print it
 test("test for problem1", () => {
     expect(main.problem1("ddd")).toBe("not number");
@@ -25,8 +27,14 @@ test("problem1 edge cases", () => {
     expect(main.problem1({})).toBe("not number");
 });
 
+// #endregion Test Problem 01
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 02
+
 // 2- Write a program that take number from user then print yes if that number can
 // divide by 3 and 4 otherwise print no
 
@@ -54,8 +62,13 @@ test("problem2 edge cases", () => {
     expect(main.problem2("12")).toBe("yes");
 });
 
+// #endregion Test Problem 02
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test problem 03
 
 // 3- Write a program that allows the user to insert 2 integers then print the max Example1
 // Input: 3 5
@@ -78,8 +91,13 @@ test("problem3 edge cases", () => {
     expect(main.problem3(5, "b")).toBe("error");
 });
 
+// #endregion Test problem 03
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 04
 
 // 4- Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
 // Example 1
@@ -108,8 +126,13 @@ test("problem4 edge cases", () => {
     expect(main.problem4(true)).toBe("error");
 });
 
+// #endregion Test Problem 04
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test problem 05
 
 // 5- Write a program that take 3 integers from user
 // then print the max element and the min element.
@@ -137,8 +160,13 @@ test("problem5 edge cases", () => {
     expect(main.problem5(null, 2, 3)).toBe("error");
 });
 
+// #endregion Test problem 05
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 06
 
 // 6- Write a program that allows the user to insert integer number
 // then check If a number is even or odd
@@ -165,8 +193,13 @@ test("problem6 edge cases", () => {
     expect(main.problem6("2")).toBe("even");
 });
 
+// #endregion Test Problem 06
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 07
 
 // 8- Write a program that take character from user
 // then if it is vowel chars (a,e,I,o,u) then print vowel otherwise print consonant
@@ -215,8 +248,13 @@ test("problem8 edge cases", () => {
     expect(main.problem8("abc")).toBe("error");
 });
 
+// #endregion Test Problem 07
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 08
 
 // 9- Write a program that allows user to insert integer
 // then print all numbers between 1 to that’s number
@@ -236,8 +274,13 @@ test("problem9 edge cases", () => {
     expect(main.problem9("5")).toBe("1,2,3,4,5");
 });
 
+// #endregion Test Problem 08
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 09
 
 // 10- Write a program that allows user to insert integer
 // then print a multiplication table up to 12.
@@ -258,8 +301,13 @@ test("problem10 edge cases", () => {
     expect(main.problem10(undefined)).toBe("error");
 });
 
+// #endregion Test Problem 09
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 10
 
 // 11- Write a program that allows to user to insert number
 // then print all even numbers between 1 to this number
@@ -282,8 +330,13 @@ test("problem11 edge cases", () => {
     expect(main.problem11("10")).toBe("2 4 6 8 10");
 });
 
+// #endregion Test Problem 10
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 11
 
 // 12- Write a program that take two integers then print the power Example:
 // Input: 4 3
@@ -307,8 +360,13 @@ test("problem12 edge cases", () => {
     expect(main.problem12(4, NaN)).toBe("error");
 });
 
+// #endregion Test Problem 11
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 12
 
 // 12_2- Write a program to enter marks of five subjects and
 // calculate total, average and percentage.
@@ -348,8 +406,13 @@ test("problem12_2 edge cases", () => {
     expect(main.problem12_2([1, 2, 3, 4, 5, 6])).toBe("error");
 });
 
+// #endregion Test Problem 12
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Probelm 13
 
 // 13-Write a program to input month number and print number of days in that month.
 // Example:
@@ -371,8 +434,13 @@ test("problem13 edge cases", () => {
     expect(main.problem13("2")).toBe("Days in month: 28");
 });
 
+// #endregion Test Probelm 13
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/********************************************/
+/********************************************/
+// #region Test Problem 14
 
 // 14- Write a program to input marks of five subjects
 // Physics, Chemistry, Biology, Mathematics and Computer
@@ -404,10 +472,16 @@ test("problem14 edge cases", () => {
     expect(main.problem14([1, 2, 3, 4, 5, 6])).toBe("error");
 });
 
+// #endregion Test Problem 14
+/********************************************/
+/********************************************/
 
-/////////////////////////////////////////////////////// DONE
+/******************************** Using switch case*******************************/
 
-// ******************************** Using switch case*******************************
+/********************************************/
+/********************************************/
+// #region Test Problem 15
+
 // 15- Write a program to print total number of days in month
 test("test for problem15", () => {
     expect(main.problem15("1")).toBe("Days in month: 31");
@@ -425,7 +499,14 @@ test("problem15 edge cases", () => {
     expect(main.problem15(undefined)).toBe("error");
     expect(main.problem15("")).toBe("error");
 });
-/////////////////////////////////////////////////////// DONE
+
+// #endregion Test Problem 15
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region Test Problem 16
 
 // 16- Write a program to check whether an alphabet is vowel or consonant
 test("test for problem16", () => {
@@ -460,7 +541,14 @@ test("test for problem16", () => {
     expect(main.problem16("abc")).toBe("error");
     expect(main.problem16("-")).toBe("error");
 });
-/////////////////////////////////////////////////////// DONE
+
+// #endregion Test Problem 16
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region Test Problem 17
 
 // 17- Write a program to find maximum between two numbers
 
@@ -494,7 +582,14 @@ test("test for problem17", () => {
     expect(main.problem17("5", "Infinity")).toBe("max = Infinity, min = 5");
     expect(main.problem17("5", "-Infinity")).toBe("max = 5, min = -Infinity");
 });
-/////////////////////////////////////////////////////// DONE
+
+// #endregion Test Problem 17
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region Test Problem 18
 
 // 18- Write a program to check whether a number is even or odd
 test("test for problem18", () => {
@@ -537,9 +632,15 @@ test("test for problem18", () => {
     expect(main.problem18("0")).toBe("even");
     expect(main.problem18("-8")).toBe("even");
     expect(main.problem18("-7")).toBe("odd");
-
 });
-/////////////////////////////////////////////////////// DONE
+
+// #endregion Test Problem 18
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region Test Problem 19
 
 // 19- Write a program to check whether a number is positive or negative or zero
 test("test for problem19", () => {
@@ -573,7 +674,14 @@ test("test for problem19", () => {
     expect(main.problem19(true)).toBe("error");
     expect(main.problem19(false)).toBe("error");
 });
-/////////////////////////////////////////////////////// DONE
+
+// #endregion Test Problem 19
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region Test Problem 20
 
 // 20- Write a program to create Simple Calculator
 
@@ -620,4 +728,7 @@ test("test for problem20 - division by zero", () => {
     expect(main.problem20(5, "/", 0)).toBe("error");
     expect(main.problem20(0, "/", 0)).toBe("error");
 });
-/////////////////////////////////////////////////////// DONE
+
+// #endregion Test Problem 20
+/********************************************/
+/********************************************/
