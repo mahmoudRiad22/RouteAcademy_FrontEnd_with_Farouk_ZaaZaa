@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+
+
+    <!-- Fonts.CSS -->
+    <link rel="stylesheet" href="./CSS/fonts.css" />
+
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+
+    <!-- FontAwesome Icons.css -->
+    <link rel="stylesheet" href="./CSS/all.css" />
+
+    <!-- My style.css -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Media Queries.css -->
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
+
+
+
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+</head>
+
+
+
+
+
+<body class="gradient-desing2-right-bottom">
+
+    <header class="my-header-bg">
+        <div class="container-fluid py-3  d-flex justify-content-between align-items-center">
+            <div class="logo px-5 d-flex justify-content-center align-items-center">
+                <img src="./images/image- (1).png" alt="image- (1).png" />
+                <span class="mx-2 text-white">WeatherApp</span>
+            </div>
+            <ul class=" list-unstyled d-flex me-5">
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent active"><a href="" class="px-3">Home</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">News</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">Live cameras</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">Photos</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="rounded-5 my-4 w-75 m-auto">
+                <div class="custom-search-floating d-flex align-items-center">
+                    <input type="search" name="searchInput" id="searchInput" placeholder=" ">
+                    <label id="searchLabel" for="searchInput">Search by city...</label>
+                    <button class="find-btn rounded-5 col-2 border-1 my-header-bg"><p class="header-text-gradient">Find</p></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="forecast-section">
+        <div class="container">
+            <div class="current-weather glass-bg shadow text-white text-center row rounded-5 p-5 w-75 m-auto"
+                id="result" data-test="result">
+                <div class="">
+                    <h1 class="text-capitalize pb-2">today <span class="h6 my-secoundy-text">now</span></h1>
+                    <div class="text-start">
+                        <span class="country" data-test="country" id="currentLocationCountry"></span>,
+                        <span class="name" data-test="name" id="currentLocationName"></span>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-end">
+                        <div class="">
+                            <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
+                                id="currentTempC">
+                            </span>
+                            <span class="position-absolute h1">&deg;c</span>
+                        </div>
+                        <div class="condition-icon">
+                            <img class="w-100" src="" alt="" data-test="condition-icon" id="currentConditionIcon" />
+                        </div>
+                    </div>
+                    <div class="condition-text mt-4 my-primary-text  fw-semibold" data-test="currentCondition-text"
+                        id="currentConditionText"></div>
+                </div>
+            </div>
+
+            <div class="day py-4 d-none">
+                <div class="d-flex justify-content-md-between rounded-top-4 align-items-baseline p-4 glass-darker-bg">
+                    <span class="h4 text-capitalize pb-2">day</span>
+                    <span class="h6 text-capitalize my-secoundy-text">date</span>
+                </div>
+                <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
+
+
+                    <div class="text-start pb-3">
+                        <span class="country" data-test="country" id="locationCountry">country</span>,
+                        <span class="name" data-test="name" id="locationName">city</span>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-end">
+                        <div class="">
+                            <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
+                                id="currentTempC">26
+                            </span>
+                            <span class="position-absolute h1">&deg;c</span>
+                        </div>
+                        <div class="condition-icon">
+                            <img class="w-100" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""
+                                data-test="condition-icon" id="conditionIcon" />
+                        </div>
+                    </div>
+                    <div class="condition-text mt-4 my-primary-text text-center fw-semibold" data-test="condition-text"
+                        id="conditionText">sunny
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="forecast-days row row-cols-md-1 row-cols-lg-3 py-5" id="forecastDaysRow">
+                <!-- here goes the days forecasts -->
+                <div class="day py-4">
+                    <div class="d-flex justify-content-between rounded-top-4 
+                        align-items-baseline p-4 glass-darker-bg">
+                        <span class="h4 text-capitalize pb-2" id="dayName">day</span>
+                        <span class="h6 text-capitalize my-secoundy-text" id="dayDate">date</span>
+                    </div>
+
+                    <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
+
+                        <div class="text-start pb-3">
+                            <span class="country" data-test="country" id="dayLocationCountry">country</span>,
+                            <span class="name" data-test="name" id="dayLocationName">city</span>
+                        </div>
+
+                        <div class="d-flex justify-content-around align-items-end">
+                            <div class="position-relative">
+                                <span class="max-temp-c fs-68 h2 position-relative d-inline-block"
+                                    data-test="dayMaxTempC" id="dayMaxTempC">26
+
+                                    <span class="position-absolute h3">&deg;c</span><br />
+
+                                </span><span class="h2 ps-4 pe-1">/</span>
+
+                                <span class="min-temp-c h3 position-relative d-inline-block ps-0"
+                                    data-test="dayMinTempC" id="dayMinTempC">19
+                                    <span class="position-absolute h5">&deg;c</span><br />
+
+                                </span>
+
+                            </div>
+
+                            <div class="condition-icon">
+                                <img class="w-100" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""
+                                    data-test="dayConditionIcon" id="dayConditionIcon" />
+                            </div>
+
+                        </div>
+
+
+                        <div class="condition-text mt-4 my-primary-text text-center fw-semibold"
+                            data-test="dayConditionText" id="dayConditionText">sunny
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer class=" py-5 my-footer-bg">
+        <div class="container">
+            <div class="inner row align-items-center">
+
+                <div class=" col-9 rounded-5 p-1 d-none">
+                    <div class="form-floating row my-input-style position-relative rounded-5 bg-danger p-0">
+                        <input class="form-control rounded-5 my-input-style p-0" type="email" name="userEmail"
+                            id="userEmail" placeholder="">
+                        <label for="userEmail" class="p-3">Enter your email to subscribe...</label>
+                        <button class="subscribe-btn rounded-5 col-2 border-1 h-100">subscribe</button>
+                    </div>
+                </div>
+
+                <div class="col rounded-5 p-1">
+                    <div class="custom-floating d-flex align-items-center">
+                        <input type="email" name="email" id="email" placeholder=" ">
+                        <label for="email">Enter your email to subscribe...</label>
+                        <button class="subscribe-btn rounded-5 col-2 border-1">subscribe</button>
+                    </div>
+                </div>
+                <ul class="links list-unstyled d-flex justify-content-center 
+                            align-items-center col-3 align-items-center">
+
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-google"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Scripts files -->
+
+
+    <!-- Bootstrap.js -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome Icons.js -->
+    <script src="./JS/all.min.js"></script>
+
+    <!-- my scripts.js -->
+    <script type="module" src="./JS/main.js"></script>
+
+
+    <!-- #endregion Scripts files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+</body>
+
+</html>
