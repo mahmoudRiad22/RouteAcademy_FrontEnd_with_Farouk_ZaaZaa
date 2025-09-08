@@ -1,26 +1,27 @@
-name: Deploy to GitHub Pages
+name: Deploy Weather App to GitHub Pages
 
 on:
     push:
         branches: ["main"]
+        paths:
+            - "week13/JsAssignment5-weatherApp/**" # Only run when weather app changes
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: ./week13/JsAssignment5-weatherApp
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Setup Pages
-              uses: actions/configure-pages@v3
+            - name: Create config.js with API key
+              run: |
+                  cd week13/JsAssignment5-weatherApp
+                  echo "export const API_KEY = '${{ secrets.WEATHER_API_KEY }}';" > config.js
+                  echo "✅ config.js created successfully"
 
-            - name: Create config.js
-              run: echo "export const API_KEY = '${{ secrets.WEATHER_API_KEY }}';" > config.js
-
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v2
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
               with:
-                  path: "./week13/JsAssignment5-weatherApp"
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./week13/JsAssignment5-weatherApp
+                  keep_files: false
