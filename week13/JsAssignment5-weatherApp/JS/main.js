@@ -12,7 +12,8 @@ const html = {
         conditionIcon: document.getElementById("currentConditionIcon"),
         conditionText: document.getElementById("currentConditionText"),
     },
-    forcast: {
+    forecast: {
+        forecastDaysRow: document.getElementById("forecastDaysRow"),
         dayMinTempC: document.getElementById("dayMinTempC"),
         dayMaxTempC: document.getElementById("dayMaxTempC"),
         dayLocationCountry: document.getElementById("dayLocationCountry"),
@@ -41,53 +42,95 @@ function diplayCurrentWeather(responseData) {
     html.current.conditionText.innerHTML = responseData.current.condition.text;
 }
 
-function formateDate(dateStr){
+function formateDate(dateStr) {
+    const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
     const date = new Date(dateStr);
-    console.log(typeof date, date);
+    console.log(date, date.getDay);
+    const formattedDate = {
+        name: dayNames[date.getDay() - 1],
+        date: date.getDate(),
+        month: monthNames[date.getMonth() - 1],
+        year: date.getFullYear(),
+    };
+    console.log("formattedDate :>> ", formattedDate);
+    return formattedDate;
 }
 
 async function displayForcastWeather(responseData) {
-    let box = '';
-    console.log(responseData.forecast.forecastday.length);
-    if(responseData.forecast.forecastday.length){
+    let box = "";
+    console.log("forecastday array length",responseData.forecast.forecastday.length);
+
+    if (responseData.forecast.forecastday.length) {
         const days = responseData.forecast.forecastday;
-        for (let i=0; i< days.length; i++){
-            console.log('date :>> ', i, days[i].date);
-            const date = formateDate(days[i].date);
+
+        for (let i = 0; i < days.length; i++) {
+            console.log("date :>> ", i, days[i].date);
+            const day = formateDate(days[i].date);
             box += `
-            <div class="day py-4">
-                <div
-                    class="d-flex justify-content-md-between rounded-top-4 align-items-baseline p-4 glass-darker-bg">
-                    <span class="h4 text-capitalize pb-2" id="dayName">${days[i].date}</span>
-                    <span class="h6 text-capitalize my-secoundy-text" id="dayDate">date</span>
-                </div>
-                <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
-
-
-                    <div class="text-start pb-3">
-                        <span class="country" data-test="country" id="dayLocationCountry">country</span>,
-                        <span class="name" data-test="name" id="dayLocationName">city</span>
+                <div class="day py-4">
+                    <div class="d-flex justify-content-md-between rounded-top-4 
+                        align-items-baseline p-4 glass-darker-bg">
+                        <span class="h4 text-capitalize pb-2" id="dayName">${day.name}</span>
+                        <span class="h6 text-capitalize my-secoundy-text" id="dayDate">${day.date}-${day.month}</span>
                     </div>
-                    <div class="d-flex justify-content-around align-items-end">
-                        <div class="">
-                            <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
-                                id="currentTempC">26
-                            </span>
-                            <span class="position-absolute h1">&deg;c</span>
+
+                    <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
+
+                        <div class="text-start pb-3">
+                            <span class="country" data-test="country" id="dayLocationCountry">${responseData.location.country}</span>,
+                            <span class="name" data-test="name" id="dayLocationName">${responseData.location.name}</span>
                         </div>
-                        <div class="condition-icon">
-                            <img class="w-100" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""
-                                data-test="condition-icon" id="dayConditionIcon" />
-                        </div>
-                    </div>
-                    <div class="condition-text mt-4 my-primary-text text-center fw-semibold"
-                        data-test="condition-text" id="dayConditionText">sunny
-                    </div>
 
+                        <div class="d-flex justify-content-around align-items-end">
+                            <div class="position-relative">
+                                <span class="max-temp-c fs-68 h2 position-relative d-inline-block" 
+                                    data-test="dayMaxTempC" id="dayMaxTempC">${days[i].day.maxtemp_c}
+
+                                <span class="position-absolute h3">&deg;c</span><br/>
+
+                                </span><span class="h2 ps-4 pe-1">/</span>
+
+                                <span class="min-temp-c h3 position-relative d-inline-block ps-0" 
+                                    data-test="dayMinTempC" id="dayMinTempC">${days[i].day.mintemp_c}
+                                <span class="position-absolute h5">&deg;c</span><br/>
+
+                                </span>
+
+                            </div>
+
+                            <div class="condition-icon">
+                                <img class="w-100" src="${days[i].day.condition.icon}" alt=""
+                                    data-test="dayConditionIcon" id="dayConditionIcon" />
+                            </div>
+
+                        </div>
+
+
+                        <div class="condition-text mt-4 my-primary-text text-center fw-semibold"
+                            data-test="dayConditionText" id="dayConditionText">${days[i].day.condition.text}
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-            `
+
+            `;
         }
+
+        html.forecast.forecastDaysRow.innerHTML = box;
     }
 }
 // TODO: make this run at user location automatically

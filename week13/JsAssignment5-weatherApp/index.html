@@ -54,8 +54,8 @@
 
     <section class="forecast-weather">
         <div class="container">
-            <div class="current-weather glass-bg shadow text-white text-center row rounded-5 p-5 w-75 m-auto" id="result"
-                data-test="result">
+            <div class="current-weather glass-bg shadow text-white text-center row rounded-5 p-5 w-75 m-auto"
+                id="result" data-test="result">
                 <div class="">
                     <h1 class="text-capitalize pb-2">today <span class="h6 my-secoundy-text">now</span></h1>
                     <div class="text-start">
@@ -77,7 +77,7 @@
                         id="currentConditionText"></div>
                 </div>
             </div>
-            
+
             <div class="day py-4 d-none">
                 <div class="d-flex justify-content-md-between rounded-top-4 align-items-baseline p-4 glass-darker-bg">
                     <span class="h4 text-capitalize pb-2">day</span>
@@ -110,34 +110,49 @@
             </div>
 
 
-            <div class="forecast-days row row-cols-md-1 row-cols-lg-3 py-5">
+            <div class="forecast-days row row-cols-md-1 row-cols-lg-3 py-5" id="forecastDaysRow">
+                <!-- here goes the days forecasts -->
                 <div class="day py-4">
-                    <div
-                        class="d-flex justify-content-md-between rounded-top-4 align-items-baseline p-4 glass-darker-bg">
+                    <div class="d-flex justify-content-md-between rounded-top-4 
+                        align-items-baseline p-4 glass-darker-bg">
                         <span class="h4 text-capitalize pb-2" id="dayName">day</span>
                         <span class="h6 text-capitalize my-secoundy-text" id="dayDate">date</span>
                     </div>
-                    <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
 
+                    <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
 
                         <div class="text-start pb-3">
                             <span class="country" data-test="country" id="dayLocationCountry">country</span>,
                             <span class="name" data-test="name" id="dayLocationName">city</span>
                         </div>
+
                         <div class="d-flex justify-content-around align-items-end">
-                            <div class="">
-                                <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
-                                    id="currentTempC">26
+                            <div class="position-relative">
+                                <span class="max-temp-c fs-68 h2 position-relative d-inline-block" 
+                                    data-test="dayMaxTempC" id="dayMaxTempC">26
+
+                                <span class="position-absolute h3">&deg;c</span><br/>
+
+                                </span><span class="h2 ps-4 pe-1">/</span>
+
+                                <span class="min-temp-c h3 position-relative d-inline-block ps-0" 
+                                    data-test="dayMinTempC" id="dayMinTempC">19
+                                <span class="position-absolute h5">&deg;c</span><br/>
+
                                 </span>
-                                <span class="position-absolute h1">&deg;c</span>
+
                             </div>
+
                             <div class="condition-icon">
                                 <img class="w-100" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""
-                                    data-test="condition-icon" id="dayConditionIcon" />
+                                    data-test="dayConditionIcon" id="dayConditionIcon" />
                             </div>
+
                         </div>
+
+
                         <div class="condition-text mt-4 my-primary-text text-center fw-semibold"
-                            data-test="condition-text" id="dayConditionText">sunny
+                            data-test="dayConditionText" id="dayConditionText">sunny
                         </div>
 
                     </div>
