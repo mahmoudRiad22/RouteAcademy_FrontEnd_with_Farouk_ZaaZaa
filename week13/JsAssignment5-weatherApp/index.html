@@ -38,21 +38,26 @@
 <body class="gradient-desing2-right-bottom">
 
 
-    <section class="current-weather">
+    <section class="search-section">
         <div class="container">
-            <!-- <div class="form-floating p-4"> -->
-            <div class="form-floating my-4 w-75 m-auto">
+            <div class="custom-floating my-4 w-75 m-auto d-none">
                 <input type="search" class="form-control my-input-style rounded-5" id="searchInput"
                     placeholder="Search by city...">
                 <label for="searchInput">Search by city...</label>
             </div>
-            <!-- </div> -->
+            <div class="rounded-5 my-4 w-75 m-auto">
+                <div class="custom-search-floating d-flex align-items-center">
+                    <input type="email" name="email" id="email" placeholder=" ">
+                    <label for="email">Search by city...</label>
+                    <button class="find-btn rounded-5 col-2 border-1">Find</button>
+                </div>
+            </div>
 
         </div>
     </section>
 
 
-    <section class="forecast-weather">
+    <section class="forecast-section">
         <div class="container">
             <div class="current-weather glass-bg shadow text-white text-center row rounded-5 p-5 w-75 m-auto"
                 id="result" data-test="result">
@@ -113,7 +118,7 @@
             <div class="forecast-days row row-cols-md-1 row-cols-lg-3 py-5" id="forecastDaysRow">
                 <!-- here goes the days forecasts -->
                 <div class="day py-4">
-                    <div class="d-flex justify-content-md-between rounded-top-4 
+                    <div class="d-flex justify-content-between rounded-top-4 
                         align-items-baseline p-4 glass-darker-bg">
                         <span class="h4 text-capitalize pb-2" id="dayName">day</span>
                         <span class="h6 text-capitalize my-secoundy-text" id="dayDate">date</span>
@@ -128,16 +133,16 @@
 
                         <div class="d-flex justify-content-around align-items-end">
                             <div class="position-relative">
-                                <span class="max-temp-c fs-68 h2 position-relative d-inline-block" 
+                                <span class="max-temp-c fs-68 h2 position-relative d-inline-block"
                                     data-test="dayMaxTempC" id="dayMaxTempC">26
 
-                                <span class="position-absolute h3">&deg;c</span><br/>
+                                    <span class="position-absolute h3">&deg;c</span><br />
 
                                 </span><span class="h2 ps-4 pe-1">/</span>
 
-                                <span class="min-temp-c h3 position-relative d-inline-block ps-0" 
+                                <span class="min-temp-c h3 position-relative d-inline-block ps-0"
                                     data-test="dayMinTempC" id="dayMinTempC">19
-                                <span class="position-absolute h5">&deg;c</span><br/>
+                                    <span class="position-absolute h5">&deg;c</span><br />
 
                                 </span>
 
@@ -163,6 +168,35 @@
         </div>
     </section>
 
+    <footer class=" py-5 my-footer-bg">
+        <div class="container">
+            <div class="inner row align-items-center">
+
+                <div class=" col-9 rounded-5 p-1 d-none">
+                    <div class="form-floating row my-input-style position-relative rounded-5 bg-danger p-0">
+                        <input class="form-control rounded-5 my-input-style p-0" type="email" name="userEmail"
+                            id="userEmail" placeholder="">
+                        <label for="userEmail" class="p-3">Enter your email to subscribe...</label>
+                        <button class="subscribe-btn rounded-5 col-2 border-1 h-100">subscribe</button>
+                    </div>
+                </div>
+
+                <div class="col rounded-5 p-1">
+                    <div class="custom-floating d-flex align-items-center">
+                        <input type="email" name="email" id="email" placeholder=" ">
+                        <label for="email">Enter your email to subscribe...</label>
+                        <button class="subscribe-btn rounded-5 col-2 border-1">subscribe</button>
+                    </div>
+                </div>
+                <div class="links list-unstyled d-flex justify-content-center align-items-center col-3 align-items-center">
+                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-google"></i></a></li>
+                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- ****************************** -->
     <!-- ****************************** -->

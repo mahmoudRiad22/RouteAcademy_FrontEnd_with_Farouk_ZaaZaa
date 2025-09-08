@@ -82,7 +82,7 @@ async function displayForcastWeather(responseData) {
             const day = formateDate(days[i].date);
             box += `
                 <div class="day py-4">
-                    <div class="d-flex justify-content-md-between rounded-top-4 
+                    <div class="d-flex justify-content-between rounded-top-4 
                         align-items-baseline p-4 glass-darker-bg">
                         <span class="h4 text-capitalize pb-2" id="dayName">${day.name}</span>
                         <span class="h6 text-capitalize my-secoundy-text" id="dayDate">${day.date}-${day.month}</span>
