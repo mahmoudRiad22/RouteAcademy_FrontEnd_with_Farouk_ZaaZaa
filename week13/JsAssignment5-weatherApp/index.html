@@ -37,19 +37,29 @@
 
 <body class="gradient-desing2-right-bottom">
 
+    <header class="my-header-bg">
+        <div class="container-fluid py-3  d-flex justify-content-between align-items-center">
+            <div class="logo px-5 d-flex justify-content-center align-items-center">
+                <img src="./images/image- (1).png" alt="image- (1).png" />
+                <span class="mx-2 text-white">WeatherApp</span>
+            </div>
+            <ul class=" list-unstyled d-flex me-5">
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent active"><a href="" class="px-3">Home</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">News</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">Live cameras</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">Photos</a></li>
+                <li class="header-link mx-2 rounded-5  fw-semibold bg-transparent"><a href="" class="px-3">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
     <section class="search-section">
         <div class="container">
-            <div class="custom-floating my-4 w-75 m-auto d-none">
-                <input type="search" class="form-control my-input-style rounded-5" id="searchInput"
-                    placeholder="Search by city...">
-                <label for="searchInput">Search by city...</label>
-            </div>
             <div class="rounded-5 my-4 w-75 m-auto">
                 <div class="custom-search-floating d-flex align-items-center">
-                    <input type="email" name="email" id="email" placeholder=" ">
-                    <label for="email">Search by city...</label>
-                    <button class="find-btn rounded-5 col-2 border-1">Find</button>
+                    <input type="search" name="searchInput" id="searchInput" placeholder=" ">
+                    <label id="searchLabel" for="searchInput">Search by city...</label>
+                    <button class="find-btn rounded-5 col-2 border-1 my-header-bg"><p class="header-text-gradient">Find</p></button>
                 </div>
             </div>
 
@@ -188,12 +198,22 @@
                         <button class="subscribe-btn rounded-5 col-2 border-1">subscribe</button>
                     </div>
                 </div>
-                <div class="links list-unstyled d-flex justify-content-center align-items-center col-3 align-items-center">
-                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-google"></i></a></li>
-                    <li class="px-1 d-flex justify-content-center align-items-center"><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
-                </div>
+                <ul class="links list-unstyled d-flex justify-content-center 
+                            align-items-center col-3 align-items-center">
+
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-google"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>

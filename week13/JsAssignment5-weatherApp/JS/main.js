@@ -59,26 +59,26 @@ function formateDate(dateStr) {
         "December",
     ];
     const date = new Date(dateStr);
-    console.log(date, date.getDay);
+    // console.log(date, date.getDay);
     const formattedDate = {
         name: dayNames[date.getDay() - 1],
         date: date.getDate(),
         month: monthNames[date.getMonth() - 1],
         year: date.getFullYear(),
     };
-    console.log("formattedDate :>> ", formattedDate);
+    // console.log("formattedDate :>> ", formattedDate);
     return formattedDate;
 }
 
 async function displayForcastWeather(responseData) {
     let box = "";
-    console.log("forecastday array length",responseData.forecast.forecastday.length);
+    // console.log("forecastday array length",responseData.forecast.forecastday.length);
 
     if (responseData.forecast.forecastday.length) {
         const days = responseData.forecast.forecastday;
 
         for (let i = 0; i < days.length; i++) {
-            console.log("date :>> ", i, days[i].date);
+            // console.log("date :>> ", i, days[i].date);
             const day = formateDate(days[i].date);
             box += `
                 <div class="day py-4">
@@ -137,14 +137,40 @@ async function displayForcastWeather(responseData) {
 getCurrentWeather("cairo");
 
 const searchBar = document.getElementById("searchInput");
+const searchLabel = document.getElementById("searchLabel");
 searchBar.addEventListener("input", function () {
-    // console.log('searchBar.value :>> ', searchBar.value);
-    // readSearchBar(searchBar.value);
     if (searchBar.value) {
+        searchLabel.classList.add("d-none");
         getCurrentWeather(searchBar.value);
+    }else{
+    searchLabel.classList.remove('d-none');
     }
 });
 
+
+const headerLinks = document.querySelectorAll(".header-link");
+for (const index in headerLinks) {
+    if (Object.prototype.hasOwnProperty.call(headerLinks, index)) {
+        const link = headerLinks[index];
+        link.addEventListener('click', function(e){
+            addActiveClass(e.target);
+        })
+    }
+}
+
+function addActiveClass(target){
+    for (const headerlink in headerLinks) {
+        if (Object.prototype.hasOwnProperty.call(headerLinks, headerlink)) {
+            const link = headerLinks[headerlink];
+            if (link === target){
+            link.classList.add('active')
+            }else{
+            link.classList.remove('active')
+            }
+            
+        }
+    }
+}
 let dummyResponse = {
     location: {
         name: "Cairo",
@@ -319,4 +345,4 @@ let dummyResponse = {
         ],
     },
 };
-console.log(dummyResponse);
+// console.log(dummyResponse);

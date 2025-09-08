@@ -26,6 +26,66 @@
 .gradient-desing2-right-bottom {
     background: linear-gradient(to right bottom, #4d5ca2, #eb718f);
 }
+
+
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region header */
+
+.logo img{
+    font-size: 14px;
+    width: 3.75rem;
+
+}
+header a{
+    text-decoration: none;
+    color: #1f245c;
+    font-size: .875rem;
+    transition: ease .25s all;
+}
+header li{
+    transition: ease .25s all;
+}
+header li:focus{
+    outline: 3px solid rgb(79, 62, 141);
+    outline: 3px solid #e0bcc5;
+    color: #009ad8;
+}
+header li.active{
+    /* outline: 3px solid rgb(79, 62, 141); */
+    outline: 3px solid #e0bcc5;
+    color: #009ad8;
+    color: white;
+    color: #ffd6e0;
+}
+header li.active a{
+    color: rgb(79, 62, 141);
+    color: #ffd6e0
+
+}
+
+header li:hover{
+    outline: 3px solid rgb(79, 62, 141);
+    outline: 3px solid #e0bcc5;
+
+}
+header li:hover a{
+    color: rgb(79, 62, 141);
+    color: white;
+    color: #ffd6e0
+}
+
+/* #endregion header */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
 .search-Input {
     outline: none;
     border: 0;
@@ -176,6 +236,24 @@ footer .links li:hover a{
     /* background-color: #C06485; */
     /* background-color: #815986; */
     background: linear-gradient(to right, #8A5F90, #C06485);
+}
+.my-header-bg{
+    background: linear-gradient(to right, #484D84, #B582A9);
+}
+.header-text-gradient{
+    background: linear-gradient(to right,#b1a1a5, #fae0e6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.2rem;
+    padding: .31rem;
+    vertical-align: center;
+    font-weight: bold;
+    display: inline-block;
+
+}
+.my-header-bg:hover{
+    background: linear-gradient(to right,#B582A9 ,#484D84);
 }
 
 /* TODO: 
