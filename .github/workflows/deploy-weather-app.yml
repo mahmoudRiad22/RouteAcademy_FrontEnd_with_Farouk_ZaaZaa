@@ -13,12 +13,6 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Create config.js with API key
-              run: |
-                  cd week13/JsAssignment5-weatherApp
-                  echo "export const API_KEY = '${{ secrets.WEATHER_API_KEY }}';" > config.js
-                  echo "✅ config.js created successfully"
-
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
