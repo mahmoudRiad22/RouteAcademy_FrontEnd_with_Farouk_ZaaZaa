@@ -16,6 +16,7 @@ jobs:
               run: |
                   cd week13/JsAssignment5-weatherApp
                   echo "export const API_KEY = '${{ secrets.WEATHER_API_KEY }}';" > config.js
+                  dir config.js
                   echo "✅ config.js created successfully"
 
             - name: Deploy to GitHub Pages
