@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.my-primary-bg {
+    background-color: #1e202b;
+}
+.my-secoundy-bg {
+    background-color: #323544;
+}
+.my-btn-bg {
+    background-color: #009ad8;
+}
+
+.my-primary-text {
+    color: #1e202b;
+    /* color: #3b2a4d; */
+}
+.my-secoundy-text {
+    /* color: #323544; */
+    color: #ffd6e0;
+}
+.my-btn-text {
+    color: #009ad8;
+}
+.gradient-desing2-right-bottom {
+    background: linear-gradient(to right bottom, #4d5ca2, #eb718f);
+}
+.search-Input {
+    outline: none;
+    border: 0;
+}
+.search-Input:focus {
+    border: 0.0625rem solid red;
+}
+
+.fs-68 {
+    font-size: 70px;
+}
+.condition-icon {
+    width: 80px;
+}
+
+.glass-bg {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.glass-darker-bg{
+    background-color: rgba(248, 249, 252,.25);
+}
+.my-input-style {
+    /* background-color: #1F1F2E; */
+    background-color: #8c92a8;
+    /* border: #bfc4d2; */
+    outline: none;
+    border: 0;
+}
+
+.my-input-style:focus {
+    background-color: #959bb2;
+    border: 0;
+    outline: #eb718f;
+    box-shadow: 0 0 0 .25rem rgb(235, 113, 143,.25);
+}

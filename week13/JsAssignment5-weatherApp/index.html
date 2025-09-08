@@ -35,10 +35,118 @@
 
 </head>
 
-<body>
+<body class="gradient-desing2-right-bottom">
 
 
+    <section class="current-weather">
+        <div class="container">
+            <!-- <div class="form-floating p-4"> -->
+            <div class="form-floating my-4 w-75 m-auto">
+                <input type="search" class="form-control my-input-style rounded-5" id="searchInput"
+                    placeholder="Search by city...">
+                <label for="searchInput">Search by city...</label>
+            </div>
+            <!-- </div> -->
 
+        </div>
+    </section>
+
+
+    <section class="forecast-weather">
+        <div class="container">
+            <div class="current-weather glass-bg shadow text-white text-center row rounded-5 p-5 w-75 m-auto" id="result"
+                data-test="result">
+                <div class="">
+                    <h1 class="text-capitalize pb-2">today <span class="h6 my-secoundy-text">now</span></h1>
+                    <div class="text-start">
+                        <span class="country" data-test="country" id="currentLocationCountry"></span>,
+                        <span class="name" data-test="name" id="currentLocationName"></span>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-end">
+                        <div class="">
+                            <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
+                                id="currentTempC">
+                            </span>
+                            <span class="position-absolute h1">&deg;c</span>
+                        </div>
+                        <div class="condition-icon">
+                            <img class="w-100" src="" alt="" data-test="condition-icon" id="currentConditionIcon" />
+                        </div>
+                    </div>
+                    <div class="condition-text mt-4 my-primary-text  fw-semibold" data-test="currentCondition-text"
+                        id="currentConditionText"></div>
+                </div>
+            </div>
+            
+            <div class="day py-4 d-none">
+                <div class="d-flex justify-content-md-between rounded-top-4 align-items-baseline p-4 glass-darker-bg">
+                    <span class="h4 text-capitalize pb-2">day</span>
+                    <span class="h6 text-capitalize my-secoundy-text">date</span>
+                </div>
+                <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
+
+
+                    <div class="text-start pb-3">
+                        <span class="country" data-test="country" id="locationCountry">country</span>,
+                        <span class="name" data-test="name" id="locationName">city</span>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-end">
+                        <div class="">
+                            <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
+                                id="currentTempC">26
+                            </span>
+                            <span class="position-absolute h1">&deg;c</span>
+                        </div>
+                        <div class="condition-icon">
+                            <img class="w-100" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""
+                                data-test="condition-icon" id="conditionIcon" />
+                        </div>
+                    </div>
+                    <div class="condition-text mt-4 my-primary-text text-center fw-semibold" data-test="condition-text"
+                        id="conditionText">sunny
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="forecast-days row row-cols-md-1 row-cols-lg-3 py-5">
+                <div class="day py-4">
+                    <div
+                        class="d-flex justify-content-md-between rounded-top-4 align-items-baseline p-4 glass-darker-bg">
+                        <span class="h4 text-capitalize pb-2" id="dayName">day</span>
+                        <span class="h6 text-capitalize my-secoundy-text" id="dayDate">date</span>
+                    </div>
+                    <div class="inner glass-bg shadow rounded-bottom-4 p-4 pt-1">
+
+
+                        <div class="text-start pb-3">
+                            <span class="country" data-test="country" id="dayLocationCountry">country</span>,
+                            <span class="name" data-test="name" id="dayLocationName">city</span>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-end">
+                            <div class="">
+                                <span class="max-temp-c fs-68 position-relative d-inline-block" data-test="currentTempC"
+                                    id="currentTempC">26
+                                </span>
+                                <span class="position-absolute h1">&deg;c</span>
+                            </div>
+                            <div class="condition-icon">
+                                <img class="w-100" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""
+                                    data-test="condition-icon" id="dayConditionIcon" />
+                            </div>
+                        </div>
+                        <div class="condition-text mt-4 my-primary-text text-center fw-semibold"
+                            data-test="condition-text" id="dayConditionText">sunny
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
 
 
     <!-- ****************************** -->
@@ -53,7 +161,7 @@
     <script src="./JS/all.min.js"></script>
 
     <!-- my scripts.js -->
-    <script src="./JS/main.js"></script>
+    <script type="module" src="./JS/main.js"></script>
 
 
     <!-- #endregion Scripts files -->
