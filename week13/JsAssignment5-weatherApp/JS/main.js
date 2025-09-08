@@ -2,6 +2,8 @@
 import {API_KEY} from "../config.js";
 
 const apiKey = API_KEY;
+// Use environment variable or fallback
+// const apiKey = window.WEATHER_API_KEY;
 const baseUrl = "https://api.weatherapi.com/v1/";
 
 const html = {

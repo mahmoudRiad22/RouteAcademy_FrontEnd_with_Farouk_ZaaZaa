@@ -24,4 +24,5 @@ jobs:
               with:
                   github_token: ${{ secrets.GH_PAT }}
                   publish_dir: ./week13/JsAssignment5-weatherApp
+                  destination_dir: week13/JsAssignment5-weatherApp
                   keep_files: false
