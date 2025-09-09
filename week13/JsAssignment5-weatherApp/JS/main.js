@@ -2,8 +2,7 @@
 import {API_KEY} from "../config.js";
 const apiKey = API_KEY;
 
-
-// const apiKey = "%%API_KEY%%"; 
+// const apiKey = "%%API_KEY%%";
 const baseUrl = "https://api.weatherapi.com/v1/";
 
 const html = {
@@ -27,7 +26,6 @@ const html = {
 
 async function getCurrentWeather(cityname) {
     const url = `${baseUrl}/forecast.json?q=${cityname}&days=4&hour=24&key=${apiKey}`;
-    console.log(url);
     const response = await fetch(url);
     const responseData = await response.json();
     diplayCurrentWeather(responseData);
