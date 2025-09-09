@@ -1,0 +1,106 @@
+/* Global CSS */
+
+h3{
+    background-color: darkcyan;
+    color: black;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+
+}
+
+/* Main CSS */
+
+.div1{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+
+    /* overflow */
+
+    overflow: visible; /*default value*/
+    /* overflow: hidden; */
+    overflow: scroll; /*stupid effect: adds scroll effect regardless*/
+    overflow: auto; /*if overflow fouond a scroll bar is created*/
+
+}
+
+.div2 .div21{
+    background-color: violet;
+    height: 300px;
+
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: .5;
+    visibility: visible;
+}
+
+.div3{
+    height: 500px;
+    width: 800px;
+    background-color: lightblue;
+}
+
+.div3:hover{
+    background-color: lightsalmon;
+
+}
+
+.div4{
+    height: 500px;
+    width: 800px;
+    background-color: rgb(17, 128, 165);
+}
+.div41{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(196, 230, 173);
+
+    transition-property: width;
+    transition-duration: .5s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+
+    /* transtion shorthand */
+    /* transition: prop    duration    delay   tiiming-func; */
+    transition: background-color 2s, width 2s;
+}
+
+.div4:hover .div41{
+    background-color: brown;
+    width: 400px;
+}
+
+.div41:hover{
+    cursor: pointer;
+    background-color: rgb(196, 230, 173);
+
+}
+/* /////////////////////////// */
+
+.div5{
+    width: 250px;
+    height: 250px;
+    margin: 100px;
+
+}
+.img1{
+    width: 120%;
+    height: 100%;
+
+    transition: transform 2s;
+
+}
+.img1:hover{
+    transform: rotate(45deg);
+}
+.img2{
+    width: 100%;
+    height: 100%;
+
+    transition: transform 1s;
+}
+.img2:hover{
+    transform: translate(200px);
+}

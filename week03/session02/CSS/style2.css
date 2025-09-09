@@ -1,0 +1,877 @@
+/*****************************/
+/*****************************/
+/* #region global CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Color Variables */
+:root {
+    --bg: #00072d; /* middle color Dominant background */
+    --surface: #001c55; /* 1st right Cards/surfaces */
+    --buttons: #0a2472; /* 2nd right Interactive elements */
+    --accent: #0e6ba8; /* 1st left For highlights */
+    --text: #a6e1fa; /* 2nd left Primary text */
+
+    /* Optional extended palette */
+    --success: #4caf50; /* Positive actions */
+    --warning: #ffc107; /* Caution states */
+    --error: #f44336; /* Destructive actions */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Alegreya Sans", serif;
+    font-size: medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    margin: 15px 0px;
+    font-family: "Playwrite IT Moderna";
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+p {
+    padding-left: 15px;
+    font-family: "Alegreya", serif;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.container {
+    background-color: var(--surface);
+    width: 75%;
+    margin: auto;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+a {
+    color: var(--text);
+    font-style: italic;
+    display: block;
+    margin: 0px 0px;
+    padding: 0;
+    background-color: var(--bg);
+}
+
+.nav-bar {
+    /* width: 80px; */
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    overflow: auto;
+    height: 90%;
+    text-align: center;
+}
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region ScrollBar CSS */
+
+/* ////////// SCROLL BAR CSS */
+/* Firefox (version 64+) */
+html {
+    scrollbar-width: thin; /* auto | thin | none */
+    scrollbar-color: rgba(51, 51, 51) rgba(0, 0, 0, 0.452); /* thumb | track */
+}
+/* For Chrome/Safari/Edge */
+::-webkit-scrollbar {
+    width: 1px; /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(187, 15, 15, 0.1); /* Semi-transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent thumb */
+    border-radius: 5px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region topic 1- Overflow */
+
+.overflow-applying-section {
+    width: 100%;
+}
+.overflow-applying-section .overflow-test1 {
+    margin-top: 20px;
+    width: calc(100% / 3);
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+}
+
+.overflow-applying-section .overflow-test2 {
+    margin-top: 20px;
+    width: calc(100% / 3);
+
+    width: 350px;
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+
+    overflow: scroll;
+}
+
+.overflow-applying-section .overflow-test3 {
+    margin-top: 20px;
+    width: calc(100% / 3);
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+
+    overflow: hidden;
+}
+.overflow-applying-section .overflow-test4 {
+    margin-top: 20px;
+    width: calc(100% / 3);
+    height: 250px;
+    background-color: var(--buttons);
+    float: left;
+
+    overflow: auto;
+}
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region 2-how to hide_elements */
+
+.hide_elements-applying-section .test1 {
+    display: none;
+}
+.hide_elements-applying-section .test2 {
+    visibility: hidden;
+}
+.hide_elements-applying-section .test3 {
+    opacity: 0;
+}
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region 4-Hover */
+
+.hover-applying-section {
+    width: 100%;
+    /* height: 400px; */
+}
+.hover-applying-section .test1 {
+    width: 200px;
+    margin: auto;
+    /* height: 100px; */
+    background-color: var(--accent);
+}
+.hover-applying-section .test1:hover {
+    background-color: var(--success);
+    cursor: pointer;
+}
+
+.hover-applying-section .test2 {
+    margin: 20px 0px;
+    width: 300px;
+
+    float: right;
+    background-color: var(--warning);
+    opacity: 0;
+}
+.hover-applying-section .test2:hover {
+    color: var(--bg);
+    cursor: pointer;
+    opacity: 1;
+}
+.hover-applying-section .test3 {
+    width: 300px;
+    float: left;
+    margin: 20px 0px;
+
+    opacity: 0;
+}
+
+.hover-applying-section .test3:hover {
+    background-color: var(--error);
+    opacity: 1;
+    color: var(--text);
+    cursor: grabbing;
+}
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region topic 5,6- transition */
+
+/*****************************/
+/*****************************/
+/* #region test1 */
+
+.transition-properties-applying-section .test1 {
+    height: 150px;
+}
+.transition-properties-applying-section .test1-1 {
+    width: 300px;
+    height: 8px;
+    overflow: auto;
+    background-color: var(--accent);
+    color: var(--accent);
+    transition: width 1s, background-color 1s 0.5s, color 0.5s 1.5s, height 1s;
+}
+
+.transition-properties-applying-section .test1-1:hover {
+    width: 100%;
+    height: 100px;
+    background-color: var(--warning);
+    color: var(--bg);
+    cursor: pointer;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region test2 */
+
+.transition-properties-applying-section .test2 {
+    height: 200px;
+    /* background-color: var(--success); */
+}
+.transition-properties-applying-section .test2 .item {
+    border: 1px solid black;
+    text-align: center;
+    width: 25%;
+    height: 200px;
+    background-color: var(--accent);
+    float: left;
+    position: relative;
+}
+.transition-properties-applying-section .item .container {
+    height: 100%;
+}
+.transition-properties-applying-section .test2 .layer {
+    height: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transition: height 0.5s 0s linear;
+}
+.transition-properties-applying-section .test2 .container:hover .layer {
+    height: 100%;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region test3 */
+.transition-properties-applying-section .test3 .container {
+    width: 80%;
+    margin: auto;
+}
+
+.transition-properties-applying-section .test3 .card {
+    width: calc(90% / 3);
+    background-color: rgb(95, 24, 182);
+    text-align: center;
+    margin: 20px 10px;
+    padding: 30px 10px;
+    float: left;
+    position: relative;
+}
+.transition-properties-applying-section .test3 .card .title {
+    color: var(--text);
+}
+
+.transition-properties-applying-section .test3 .card .layer {
+    width: 100%;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.388);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: height 0.7s 0s ease-in-out;
+}
+.transition-properties-applying-section .test3 .card:hover .layer {
+    height: 100%;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region topic 7,8- transform */
+
+.transform-applying-section img {
+    width: 100%;
+}
+
+/*****************************/
+/*****************************/
+/* #region test1 rotate and scale */
+
+.transform-applying-section .test1 .image {
+    width: 25%;
+    height: 200px;
+    margin: 0px 20px;
+    float: left;
+}
+
+.rotate360 {
+    transition: transform 0.5s;
+}
+.rotate360:hover {
+    transform: rotate(360deg);
+}
+
+.rotate180 {
+    transition: transform 0.5s;
+}
+.rotate180:hover {
+    transform: rotate(180deg);
+}
+
+.rotate270 {
+    transition: transform 0.75s;
+}
+.rotate270:hover {
+    transform: rotate(270deg);
+}
+.scale10 {
+    transition: transform 0.2s;
+}
+.scale10:hover {
+    transform: scale(1.25);
+}
+
+.scale30 {
+    transition: transform 0.5s;
+}
+.scale30:hover {
+    transform: scale(1.3);
+}
+
+.scale50 {
+    transition: transform 0.8s;
+}
+.scale50:hover {
+    transform: scale(1.5);
+}
+
+.delay-half-sec {
+    transition-delay: 0.5s;
+}
+.delay-quarter-sec {
+    transition-delay: 0.25s;
+}
+
+/* #endregion */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region test2 translate and skew */
+
+.transform-applying-section .test2 .container {
+    width: 95%;
+    margin: auto;
+}
+.transform-applying-section .test2 .image {
+    width: 28%;
+    margin: 10px;
+    padding: 10px;
+
+    float: left;
+}
+
+/*****************************/
+/*****************************/
+/* #region translate right */
+
+.translate-right-50px {
+    transition: transform 1s;
+}
+.translate-right-50px:hover {
+    transform: translateX(50px);
+}
+
+.translate-right-100px {
+    transition: transform 1s;
+}
+.translate-right-100px:hover {
+    transform: translateX(100px);
+}
+
+.translate-right-150px {
+    transition: transform 1s;
+}
+.translate-right-150px:hover {
+    transform: translateX(150px);
+}
+
+/* #endregion translate right */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region translate left */
+
+.translate-left-50px {
+    transition: transform 1s;
+}
+.translate-left-50px:hover {
+    transform: translateX(-50px);
+}
+.translate-left-100px {
+    transition: transform 1s;
+}
+.translate-left-100px:hover {
+    transform: translateX(-100px);
+}
+
+.translate-left-150px {
+    transition: transform 1s;
+}
+.translate-left-150px:hover {
+    transform: translateX(-150px);
+}
+
+/* #endregion translate left */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region skewX left */
+
+.skewX-left-10deg {
+    transition: transform 0.5s;
+}
+.skewX-left-10deg:hover {
+    transform: skewX(10deg);
+}
+
+.skewX-left-20deg {
+    transition: transform 0.5s;
+}
+.skewX-left-20deg:hover {
+    transform: skewX(20deg);
+}
+
+.skewX-left-30deg {
+    transition: transform 0.5s;
+}
+.skewX-left-30deg:hover {
+    transform: skewX(30deg);
+}
+
+.skewX-left-40deg {
+    transition: transform 0.5s;
+}
+.skewX-left-40deg:hover {
+    transform: skewX(40deg);
+}
+
+.skewX-left-50deg {
+    transition: transform 0.5s;
+}
+.skewX-left-50deg:hover {
+    transform: skewX(50deg);
+}
+/* #endregion skewX left */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region skew right */
+
+.skewX-right-10deg {
+    transition: transform 1s;
+}
+.skewX-right-10deg:hover {
+    transform: skewX(-10deg);
+}
+
+.skewX-right-20deg {
+    transition: transform 1s;
+}
+.skewX-right-20deg:hover {
+    transform: skewX(-20deg);
+}
+
+.skewX-right-30deg {
+    transition: transform 1s;
+}
+.skewX-right-30deg:hover {
+    transform: skewX(-30deg);
+}
+
+.skewX-right-40deg {
+    transition: transform 1s;
+}
+.skewX-right-40deg:hover {
+    transform: skewX(-40deg);
+}
+
+.skewX-right-50deg {
+    transition: transform 1s;
+}
+.skewX-right-50deg:hover {
+    transform: skewX(-50deg);
+}
+
+/* #endregion skew right*/
+/*****************************/
+/*****************************/
+
+/* #endregion test2 translate and skew*/
+/*****************************/
+/*****************************/
+
+/* #endregion topic 7,8- transform*/
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region width-vs-scale-applying-section */
+
+.width-vs-scale-applying-section .card {
+    width: 30%;
+    height: 200px;
+    margin: 10px;
+    background-color: var(--buttons);
+    text-align: center;
+    position: relative;
+
+    float: left;
+}
+
+.width-vs-scale-applying-section .layer {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.527);
+    transition: height 0.5s, width 0.5s;
+}
+.width-vs-scale-applying-section .card:hover .layer {
+    height: 100%;
+    width: 100%;
+}
+
+/* #endregion width-vs-scale-applying-section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region position&hover-applying-section */
+
+.position-and-hover-applying-section .card {
+    width: 30%;
+    margin: 10px;
+
+    background-color: var(--error);
+    padding: 5px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+/* /////////////////////// */
+.position-and-hover-applying-section img {
+    width: 100%;
+    display: block;
+}
+
+.position-and-hover-applying-section .card:hover img {
+    transform: scale(1.2);
+    transition: transform 0.5s 0.5s;
+}
+
+/* /////////////////////// */
+.position-and-hover-applying-section .layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.2s;
+}
+
+.position-and-hover-applying-section .card:hover .layer1 {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+/* /////////////////////// */
+.position-and-hover-applying-section .layer2 .title {
+    position: absolute;
+    right: 0;
+    top: 5%;
+
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    transform: translateX(110%);
+    z-index: 2;
+}
+.position-and-hover-applying-section .card:hover .layer2 .title {
+    transform: translate(0);
+    background-color: black;
+    color: white;
+    transition: transform 1s 1s;
+}
+
+/* /////////////////////// */
+.position-and-hover-applying-section .layer2 .details {
+    position: absolute;
+    right: 0;
+    top: 25%;
+
+    width: 100%;
+    transform: translateX(110%);
+    z-index: 2;
+}
+
+.position-and-hover-applying-section .card:hover .layer2 .details {
+    transform: translate(0);
+    transition: transform 1s 1.85s;
+}
+
+/* #endregion position&hover-applying-section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region 11- pesudo-element after & before */
+.after-before-applying-section p {
+    position: relative;
+    width: 30%;
+    height: 0;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 1.25px solid var(--error);
+}
+.after-before-applying-section p::after {
+    content: "";
+
+    width: 45%;
+
+    position: absolute;
+    top: 10px;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    border: 0.5px solid var(--error);
+    opacity: 0.7;
+}
+
+.after-before-applying-section p::before {
+    content: "";
+
+    width: 45%;
+    height: 0;
+
+    position: absolute;
+    top: -10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    border: 0.5px solid var(--error);
+    opacity: 0.7;
+}
+
+.after-before-applying-section img {
+    width: 100%;
+    display: block;
+}
+
+.after-before-applying-section .card {
+    width: 30%;
+    position: relative;
+    /* overflow: hidden; */
+    float: left;
+    margin: 10px;
+}
+.after-before-applying-section .card .info {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.after-before-applying-section .card::after {
+    content: "";
+
+    width: 100%;
+    height: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* transform: translate(110%); */
+    transition: height 1s;
+}
+
+.after-before-applying-section .card:hover::after {
+    /* transform: translate(0); */
+    cursor: pointer;
+    height: 50%;
+}
+
+.after-before-applying-section .card::before {
+    content: "";
+
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 0, 0, 0.5);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: height 1s;
+}
+.after-before-applying-section .card:hover::before {
+    height: 50%;
+}
+/* #endregion 11- pesudo-element after & before */
+/*****************************/
+/*****************************/
+
+
+
+
+
+
+/*****************************/
+/*****************************/
+/* #region 10-after_&_before_applying_sec */
+
+.after_before_applying_sec .image{
+    width: 25%;
+    margin: auto;
+}
+.after_before_applying_sec .image img{
+    width: 100%;
+    display: block;
+}
+
+.after_before_applying_sec .container .box{
+    background-color: #fff;
+    width: 50%;
+    padding: 30px;
+}
+
+.after_before_applying_sec .container .box .border{
+    border: 5px solid black;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.after_before_applying_sec .container .box .border::after {
+    content: "";
+
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+
+    position: absolute;
+    bottom: -25px;
+    left: 50px;
+    
+}
+.after_before_applying_sec .container .box .border::before {
+    content: "";
+
+    height: 80px;
+    border-left: 5px solid black;
+    position: absolute;
+    bottom: -55px;
+    left: 70px;
+    z-index: 1;
+    
+}
+.after_before_applying_sec .container .box p{
+    color: black;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 80px;
+}
+/* #endregion 10-after_&_before_applying_sec */
+/*****************************/
+/*****************************/
+
+
+
+

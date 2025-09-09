@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week04 session02</title>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region session Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap"
+        rel="stylesheet">
+
+
+    <!-- #endregion session Fonts -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/all.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+</head>
+
+<body>
+
+
+    <div class="full-nav-bar">
+
+        <div class="nav-bar left">
+
+            <h4>W04 S02</h4>
+
+            <a href="#1">01- Display flex "parent.prop"</a>
+            <a href="#2"></a>
+            <a href="#3"></a>
+            <a href="#4"></a>
+            <a href="#5"></a>
+            <a href="#6"></a>
+            <a href="#7"></a>
+            <a href="#8"></a>
+            <a href="#9"></a>
+            <a href="#10"></a>
+            <a href="#11"></a>
+            <a href="#12"></a>
+            <a href="#13"></a>
+
+        </div>
+        <div class="nav-bar-icons">
+            <a href="https://web.facebook.com/mahmoudriad0" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+            <a href="https://x.com/ByLoKtK" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoudriad027@gmail.com&su=&body=" target="_blank">
+                <i class="fa-brands fa-google"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mahmoudriad0/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+
+            <a href="https://github.com/mahmoudRiad22" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+        </div>
+    </div>
+
+
+    <h1>Week04 Session02 "flex"</h1>
+
+    <div class="new-topic display-flex" id="1">
+
+        <div class="container">
+            <br />
+            <h2>01- Display flex "parent properties"</h2>
+            <p>
+                <b>parent properties:</b> <br />
+                display: flex;<br />
+                flex-direction: row[default] | column | row-reverse | column-reverse <br />
+                flex-wrap: nowrap[default] | wrap | wrap-reverse <br />
+                <b>"shorthand"</b> <br />
+                flex-flow: flex-driection flex-wrap <br />
+                <hr />
+
+                <b>"must have an extra space in the width to be used"</b><br />
+                justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly <br />
+                align-items: stretch[default] | flex-start | flex-end | center <br />
+
+            </p><br />
+            <div class="applying-section">
+                <h4>applying using display flex</h4>
+                <div class="gallery">
+                    <div class="all-cards">
+                        <div class="card-item">
+                            <img src="./images/imgi_5_meal-1.jpg" alt="imgi_5_meal-1.jpg" />
+                            <div class="details">
+                                <h3>card 1</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="./images/imgi_9_meal-3.jpg" alt="imgi_5_meal-1.jpg" />
+                            <div class="details">
+                                <h3>card 2</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="./images/imgi_5_meal-1.jpg" alt="imgi_5_meal-1.jpg" />
+                            <div class="details">
+                                <h3>card 3</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="./images/imgi_9_meal-3.jpg" alt="imgi_5_meal-1.jpg" />
+
+                            <div class="details">
+                                <h3>card 4</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="./images/imgi_5_meal-1.jpg" alt="imgi_5_meal-1.jpg" />
+                            <div class="details">
+                                <h3>card 5</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br /> <br />
+    </div>
+
+    <div class="new-topic word-animation">
+
+        <div class="container">
+
+            <h3>word animation</h3>
+
+            <p>description:</p><br />
+
+            <div class="applying-section">
+                <div class="typing-container">
+                    <span id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Scripts area -->
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const textElement = document.getElementById('typing-text');
+        const words = ["Developer", "Freelancer", "Photographer", "Designer"];
+        let wordIndex = 0; 
+        let charIndex = 0; 
+        let isDeleting = false;
+        let typingSpeed = 200;
+
+        function type() {
+            const currentWord = words[wordIndex];
+
+            if (!isDeleting) {
+                textElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 150;
+
+                if (charIndex === currentWord.length) {
+                    isDeleting = true;
+                    typingSpeed = 1000;
+                }
+            }
+            else {
+                textElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length; 
+                    typingSpeed = 500;
+                }
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+
+        type();
+    </script>
+    <!-- #endregion Scripts area -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+</body>
+
+</html>

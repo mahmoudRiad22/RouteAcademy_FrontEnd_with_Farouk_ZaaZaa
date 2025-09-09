@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(10)week06 session01</title>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region session Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap"
+        rel="stylesheet">
+
+
+    <!-- #endregion session Fonts -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+
+    <link rel="stylesheet" href="./CSS/fontasesome-all.css" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+</head>
+
+<body>
+
+
+    <div class="full-nav-bar">
+
+        <div class="nav-bar left">
+
+            <h4>W06 S02</h4>
+
+            <a href="#1">1- !important && inherit</a>
+            <a href="#2">2- line-height, letter-spacing, text-transform, scroll-behavior</a>
+            <a href="#3">3- box-shadow and text-shadow</a>
+            <a href="#4">bootstrap-bg-color</a>
+            <a href="#5">bootstrap-sizing [w,h]</a>
+            <a href="#6">bootstrap-spacing</a>
+            <a href="#7">bootstrap-flex</a>
+            <a href="#8"></a>
+            <a href="#9"></a>
+            <a href="#10"></a>
+            <a href="#11"></a>
+            <a href="#12"></a>
+            <a href="#13"></a>
+
+        </div>
+        <div class="nav-bar-icons">
+            <a href="https://web.facebook.com/mahmoudriad0" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+            <a href="https://x.com/ByLoKtK" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoudriad027@gmail.com&su=&body=" target="_blank">
+                <i class="fa-brands fa-google"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mahmoudriad0/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+
+            <a href="https://github.com/mahmoudRiad22" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+        </div>
+    </div>
+
+
+    <h1>(10)week06 session01 <br /><br /></h1>
+
+    <div class="new-topic !important && inherit" id="1">
+
+        <div class="container">
+            <h2>1- !important && inherit</h2>
+            <p>
+                describtion: <br />
+                <i><b>!important:</b> make the value cant not be overridden by others.</i> <br />
+                <i><b>inherit:</b> allow the value of a properity to be inhertied from the parent element.</i> <br />
+
+            <ul>✅ inherited properties:
+                <ol type="1"><b><i>Text & Font:</i></b>
+                    <li>font-family</li>
+                    <li>font-size</li>
+                    <li>font-weight</li>
+                    <li>font-style</li>
+                    <li>line-height</li>
+                    <li>color</li>
+                    <li>text-align</li>
+                    <li>letter-spacing</li>
+                    <li>word-spacing</li>
+                    <li>text-transform</li>
+                    <li>text-indent</li>
+                </ol>
+                <ol><b><i>Lists:</i></b>
+                    <li>list-style-type</li>
+                    <li>list-style-position</li>
+                </ol>
+                <ol><b><i>Visibility</i></b>
+                    <li>Visibility</li>
+                    <li>crusor</li>
+                </ol>
+                <ol> <b><i>Other</i></b>
+                    <li>direction</li>
+                    <li>white-space</li>
+                    <li>quotes</li>
+                </ol>
+            </ul>
+            <ul>❌ Non-Inherited Properties:
+                <ol><b><i>Layout & Box Model:</i></b>
+                    <li>width / height</li>
+                    <li>margin / padding</li>
+                    <li>border</li>
+                    <li>display</li>
+                    <li>position</li>
+                    <li>float / clear</li>
+                    <li>overflow</li>
+                    <li>z-index</li>
+                </ol>
+                <ol><b><i>Background & Box Decorations:</i></b>
+                    <li>background / background-color</li>
+                    <li>background-image</li>
+                    <li>box-shadow</li>
+                    <li>opacity</li>
+                </ol>
+                <ol><b><i>Flex/Grid:</i></b>
+                    <li>flex / flex-direction</li>
+                    <li>grid / grid-template</li>
+                    <li>align-items / justify-content</li>
+                </ol>
+                <ol><b><i>Other:</i></b>
+                    <li>vertical-align</li>
+                    <li>transform</li>
+                    <li>box-sizing</li>
+                </ol>
+            </ul>
+            </p><br />
+            <div class="applying-section"></div>
+            <br />
+        </div>
+        <br /> <br />
+    </div>
+
+
+    <div class="new-topic line-height, letter-spacing, text-transform, scroll-behavior." id="2">
+
+        <div class="container">
+
+            <h3>2- line-height, letter-spacing, text-transform, scroll-behavior.</h3>
+
+            <p>description: <br />
+                <b><i>inline-height:</i></b> allow you to adjust the height in between lines, will be given using font
+                extensions. <br />
+                <b><i>letter-spacing:</i></b> allow you to adjust the sapce inbetween letters, can use a [1.2] value
+                which is multiplied by the font-size. <br />
+                <b><i>text-trasform:</i></b> allow you to change the text style into <i class="bg-txt">[Capitalized,
+                    lowercase, uppercase, none]</i> <br />
+                <b><i>scroll-behavior:</i></b> allow you to make the scroll between sections to be smooth.. and always
+                given to html element. <br />
+
+            </p><br />
+
+            <div class="applying-section"></div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic box-shadow and text-shadow NOT-FINISHED" id="3">
+
+        <div class="container">
+
+            <h3>3- box-shadow and text-shadow</h3>
+
+            <p>description:</p><br />
+
+            <div class="applying-section"></div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic bootstrap-bg textce" id="4">
+
+        <div class="container">
+
+            <h3>bootstrap-bg-color</h3>
+
+            <p>description:
+                there is three main bg classes <br />
+                <b class="text-primary"><i>1- ".bg-color"</i></b> <br />
+                <b><i class="text-secondary">2- ".bg-gradient"</i></b><br />
+                <b><i class="text-dark">3- ".bg-opacity"</i></b><br />
+            </p><br />
+
+            <div class="applying-section">
+                <div class="bg-gradient bg-primary">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-secondary">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-body">
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                        aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-body-secondary">
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                        aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-body-tertiary">
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                        aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-white">
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                        aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-black">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-transparent">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-dark">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-white">
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                        aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-danger">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-success">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-warning">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+                <div class="bg-gradient  bg-info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur sapiente omnis
+                        minima quidem nostrum, laboriosam quisquam dolorum! Enim, saepe!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic bootstrap-sizing [w,h]" id="5">
+
+        <div class="container">
+
+            <h3>bootstrap-sizing [w,h]</h3>
+
+            <p>description: <br />
+            <table>
+                <tr>
+                    <td class="pe-5 ps-3">
+                        <b>.w-100</b><br />
+                        <b>.w-75</b><br />
+                        <b>.w-50</b><br />
+                        <b>.w-25</b><br />
+                    </td>
+                    <td class="ps-5">
+                        <b>.h-100</b><br />
+                        <b>.h-75</b><br />
+                        <b>.h-50</b><br />
+                        <b>.h-25</b><br />
+                    </td>
+                </tr>
+            </table>
+            </p><br />
+
+            <div class="applying-section bootstrap-sizing [w,h]">
+                <p class=" w-100 bg-primary">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea consequuntur rerum reprehenderit
+                    distinctio quae quaerat non assumenda minima omnis temporibus perferendis officiis et repudiandae
+                    officia, maiores ipsum impedit odit fugit, tempore voluptates voluptatum, deserunt eum ipsam porro.
+                    Eveniet, unde, natus impedit non rem velit maiores, quae hic error consequuntur tenetur.
+                </p><br />
+                <p class="w-50 bg-danger bg-gradient">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea consequuntur rerum reprehenderit
+                    distinctio quae quaerat non assumenda minima omnis temporibus perferendis officiis et repudiandae
+                    officia, maiores ipsum impedit odit fugit, tempore voluptates voluptatum, deserunt eum ipsam porro.
+                    Eveniet, unde, natus impedit non rem velit maiores, quae hic error consequuntur tenetur.
+                </p><br />
+                <p class="w-75 bg-warning bg-gradient text-dark">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea consequuntur rerum reprehenderit
+                    distinctio quae quaerat non assumenda minima omnis temporibus perferendis officiis et repudiandae
+                    officia, maiores ipsum impedit odit fugit, tempore voluptates voluptatum, deserunt eum ipsam porro.
+                    Eveniet, unde, natus impedit non rem velit maiores, quae hic error consequuntur tenetur.
+                </p><br />
+                <p class="w-25 bg-info text-dark">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea consequuntur rerum reprehenderit
+                    distinctio quae quaerat non assumenda minima omnis temporibus perferendis officiis et repudiandae
+                    officia, maiores ipsum impedit odit fugit, tempore voluptates voluptatum, deserunt eum ipsam porro.
+                    Eveniet, unde, natus impedit non rem velit maiores, quae hic error consequuntur tenetur.
+                </p><br />
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic bootstrap-spacing" id="6">
+
+        <div class="container">
+
+            <h3>bootstrap-spacing</h3>
+
+            <p>description: <br />
+            <table style="border-collapse: collapse;" class="bg-secondary">
+                <th>
+                <td>{properity}</td>
+                <td colspan="3">{sides}</td>
+                <td colspan="2">-</td>
+                <td colspan="3">{size}</td>
+                </th>
+
+                <tr>
+                    <td colspan="3">
+                        <p>m</p>
+                        <p>p</p>
+                    </td>
+                    <td colspan="3">
+                        <p>t</p>
+                        <p>b</p>
+                        <p>s</p>
+                        <p>e</p>
+                        <p>x</p>
+                        <p>y</p>
+                    </td>
+                    <td>-</td>
+                    <td colspan="3">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9">
+                        <p>horizontal centering:</p>
+                        <p>mx-auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9">
+                        <p>negative margine</p>
+                        <p>m{sides}-n{size}</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><b>gab</b><br />[on the parent element]</td>
+                    <td>-</td>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><b>row-gab</b><br />[on the parent element]</td>
+                    <td>-</td>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><b>column-gab</b><br />[on the parent element]</td>
+                    <td>-</td>
+                    <td>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>auto</p>
+                    </td>
+                </tr>
+
+            </table>
+
+            </p><br />
+
+            <div class="applying-section">
+                <div class="mx-auto p-2 bg-gradient bg-info" style="width: 200px;">
+                    Centered element
+                </div>
+
+                <p class="text-center">gab</p>
+                <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-4 bg-opacity-50 mb-3">
+                    <div class="p-2 border border-2 border-black border-black bg-warning-subtle text-black bg-gradient">
+                        Grid item 1</div>
+                    <div class="p-2 border border-2 border-black bg-warning-subtle text-black bg-gradient">Grid item 2
+                    </div>
+                    <div class="p-2 border border-2 border-black bg-warning-subtle text-black bg-gradient">Grid item 3
+                    </div>
+                    <div class="p-2 border border-2 border-black bg-warning-subtle text-black bg-gradient">Grid item 4
+                    </div>
+                </div>
+
+
+                <p class="text-center">row-gab</p>
+                <div style="grid-template-columns: 1fr 1fr;" class="d-grid row-gap-2 bg-opacity-50 mb-3">
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 1</div>
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 2</div>
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 3</div>
+                    <div class="p-2 border border-black bg-danger-subtle text-black bg-gradient">Grid item 4</div>
+                </div>
+
+                <p class="text-center">column-gab</p>
+                <div style="grid-template-columns: 1fr 1fr;" class="d-grid column-gap-3 gap-0 bg-opacity-50 mb-3">
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 1</div>
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 2</div>
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 3</div>
+                    <div class="p-2 border border-light bg-dark text bg-gradient">Grid item 4</div>
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+
+    <div class="new-topic bootstrap-flex" id="7">
+
+        <div class="container">
+
+            <h3>bootstrap-flex</h3>
+
+            <p class="m-0">
+                <span class="text-danger">
+                    enable flex: <br />
+                    <b>d-flex</b> or <b>d-inline-flex</b> <br /> <br />
+                    <span>
+                        <h4 class="text-start m-0 p-0">For the parent</h4>
+                        <b> .flex-row</b> and <b>.flex-row-reverse</b> <br />
+                        <b>.flex-column</b> and <b>.flex-column-reverse</b> <br />
+                        <b>justify-content- {start, end, center, around, evenly, between}</b> <br />
+                        <b>align-items- {start, end, center, stretch, baseline}</b> <br />
+                    </span> <br />
+                    <span>
+                        <h4 class="text-start m-0 p-0">for the child</h4>
+                        <b>Order-{first, 0, 1, 2, 3, 4, 5, last}</b> <br />
+                        <b>.flex-shrink-{0, 1}</b> <br />
+                        <b>.flex-grow-{0, 1}</b> <br />
+                        <b>align-self-{start, end, center, stretch, basline, auto}</b> <br />
+                        <br />
+                        <b>flex-fill: assign the extra space to the child that has the "fill" properity,
+                            if multiple childs has the "fill" then its divided evenly
+                        </b>
+                    </span>
+                </span>
+
+            </p><br />
+
+            <div class="applying-section">
+                <div class="test text-black d-flex flex-wrap justify-content-center text-center bg-danger">
+                    <div class="item w-25 bg-danger-subtle border border-1 border-black">1</div>
+                    <div class="item w-25 bg-danger-subtle border border-1 border-black">2</div>
+                    <div class="item w-25 bg-danger-subtle border border-1 border-black">3</div>
+                    <div class="item w-25 bg-danger-subtle border border-1 border-black">4</div>
+                    <div class="item w-25 bg-danger-subtle border border-1 border-black">5</div>
+                </div>
+
+                <div class="text2 bg-info text-black text-center">
+                    <h3>flex-fill</h3>
+                    <div class="d-flex ">
+                        <div class="p-2 flex-fill bg-dark-subtle border border-2 border-black">Flex item with a lot of
+                            content</div>
+                        <div class="p-2 flex-fill bg-info-subtle  border border-2 border-black">Flex item</div>
+                        <div class="p-2 flex-fill bg-primary-subtle border border-2 border-black">Flex item</div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary-subtle text-black">
+                    <h4>flex-grow</h4>
+                    <div class="d-flex border border-1 border-black ">
+                        <div class="p-2 flex-grow-1 border bg-danger-subtle">Flex item</div>
+                        <div class="p-2">Flex item</div>
+                        <div class="p-2">Third flex item is kinda cool</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Scripts files -->
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- #endregion Scripts files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+</body>
+
+</html>

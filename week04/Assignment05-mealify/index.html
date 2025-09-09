@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+    <!-- #region Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- #endregion -->
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+
+    <link rel="stylesheet" href="./CSS/fontawesome-all.css" />
+    <link rel="stylesheet" href="./CSS/fonts.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
+
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+
+</head>
+
+<body>
+
+
+
+    <div class="header">
+
+        <div class="container">
+
+            <h1 class="logo"><a href="#"><span>mealify<span>.</span></span></a></h1>
+
+
+            <div class="navbar-links">
+                <ul>
+                    <li> <a class="active" id="a" href="#home">home</a></li>
+                    <li> <a id="a" href="#chefs">chefs</a></li>
+                    <li> <a id="a" href="#gallery">gallery</a></li>
+                    <li> <a id="a" href="#contacts">contact</a></li>
+                </ul>
+                <!-- <a id="a" href="#home">home</a>
+                    <a id="a" href="#chefs">chefs</a>
+                    <a id="a" href="#gallery">gallery</a>
+                    <a id="a" href="#contacts">contact</a> -->
+            </div>
+
+            <div class="btns">
+                <div class="darkmode-btns">
+                    <button id="dark-on" onclick="
+                            document.getElementById('dark-on').style.visibility= 'hidden';
+                            document.getElementById('light-on').style.visibility= 'visible';
+                            document.getElementById('nav-btn').style.color = 'var(--text)';
+                            document.getElementById('x-btn').style.color = 'var(--hidden-navbar-text)';
+                            document.querySelectorAll('.links a').forEach(target => target.style.color = 'var(--hidden-navbar-text)');
+                    
+                            document.documentElement.style.setProperty('--bg1', '#252525');
+                            document.documentElement.style.setProperty('--bg2', '#202020');
+                            document.documentElement.style.setProperty('--buttons', '#C17E1F');
+                            document.documentElement.style.setProperty('--text', '#FFFFFF');
+                            document.documentElement.style.setProperty('--highlight', '#D78C23');
+                            document.documentElement.style.setProperty('--selection', '#845B22');
+                            document.documentElement.style.setProperty('--navbar', '#171717');
+                            document.documentElement.style.setProperty('--footer', '#080708');
+                            document.documentElement.style.setProperty('--card-bgc', '#171717');
+                            document.documentElement.style.setProperty('--gray-text', '#7D7D7D');
+                            document.documentElement.style.setProperty('--info-bgc', '#0D0D0D');
+                            ">
+                        <i id="dark-on-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="light-on" onclick="
+                            document.getElementById('light-on').style.visibility= 'hidden';
+                            document.getElementById('dark-on').style.visibility= 'visible';
+                            document.documentElement.style.setProperty('--bg1', '#eeeeee');
+                            document.documentElement.style.setProperty('--bg2', '#ffffff');
+                            document.documentElement.style.setProperty('--buttons', '#ce1212');
+                            document.documentElement.style.setProperty('--text', '#212529');
+                            document.documentElement.style.setProperty('--highlight', '#e61414');
+                            document.documentElement.style.setProperty('--selection', '#DD5959');
+                            document.documentElement.style.setProperty('--navbar', '#FFFFFF');
+                            document.documentElement.style.setProperty('--footer', '#100e0f');
+                            document.documentElement.style.setProperty('--hidden-navbar-text', '#7f7f90');
+                            document.documentElement.style.setProperty('--card-bgc', '#ffffff');
+                            document.documentElement.style.setProperty('----gray-text', '#ADADAD');
+                            document.documentElement.style.setProperty('--info-bgc', '#eeeeee');
+                            " style="visibility: hidden;">
+                        <i id="light-on-icon" class="fa-solid fa-sun"></i>
+                    </button>
+                </div>
+                <button class="nav-btn" onclick="
+                            document.getElementById('hidden-navbar').style.transform = 'translateX(0%)';">
+                    <i id="nav-btn" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="hidden">
+            <div class="navbar" id="hidden-navbar">
+                <div class="links" id="links">
+                    <button class="x-btn" id="x-btn" onclick="
+                                document.getElementById('hidden-navbar').style.transform = 'translateX(110%)';"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <a id="a" href="#home">home</a>
+                    <a id="a" href="#chefs">chefs</a>
+                    <a id="a" href="#gallery">gallery</a>
+                    <a id="a" href="#contacts">contact</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="home-section" id="home">
+        <!-- <div class="navbar-holder"></div> -->
+        <!-- <div class="navbar-placeholder"></div> -->
+        <div class="container">
+
+            <div class="flex-container">
+                <div class="left-side">
+                    <div class="text">
+                        <h2>
+                            enjoy your healthy <br />
+                            delicious food
+                        </h2>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae
+                            cumque eum
+                            quaerat.
+                        </p>
+                    </div>
+                    <div class="btns-container">
+                        <button class="btn1"><a href="#contact">Book a Table</a></button>
+                        <div class="video-btn">
+                            <button>
+                                <div class="icon">
+                                    <div class="half-circle"></div>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </div>
+                                <a href="https://www.youtube.com/" target="_blank">watch a video</a>
+
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side home-image">
+                    <img class="shadow-img" src="./images/imgi_1_hero-img.png" alt="imgi_1_hero-img.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chefs-section" id="chefs">
+        <div class="container">
+            <div class="section-title">
+                <h2>chefs</h2>
+                <span>our <span>proffesional</span> chefs</span>
+            </div>
+
+            <div class="sections-cards">
+
+                <!-- <div class="flex-conatiner" id="flex-conatiner"> -->
+
+                <div class="card shadow-card">
+                    <div class="card-container">
+                        <div class="image">
+                            <img src="./images/imgi_2_chefs-1.jpg" alt="imgi_2_chefs-1.jpg" />
+                        </div>
+                        <div class="card-info">
+                            <h3 class="chef-name">Walter White</h3>
+                            <span class="chef-title">Master Chef</span>
+                            <p class="chef-details">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
+                                tenetur
+                                ipsa
+                                quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.
+                            </p>
+                        </div>
+                        <ul class="links">
+                            <li><i class="fa-brands fa-x-twitter"></i></li>
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow-card">
+                    <div class="card-container">
+                        <div class="image">
+                            <img src="./images/imgi_3_chefs-2.jpg" alt="imgi_2_chefs-2.jpg" />
+                        </div>
+                        <div class="card-info">
+                            <h3 class="chef-name">Sarah Jhonson</h3>
+                            <span class="chef-title">Patissier</span>
+                            <p class="chef-details">Quo esse repellendus quia id. Est eum et accusantium pariatur fugit
+                                nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.
+                            </p>
+                        </div>
+                        <ul class="links">
+                            <li><i class="fa-brands fa-x-twitter"></i></li>
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow-card">
+                    <div class="card-container">
+                        <div class="image">
+                            <img src="./images/imgi_4_chefs-3.jpg" alt="imgi_4_chefs-3.jpg" />
+                        </div>
+                        <div class="card-info">
+                            <h3 class="chef-name">William Anderson</h3>
+                            <span class="chef-title">Cook</span>
+                            <p class="chef-details">Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae
+                                deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.
+                            </p>
+                        </div>
+                        <ul class="links">
+                            <li><i class="fa-brands fa-x-twitter"></i></li>
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-section" id="gallery">
+
+        <div class="container">
+            <div class="section-title">
+                <h2>gallery</h2>
+                <span>Check<span>Our Gallery</span></span>
+            </div>
+
+            <div class="gallery-pics">
+                <div class="left">
+                    <div class="images">
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Pizza</h2>
+                                    <p>Hawaiian pizza with ham and pineapple</p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_5_meal-1.jpg" alt="imgi_5_meal-1.jpg">
+                        </div>
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Levitation pizza</h2>
+                                    <p>Levitation pizza on black background.</p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_6_meal-4.jpg" alt="imgi_6_meal-4.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="mid">
+                    <div class="images">
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Beef steaks</h2>
+                                    <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_7_meal-2.jpg" alt="imgi_7_meal-2.jpg">
+                        </div>
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Frittata</h2>
+                                    <p>Frittata or potato pie in a ceramic plate</p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_8_meal-7.jpg" alt="imgi_8_meal-7.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="images">
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Burger</h2>
+                                    <p>grass fed bison hamburger with chips & beer</p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_9_meal-3.jpg" alt="imgi_9_meal-3.jpg">
+                        </div>
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Crispy Fried Chicken</h2>
+                                    <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_10_meal-5.jpg" alt="imgi_10_meal-5.jpg">
+                        </div>
+                        <div class="image">
+                            <div class="layer">
+                                <div class="text">
+                                    <h2>Lyulya kebab</h2>
+                                    <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices
+                                        and
+                                        herbs
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="./images/imgi_11_meal-6.jpg" alt="imgi_11_meal-6.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contacts-section" id="contacts">
+        <div class="container">
+
+            <div class="title">
+                <h2>contact</h2>
+                <span>need help ? <span>contact us</span></span>
+            </div>
+
+            <div class="map-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.9992069186533!2d31.322084174007728!3d30.065557217572856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fccc4e5bfc5%3A0xc551dcd71cfb036c!2sRoute%20Academy!5e0!3m2!1sen!2seg!4v1752599938419!5m2!1sen!2seg"
+                    width="100%" height="500px" style="border:0; margin: 15px 0px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-details">
+                <div class="info">
+                    <div class="icon"><i class="fa-solid fa-map"></i></div>
+                    <div class="text">
+                        <h3>our address</h3>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>email us</h3>
+                        <p>contact@example.com</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>call us</h3>
+                        <p>+1 5589 55488 55</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fa-solid fa-share-nodes"></i></div>
+                    <div class="text">
+                        <h3>opening hours</h3>
+                        <p><b>Mon-Sat:</b> 11AM - 23PM; <b>Sunday :</b> Closed</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form">
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="msg" id="msg" placeholder="Message"></textarea>
+                </form>
+
+                <button type="submit">Send Message</button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+
+            <div class="left">
+                <div class="image">
+                    <img src="./images/imgi_12_favicon.png" alt="imgi_12_favicon.png" />
+                    <h2>mealify</h2>
+                </div>
+                <p>Mealify is a restaurant landing page that offers a delicious dining experience to its customers.</p>
+                <div class="social-media">
+                    <h3>social midea</h3>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <h3>Subscribe our Newsletter</h3>
+                <p>Don't miss out on our latest menu updates and exclusive offers - join our newsletter today and stay
+                    up-to-date with all things Mealify!</p>
+                <form action="">
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email Address">
+
+                    <button><i class="fa-solid fa-envelope"></i> Subscribe</button>
+                </form>
+                <h3>quick links</h3>
+                <ul class="quick-links">
+                    <li><a href="">menu</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">testimonial</a></li>
+                    <li><a href="">promo</a></li>
+                    <li><a href="">contact</a></li>
+                    <li><a href="">our partners</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>get in touch</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>A108 Adam Street, New York, NY 535022</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="#contacs">contact@example.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 5589 55488 55</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.navbar-links ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                document.querySelectorAll('.navbar-links ul li a').forEach(l =>
+                    l.classList.remove('active'));
+                // Add active class to clicked link
+                link.classList.add('no-after');
+                link.classList.add('active');
+            });
+        });    
+    </script>
+</body>
+
+</html>

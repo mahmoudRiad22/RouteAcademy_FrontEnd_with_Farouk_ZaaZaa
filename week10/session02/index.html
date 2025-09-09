@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test area</title>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Fonts CDN  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap"
+        rel="stylesheet">
+
+
+    <!-- #endregion session Fonts -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+
+
+    <!-- Fonts.CSS -->
+    <link rel="stylesheet" href="./CSS/fonts.css" />
+
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+
+    <!-- FontAwesome Icons.css -->
+    <link rel="stylesheet" href="./CSS/all.css" />
+
+    <!-- My style.css -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Media Queries.css -->
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
+
+
+
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-black  opacity-75 fixed-top p-0">
+        <div class="container-fluid">
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+                <ul class="navbar-nav text-capitalize text-white">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="fs-6 text-white">week10 session02</span>
+                        </a>
+                        <ul class="dropdown-menu text-white bg-dark-subtle">
+                            <li><a class="dropdown-item" href="#1">1-Hoisting</a></li>
+                            <li><a class="dropdown-item" href="#2">2-Objects and Arrays</a></li>
+                            <li><a class="dropdown-item" href="#3">3-Applying-Example</a></li>
+                            <li><a class="dropdown-item" href="#4">4-Array Methods</a></li>
+                            <li><a class="dropdown-item" href="#5">5-CRUD Operation Design</a></li>
+                            <!-- <li><a class="dropdown-item" href="#6"></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="#7"></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="#8"></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="#9"></a></li> -->
+                            <!-- <li><a class="dropdown-item" href="#10"></a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item ">
+                        <a class="nav-link active nav-bar-icons" href="https://web.facebook.com/mahmoudriad0"
+                            target="_blank"><i class="fa-brands fa-facebook text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons" href="https://x.com/ByLoKtK" target="_blank"><i
+                                class="fa-brands fa-x-twitter text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoudriad027@gmail.com&su=&body="
+                            target="_blank">
+                            <i class="fa-brands fa-google text-white"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons" href="https://www.linkedin.com/in/mahmoudriad0/"
+                            target="_blank"><i class="fa-brands fa-linkedin text-white"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-bar-icons" href="https://github.com/mahmoudRiad22"
+                            target="_blank"><i class="fa-brands fa-github text-white"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="mt-5 pt-5 pb-3">Week10 Session02</h1>
+
+    <div class="new-topic 1-Hoisting" id="1">
+        <div class="container  surface-bg">
+
+            <h3 class="mt-5 py-5 text-center">1-Hoisting</h3>
+
+            <div class="row g-4">
+                <div class="col-1 w-auto">
+                    <div class="inner shadow py-3 px-1">
+                        <ul>
+                            <h4 class="text-center">What Does it do?</h4>
+                            <li>
+                                <ol>
+                                    <h5 class="text-danger">Hoisting for Variables:</h5>
+                                    <li>Takes the Decleration of variables to the top of the code scope.</li>
+                                    <li>Keeps the Assignment in its place.</li>
+                                </ol>
+                            </li> <br />
+                            <li>
+                                <ol>
+                                    <h5 class="text-danger">Hoisting for Functions:</h5>
+                                    <li>
+                                        <ol>
+                                            <h6>Hoisting For <b>Decleration Functions:</b></h6>
+                                            <li>Takes teh full decleration to the top of the code scope.</li>
+                                            <li>keeps the call of the function in place.</li>
+                                        </ol>
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <ol>
+                                            <h6>Hoisting for <b>Expression Functions:</b></h6>
+                                            <li>Takes the decleration of the variable to top of the code scope.</li>
+                                            <li>Keesps the Assignment and calls in its place.</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="applying-section"></div>
+            <br /> <br />
+        </div>
+    </div>
+
+    <div class="new-topic 2-Objects and Arrays" id="2">
+
+        <div class="container  surface-bg">
+
+            <h3 class="mt-5 py-5 text-center">2-Objects and Arrays</h3>
+
+            <div class="applying-section">
+                <div class="row row-cols-2 gy-4 gx-3">
+                    <div class="col objects">
+                        <div class="inner shadow p-3">
+                            <h4 class="text-center"><b>Objects:</b></h4><br />
+                            <ul class="list-unstyled p-4">
+                                <li>
+                                    <h6><b>Syntax:</b></h6>
+                                    <pre><code>let object1 = {};</code></pre>
+                                </li>
+                                <li class="accent-bg text-my-bg p-4">
+                                    <pre><code><b>Example:</b>
+let userData = {
+name: "mahmoud",
+age: 31,
+email: mahmoud@gmail.com
+};
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <h6><b>Acess:</b></h6>
+                                    <pre><code>console.log(userData.name);</code></pre>
+                                    <pre><code>console.log(userData['name']);</code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col arrays">
+                        <div class="inner">
+                            <h4 class="text-center"><b>Arrays</b></h4><br />
+                            <ul class="list-unstyled p-4">
+                                <h6><b>Syntax:</b></h6>
+                                <li>
+                                    <pre><code>let array1 = [];</code></pre>
+                                </li>
+                                <li class="accent-bg text-my-bg p-4">
+                                    <pre><code><b>Examples:</b>
+// array of strings
+let array1 = ['mahmoud', 'islam', 'mohamed', 'aya', 'nada'];
+
+//array of numbers
+let arrayOfNumbers = [30, 5, 18, 64, 69, 100];
+
+//array of Objects
+let objectsList= [
+    {name: 'mahmoud', age: 30, email: 'mahmoud@gmail.com'},
+    {name: 'ahmed', age: 30, email: 'ahmed@gmail.com'},
+    {name: 'omar', age: 30, email: 'omar@gmail.com'},
+    {name: 'islam', age: 30, email: 'islam@gmail.com'}
+];
+                                    </code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-10 m-auto array-Acces">
+                        <div class="inner shadow">
+                            <h4 class="text-center"><b>Arrays Acess</b></h4><br />
+                            <ul class="list-unstyled p-4">
+                                <h6><b>Acess Syntax</b></h6>
+                                <li class="accent-bg text-my-bg p-4">
+                                    <pre><code><b>Example:</b>
+let array1 = ['mahmoud', 'islam', 'mohamed', 'aya', 'nada'];
+
+console.log(array1[3]); ====>// <i>output:</i> aya
+console.log(array1[0]); ====>// <i>output:</i> mahmoud
+console.log(array1[4]); ====>// <i>output:</i> nada
+                                    </code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-10 looping an array m-auto">
+                        <div class="inner shadow">
+                            <ol class="list-unstyled p-4">
+                                <h4 class="text-center"><b>Looping an Array:</b></h4><br />
+                                <li class="accent-bg text-my-bg p-4">
+                                    <h5><b>Using an array method "foreach".</b></h5>
+                                    <pre><code><b>Example</b>
+let array1 = ["mahmoud", "islam", "mohamed", "aya", "nada"];
+
+array1.forEach((item) => {
+    console.log(item);
+});
+<b>Output:</b>
+mahmoud
+islam
+mohamed
+aya
+nada
+                                    </code></pre>
+                                </li><br />
+                                <li class="accent-bg text-my-bg p-4">
+                                    <h5><b>Using a "for...of".</b></h5>
+                                    <pre><code><b>Example:</b>
+let array1 = ["mahmoud", "islam", "mohamed", "aya", "nada"];
+
+for (const item of array1) {
+    console.log(item);
+}
+<b>Output:</b>
+mahmoud
+islam
+mohamed
+aya
+nada
+                                    </code></pre>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /> <br />
+        </div>
+    </div>
+
+    <div class="new-topic 3-Applying-Example" id="3">
+
+        <div class="container  surface-bg">
+
+            <h3 class="mt-5 py-5 text-center">3-Applying-Example</h3>
+
+            <div class="applying-section">
+                <section>
+                    <div class="container-fluid">
+                        <div class="my-3 row">
+                            <div class="col-12 row">
+                                <div class="col">
+                                    <button type="button" class="btn  btn-primary" onclick="showProductsWithFilter()">
+                                        All Products</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn  btn-success"
+                                        onclick="showProductsWithFilter('onSale')">
+                                        On Sale</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn  btn-warning"
+                                        onclick="showProductsWithFilter('available')">
+                                        <span class="text-sucess">On storage</span></button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-dark "
+                                        onclick="showProductsWithFilter('notAvaibale')">
+                                        <span class="text-danger">Not on storage</span></button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn  btn-danger" onclick="clearAllProducts()">
+                                        Clear All</button>
+                                </div>
+                            </div>
+                        </div><br />
+
+                        <div class="row g-4" id="allCards">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <br /> <br />
+        </div>
+    </div>
+
+    <div class="new-topic 4-Array Methods" id="4">
+
+        <div class="container  surface-bg">
+
+            <h3 class="mt-5 py-5 text-center">4-Array Methods</h3>
+
+            <div class="applying-section">
+
+                <div class=" array methods">
+                    <ol class="fs-6 list-unstyled px-5 shadow">
+                        <li>
+                            <b class="text-black fs-5">.sort((s,b)=>(s-b))....</b> used to sort elements from small to
+                            big or reverse. <br />[return sorted
+                            array]
+                        </li><br />
+                        <li>
+                            <b class="text-black fs-5">.reverse().... </b>used to reverse the order of the array.
+                            <br />[return reversed array]
+                        </li><br />
+                        <li><b class="text-black fs-5">.push(item)....</b> used to add new element at the end.
+                            <br />[return new length]
+                        </li><br />
+                        <li><b class="text-black fs-5">.unshift(item)....</b> used to add new element at the start.
+                            <br />[return new length]
+                        </li><br />
+                        <li><b class="text-black fs-5">.pop()....</b> removes last element of array. <br />[return the
+                            removed element]</li><br />
+                        <li><b class="text-black fs-5">.shift()....</b> removes the 1st element of array. <br />[returns
+                            removed element]</li><br />
+                        <li><b class="text-black fs-5">.at(index)....</b> return the value at given index.</li><br />
+                        <li><b class="text-black fs-5">.slice(startindex, end index excluded)....</b> return sub-array
+                            based on start and end indexes.
+                        </li><br />
+                        <li><b class="text-black fs-5">.splice(start index included, deleteCount, ...items)....</b> full
+                            manipulation of an array (add,
+                            remove, replace). <br />[return updated array]</li><br />
+                        <li><b class="text-black fs-5">.indexof('value').... </b>return the index of 1st match if found
+                            or -1 if not found.</li><br />
+                        <li><b class="text-black fs-5">.lastIndexOf('value')....</b> return the index of last match if
+                            found oor -1 if not found.</li>
+                        <br />
+                        <li><b class="text-black fs-5">.includes('string')....</b> return True if atleast one match if
+                            found otherwise False</li><br />
+                        <li><b class="text-black fs-5">.toString()....</b> return a string with all array elements
+                            sperated by ','.</li><br />
+                        <li><b class="text-black fs-5">.join('seperator')....</b> return a string with all array
+                            elements seperated by given seperator.
+                        </li><br />
+                    </ol>
+                </div>
+
+            </div>
+            <br /> <br />
+        </div>
+    </div>
+
+    <div class="new-topic 5-CRUD Operation Design" id="5">
+
+        <div class="container  surface-bg">
+
+            <h3 class="mt-5 py-5 text-center">5-CRUD Operation Design Applying</h3>
+
+            <div class="applying-section">
+
+                <section class="CRUD operations mt-5 mb-3">
+                    <div class="container-fluid bg-info w-75 p-3 rounded-4">
+                        <h4 class="text-center text-black fw-bold mb-4">CRUD Operation</h4>
+
+                        <div class="form-floating">
+                            <input class="form-control" placeholder="" type="text" id="ProductName">
+                            <label for="ProductName"> Product Name</label>
+                        </div><br />
+
+                        <div class="form-floating">
+                            <input class="form-control" placeholder="" type="text" name="ProductCategory" id="ProductCategory">
+                            <label for="ProductCategory">Product Category</label>
+                        </div><br />
+
+                        <div class="form-floating">
+                            <textarea style="height: 120px;" class="form-control" placeholder="" name="ProductDescription"
+                                id="ProductDescription"></textarea>
+                            <label for="ProductDescription">Product Description</label>
+                        </div><br />
+
+                        <div class="form-floating">
+                            <input class="form-control" placeholder="" type="file" name="ProductImage" id="ProductImage">
+                            <label for="ProductImage">Product Image</label>
+                        </div><br />
+
+                        <button type="button" class="btn btn-primary" onclick="">Add Product</button>
+                    </div>
+
+                    <div class="form-floating w-50 mt-3 mx-auto">
+                        <input class="form-control" type="search" name="searchInput" id="searchInput" placeholder="">
+                        <label for="searchInput">Search</label>
+                    </div>
+                </section>
+
+                <section class="products-section">
+                    <div class="container">
+                        <div class="row gy-5 gx-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card-item">
+                                    <div class="inner my-bg pb-3 rounded-3 overflow-hidden">
+                                        <img class="w-100 d-block" src="./images/images3/imgi_19_08.jpg"
+                                            alt="imgi_19_08.jpg" />
+                                        <div class="card-body my-3">
+                                            <span class="badge bg-info d-inline-block mx-2 mb-2">index: 0</span>
+                                            <p class="title">Title: </p>
+                                            <p>Description: </p>
+                                            <p>Category:</p>
+                                            <p>Price: </p>
+                                        </div>
+                                        <div class="card-footer text-center">
+                                            <button type="button" class="btn mx-1 btn-outline-warning">
+                                                <i class="fa-solid fa-pen-to-square"></i> Edite
+                                            </button>
+                                            <button type="button" class="btn mx-1 btn-outline-danger">
+                                                <i class="fa-solid fa-trash-can"></i> Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <br /> <br />
+        </div>
+    </div>
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Scripts files -->
+
+
+    <!-- Bootstrap.js -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome Icons.js -->
+    <script src="./JS/all.min.js"></script>
+
+    <!-- my scripts.js -->
+    <script src="./JS/main.js"></script>
+
+
+    <!-- #endregion Scripts files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+</body>
+
+</html>

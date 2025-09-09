@@ -1,0 +1,25 @@
+testarea.html
+testarea.css
+testREADME.md
+vscode-shortcuts.md
+Project-template
+fontawesome-free-6.7.2-web
+session-template
+bootstrap-5.3.7-dist
+.stylelintrc.json
+.eslintrc.js
+jsconfig.json
+package-lock.json
+package.json
+.vscode
+node_modules
+testjs.js
+#ignore js
+config.js
+# ignore env
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+deploy-weather-app.yml

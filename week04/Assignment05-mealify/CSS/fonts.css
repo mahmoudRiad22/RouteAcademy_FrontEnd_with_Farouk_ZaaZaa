@@ -1,0 +1,240 @@
+/*****************************/
+/*****************************/
+/* #region Font: Inter */
+
+@font-face {
+    font-family: "Inter_18pt-Black";
+    src: url(../fonts/Inter/static/Inter_18pt-Black.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-BlackItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-BlackItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Bold";
+    src: url(../fonts/Inter/static/Inter_18pt-Bold.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-BoldItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-ExtraBold";
+    src: url(../fonts/Inter/static/Inter_18pt-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-ExtraBoldItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-ExtraLight";
+    src: url(../fonts/Inter/static/Inter_18pt-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-ExtraLightItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Italic";
+    src: url(../fonts/Inter/static/Inter_18pt-Italic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Light";
+    src: url(../fonts/Inter/static/Inter_18pt-Light.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-LightItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-LightItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Medium";
+    src: url(../fonts/Inter/static/Inter_18pt-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-MediumItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-MediumItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Regular";
+    src: url(../fonts/Inter/static/Inter_18pt-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-SemiBold";
+    src: url(../fonts/Inter/static/Inter_18pt-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-SemiBoldItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Thin";
+    src: url(../fonts/Inter/static/Inter_18pt-Thin.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-ThinItalic";
+    src: url(../fonts/Inter/static/Inter_18pt-ThinItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Black";
+    src: url(../fonts/Inter/static/Inter_24pt-Black.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-BlackItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-BlackItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Bold";
+    src: url(../fonts/Inter/static/Inter_24pt-Bold.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-BoldItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-ExtraBold";
+    src: url(../fonts/Inter/static/Inter_24pt-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-ExtraBoldItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-ExtraLight";
+    src: url(../fonts/Inter/static/Inter_24pt-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-ExtraLightItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Italic";
+    src: url(../fonts/Inter/static/Inter_24pt-Italic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Light";
+    src: url(../fonts/Inter/static/Inter_24pt-Light.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-LightItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-LightItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Medium";
+    src: url(../fonts/Inter/static/Inter_24pt-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-MediumItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-MediumItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Regular";
+    src: url(../fonts/Inter/static/Inter_24pt-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-SemiBold";
+    src: url(../fonts/Inter/static/Inter_24pt-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-SemiBoldItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Thin";
+    src: url(../fonts/Inter/static/Inter_24pt-Thin.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-ThinItalic";
+    src: url(../fonts/Inter/static/Inter_24pt-ThinItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Black";
+    src: url(../fonts/Inter/static/Inter_28pt-Black.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-BlackItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-BlackItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Bold";
+    src: url(../fonts/Inter/static/Inter_28pt-Bold.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-BoldItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-ExtraBold";
+    src: url(../fonts/Inter/static/Inter_28pt-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-ExtraBoldItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-ExtraLight";
+    src: url(../fonts/Inter/static/Inter_28pt-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-ExtraLightItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Italic";
+    src: url(../fonts/Inter/static/Inter_28pt-Italic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Light";
+    src: url(../fonts/Inter/static/Inter_28pt-Light.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-LightItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-LightItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Medium";
+    src: url(../fonts/Inter/static/Inter_28pt-Medium.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-MediumItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-MediumItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Regular";
+    src: url(../fonts/Inter/static/Inter_28pt-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-SemiBold";
+    src: url(../fonts/Inter/static/Inter_28pt-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-SemiBoldItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Thin";
+    src: url(../fonts/Inter/static/Inter_28pt-Thin.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-ThinItalic";
+    src: url(../fonts/Inter/static/Inter_28pt-ThinItalic.ttf);
+}
+
+/* #endregion Font: Inter */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region Font: Amatic_SC */
+
+@font-face {
+    font-family: "AmaticSC-Bold";
+    src: url(../fonts/Amatic_SC/AmaticSC-Bold.ttf);
+}
+@font-face {
+    font-family: "AmaticSC-Regular";
+    src: url(../fonts/Amatic_SC/AmaticSC-Regular.ttf);
+}
+/* #endregion Font: Amatic_SC */
+/*****************************/
+/*****************************/

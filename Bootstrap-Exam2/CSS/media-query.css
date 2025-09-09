@@ -1,0 +1,125 @@
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* -sm- Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+    nav.navbar {
+        /* background-color: lime !important; */
+    }
+    .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 78px;
+        /* background-color: lime !important; */
+
+    }
+    .btns {
+    color: white;
+    background-color: var(--btn-bg);
+    transition: transform 0.25s background-color 0.25s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 48px;
+}
+.btns-outline {
+    color: white;
+    background-color: transparent;
+    transition: transform 0.25s background-color 0.5s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 48px;
+}
+}
+
+/* -md- Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    nav.navbar {
+        /* background-color: blue !important; */
+    }
+        .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 100px;
+        /* background-color: lime !important; */
+
+    }
+
+    .btns {
+    color: white;
+    background-color: var(--btn-bg);
+    transition: transform 0.25s background-color 0.25s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.btns-outline {
+    color: white;
+    background-color: transparent;
+    transition: transform 0.25s background-color 0.5s;
+
+    font-family: "Poppins-Regular";
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+}
+    .about .about-content {
+        width: 90%;
+    }
+    .contact-pt2 .part2 .map iframe {
+        height: 100% !important;
+    }
+
+    .contact .part1 .carousel-inner .carousel-item .card-item {
+        width: 100% !important;
+    }
+    .services .bottom-sec p {
+        width: 100%;
+        /* background-color: blue; */
+    }
+}
+
+/* -lg- Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    nav.navbar {
+        /* background-color: violet !important; */
+    }
+
+        .carousel-caption-style h1 {
+        font-family: "Poppins-Bold";
+        font-size: 95px;
+        font-weight: 700;
+        line-height: 128px;
+        /* background-color: lime !important; */
+
+    }
+    .about .about-content {
+        width: 70%;
+    }
+    .contact .part1 .carousel-inner .carousel-item .card-item {
+        width: 75% !important;
+    }
+    .services .bottom-sec p {
+        width: 80%;
+    }
+}
+
+/* -xl- X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* -xx-l XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

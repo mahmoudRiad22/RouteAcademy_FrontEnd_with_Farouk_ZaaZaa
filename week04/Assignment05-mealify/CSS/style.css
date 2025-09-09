@@ -1,0 +1,1011 @@
+/*****************************/
+/*****************************/
+/* #region Global CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --bg1: #eeeeee;
+    --bg2: #ffffff;
+
+    --buttons: #ce1212;
+    --text: #212529;
+
+    --highlight: #e61414;
+    --selection: #dd5959;
+
+    --navbar: #ffffff;
+    --footer: #100e0f;
+    --hidden-navbar-text: #7f7f90;
+
+    --gray-text: #7d7d7d;
+    --card-bgc: #ffffff;
+    --info-bgc: #eeeeee;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--bg1);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Inter_18pt-Regular";
+    text-transform: capitalize;
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: medium;
+    color: var(--hidden-navbar-text);
+}
+
+span {
+    font-family: "AmaticSC-Regular";
+}
+
+.container {
+    background-color: var(--surface);
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+div img {
+    width: 100%;
+    display: block;
+}
+
+::selection {
+    background-color: var(--selection);
+    color: var(--bg2);
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+.active {
+    position: relative;
+}
+.active::after {
+    content: "";
+    visibility: visible !important;
+    width: 100% !important;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    height: 0.1px;
+    border: none;
+    background-color: var(--buttons);
+}
+
+/* #endregion Global CSS */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region animations */
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* #endregion animations */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region shadows */
+
+.shadow-img {
+    filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.35));
+}
+.shadow-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* #endregion shadows */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region logo */
+
+.header {
+    background-color: var(--navbar);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 5px;
+}
+
+.logo a span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: normal;
+    color: var(--text);
+    text-transform: capitalize;
+}
+.logo a span span {
+    color: var(--buttons);
+    padding: 0;
+    margin: 0;
+}
+
+/* #endregion logo */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region header-btns */
+
+#light-on #light-on-icon {
+    color: var(--text);
+    background-color: var(--navbar);
+}
+
+#dark-on #dark-on-icon {
+    color: var(--text);
+    background-color: var(--navbar);
+}
+.header .container .btns .darkmode-btns {
+    position: relative;
+}
+.header .container .btns .darkmode-btns #dark-on {
+    border: none;
+    font-weight: 400;
+    line-height: 25px;
+
+    font-size: 28px;
+    padding: 2px 5px;
+    border: none;
+    background-color: var(--navbar);
+}
+.header .container .btns .darkmode-btns #light-on {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    vertical-align: middle;
+    font-weight: 400;
+    line-height: 25px;
+
+    font-size: 28px;
+    padding: 2px 5px;
+    border: none;
+    background-color: var(--navbar);
+}
+#dark-on:hover,
+#light-on:hover {
+    cursor: pointer;
+}
+
+.header .container .btns .nav-btn {
+    font-weight: 900;
+    font-size: 31px;
+    line-height: 31px;
+    border: none;
+    background-color: var(--navbar);
+}
+.header .container .btns #nav-btn {
+    color: black;
+}
+
+/* #endregion header-btns */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region visiable navbar-links */
+.header .container .navbar-links {
+    display: none;
+}
+.header .container .navbar-links li a {
+    color: var(--hidden-navbar-text);
+}
+.header .container .navbar-links ul {
+    padding: 0;
+}
+.header .container .navbar-links li {
+    position: relative;
+    margin: 15px;
+    text-align: left;
+}
+.header .container .navbar-links li a::after {
+    content: "";
+
+    width: 0%;
+    border: 1.5px solid var(--buttons);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    visibility: hidden;
+    transition: width 0.3s ease;
+}
+.header .container .navbar-links li:hover a::after {
+    visibility: visible;
+    width: 100%;
+}
+.header .container .navbar-links li:hover a {
+    color: var(--text);
+}
+.header .container .btns {
+    display: flex;
+}
+
+.header .container .navbar-links a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 21px;
+    line-height: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+/* #endregion visiable navbar-links */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region hidden navbar */
+.header .container .btns .nav-btn {
+    margin-left: 20px;
+}
+.navbar {
+    background-color: var(--navbar);
+    height: 100vh;
+    width: 95vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 301;
+    transform: translateX(110%);
+    transition: transform 0.5s;
+}
+
+.header .hidden .navbar .links {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 40px 15px;
+    text-transform: capitalize;
+}
+.header .hidden .navbar .links .x-btn,
+a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    font-size: 21px;
+    font-weight: 600;
+    color: #7f7f90;
+}
+.header .hidden .navbar .links .x-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    padding: 15px 15px;
+    border: none;
+    background-color: var(--navbar);
+}
+.header .hidden .navbar .links a {
+    color: var(--text);
+}
+/* #endregion hidden-navbar */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region Home section */
+.home-section {
+    margin-top: 80px;
+    padding-top: 50px;
+}
+.home-section .container {
+    padding: 40px 0px;
+}
+
+.home-section .flex-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.home-section .left-side .text h2 {
+    font-family: "AmaticSC-Regular";
+    font-size: 81px;
+    font-weight: 700;
+
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.home-section .left-side .text p {
+    padding-bottom: 30px;
+    text-align: center;
+}
+.home-section .left-side .btns-container .btn1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border-top-left-radius: 5px;
+    background-color: var(--buttons);
+}
+.home-section .left-side .btns-container .btn1 a {
+    color: var(--bg1);
+}
+.home-section .left-side .btns-container .btn1:hover {
+    background-color: var(--highlight);
+    cursor: pointer;
+}
+.home-section .left-side .btns-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.home-section .left-side .btns-container .video-btn {
+    position: relative;
+    margin-top: 30px;
+}
+.home-section .left-side .btns-container .video-btn button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 900;
+    border: none;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border-top-left-radius: 5px;
+    background-color: var(--bg1);
+}
+.home-section .left-side .btns-container .video-btn a {
+    color: var(--text);
+}
+.home-section .left-side .btns-container .video-btn .icon {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.home-section .left-side .btns-container .video-btn .icon a i {
+    font-size: 40px;
+    line-height: 20px;
+    font-weight: 900;
+    color: var(--bg2);
+    background-color: var(--text);
+    border-radius: 50%;
+}
+
+.home-section .left-side .btns-container .video-btn .half-circle {
+    border: 10px solid var(--buttons);
+    position: absolute;
+    top: -80%;
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    clip-path: inset(0 50% 0 0);
+}
+
+.home-section .left-side .btns-container .video-btn button:hover a {
+    color: var(--highlight);
+}
+.home-section .left-side .btns-container .video-btn button:hover .icon a i {
+    background-color: var(--highlight);
+}
+.home-section .home-image img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+.home-section .home-image {
+    margin: auto;
+}
+
+/* #endregion Home section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region chefs-section */
+
+.chefs-section {
+    background-color: var(--bg2);
+    margin: 80px 0px;
+    padding: 50px 0px;
+    text-align: center;
+}
+.chefs-section .section-title {
+    padding: 80px 0px 0 0;
+}
+.chefs-section .section-title h2 {
+    padding: 0 0 5px 0;
+    font-size: 18px;
+    color: var(--hidden-navbar-text);
+    text-transform: uppercase;
+}
+.chefs-section .section-title span {
+    font-family: "AmaticSC-Regular";
+    font-size: 63px;
+    font-weight: 400;
+    color: var(--text);
+}
+.chefs-section .section-title span span {
+    color: var(--highlight);
+}
+
+.chefs-section .sections-cards {
+    padding: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chefs-section .card {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: var(--bg2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.chefs-section .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: rgba(192, 192, 192, 0.5);
+
+    margin-top: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    transform: translate(100px);
+
+    transition: transform 1s;
+}
+.chefs-section .card-container:hover .links {
+    transform: translate(0);
+    cursor: pointer;
+}
+.chefs-section .card-container .links li i {
+    color: var(--hidden-navbar-text);
+    transition: color 0.25s;
+}
+.chefs-section .card-container .links li i:hover {
+    color: var(--footer);
+}
+
+.chefs-section .card:hover {
+    transform: scale(1.08);
+}
+.chefs-section .links li {
+    padding: 15px;
+}
+
+.chefs-section .card-container .card-info {
+    text-align: center;
+    background-color: var(--card-bgc);
+}
+.chefs-section .sections-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chefs-section .sections-cards .card-container .card-info {
+    padding: 20px;
+}
+.chefs-section .section-title .card-container .card-info h3 {
+    font-family: "Inter_24pt-Regular";
+    font-size: 23px;
+    font-weight: 700;
+}
+.chefs-section .sections-cards .card-container .card-info span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--hidden-navbar-text);
+}
+.chefs-section .sections-cards .card-container .card-info p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* #endregion chefs-section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region gallery */
+.gallery-section .gallery-pics {
+    column-count: 3;
+    column-gap: 15px;
+}
+
+.gallery-section .left{
+    display: contents;
+}
+.gallery-section .mid{
+    display: contents;
+}
+.gallery-section .right{
+    display: contents;
+}
+.gallery-section .images {
+    display: contents;
+}
+
+.gallery-section .image {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    position: relative;
+}
+.gallery-section {
+    background-color: var(--bg1);
+    margin: 80px 0px;
+    padding: 30px 0px 0 0;
+    text-align: center;
+}
+
+.gallery-section .section-title {
+    padding: 40px 0px 0 0;
+}
+.gallery-section .section-title h2 {
+    padding: 0 0 5px 0;
+    font-size: 18px;
+    color: var(--hidden-navbar-text);
+    text-transform: uppercase;
+}
+.gallery-section .section-title span {
+    font-family: "AmaticSC-Regular";
+    font-size: 63px;
+    font-weight: 400;
+    color: var(--text);
+}
+.gallery-section .section-title span span {
+    color: var(--highlight);
+}
+.gallery-section .image {
+    border: 4px solid white;
+    margin: 20px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-section .image .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transform: translateY(100%);
+    transition: transform 0.5s;
+}
+.gallery-section .image:hover .layer {
+    transform: translateY(0);
+}
+.gallery-section .image .layer .text h2 {
+    color: #ffffff;
+    font-family: "Inter_24pt-Regular";
+    font-size: 30px;
+    font-weight: 700;
+}
+.gallery-section .image .layer .text p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #d1dddd;
+    padding: 10px 0px;
+}
+/* #endregion gallery */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region Contacts-section */
+
+.contacts-section {
+    padding: 130px 0px 130px 0px;
+    background-color: var(--bg2);
+}
+.contacts-section .container {
+    background-color: var(--bg2);
+    text-align: center;
+}
+.contacts-section .title {
+    padding: 80px 0px 0 0;
+}
+.contacts-section .title h2 {
+    padding: 0 0 5px 0;
+    font-size: 18px;
+    color: var(--hidden-navbar-text);
+    text-transform: uppercase;
+}
+.contacts-section .title span {
+    font-family: "AmaticSC-Regular";
+    font-size: 63px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--text);
+}
+.contacts-section .title span span {
+    color: var(--highlight);
+}
+
+.contacts-section .container .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contacts-section .contact-details .info {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--info-bgc);
+}
+.contacts-section .contact-details .info .icon {
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--buttons);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--bg2);
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.contacts-section .contact-details .info .text h3 {
+    padding-top: 5px;
+    padding-left: 10px;
+    color: var(--gray-text);
+}
+.contacts-section .contact-details .info .text p {
+    padding-top: 5px;
+    padding-left: 10px;
+    text-align: left;
+    color: var(--text);
+}
+.contacts-section .container .form form {
+    width: 100%;
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contacts-section .container .form #name {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0px;
+}
+.contacts-section .container .form #email {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0px;
+}
+.contacts-section .container .form #subject {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0px;
+}
+.contacts-section .container .form #msg {
+    width: 100%;
+    height: calc(60px * 3);
+    margin: 10px 0px;
+}
+
+.contacts-section .container .form button {
+    padding: 20px 50px;
+    border-radius: 30px;
+    background-color: var(--buttons);
+    color: var(--bg2);
+    border: none;
+}
+.contacts-section .container .form button:hover {
+    cursor: pointer;
+    background-color: var(--highlight);
+}
+.contacts-section .container .form input,
+textarea {
+    border: 1.5px solid #e8e3e3;
+    padding: 20px;
+}
+/* #endregion Contacts-section */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region Footer */
+
+.footer {
+    background-color: var(--footer);
+    padding: 130px 0px 50px 0;
+    padding-bottom: 120px;
+    color: #ffffff;
+}
+.footer p {
+    color: var(--gray-text);
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .left,
+.right {
+    width: 25%;
+}
+.footer .middle {
+    width: 45%;
+}
+/*****************************/
+/*****************************/
+/* #region left */
+
+.footer .left .image h2::after {
+    content: ".";
+    color: var(--buttons);
+}
+.footer .left .image {
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.footer .left .image img {
+    padding: 4px;
+}
+.footer .left .image h2 {
+    padding: 10px;
+}
+.footer .left p {
+    padding: 10px 0px 30px 0;
+    color: white;
+}
+
+.footer .left .social-media h3 {
+    text-align: center;
+    font-family: "Inter_24pt-Regular";
+    font-weight: 700;
+    font-size: 23px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+.footer .left .social-media ul {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer .left .social-media ul li a {
+    color: #ffffff;
+}
+.footer .left .social-media ul i {
+    padding: 15px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+/* #endregion left */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region middle */
+
+.footer .middle h3 {
+    font-family: "Inter_24pt-Regular";
+    font-weight: 700;
+    font-size: 23px;
+    padding: 5px 0px;
+}
+.footer .middle p {
+    color: white;
+    padding: 5px 0px;
+    padding-bottom: 20px;
+}
+.footer .middle form input {
+    width: 60%;
+    height: 50px;
+}
+.footer .middle form button {
+    background-color: var(--buttons);
+    padding: 15px 30px;
+    border: none;
+    color: #ffffff;
+}
+.footer .middle form button:hover {
+    background-color: var(--highlight);
+    cursor: pointer;
+}
+
+.footer .quick-links li::before {
+    content: "❯ ";
+}
+.footer .quick-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer .quick-links li {
+    width: 50%;
+    padding: 5px;
+    transition: transform 0.5s;
+}
+
+.footer .quick-links li a {
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+}
+.footer .quick-links li:hover {
+    transform: translate(10px, 2px);
+    background-color: #222222;
+}
+/* #endregion middle */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region right */
+
+.footer .right h3 {
+    font-family: "Inter_24pt-Regular";
+    font-size: 23px;
+    font-weight: 700;
+    padding: 5px;
+}
+.footer .right ul {
+    flex-direction: column;
+}
+.footer .right ul li,
+a {
+    color: #ffffff;
+}
+.footer .right ul li,
+span,
+a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.footer .right ul li span,
+a {
+    padding: 5px 0px 15px 15px;
+}
+.footer .right ul li i {
+    color: var(--buttons);
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 900;
+    padding: 0;
+}
+.footer .right ul li {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 15px;
+}
+/* #endregion right */
+/*****************************/
+/*****************************/
+
+/* #endregion Footer */
+/*****************************/
+/*****************************/

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Problem Solving</title>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+
+
+    <!-- Fonts.CSS -->
+    <link rel="stylesheet" href="./CSS/fonts.css" />
+
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+
+    <!-- FontAwesome Icons.css -->
+    <link rel="stylesheet" href="./CSS/all.css" />
+
+    <!-- My style.css -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Media Queries.css -->
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
+
+
+
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+</head>
+
+<body>
+
+
+    <section class=" problem-solving gradient01 bg-danger-subtle pb-5">
+        <h1 class="text-center p-4 text-gradient01 shine">Js Problem Solving Part 01</h1>
+        <div class="container d-flex justify-content-around flex-wrap">
+            <div class="accordion w-50 px-3" id="accordionExample">
+                <div class="accordion-item shine problem01">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem01" aria-expanded="false" aria-controls="collapseproblem01">
+                            <b>Problem 01</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem01" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>01- Write a program that allow to user enter number then print it. <br />
+                                Example: <br />
+                                Input: 5 <br />
+                                Output: 5 <br />
+                            </p>
+                            <button class="btn btn-success" id="btn1">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem02">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem02" aria-expanded="false" aria-controls="collapseproblem02">
+                            <b>Problem 02</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem02" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                02- Write a program that take number from user then print yes if that number can divide
+                                by 3 and 4 otherwise print no <br />
+                                Example1: <br />
+                                Input: 12 :>> Output Yes <br />
+                                Example2: <br />
+                                Input: 9 :>> Output No
+
+                            </p>
+                            <button class="btn btn-success" id="btn2">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem03">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem03" aria-expanded="false" aria-controls="collapseproblem03">
+                            <b>Problem 03</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem03" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                03- Write a program that allows the user to insert 2 integers then print the max. <br />
+                                <b>Example 1:</b> <br />
+                                Input: 3 5 <br />
+                                Output: 5 <br />
+                                <b>Example 2:</b> <br />
+                                Input: 10 7 <br />
+                                Output: 10
+                            </p>
+                            <button class="btn btn-success" id="btn3">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem04">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem04" aria-expanded="false" aria-controls="collapseproblem04">
+                            <b>Problem 04</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem04" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                04- Write a program that allows the user to insert an integer
+                                then print negative if it is negative number otherwise print positive. <br />
+                                <b>Example 1:</b> <br />
+                                Input: -5 <br />
+                                Output negative <br />
+                                <b>Example 2:</b> <br />
+                                Input: 10 <br />
+                                Output positive
+
+
+                            </p>
+                            <button class="btn btn-success" id="btn4">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem05">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem05" aria-expanded="false" aria-controls="collapseproblem05">
+                            <b>Problem 05</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem05" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                05- Write a program that take 3 integers from user
+                                then print the max element and the min element. <br />
+                                <b>Example 1: </b> <br />
+                                Input:7,8,5 <br />
+                                Output: <br />
+                                max element = 8, min element = 5 <br />
+                                <b>Example 2:</b> <br />
+                                Input: 3 6 9 <br />
+                                Outputs: <br />
+                                Max element = 9 Min element = 3
+                            </p>
+                            <button class="btn btn-success" id="btn5">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem06">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem06" aria-expanded="false" aria-controls="collapseproblem06">
+                            <b>Problem 06</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem06" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                06- Write a program that allows the user to insert integer number
+                                then check If a number is even or odd</p>
+                            <button class="btn btn-success" id="btn6">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem07">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem07" aria-expanded="false" aria-controls="collapseproblem07">
+                            <b>Problem 07</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem07" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                07- Write a program that take character from user then if it is vowel chars
+                                (a,e,I,o,u) then print vowel otherwise print consonant. <br />
+                                <b>Example 1:</b> <br />
+                                Input: O <br />
+                                Output: vowel <br />
+                                <b>Example 2:</b> <br />
+                                Input: b <br />
+                                Output: Consonant <br />
+                            </p>
+                            <button class="btn btn-success" id="btn8">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem08">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem08" aria-expanded="false" aria-controls="collapseproblem08">
+                            <b>Problem 08</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem08" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                08- Write a program that allows user to insert integer
+                                then print all numbers between 1 to that’s number. <br />
+                                <b>Example:</b> <br />
+                                Input 5 <br />
+                                Output 1, 2, 3, 4, 5
+                            </p>
+                            <button class="btn btn-success" id="btn9">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem09">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem09" aria-expanded="false" aria-controls="collapseproblem09">
+                            <b>Problem 09</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem09" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                09- Write a program that allows user to insert integer
+                                then print a multiplication table up to 12.<br />
+                                <b>Example:</b> <br />
+                                Input: 5 <br />
+                                Outputs: 5 10 15 20 25 30 35 40 45 50 55 60
+                            </p>
+                            <button class="btn btn-success" id="btn10">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem10">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem10" aria-expanded="false" aria-controls="collapseproblem10">
+                            <b>Problem 10</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                10- Write a program that allows to user to insert number
+                                then print all even numbers between 1 to this number. <br />
+                                <b>Example:</b> <br />
+                                Input: 15 <br />
+                                Output: 2 4 6 8 10 12 14
+                            </p>
+                            <button class="btn btn-success" id="btn11">Test it</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion w-50 px-3" id="accordionExample">
+                <div class="accordion-item shine problem11">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem11" aria-expanded="false" aria-controls="collapseproblem11">
+                            <b>Problem 11</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                11- Write a program that take two integers then print the power. <br />
+                                <b>Example:</b> <br />
+                                Input: 4 3 <br />
+                                Output: 64 <br />
+                                Hint how to calculate 4^3 = 4 * 4 * 4 =64
+                            </p>
+                            <button class="btn btn-success" id="btn12">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem12">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem12" aria-expanded="false" aria-controls="collapseproblem12">
+                            <b>Problem 12</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                12- Write a program to enter marks of five subjects and
+                                calculate total, average and percentage. <br />
+                                <b>Example</b> <br />
+                                Input: - Enter Marks of five subjects: <br />
+                                95 <br />
+                                76 <br />
+                                58 <br />
+                                90 <br />
+                                89 <br />
+                                Output:- <br />
+                                Total marks = 408,
+                                Average Marks =87,
+                                Percentage =87
+                            </p>
+                            <button class="btn btn-success" id="btn12_2">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem13">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem13" aria-expanded="false" aria-controls="collapseproblem13">
+                            <b>Problem 13</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                13- Write a program to input month number and print number of days in that month. <br />
+                                <b>Example:</b> <br />
+                                Input: - Month Number: 1 <br />
+                                Output:-. Days in Month: 31
+                            </p>
+                            <button class="btn btn-success" id="btn13">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem14">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem14" aria-expanded="false" aria-controls="collapseproblem14">
+                            <b>Problem 14</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                14- Write a program to input marks of five subjects
+                                Physics, Chemistry, Biology, Mathematics and Computer. <br />
+                                Find percentage and grade: <br />
+                                Percentage >= 90%: Grad A <br />
+                                Percentage >= 80%: Grad B <br />
+                                Percentage >= 70%: Grad C <br />
+                                Percentage >= 60%: Grad D <br />
+                                Percentage >= 40%: Grad E <br />
+                                Percentage &lt; 40%: Grad F
+                            </p>
+                            <button class="btn btn-success" id="btn14">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem15">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem15" aria-expanded="false" aria-controls="collapseproblem15">
+                            <b>Problem 15</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                15- Write a program to print total number of days in month</p>
+                            <button class="btn btn-success" id="btn15">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem16">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem16" aria-expanded="false" aria-controls="collapseproblem16">
+                            <b>Problem 16</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                16- Write a program to check whether an alphabet is vowel or consonant</p>
+                            <button class="btn btn-success" id="btn16">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem17">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem17" aria-expanded="false" aria-controls="collapseproblem17">
+                            <b>Problem 17</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem17" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                17- Write a program to find maximum between two numbers</p>
+                            <button class="btn btn-success" id="btn17">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem18">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem18" aria-expanded="false" aria-controls="collapseproblem18">
+                            <b>Problem 18</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem18" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                18- Write a program to check whether a number is even or odd</p>
+                            <button class="btn btn-success" id="btn18">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem19">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem19" aria-expanded="false" aria-controls="collapseproblem19">
+                            <b>Problem 19</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem19" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                19- Write a program to check whether a number is positive or negative or zero</p>
+                            <button class="btn btn-success" id="btn19">Test it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shine problem20">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseproblem20" aria-expanded="false" aria-controls="collapseproblem20">
+                            <b>Problem 20</b>
+                        </button>
+                    </h2>
+                    <div id="collapseproblem20" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                20- Write a program to create Simple Calculator</p>
+                            <button class="btn btn-success" id="btn20">Test it</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Scripts files -->
+
+
+    <!-- Bootstrap.js -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome Icons.js -->
+    <script src="./JS/all.min.js"></script>
+
+    <!-- my scripts.js -->
+    <script src="./JS/main.js"></script>
+
+
+    <!-- #endregion Scripts files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+</body>
+
+</html>

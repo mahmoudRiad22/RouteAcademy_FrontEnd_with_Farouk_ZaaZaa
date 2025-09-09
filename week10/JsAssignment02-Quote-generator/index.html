@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Assignment js2</title>
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region CSS files -->
+
+
+    <!-- Fonts.CSS -->
+    <link rel="stylesheet" href="./CSS/fonts.css" />
+
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+
+    <!-- FontAwesome Icons.css -->
+    <link rel="stylesheet" href="./CSS/all.css" />
+
+    <!-- My style.css -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Media Queries.css -->
+    <link rel="stylesheet" href="./CSS/media-classes.css" />
+
+
+
+    <!-- #endregion CSS files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+
+</head>
+
+<body>
+
+
+
+    <div class="applying-section">
+        <div class=" text-center pb-sm-4">
+            <h1 class="fw-bold pt-5 impact-font">Quote of the day</h1><br />
+            <h2 class="roman-font">Press below button to recieve new quote</h2>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div class="text-center">
+            <button onclick="noRepeate()" type="button" class="gen-btn btn btn-primary px-5 py-3 border-0"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Generate Qoutes
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-black text-white border-black">
+                        <h1 class="modal-title" id="staticBackdropLabel">Today's Qoute</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-info">
+                        <div class="row align-items-top" id="quoteBox">
+                            <!-- Qoute Content Goes Here -->
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-dark border-black">
+                        <button type="button" class="btn btn-secondary border-0 close-btn"
+                            data-bs-dismiss="modal">Close</button>
+                        <button onclick="noRepeate()" type="button" class="btn btn-primary gen-btn border-0">New
+                            Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+    <!-- #region Scripts files -->
+
+
+    <!-- Bootstrap.js -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome Icons.js -->
+    <script src="./JS/all.min.js"></script>
+
+    <!-- my scripts.js -->
+    <script src="./JS/main.js"></script>
+
+
+    <!-- #endregion Scripts files -->
+    <!-- ****************************** -->
+    <!-- ****************************** -->
+</body>
+
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week03 session02 try2</title>
+
+    <!-- #region Font section -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap"
+        rel="stylesheet">
+    <!-- #endregion -->
+
+
+    <!-- #region CSS and JS links -->
+    <link rel="stylesheet" href="./CSS/style2.css" />
+    <!-- #endregion -->
+</head>
+
+<body>
+
+    <h1>week03 session02 "re-study"</h1>
+    <div class="nav-bar">
+        <h5>Week03-s02</h5>
+        <a href="#1-overflow">1-overflow</a><br />
+        <a href="#2-hide_elements">2-hide elements</a><br />
+        <a href="#3-coloring_system">3-coloring system</a><br />
+        <a href="#4-hover">4-hover</a><br />
+        <a href="#5-transition_properties">5,6-transition</a><br />
+        <a href="#6-transform">7,8-transform</a><br />
+        <a href="#7-width_vs_scale">9-width vs scale</a><br />
+        <a href="#8-applying_section">10-applying section</a><br />
+        <a href="#9-after_&_before">11-after & before</a><br />
+        <a href="#10-after_&_before_applying_sec">12-after & before <br /> applying</a><br />
+
+    </div>
+    <div class="new-topic" id="1-overflow">
+
+        <div class="container">
+            <h2>1- overflow</h2>
+            <p>describtion:
+            <pre>           -- if an element has a known size and the content inside of it <br/></pre>
+            <pre>               is going outside that size, we use <b>Overflow</b> to fix that</pre>
+            <br />
+            <pre>           -- <b>Overflow: hidden;     <b>// it clip out any overflowed content</b></b></pre><br />
+            <pre>           -- <b>Overflow: scroll;     <b>// It creates a scrollbar regardless there is overflow or not</b></b></pre>
+            <br />
+            <pre>           -- <b>Overflow: auto;       <b>// best option, if there is an overflow then shows a scrollbar. 
+                                    // if not then removes it</b></b></pre><br />
+            </p><br />
+            <div class="overflow-applying-section">
+                <div class="overflow-test1">
+                    <p>No overflow here</p><br />
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, incidunt!</p>
+                </div>
+                <div class="overflow-test2">
+                    <p><b>Overflow: scroll;</b></p><br />
+                    <p><b>STUPID: no overflow still shows a scroll bar</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus odio autem nam aspernatur beatae
+                    </p>
+                </div>
+
+                <div class="overflow-test3">
+                    <p><b>Overflow: hidden;</b></p><br />
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus odio autem nam aspernatur beatae
+                        expedita mollitia, molestiae deleniti error ipsum natus odit? Dolorum, accusamus voluptates!
+                        rerum! Quo dolorum earum pariatur deleniti, esse id veritatis voluptatibus nemo minus corrupti
+                        rerum! Quo dolorum earum pariatur deleniti, esse id veritatis voluptatibus nemo minus corrupti
+                        nam animi praesentium tempora consequatur dolores. Sequi!
+                    </p>
+                </div>
+                <div class="overflow-test4">
+                    <p><b>Overflow: auto;</b></p><br />
+                    <p>if overflow found it uses scrollbar automatically, if not then no need for it</p><br />
+                </div>
+                <div class="overflow-test4">
+                    <p><b>Overflow: auto;</b></p><br />
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus odio autem nam aspernatur beatae
+                        expedita mollitia, molestiae deleniti error ipsum natus odit? Dolorum, accusamus voluptates!
+                        rerum! Quo dolorum earum pariatur deleniti, esse id veritatis voluptatibus nemo minus corrupti
+                        rerum! Quo dolorum earum pariatur deleniti, esse id veritatis voluptatibus nemo minus corrupti
+                        nam animi praesentium tempora consequatur dolores. Sequi!
+                    </p>
+                </div>
+                <div class="clear-fix"></div>
+                <br /><br />
+            </div>
+        </div>
+    </div>
+
+    <div class="new-topic" id="2-hide_elements">
+
+        <div class="container">
+
+            <h3>2- how to hide elements</h3>
+
+            <p>description:
+            <pre>           1- Display:none;        <b>// totally hide the element from rendering at all</b></pre><br />
+            <pre>           2- visiability: hidden; <b>// hide the element content after rendering it</b></pre><br />
+            <pre>           3- opacity: 0~1;        <b>// the element is rendered but makes the element tansparent</b></pre>
+            <pre>                                   <b>// based on its value, you can still see the hover effect</b></pre>
+            <br />
+            <pre>           4- hidden               <b>// a global html attribute used to make a the element <b>hidden</b></b></pre>
+            </p><br />
+            <h5>chech the code part below to see it
+                <br />
+                <a href="" target="_blank" style="display: inline;">code: hide elements</a>
+            </h5>
+
+            <div class="hide_elements-applying-section">
+                <div class="test1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, tempore ea quas quam a eos repellat
+                        voluptate aliquid maiores officiis!
+                    </p>
+                </div>
+
+                <div class="test2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti placeat tempora eligendi
+                        aliquam libero vitae modi possimus officia doloremque assumenda nostrum blanditiis adipisci
+                        vero, vel quod earum veritatis delectus quis ex? Optio odio molestiae cupiditate fugit dolores
+                        officia quam consequuntur.
+                    </p>
+                </div>
+
+                <div class="test3">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, omnis. Cupiditate quae
+                        earum vel ex sapiente, cum explicabo et suscipit eligendi, molestiae consequuntur quos, a
+                        maiores optio deleniti perspiciatis corrupti?
+                    </p>
+                </div>
+                <div class="test4" hidden>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, omnis. Cupiditate quae
+                        earum vel ex sapiente, cum explicabo et suscipit eligendi, molestiae consequuntur quos, a
+                        maiores optio deleniti perspiciatis corrupti?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="3-coloring_system">
+
+        <div class="container">
+
+            <h3>3- coloring system</h3>
+
+            <p>
+            <pre>   Description:    -- Hex: using the hashtag "#"</pre>
+            <pre>                   -- RGPA: to use opacity over the background color</pre>
+            </p><br />
+
+            <div class="coloring-system-applying-section"></div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="4-hover">
+
+        <div class="container">
+
+            <h3>4-hover</h3>
+
+            <p>
+            <pre>    Description: A pesudo-element that shows when the user hover with the mouse over the element.</pre>
+            </p><br />
+
+            <div class="hover-applying-section">
+                <div class="test1">
+                    <p>
+                        On hover: <br />
+                        color turns Green. <br />
+                        mouse turns pointer <br /><br />
+                        look at bottom right <br />
+                        look at bottom left <br />
+                    </p>
+                </div>
+
+                <div class="test2">
+                    <p>text appear on hover only</p>
+                </div>
+                <div class="test3">
+                    <p>text appear on hover only</p>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="5-transition_properties">
+
+        <div class="container">
+
+            <h3>5,6- transition</h3>
+
+            <p class="description">
+            <pre>Description:   -- Use <b>TRANSITION</b> to control the duration and delay of <b>A CHANGE</b> in an element</pre>
+            <br />
+            <pre>               -- basic transition needs <b><i>"name"</i></b> and <b><i>"duration"</i></b> at first.   i.e: <b>trnasition: width 1s;</b></pre>
+            <br />
+            <pre>               -- you can add <b><i>"delay"</i></b> and "timing-function"</pre>
+            <pre>                       - to fully understand the <b><i>"timing-function"</i></b> <a 
+                    href="https://www.the-art-of-web.com/css/timing-function/" 
+                    target="_blank"
+                    style="display: inline;">click-here</a></pre><br />
+            <pre>               -- adding the <b><i>transition</i></b> to the parent makes it <b><i>transition-in</i></b> and <b><i>transition-out</i></b></pre>
+            <br />
+
+            </p><br />
+
+            <div class="transition-properties-applying-section">
+                <div class="test1">
+                    <div class="test1-1">
+                        <p>
+                            <b>transition: width 1s, background-color 1s .5s, color 1s 1s, height 1s;</b> <br />
+
+                            Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Rerum, voluptates! adipisicing elit. Consectetur, nobis!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="test2">
+                    <h3>trying the layer idea try1</h3>
+                    <div class="item">
+                        <div class="container">
+                            <div class="layer"></div>
+                            <p class="title">Front end</p>
+                            <p class="details">with Zaazaa</p>
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="layer"></div>
+                            <p class="title">Front end</p>
+                            <p class="details">with Zaazaa</p>
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="layer"></div>
+                            <p class="title">Front end</p>
+                            <p class="details">with Zaazaa</p>
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="layer"></div>
+                            <p class="title">Front end</p>
+                            <p class="details">with Zaazaa</p>
+                        </div>
+
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <br /> <br /> <br />
+                <div class="test3">
+                    <h3>trying the layer idea try2</h3>
+                    <div class="container">
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">Card Number 1</p>
+                            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id esse
+                                eligendi! Sunt accusamus rem doloremque impedit velit! Maiores, optio.</p>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="6-transform">
+
+        <div class="container">
+
+            <h3>7,8- transform</h3>
+
+            <p>description:
+            <pre>           --<i>transform:</i>
+                    1- rotate
+                    2- scale
+                    3- translate
+                    4- skew</pre> <br />
+
+            </p><br />
+
+            <div class="transform-applying-section">
+
+                <div class="test1">
+                    <h4>rotate and scale</h4>
+                    <div class="image rotate360">
+                        <img src="./images/stas-ovsky.jpg" alt="stas-ovsky.jpg" />
+                    </div>
+
+                    <div class="image scale10">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image rotate360">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image rotate180">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image rotate270">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image scale30">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image scale50 delay-quarter-sec">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+
+                    <div class="image rotate360 delay-half-sec">
+                        <img src="./images/drew-coffman-1872.jpg" alt="drew-coffman-1872.jpg" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <br /><br />
+                <div class="test2">
+                    <h4>translate and skew</h4>
+
+                    <div class="container">
+                        <div class="image translate-right-50px">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image translate-right-100px">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image translate-right-150px">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image translate-left-50px">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image translate-left-100px">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image translate-left-150px">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image skewX-left-20deg">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image skewX-left-30deg">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image skewX-left-50deg">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image skewX-right-20deg">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image skewX-right-30deg">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="image skewX-right-50deg">
+                            <img src="./images/ben-garratt.jpg" alt="ben-garratt.jpg">
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="7-width_vs_scale">
+
+        <div class="container">
+
+            <h3>9- width vs scale</h3>
+
+            <p>
+            <pre>Description:       -- scale always makes the element into its own layer and 
+                    won't affect other elements</pre><br />
+            <pre>                   -- when you want to make the <b><i>ZOOM effect</i></b> alays do it with <b>scale.</b></pre>
+            <br />
+            </p><br />
+
+            <div class="width-vs-scale-applying-section">
+                <h4>having fun with layers at this point</h4>
+                <div class="test1">
+                    <div class="container">
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">card title</p>
+                            <p class="details">card details</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">card title</p>
+                            <p class="details">card details</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">card title</p>
+                            <p class="details">card details</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">card title</p>
+                            <p class="details">card details</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">card title</p>
+                            <p class="details">card details</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer"></div>
+                            <p class="title">card title</p>
+                            <p class="details">card details</p>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="8-applying_section">
+
+        <div class="container">
+
+            <h3>10- position & hover Applying </h3>
+
+            <p>
+            <pre>Description:     -- createing a section of the next assignment.</pre>
+            </p><br />
+
+            <div class="position-and-hover-applying-section">
+                <h2>position&hover applying</h2>
+                <div class="applying">
+                    <div class="container">
+                        <div class="card">
+                            <div class="layer1"></div>
+                            <div class="image">
+                                <img src="./images/clem-onojeghuo.jpg" alt="clem-onojeghuo.jpg">
+                            </div>
+                            <div class="layer2">
+                                <div class="title">
+                                    <p>Title Name</p>
+                                </div>
+                                <div class="details">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer1"></div>
+
+                            <img src="./images/clem-onojeghuo.jpg" alt="clem-onojeghuo.jpg">
+
+                            <div class="layer2">
+                                <div class="title">
+                                    <p>Title Name</p>
+                                </div>
+                                <div class="details">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer1"></div>
+                            <div class="image">
+                                <img src="./images/clem-onojeghuo.jpg" alt="clem-onojeghuo.jpg">
+                            </div>
+                            <div class="layer2">
+                                <div class="title">
+                                    <p>Title Name</p>
+                                </div>
+                                <div class="details">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer1"></div>
+                            <div class="image">
+                                <img src="./images/clem-onojeghuo.jpg" alt="clem-onojeghuo.jpg">
+                            </div>
+                            <div class="layer2">
+                                <div class="title">
+                                    <p>Title Name</p>
+                                </div>
+                                <div class="details">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer1"></div>
+                            <div class="image">
+                                <img src="./images/clem-onojeghuo.jpg" alt="clem-onojeghuo.jpg">
+                            </div>
+                            <div class="layer2">
+                                <div class="title">
+                                    <p>Title Name</p>
+                                </div>
+                                <div class="details">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="layer1"></div>
+                            <div class="image">
+                                <img src="./images/clem-onojeghuo.jpg" alt="clem-onojeghuo.jpg">
+                            </div>
+                            <div class="layer2">
+                                <div class="title">
+                                    <p>Title Name</p>
+                                </div>
+                                <div class="details">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="9-after_&_before">
+
+        <div class="container">
+
+            <h3>11- pesudo-element after & before</h3>
+
+            <p>
+            <pre>    Description:      -- creating an imaginary element using CSS only.</pre><br />
+            <pre>                      -- you must have <b><i>7-properties</i></b> in your persudo element</pre>
+            <pre>                                 1- content <b><i>!important</i></b></pre>
+            <pre>                                 2- width</pre>
+            <pre>                                 3- height</pre>
+            <pre>                                 4- background-color</pre>
+            <pre>                                 5- position</pre>
+            <pre>                                 6- top or bottom</pre>
+            <pre>                                 7- left or right</pre>
+            </p><br />
+
+            <div class="after-before-applying-section">
+                <h3>trying to create a layer using after effect</h3>
+                <p></p>
+                <br />
+                <div class="test1">
+
+                    <div class="container">
+                        <div class="card">
+                            <div class="image"><img src="./images/alexandru-stavrica.jpg" alt="alexandru-stavrica.jpg">
+                            </div>
+                            <div class="info">
+                                <p class="title">card title</p>
+                                <p class="details">card details</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="image"><img src="./images/alexandru-stavrica.jpg" alt="alexandru-stavrica.jpg">
+                            </div>
+                            <div class="info">
+                                <p class="title">card title</p>
+                                <p class="details">card details</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="image"><img src="./images/alexandru-stavrica.jpg" alt="alexandru-stavrica.jpg">
+                            </div>
+                            <div class="info">
+                                <p class="title">card title</p>
+                                <p class="details">card details</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="image"><img src="./images/alexandru-stavrica.jpg" alt="alexandru-stavrica.jpg">
+                            </div>
+                            <div class="info">
+                                <p class="title">card title</p>
+                                <p class="details">card details</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="image"><img src="./images/alexandru-stavrica.jpg" alt="alexandru-stavrica.jpg">
+                            </div>
+                            <div class="info">
+                                <p class="title">card title</p>
+                                <p class="details">card details</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="image"><img src="./images/alexandru-stavrica.jpg" alt="alexandru-stavrica.jpg">
+                            </div>
+                            <div class="info">
+                                <p class="title">card title</p>
+                                <p class="details">card details</p>
+                            </div>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+                <br /><br />
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="new-topic" id="10-after_&_before_applying_sec">
+
+        <div class="container after_before_applying_sec">
+
+            <h3>12- after & before applying</h3>
+
+            <p>
+            <pre>Description:    -- creating a square with word in it and then
+                    create an empty space and an pesudo element in ut.
+            </pre>
+            </p><br />
+
+            <div class="image"><img src="./images/after&beforeapplying.jpg" alt="after&beforeapplying.jpg" /></div>
+            <br /><br />
+            <div class="applying-section">
+                <div class="container">
+                    <div class="box">
+
+                        <div class="border">
+                            <p>TEST</p>
+                        </div>
+                        <br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+    <br /><br /><br />
+</body>
+
+</html>

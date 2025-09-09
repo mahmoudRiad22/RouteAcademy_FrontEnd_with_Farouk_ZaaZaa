@@ -1,0 +1,96 @@
+/******************************************************************************/
+/******************************************************************************/
+/* #region poppins fonts */
+
+@font-face {
+    font-family: "Poppins-Black";
+    src: url(../fonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url(../fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url(../fonts/Poppins/Poppins-Italic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Light";
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Poppins-Thin";
+    src: url(../fonts/Poppins/Poppins-Thin.ttf);
+}
+
+/* #endregion poppins fonts */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region SourceSance3  */
+    @font-face {
+        font-family: "SourceSans3";
+        src: url(../fonts/Source_Sans_3/SourceSans3-VariableFont_wght.ttf);
+    }
+@font-face {
+    font-family: "SourceSans3-Black";
+    src: url(../fonts/Source_Sans_3/SourceSans3-Black.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-Bold";
+    src: url(../fonts/Source_Sans_3/SourceSans3-Bold.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-ExtraBold";
+    src: url(../fonts/Source_Sans_3/SourceSans3-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-ExtraLight";
+    src: url(../fonts/Source_Sans_3/SourceSans3-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-Italic";
+    src: url(../fonts/Source_Sans_3/SourceSans3-Italic.ttf);
+}
+@font-face {
+    font-family: "SourceSans3Light";
+    src: url(../fonts/Source_Sans_3/SourceSans3-Light.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-Medium";
+    src: url(../fonts/Source_Sans_3/SourceSans3-Medium.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-Regular";
+    src: url(../fonts/Source_Sans_3/SourceSans3-Regular.ttf);
+}
+@font-face {
+    font-family: "SourceSans3-SemiBold";
+    src: url(../fonts/Source_Sans_3/SourceSans3-SemiBold.ttf);
+}
+
+/* #endregion SourceSance3  */
+/******************************************************************************/
+/******************************************************************************/

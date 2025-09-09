@@ -1,0 +1,10 @@
+filex.txt
+SourceSans3-Black.ttf
+SourceSans3-Bold.ttf
+SourceSans3-ExtraBold.ttf
+SourceSans3-ExtraLight.ttf
+SourceSans3-Italic.ttf
+SourceSans3-Light.ttf
+SourceSans3-Medium.ttf
+SourceSans3-Regular.ttf
+SourceSans3-SemiBold.ttf

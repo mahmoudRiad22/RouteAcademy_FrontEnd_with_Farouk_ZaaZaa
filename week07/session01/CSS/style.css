@@ -1,0 +1,430 @@
+/*****************************/
+/*****************************/
+/* #region Global CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --bg: #cfab8d; /* middle color Dominant background */
+    --surface: #d9c4b0; /* 1st right Cards/surfaces */
+    --buttons: #d9c4b0; /* 2nd right Interactive elements */
+    --accent: #eceedf; /* 1st left For highlights */
+    --text: black; /* 2nd left Primary text */
+
+    /* Optional extended palette */
+    --success: #4caf50; /* Positive actions */
+    --warning: #ffc107; /* Caution states */
+    --error: #f44336; /* Destructive actions */
+}
+.my-bg {
+    background-color: var(--bg);
+}
+.surface-bg {
+    background-color: var(--surface);
+}
+.buttons-bg {
+    background-color: var(--buttons);
+}
+.accent-bg {
+    background-color: var(--accent);
+}
+.text-clr {
+    color: var(--text);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Alegreya Sans", serif;
+    font-size: medium;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px 0px;
+    font-family: "Playwrite IT Moderna";
+    font-weight: 400;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playwrite IT Moderna";
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    padding-left: 15px;
+    font-family: "Alegreya", serif;
+    font-size: medium;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    font-style: italic;
+    text-align: center;
+    color: var(--text);
+}
+
+/* #endregion Global CSS */
+/*****************************/
+/*****************************/
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region fonts */
+
+@font-face {
+    font-family: "Heebo";
+    src: url(../fonts/Heebo-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+/* #endregion fonts */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+/*****************************/
+/*****************************/
+/* #region nav-bar */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+    overflow: auto;
+
+    width: 15%;
+    height: 90%;
+
+    /* background-color: var(--buttons); */
+}
+.nav-bar h4 {
+    font-weight: 800;
+}
+.nav-bar a {
+    text-align: left;
+    font-size: 20px;
+    margin: 10px 0px;
+    padding-left: 8px;
+}
+/* #endregion nav-bar */
+/*****************************/
+/*****************************/
+
+/*****************************/
+/*****************************/
+/* #region nav-bar-icons */
+
+.nav-bar-icons .fa-facebook:hover {
+    color: rgb(31, 109, 243) !important;
+    transform: scale(1.3);
+}
+.nav-bar-icons .fa-linkedin:hover {
+    transform: scale(1.3);
+    color: rgb(0, 0, 168) !important;
+}
+.nav-bar-icons .fa-x-twitter:hover {
+    transform: scale(1.3);
+    color: rgb(174, 174, 177) !important;
+}
+.nav-bar-icons .fa-google:hover {
+    transform: scale(1.3);
+    color: rgb(219, 63, 99) !important;
+}
+.nav-bar-icons .fa-github:hover {
+    transform: scale(1.3);
+    color: rgb(200, 200, 200) !important;
+}
+/* #endregion nav-bar-icons */
+/*****************************/
+/*****************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 1-recape */
+
+h2::after {
+    /* content: ""; */
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* #endregion 1-recape */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 2-header */
+
+#header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/imgi_8_liability-concept.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* #endregion 2-header  */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 2-navbar */
+
+#header2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url(../images/imgi_27_abstract-business-objects-as-symbol-teamwork.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* #endregion 2-navbar */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 4-category section */
+
+#header3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url(../images/imgi_7_business-people-negotiating-a-contract.jpg);
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.square2 {
+    width: 50px;
+    height: 50px;
+}
+.square1 {
+    width: 80px;
+    height: 80px;
+}
+.header-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #066ac9;
+    line-height: 33px;
+}
+.bg1 {
+    background-color: #E6F8F3;
+}
+.bg2 {
+    background-color: #FFF2E7;
+}
+.bg3 {
+    background-color: #FBE9EB;
+}
+.bg4 {
+    background-color: #F0ECF9;
+}
+.bg5 {
+    background-color: #E7F6F8;
+}
+.bg6 {
+    background-color: #E8EBED;
+}
+.bg7 {
+    background-color: #FEF6E0;
+}
+.bg8 {
+    background-color: #E9E9EA;
+}
+.bg9 {
+    background-color: #F0ECF9;
+}
+.bg10 {
+    background-color: #FBE9EB;
+}
+.bg11 {
+    background-color: #FBE9EB;
+}
+.bg12 {
+    background-color: #FBE9EB;
+}
+#category .card-item{
+    transition: transform .25s;
+}
+#category .card-item:hover{
+    transform: translateY(-8px);
+}
+/* #endregion 4-category section */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 5-carsouel */
+#slide1{
+    position: relative;
+}
+.cicle-60{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.cicle-120{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+#slide1 img{
+    /* position: absolute; */
+    /* top: -15%; */
+
+    /* transform: translateX(-50%); */
+    transform: translateY(50%);
+}
+#slide1 .content .content-title h3{
+    position: relative;
+    padding-bottom: 10px;
+}
+#slide1 .content .content-title h3::after {
+    content: "";
+
+    width: 15%;
+    height: 5px;
+    background-color: rgb(114, 197, 225);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.carousel-control-prev, .carousel-control-next{
+    transform: translateY(10%);
+}
+.carousel-indicators [data-bs-target], .carousel-indicators [data-bs-target] img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-indent: 0;
+    display: block;
+}
+/* #endregion 5-carsouel */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 6-navs&tabs */
+
+.bg-gray{
+    background-color: rgb(240, 240, 240);
+}
+.bg-lighblue{
+    background-color: #cae0f3;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #066AC9;
+}
+.all-levels{
+    background-color: rgba(190, 6, 190, 0.217);
+    color: purple;
+    font-size: 16px;
+}
+.bg-heart{
+    color: #D6293E;
+}
+.tabs .card-title{
+    font-size: 26px;
+    font-family: "Heebo";
+    font-weight: 500;
+    line-height: 33px   ;
+    color: black;
+    transition: color 1s;
+}
+.tabs .card-title a:hover{
+    color: #066ac9;
+}
+.card-text{
+    font-size: 19px;
+    font-family: "Roboto";
+    color: #747579;
+}
+
+.scrollSpy .navbar-nav .nav-link.active, .scrollSpy.navbar-nav .nav-link.show{
+border-radius: 10px;
+background-color: lightskyblue;
+color: black;
+
+}
+/* #endregion 6-navs&tabs */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region 7-scrollSpy */
+
+.scrollSpy .navbar-nav .nav-link.active, .scrollSpy.navbar-nav .nav-link.show{
+border-radius: 10px;
+background-color: lightskyblue;
+color: black;
+
+}
+.scrollSpy .applying-section #navbar-example{
+    top: 50px;
+
+}
+.three .applying-section #navbar-example2{
+    top: 50px;
+
+}
+.four .applying-section nav{
+    top: 50px;
+    z-index: 1030;
+}
+/* #endregion 7-scrollSpy */
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+

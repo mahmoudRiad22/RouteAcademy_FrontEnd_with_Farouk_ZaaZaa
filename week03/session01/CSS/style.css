@@ -1,0 +1,182 @@
+/* Global CSS */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    background-color: antiquewhite;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+h2 {
+    text-align: center;
+    background-color: burlywood;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    background-color: cadetblue;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+/* Main CSS */
+
+/* background-image */
+
+.div1 {
+    width: 600px;
+    height: 400px;
+    background-color: violet;
+    color: whitesmoke;
+
+    /* background-img */
+
+    background-image: url(../images/full-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /*
+    full pic with best quality
+    Think of it like fitting a photo into 
+    a frame without cutting off any parts.
+    */
+    background-size: cover;
+    /*
+    cover full div + no stretch
+    Think of it like zooming in on a photo 
+    until it fills the entire frame, even if edges get cut off.
+    */
+
+    background-position: center center;
+
+    background-attachment: fixed;
+    /* 
+    Key Behavior
+    -- The background image is locked to the viewport 
+        (visible screen area).
+    -- Content scrolls over the image (creates a "parallax" effect).
+    -- The image does not move when you scroll.
+    */
+
+    background-attachment: scroll; /*default state*/
+}
+
+.div21 {
+    height: 200px;
+    background-image: url(../images/clem-onojeghuo.jpg);
+    /* Size, postion, attachment, repeat*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.div22 {
+    height: 300px;
+    background-image: url(../images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Border */
+
+.div3 {
+    height: 400px;
+    width: 600px;
+
+    background-color: aquamarine;
+    margin: 0px 150px;
+
+    border-top: 10px solid black;
+    border-right: 10px dashed red;
+    border-bottom: 10px solid green;
+    border-left: 10px dotted gray;
+
+    /* border shorthand */
+    border: 20px solid violet;
+}
+
+/* creating arrows with borders */
+.div4 {
+    width: 0px;
+    height: 0px;
+
+    /* chose one arrow and make the others "transparent" */
+
+    /* RIGHT ARROW */
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid gray;
+    border-radius: 5%;
+
+    /* LEFT ARROW */
+    border-top: 30px solid transparent;
+    border-right: 30px solid orange;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-radius: 5%;
+
+    /* UPWARD ARROW */
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid red;
+    border-left: 30px solid transparent;
+    border-radius: 5%;
+
+    /* DOWNWARD ARROW */
+    border-top: 30px solid green;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-radius: 5%;
+
+    border-top: 100px solid green;
+    border-right: 100px solid orange;
+    border-bottom: 100px solid red;
+    border-left: 100px solid gray;
+    /* border-radius: 5%; */
+    border-top-left-radius: 35%;
+}
+
+/* background-clip */
+.div6 {
+    width: 500px;
+    height: 500px;
+
+    background-color: red;
+    border: 6px dotted black;
+    /* margin: auto; */
+    background-image: url(../images/ben-garratt.jpg);
+    padding: 30px;
+
+    background-clip: border-box;
+    background-clip: padding-box;
+    background-clip: content-box;
+}
+
+/* multiple background images */
+.div7 {
+    width: 70%;
+    margin: auto;
+    height: 500px;
+    background-color: red;
+
+    background-image: url(../images/drew-coffman-1872.jpg),
+        url(../images/ben-garratt.jpg), url(../images/stas-ovsky.jpg),
+        url(../images/clem-onojeghuo.jpg), url(../images/full-2.jpg);
+
+    background-size: 230px 230px, 230px 230px, 230px 230px, 230px 230px,
+        230px 230px;
+
+    background-repeat: no-repeat;
+    background-position: center center, top right, top left, bottom left,
+        bottom right;
+}
