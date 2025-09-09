@@ -1,7 +1,8 @@
 // change it to "config_example.js"
-import {API_KEY} from "../config.js"; 
+import {API_KEY} from "../config.js";
 
-const apiKey = API_KEY;
+// const apiKey = API_KEY;
+const apiKey = "%%API_KEY%%"; 
 const baseUrl = "https://api.weatherapi.com/v1/";
 
 const html = {
@@ -96,7 +97,7 @@ async function displayForcastWeather(responseData) {
 
                                 <span class="position-absolute h3">&deg;c</span><br/>
 
-                                </span><span class="h2 ps-4 pe-1">/</span>
+                                </span><span class="h2 ps-4 pe-1">/</span> <br/>
 
                                 <span class="min-temp-c h3 position-relative d-inline-block ps-0" 
                                     data-test="dayMinTempC" id="dayMinTempC">${days[i].day.mintemp_c}
@@ -131,37 +132,82 @@ async function displayForcastWeather(responseData) {
 getCurrentWeather("cairo");
 
 const searchBar = document.getElementById("searchInput");
-const searchLabel = document.getElementById("searchLabel");
 searchBar.addEventListener("input", function () {
+    const searchLabel = document.getElementById("searchLabel");
     if (searchBar.value) {
         searchLabel.classList.add("d-none");
         getCurrentWeather(searchBar.value);
-    }else{
-    searchLabel.classList.remove('d-none');
+    } else {
+        searchLabel.classList.remove("d-none");
     }
 });
 
-
-const headerLinks = document.querySelectorAll(".header-link");
+const headerLinks = document.querySelectorAll(".nav-link");
 for (const index in headerLinks) {
     if (Object.prototype.hasOwnProperty.call(headerLinks, index)) {
         const link = headerLinks[index];
-        link.addEventListener('click', function(e){
+        link.addEventListener("click", function (e) {
             addActiveClass(e.target);
-        })
+        });
     }
 }
 
-function addActiveClass(target){
+function addActiveClass(target) {
     for (const headerlink in headerLinks) {
         if (Object.prototype.hasOwnProperty.call(headerLinks, headerlink)) {
             const link = headerLinks[headerlink];
-            if (link === target){
-            link.classList.add('active')
-            }else{
-            link.classList.remove('active')
+            if (link === target) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
             }
-            
         }
     }
+}
+
+const emailBar = document.getElementById("emailInput");
+emailBar.addEventListener("input", function () {
+    const emailLabel = document.getElementById("emailLabel");
+    if (emailBar.value) {
+        emailLabel.classList.add("d-none");
+    } else {
+        emailLabel.classList.remove("d-none");
+    }
+});
+
+const subscribeBtn = document.getElementById("subscribeBtn");
+subscribeBtn.addEventListener("click", () => {
+    const toastLiveExample = document.getElementById("liveToast");
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+
+    if (emailValidation(emailBar.value)) {
+        document.getElementById("toastBodyParent").classList.remove("my-bg-danger");
+        document.getElementById("toastBody").classList.remove("text-danger");
+
+        document.getElementById("toastBodyParent").classList.add("my-bg-success");
+        document.getElementById("toastBody").classList.add("my-text-sucess");
+        document.getElementById("toastBody").innerHTML = "Success!!";
+
+        toastBootstrap.show();
+        setTimeout(() => {
+            toastBootstrap.hide();
+        }, 1500);
+    } else {
+        document.getElementById("toastBodyParent").classList.remove("my-bg-success");
+        document.getElementById("toastBody").classList.remove("text-success");
+
+        document.getElementById("toastBodyParent").classList.add("my-bg-danger");
+        document.getElementById("toastBody").classList.add("text-danger");
+        document.getElementById("toastBody").innerHTML = "Invalid Email!!";
+
+        toastBootstrap.show();
+        setTimeout(() => {
+            toastBootstrap.hide();
+        }, 1500);
+    }
+});
+
+function emailValidation(input) {
+    const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegEx.test(input);
 }

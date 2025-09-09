@@ -27,64 +27,57 @@
     background: linear-gradient(to right bottom, #4d5ca2, #eb718f);
 }
 
+.my-bg-danger {
+    background-color: #2c0b0e;
+}
 
-
-
-
-
+.my-bg-success {
+    background-color: #004928;
+}
+.my-text-sucess {
+    color: #55b298;
+}
 
 /******************************************************************************/
 /******************************************************************************/
 /* #region header */
 
-.logo img{
+.logo img {
     font-size: 14px;
     width: 3.75rem;
-
 }
-header a{
-    text-decoration: none;
-    color: #1f245c;
-    font-size: .875rem;
-    transition: ease .25s all;
+.navbar-toggler:focus {
+    outline: 3px solid #e0bcc5 !important;
+    color: #ffd6e0 !important;
 }
-header li{
-    transition: ease .25s all;
-}
-header li:focus{
-    outline: 3px solid rgb(79, 62, 141);
+.navbar-toggler:hover {
     outline: 3px solid #e0bcc5;
-    color: #009ad8;
-}
-header li.active{
-    /* outline: 3px solid rgb(79, 62, 141); */
-    outline: 3px solid #e0bcc5;
-    color: #009ad8;
-    color: white;
     color: #ffd6e0;
 }
-header li.active a{
-    color: rgb(79, 62, 141);
-    color: #ffd6e0
-
+.navbar-nav a {
+    text-decoration: none;
+    color: #1f245c;
+    font-size: 0.875rem;
+    transition: ease 0.25s all;
 }
 
-header li:hover{
-    outline: 3px solid rgb(79, 62, 141);
+.navbar-nav a:focus {
     outline: 3px solid #e0bcc5;
-
+    color: #ffd6e0;
+    /* color: #ffd6e0; */
 }
-header li:hover a{
-    color: rgb(79, 62, 141);
-    color: white;
-    color: #ffd6e0
+.navbar-nav a.active {
+    outline: 3px solid #e0bcc5;
+    color: #ffd6e0 !important;
+}
+.navbar-nav a:hover {
+    outline: 3px solid #e0bcc5;
+    color: #ffd6e0;
 }
 
 /* #endregion header */
 /******************************************************************************/
 /******************************************************************************/
-
-
 
 .search-Input {
     outline: none;
@@ -124,6 +117,7 @@ header li:hover a{
     position: absolute;
     right: 0.1rem;
     height: 2.8rem;
+    width: 6rem;
     background-color: #945d88;
     color: black;
     border: 0;
@@ -171,6 +165,7 @@ header li:hover a{
     position: absolute;
     right: 0.1rem;
     height: 2.8rem;
+    width: 6rem;
     background-color: rgb(75, 58, 134);
     color: black;
     color: #fae0e6;
@@ -182,6 +177,13 @@ header li:hover a{
     color: #de7d95;
     color: black;
 }
+.my-find-bg {
+    background: linear-gradient(to right, #484d84, #b582a9);
+}
+.my-find-bg:hover {
+    background: linear-gradient(to right, #b582a9, #484d84);
+}
+
 .custom-search-floating {
     position: relative;
 }
@@ -215,50 +217,62 @@ header li:hover a{
     opacity: 0.7;
 }
 
-footer .links li{
+footer .links li {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: #945D88;
+    background-color: #945d88;
     margin: 2px;
-    transition: .25s ease all;
+    transition: 0.25s ease all;
 }
-footer .links li a{
+footer .links li a {
     color: black;
-    transition: .25s ease all;
+    transition: 0.25s ease all;
 }
 footer .links li:hover,
-footer .links li:hover a{
-    background-color: #B171A4;
+footer .links li:hover a {
+    background-color: #b171a4;
     color: #ffd6e0;
 }
-.my-footer-bg{
+.my-footer-bg {
     /* background-color: #C06485; */
     /* background-color: #815986; */
-    background: linear-gradient(to right, #8A5F90, #C06485);
+    background: linear-gradient(to right, #8a5f90, #c06485);
 }
-.my-header-bg{
-    background: linear-gradient(to right, #484D84, #B582A9);
+.my-header-bg {
+    background: linear-gradient(to right, #484d84, #b582a9);
 }
-.header-text-gradient{
-    background: linear-gradient(to right,#b1a1a5, #fae0e6);
+.header-text-gradient {
+    background: linear-gradient(to right, #b1a1a5, #fae0e6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-size: 1.2rem;
-    padding: .31rem;
+    padding: 0.31rem;
     vertical-align: center;
     font-weight: bold;
     display: inline-block;
+}
 
+/* .subscribe-btn {
+    position: absolute;
+    right: 0.1rem;
+    height: 2.8rem;
+    background-color: rgb(75, 58, 134);
+    color: black;
+    color: #fae0e6;
+    border: 0;
+    transition: all 0.25s ease;
 }
-.my-header-bg:hover{
-    background: linear-gradient(to right,#B582A9 ,#484D84);
-}
+.subscribe-btn:hover {
+    background-color: rgb(101, 79, 180);
+    color: #de7d95;
+    color: black;
+} */
 
 /* TODO: 
-1- navbar
-2-active state
+1- navbar DONE
+2-active state DONE
 3- shine effect
 4- rotaing glow on the today section
  */
