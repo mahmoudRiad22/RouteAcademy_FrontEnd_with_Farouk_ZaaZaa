@@ -1,0 +1,38 @@
+# Name of the workflow
+name: Build and Deploy WeatherApp
+
+# Run this workflow on every push to the `main` branch
+on:
+  push:
+    branches:
+      - main # Or your default branch
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: write # This is required to push the changes to the gh-pages branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Use the latest version of Ubuntu
+    steps:
+      # 1. Check out your repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Find and replace the placeholder with the secret
+      - name: Inject Secret Key
+        run: |
+          # Use 'sed' to find and replace the placeholder in your JS file
+          # The 'g' flag ensures all occurrences are replaced
+          sed -i "s|%%API_KEY%%|${{ secrets.WEATHER_API_KEY }}|g" week13/JsAssignment5-weatherApp/JS/main.js
+        # If your file is in a subfolder, adjust the path like this:
+        # sed -i "s|%%API_KEY%%|${{ secrets.API_KEY }}|g" js/main.js
+
+      # 3. Deploy the modified files to the gh-pages branch
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: . # Deploy the entire root directory
+          # If your site files are in a 'public' or 'dist' folder, change this to:
+          # publish_dir: ./public
