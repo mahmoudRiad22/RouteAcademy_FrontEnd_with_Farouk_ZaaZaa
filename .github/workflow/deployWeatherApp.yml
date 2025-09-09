@@ -24,7 +24,7 @@ jobs:
         run: |
           # Use 'sed' to find and replace the placeholder in your JS file
           # The 'g' flag ensures all occurrences are replaced
-          sed -i "s|%%API_KEY%%|${{ secrets.API_KEY }}|g" week13/JsAssignment5-weatherApp/JS/main.js
+          sed -i "s|%%API_KEY%%|${{ secrets.WEATHER_API_KEY }}|g" week13/JsAssignment5-weatherApp/JS/main.js
         # If your file is in a subfolder, adjust the path like this:
         # sed -i "s|%%API_KEY%%|${{ secrets.API_KEY }}|g" js/main.js
 
