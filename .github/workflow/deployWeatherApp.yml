@@ -33,6 +33,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./week13/JsAssignment5-weatherApp # Deploy the entire root directory
+          publish_dir: . # Deploy the entire root directory
           # If your site files are in a 'public' or 'dist' folder, change this to:
           # publish_dir: ./public
