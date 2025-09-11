@@ -13,13 +13,13 @@ async function getPhotoss(city) {
     console.log("resData :>> ", resData.results);
     displayPhotots(await resData);
 }
+
+
+
 const rows = document.getElementById("rows");
-// console.log("rows :>> ", rows);
 function displayPhotots(resData) {
     let box = "";
-    // console.log(resData.results[0].urls.regular);
     for (const index in resData.results) {
-    console.log("resData.results[index].height :>> ", resData.results[index].height, resData.results[index].width);
         box += `
             <div class="masonry-item mb-4 pic">
                 <div class="inner shadow-lg rounded-3 overflow-hidden">
@@ -35,3 +35,14 @@ function displayPhotots(resData) {
 }
 
 getPhotoss("giza");
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("input", function () {
+    console.log("searchInput :>> ", searchInput.value);
+    const searchLabel = document.getElementById("searchLabel");
+    if (searchInput.value) {
+        searchLabel.classList.add("d-none");
+        getPhotoss(searchInput.value);
+    } else {
+        searchLabel.classList.remove("d-none");
+    }
+});
