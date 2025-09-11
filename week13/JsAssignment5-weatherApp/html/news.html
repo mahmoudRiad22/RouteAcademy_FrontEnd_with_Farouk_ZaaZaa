@@ -75,13 +75,13 @@
         </anv>
     </header>
 
-    <section>
-        <div class="container">
+    <section class="News_section">
+        <div class="container py-4">
             <div class="row g-4" id="rows">
-                <div class="pic col-4">
+                <div class="pic col">
                     <div class="inner shadow rounded-4 overflow-hidden">
                         <div class="img">
-                            <img class="w-100 d-block" src="../images/new Design1.png" alt="" />
+                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -89,21 +89,21 @@
                 <!-- <div class="">
                     <div class="inner">
                         <div class="img">
-                            <img class="w-100 d-block" src="../images/new Design1.png" alt="" />
+                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
                         </div>
                     </div>
                 </div>
                 <div class="">
                     <div class="inner">
                         <div class="img">
-                            <img class="w-100 d-block" src="../images/new Design1.png" alt="" />
+                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
                         </div>
                     </div>
                 </div>
                 <div class="">
                     <div class="inner">
                         <div class="img">
-                            <img class="w-100 d-block" src="../images/new Design1.png" alt="" />
+                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
                         </div>
                     </div>
                 </div> -->
@@ -112,6 +112,56 @@
     </section>
 
 
+    <footer class=" py-5 my-footer-bg">
+        <div class="container">
+
+            <div class="inner row align-items-center">
+
+                <div class="col rounded-5 p-1">
+                    <div class="errorBar text-center" id="errorBar">
+
+                    </div>
+                    <div class="custom-footer-floating d-flex align-items-center">
+                        <input type="email" name="emailBar" id="emailInput" placeholder=" ">
+
+                        <label id="emailLabel" for="emailBar">Enter your email to subscribe...</label>
+                        <button class="subscribe-btn btn rounded-5 col-2 border-1 my--bg" id="subscribeBtn">
+                            <p class="header-text-gradient fs-6 p-0 pt-1">Subscribe</p>
+                        </button>
+                    </div>
+
+                </div>
+                <ul class="links list-unstyled d-flex justify-content-center 
+                            align-items-center col-3 align-items-center">
+
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-google"></i></a>
+                    </li>
+                    <li class="px-1 d-flex justify-content-center align-items-center">
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <section class="utilities">
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast me-auto">
+                <div class="toast-body d-flex justify-content-between align-items-center" data-bs-theme="dark"
+                    id="toastBodyParent">
+                    <span id="toastBody" class="">Hello, world! This is a toast message.</span>
+                    <button type="button" class="btn-close " data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- ****************************** -->
     <!-- ****************************** -->
     <!-- #region Scripts files -->

@@ -17,12 +17,12 @@ const rows = document.getElementById("rows");
 // console.log("rows :>> ", rows);
 function displayPhotots(resData) {
     let box = "";
-    console.log(resData.results[0].urls.regular);
-
+    // console.log(resData.results[0].urls.regular);
     for (const index in resData.results) {
+    console.log("resData.results[index].height :>> ", resData.results[index].height, resData.results[index].width);
         box += `
-            <div class="pic col-4">
-                <div class="inner shadow rounded-4 overflow-hidden">
+            <div class="masonry-item mb-4 pic">
+                <div class="inner shadow-lg rounded-3 overflow-hidden">
                     <div class="img">
                         <img class="w-100 d-block" src="${resData.results[index].urls.regular}" alt="" />
                     </div>
@@ -34,4 +34,4 @@ function displayPhotots(resData) {
     document.getElementById("rows").innerHTML = box;
 }
 
-getPhotoss("cairo");
+getPhotoss("giza");
