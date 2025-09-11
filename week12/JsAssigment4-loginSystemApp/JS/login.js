@@ -42,7 +42,7 @@ try {
         // console.log("e.target :>> ", e.target);
         infoBar.innerHTML = "";
         const isPass = logInValidation();
-        console.log("isPass :>> ", isPass);
+        // console.log("isPass :>> ", isPass);
         if (isPass[0]) {
             // console.log("Sucess should load the welcome screen now");
             sessionStorage.setItem("currentUser", JSON.stringify(isPass[1]));
