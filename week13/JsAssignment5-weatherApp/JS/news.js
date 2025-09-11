@@ -9,6 +9,4 @@ const urlNewsByCity =
     `&category=general` +
     `&pageSize=20`;
 
-console.log(url);
-
 console.log("urlNewsByCity :>> ", urlNewsByCity);
