@@ -6,11 +6,11 @@ const city = `us`;
 
 async function getPhotoss(city) {
     const photosUrl = `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}`;
-    console.log("photosUrl :>> ", photosUrl);
+    // console.log("photosUrl :>> ", photosUrl);
     const response = await fetch(photosUrl);
     const resData = await response.json();
 
-    console.log("resData :>> ", resData.results);
+    // console.log("resData :>> ", resData.results);
     displayPhotots(await resData);
 }
 
@@ -37,7 +37,7 @@ function displayPhotots(resData) {
 getPhotoss("giza");
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", function () {
-    console.log("searchInput :>> ", searchInput.value);
+    // console.log("searchInput :>> ", searchInput.value);
     const searchLabel = document.getElementById("searchLabel");
     if (searchInput.value) {
         searchLabel.classList.add("d-none");
