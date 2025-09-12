@@ -5,7 +5,8 @@ const baseUrl = "https://api.unsplash.com/search/photos?";
 const city = `us`;
 
 async function getPhotoss(city) {
-    const photosUrl = `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}`+`&per_page=30`;
+    const photosUrl =
+        `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}` + `&per_page=30`;
     // console.log("photosUrl :>> ", photosUrl);
     const response = await fetch(photosUrl);
     const resData = await response.json();
@@ -13,8 +14,6 @@ async function getPhotoss(city) {
     // console.log("resData :>> ", await resData.results);
     displayPhotots(await resData);
 }
-
-
 
 const rows = document.getElementById("rows");
 function displayPhotots(resData) {
@@ -47,7 +46,9 @@ searchInput.addEventListener("input", function () {
     }
 });
 
-
+/********************************************/
+/********************************************/
+// #region footer
 
 const emailBar = document.getElementById("emailInput");
 emailBar.addEventListener("input", function () {
@@ -95,3 +96,7 @@ function emailValidation(input) {
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegEx.test(input);
 }
+
+// #endregion footer
+/********************************************/
+/********************************************/
