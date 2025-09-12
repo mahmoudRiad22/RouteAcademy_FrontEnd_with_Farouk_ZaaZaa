@@ -35,53 +35,52 @@
 
 </head>
 
-<body class="gradient-desing2-right-bottom">
+<body class="gradient-desing2-right-bottom bg-danger">
 
     <header class="my-header-bg">
-        <anv class="navbar navbar-expand-lg">
-            <div class="container">
-
-                <a href="" class="navbar-brand">
-                    <img class="" src="../images/image- (1).png" alt="image- (1).png" />
-                    <span class=" mx-2 text-white">WeatherApp</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item header-link my-1  fw-semibold bg-transparent">
-                            <a href="../index.html" class="nav-link rounded-5 px-3 mx-1">Home</a>
-                        </li>
-                        <li class="nav-item header-link my-1  fw-semibold bg-transparent">
-                            <a href="./news.html" class="nav-link rounded-5 px-3 mx-1">News</a>
-                        </li>
-                        <!-- <li class="nav-item header-link my-1  fw-semibold bg-transparent">
-                            <a href="javascript:;" class="nav-link rounded-5 px-3 mx-1">Live
-                                cameras</a>
-                        </li> -->
-                        <li class="nav-item header-link my-1  fw-semibold bg-transparent">
-                            <a href="./photos.html" class="nav-link rounded-5 px-3 mx-1 active">Photos</a>
-                        </li>
-                        <li class="nav-item header-link my-1  fw-semibold bg-transparent">
-                            <a href="javascript:;" class="nav-link rounded-5 px-3 mx-1">Contact</a>
-                        </li>
-                    </ul>
+        <div class="container-fluid">
+            <anv class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a href="" class="navbar-brand ">
+                        <img class="" src="../images/image- (1).png" alt="image- (1).png" />
+                        <span class=" mx-2 text-white">WeatherApp</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item header-link my-1  fw-semibold bg-transparent">
+                                <a href="../index.html" class="nav-link rounded-5 px-3 mx-1">Home</a>
+                            </li>
+                            <li class="nav-item header-link my-1  fw-semibold bg-transparent">
+                                <a href="./news.html" class="nav-link rounded-5 px-3 mx-1">News</a>
+                            </li>
+                            <!-- <li class="nav-item header-link my-1  fw-semibold bg-transparent">
+                                <a href="javascript:;" class="nav-link rounded-5 px-3 mx-1">Live
+                                    cameras</a>
+                            </li> -->
+                            <li class="nav-item header-link my-1  fw-semibold bg-transparent">
+                                <a href="./photos.html" class="nav-link rounded-5 px-3 mx-1 active">Photos</a>
+                            </li>
+                            <li class="nav-item header-link my-1  fw-semibold bg-transparent">
+                                <a href="javascript:;" class="nav-link rounded-5 px-3 mx-1">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </anv>
+            </anv>
+        </div>
     </header>
 
 
-        <section class="search-section">
+    <section class="search-section">
         <div class="container">
             <div class="rounded-5 my-4 w-75 m-auto">
                 <div class="custom-search-floating d-flex align-items-center">
                     <input type="search" name="searchInput" id="searchInput" placeholder=" ">
-                    <label id="searchLabel" for="searchInput">Search photos in...</label>
+                    <label id="searchLabel" for="searchInput" class="flex-text">Search photos in...</label>
                     <button class="find-btn rounded-5 col-2 border-1 my-find-bg">
                         <p class="header-text-gradient">Find</p>
                     </button>
@@ -94,7 +93,7 @@
 
     <section class="photos-section">
         <div class="container py-4">
-            <div class="masonry-container" id="rows">
+            <div class="column-count" id="rows">
                 <div class="masonry-item pic">
                     <div class="inner shadow rounded-4 overflow-hidden">
                         <div class="img">
@@ -130,7 +129,7 @@
 
 
     <footer class=" py-5 my-footer-bg">
-        <div class="container">
+        <div class="container text-center">
 
             <div class="inner row align-items-center">
 
@@ -141,15 +140,15 @@
                     <div class="custom-footer-floating d-flex align-items-center">
                         <input type="email" name="emailBar" id="emailInput" placeholder=" ">
 
-                        <label id="emailLabel" for="emailBar">Enter your email to subscribe...</label>
+                        <label id="emailLabel" for="emailBar" class="flex-text">Enter email to subscribe...</label>
                         <button class="subscribe-btn btn rounded-5 col-2 border-1 my--bg" id="subscribeBtn">
-                            <p class="header-text-gradient fs-6 p-0 pt-1">Subscribe</p>
+                            <p class="header-text-gradient fs-6 p-0 pt-1 flex-text">Subscribe</p>
                         </button>
                     </div>
 
                 </div>
                 <ul class="links list-unstyled d-flex justify-content-center 
-                            align-items-center col-3 align-items-center">
+                            align-items-center col-12 col-md-3 align-items-center">
 
                     <li class="px-1 d-flex justify-content-center align-items-center">
                         <a href=""><i class="fa-brands fa-facebook"></i></a>

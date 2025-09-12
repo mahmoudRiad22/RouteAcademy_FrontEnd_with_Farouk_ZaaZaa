@@ -1,0 +1,52 @@
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .column-count {
+        column-count: 1;
+    }
+
+    .flex-text {
+        font-size: 14px;
+        text-wrap: wrap;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .flex-text {
+        font-size: 16px;
+        text-wrap: wrap;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .column-count {
+        column-count: 2;
+    }
+    .flex-text {
+        font-size: 18px;
+        text-wrap: wrap;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .column-count {
+        column-count: 3;
+    }
+    .flex-text {
+        font-size: 20px;
+        text-wrap: wrap;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .flex-text {
+        font-size: 24px;
+        text-wrap: wrap;
+    }
+}

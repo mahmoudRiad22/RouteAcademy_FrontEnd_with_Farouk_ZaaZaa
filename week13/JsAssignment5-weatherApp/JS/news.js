@@ -1,16 +1,82 @@
 import {NEWS_API} from "../config.js";
 const city = `us`;
-const urlNewsByCity =
-    `https://newsapi.org/v2/top-headlines?` +
-    // `&q=?`+
-    // `sources=bbc-news`+
-    `apiKey=${NEWS_API}` +
-    `&country=${city}` +
-    `&category=general` +
-    `&pageSize=20`;
 
-console.log("urlNewsByCity :>> ", urlNewsByCity);
+// console.log('urklNewsByCity :>> ', urlNewsByCity.status);
 
+async function getNews(keyword) {
+    // console.log('keyword :>> ', keyword);
+    const urlNewsByCity =
+        `https://newsapi.org/v2/everything?` +
+        // `&q=?`+
+        // `sources=bbc-news`+
+        `apiKey=${NEWS_API}` +
+        `&q=${keyword}` +
+        `&language=en` +
+        `&sortBy=popularity` +
+        `&page=1` +
+        `&pageSize=25`;
+    const response = await fetch(urlNewsByCity);
+    const resData = await response.json();
+
+    // console.log("urlNewsByCity :>> ", await resData);
+    // console.log("urlNewsByCity :>> ", await resData.articles);
+    return await resData.articles;
+}
+
+function displayNews(newsArticles) {
+    let box = "";
+    console.log(
+        "tyepof newsArticles[0] :>> ",
+        newsArticles[0].description.split(" ").slice(0, 15).join(" ")
+    );
+    for (const i in newsArticles) {
+        // console.log('i :>> ', i);
+        box += `
+        <div class="inner shadow-lg rounded-4 overflow-hidden mb-3">
+            <div class="img">
+                <img class="w-100 d-block" src="${newsArticles[i].urlToImage}" alt="" />
+            </div>
+            <div class="article p-4">
+                <article>
+                    <h4 class="text-white">${newsArticles[i].title}</h4>
+                    <p class="h6">By:<b><i>${newsArticles[i].author}</i></b></p>
+                    <caption class="text-truncate">
+                    <details>
+                    <summary>${newsArticles[i].description
+                        .split(" ")
+                        .slice(0, 15)
+                        .join(" ")}</summary>
+                    ${newsArticles[i].description.split(" ").slice(15).join(" ")}</details>
+                    <a href="${
+                        newsArticles[i].url
+                    }" target="_blank" class="btn btn-primary rounded-4 my-2 read-more">Read More >></a>
+                    </caption>
+                </article>
+            </div>
+        </div>
+`;
+    }
+    document.getElementById("row").innerHTML = box;
+}
+
+const searchBar = document.getElementById("searchInput");
+searchBar.addEventListener("input", function () {
+    const searchLabel = document.getElementById("searchLabel");
+    if (searchBar.value) {
+        searchLabel.classList.add("d-none");
+        searchfor(searchBar.value);
+    } else {
+        searchLabel.classList.remove("d-none");
+    }
+});
+
+async function searchfor(keywords) {
+    const newsArticles = await getNews(keywords);
+    console.log("urlNewsByCity :>> ", newsArticles);
+    displayNews(newsArticles);
+}
+
+searchfor("global")
 /********************************************/
 /********************************************/
 // #region Footer
