@@ -4,23 +4,29 @@ const city = `us`;
 // console.log('urklNewsByCity :>> ', urlNewsByCity.status);
 
 async function getNews(keyword) {
-    // console.log('keyword :>> ', keyword);
-    const urlNewsByCity =
-        `https://newsapi.org/v2/everything?` +
-        // `&q=?`+
-        // `sources=bbc-news`+
-        `apiKey=${NEWS_API}` +
-        `&q=${keyword}` +
-        `&language=en` +
-        `&sortBy=popularity` +
-        `&page=1` +
-        `&pageSize=25`;
-    const response = await fetch(urlNewsByCity);
-    const resData = await response.json();
+    document.getElementById("loaders").innerHTML = `
+    <span class="loader"></span>
+    `;
 
-    // console.log("urlNewsByCity :>> ", await resData);
-    // console.log("urlNewsByCity :>> ", await resData.articles);
-    return await resData.articles;
+    try {
+        // console.log('keyword :>> ', keyword);
+        const urlNewsByCity =
+            `https://newsapi.org/v2/everything?` +
+            // `&q=?`+
+            // `sources=bbc-news`+
+            `apiKey=${NEWS_API}` +
+            `&q=${keyword}` +
+            `&language=en` +
+            `&sortBy=popularity` +
+            `&page=1` +
+            `&pageSize=25`;
+        const response = await fetch(urlNewsByCity);
+        const resData = await response.json();
+        document.getElementById("loaders").innerHTML = ``;  
+        return await resData.articles;
+    } catch (err) {
+        console.error("Error Fetching Data :>> ", err);
+    }
 }
 
 function displayNews(newsArticles) {
@@ -76,7 +82,7 @@ async function searchfor(keywords) {
     displayNews(newsArticles);
 }
 
-searchfor("global")
+searchfor("global");
 /********************************************/
 /********************************************/
 // #region Footer
