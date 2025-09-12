@@ -93,7 +93,6 @@
 .navbar-nav a:focus {
     outline: 3px solid #e0bcc5;
     color: #ffd6e0;
-    /* color: #ffd6e0; */
 }
 .navbar-nav a.active {
     outline: 3px solid #e0bcc5;
@@ -242,8 +241,6 @@ footer .links li:hover a {
 }
 
 .my-footer-bg {
-    /* background-color: #C06485; */
-    /* background-color: #815986; */
     background: linear-gradient(to right, #8a5f90, #c06485);
 }
 
@@ -367,9 +364,3 @@ footer .links li:hover a {
 /******************************************************************************/
 /******************************************************************************/
 
-/* TODO: 
-1- navbar DONE
-2-active state DONE
-3- shine effect
-4- rotaing glow on the today section
- */
