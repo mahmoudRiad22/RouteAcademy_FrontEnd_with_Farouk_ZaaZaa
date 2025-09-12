@@ -5,12 +5,12 @@ const baseUrl = "https://api.unsplash.com/search/photos?";
 const city = `us`;
 
 async function getPhotoss(city) {
-    const photosUrl = `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}`;
+    const photosUrl = `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}`+`&per_page=30`;
     // console.log("photosUrl :>> ", photosUrl);
     const response = await fetch(photosUrl);
     const resData = await response.json();
 
-    // console.log("resData :>> ", resData.results);
+    // console.log("resData :>> ", await resData.results);
     displayPhotots(await resData);
 }
 
