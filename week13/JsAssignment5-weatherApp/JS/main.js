@@ -58,7 +58,7 @@ function formateDate(dateStr) {
     ];
     const date = new Date(dateStr);
     const formattedDate = {
-        name: dayNames[date.getDay()? date.getDay() - 1 : date.getDay() + 6],
+        name: dayNames[date.getDay() ? date.getDay() - 1 : date.getDay() + 6],
         date: date.getDate(),
         month: monthNames[date.getMonth() - 1],
         year: date.getFullYear(),
@@ -141,6 +141,10 @@ searchBar.addEventListener("input", function () {
     }
 });
 
+/********************************************/
+/********************************************/
+// #region header
+
 const headerLinks = document.querySelectorAll(".nav-link");
 for (const index in headerLinks) {
     if (Object.prototype.hasOwnProperty.call(headerLinks, index)) {
@@ -163,6 +167,14 @@ function addActiveClass(target) {
         }
     }
 }
+
+// #endregion header
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region footer
 
 const emailBar = document.getElementById("emailInput");
 emailBar.addEventListener("input", function () {
@@ -210,3 +222,7 @@ function emailValidation(input) {
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegEx.test(input);
 }
+
+// #endregion footer
+/********************************************/
+/********************************************/
