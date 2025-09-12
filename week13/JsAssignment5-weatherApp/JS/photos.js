@@ -22,7 +22,7 @@ async function getPhotos(city) {
     }
 }
 
-const rows = document.getElementById("rows");
+// const rows = document.getElementById("rows");
 function displayPhotots(resData) {
     let box = "";
     for (const index in resData.results) {
