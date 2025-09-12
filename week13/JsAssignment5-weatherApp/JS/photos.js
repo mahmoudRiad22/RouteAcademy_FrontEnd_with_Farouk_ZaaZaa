@@ -2,14 +2,24 @@ import {UNSPLASH_ACCESS_KEY} from "../config.js";
 
 const baseUrl = "https://api.unsplash.com/search/photos?";
 
-
 async function getPhotos(city) {
-    const photosUrl =
-        `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}` + `&per_page=30`;
-    const response = await fetch(photosUrl);
-    const resData = await response.json();
+    document.getElementById("loaders").innerHTML = `
+    <span class="loader"></span>
+    `;
 
-    displayPhotots(await resData);
+    try {
+        console.clear();
+        const photosUrl =
+            `${baseUrl}` + `query=${city}` + `&client_id=${UNSPLASH_ACCESS_KEY}` + `&per_page=30`;
+        const response = await fetch(photosUrl);
+        const resData = await response.json();
+
+        displayPhotots(await resData);
+            document.getElementById("loaders").innerHTML = ``;
+    } catch (err) {
+        console.error("Error Fetching Data :>> ", err);
+
+    }
 }
 
 const rows = document.getElementById("rows");

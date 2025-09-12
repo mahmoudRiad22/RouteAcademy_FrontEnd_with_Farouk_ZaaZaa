@@ -25,11 +25,19 @@ const html = {
 };
 
 async function getCurrentWeather(cityname) {
-    const url = `${baseUrl}/forecast.json?q=${cityname}&days=15&hour=24&key=${apiKey}`;
-    const response = await fetch(url);
-    const responseData = await response.json();
-    diplayCurrentWeather(responseData);
-    displayForcastWeather(responseData);
+    document.getElementById("loaders").innerHTML = `
+    <span class="loader"></span>
+    `;
+    try {
+        const url = `${baseUrl}/forecast.json?q=${cityname}&days=15&hour=24&key=${apiKey}`;
+        const response = await fetch(url);
+        const responseData = await response.json();
+        document.getElementById("loaders").innerHTML = ``;
+        diplayCurrentWeather(responseData);
+        displayForcastWeather(responseData);
+    } catch (err) {
+        console.error("Error Fetching Data :>> ", err);
+    }
 }
 
 function diplayCurrentWeather(responseData) {
@@ -127,9 +135,8 @@ async function displayForcastWeather(responseData) {
         html.forecast.forecastDaysRow.innerHTML = box;
     }
 }
-// TODO: make this run at user location automatically
-getCurrentWeather("cairo");
 
+// read input
 const searchBar = document.getElementById("searchInput");
 searchBar.addEventListener("input", function () {
     const searchLabel = document.getElementById("searchLabel");
@@ -226,3 +233,5 @@ function emailValidation(input) {
 // #endregion footer
 /********************************************/
 /********************************************/
+
+getCurrentWeather("cairo");
