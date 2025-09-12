@@ -1,7 +1,6 @@
 import {NEWS_API} from "../config.js";
 const city = `us`;
 
-// console.log('urklNewsByCity :>> ', urlNewsByCity.status);
 
 async function getNews(keyword) {
     document.getElementById("loaders").innerHTML = `
@@ -9,11 +8,8 @@ async function getNews(keyword) {
     `;
 
     try {
-        // console.log('keyword :>> ', keyword);
         const urlNewsByCity =
             `https://newsapi.org/v2/everything?` +
-            // `&q=?`+
-            // `sources=bbc-news`+
             `apiKey=${NEWS_API}` +
             `&q=${keyword}` +
             `&language=en` +
@@ -31,12 +27,8 @@ async function getNews(keyword) {
 
 function displayNews(newsArticles) {
     let box = "";
-    console.log(
-        "tyepof newsArticles[0] :>> ",
-        newsArticles[0].description.split(" ").slice(0, 15).join(" ")
-    );
+
     for (const i in newsArticles) {
-        // console.log('i :>> ', i);
         box += `
         <div class="inner shadow-lg rounded-4 overflow-hidden mb-3">
             <div class="img">
@@ -78,7 +70,6 @@ searchBar.addEventListener("input", function () {
 
 async function searchfor(keywords) {
     const newsArticles = await getNews(keywords);
-    console.log("urlNewsByCity :>> ", newsArticles);
     displayNews(newsArticles);
 }
 

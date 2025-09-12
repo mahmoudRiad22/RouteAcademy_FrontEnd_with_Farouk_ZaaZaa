@@ -1,8 +1,6 @@
-// change it to "config_example.js"
 import {API_KEY} from "../config.js";
 const apiKey = API_KEY;
 
-// const apiKey = "e62895f9f3744dcea6d172527241907";
 const baseUrl = "https://api.weatherapi.com/v1/";
 
 const html = {

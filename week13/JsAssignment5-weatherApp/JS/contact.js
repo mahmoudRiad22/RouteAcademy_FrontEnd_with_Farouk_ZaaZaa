@@ -69,7 +69,6 @@ submitBtn.addEventListener("click", function () {
         validateCompanyName(companyBar.value) &&
         validateWebsite(websiteBar.value)
     ) {
-        console.log("ALL Passed");
         document.getElementById("toastBodyParent").classList.remove("my-bg-danger");
         document.getElementById("toastBody").classList.remove("text-danger");
 
@@ -81,8 +80,6 @@ submitBtn.addEventListener("click", function () {
         setTimeout(() => {
             toastBootstrap.hide();
         }, 2500);
-    } else {
-        console.log("Faild to submit Data");
     }
 });
 
