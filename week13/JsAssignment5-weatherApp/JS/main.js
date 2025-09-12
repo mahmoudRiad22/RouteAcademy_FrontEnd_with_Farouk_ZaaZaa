@@ -25,7 +25,7 @@ const html = {
 };
 
 async function getCurrentWeather(cityname) {
-    const url = `${baseUrl}/forecast.json?q=${cityname}&days=4&hour=24&key=${apiKey}`;
+    const url = `${baseUrl}/forecast.json?q=${cityname}&days=15&hour=24&key=${apiKey}`;
     const response = await fetch(url);
     const responseData = await response.json();
     diplayCurrentWeather(responseData);
@@ -58,7 +58,7 @@ function formateDate(dateStr) {
     ];
     const date = new Date(dateStr);
     const formattedDate = {
-        name: dayNames[date.getDay() - 1],
+        name: dayNames[date.getDay()? date.getDay() - 1 : date.getDay() + 6],
         date: date.getDate(),
         month: monthNames[date.getMonth() - 1],
         year: date.getFullYear(),
