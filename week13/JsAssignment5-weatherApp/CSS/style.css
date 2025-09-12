@@ -290,17 +290,35 @@ footer .links li:hover a {
 /******************************************************************************/
 /* #region masonry layout */
 
-.masonry-container {
-    column-count: 3;
+.column-count {
+    column-count: 1;
 }
 
 /* #endregion masonry layout */
 /******************************************************************************/
 /******************************************************************************/
 
+.read-more {
+    background-color: #945d88;
+    background-color: #484d84;
+    color: black;
+    /* color: white; */
+    border: 0;
+    transition: all 0.25s;
+}
+.read-more:hover {
+    background-color: #b171a4;
+    color: #ffd6e0;
+}
+
+.flex-text{
+    font-size: 10px;
+    text-wrap: wrap;
+}
 /* TODO: 
 1- navbar DONE
 2-active state DONE
 3- shine effect
 4- rotaing glow on the today section
  */
+

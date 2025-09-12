@@ -76,46 +76,58 @@
     </header>
 
 
+    <section class="search-section">
+        <div class="container">
+            <div class="rounded-5 my-4 w-75 m-auto">
+                <div class="custom-search-floating d-flex align-items-center">
+                    <input type="search" name="searchInput" id="searchInput" placeholder=" ">
+                    <label id="searchLabel" for="searchInput" class="flex-text">Search anything...</label>
+                    <button class="find-btn rounded-5 col-2 border-1 my-find-bg">
+                        <p class="header-text-gradient">Find</p>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
     <section class="News_section">
-        <div class="container py-4">
-            <div class="row g-4" id="rows">
-                <div class="pic col">
+        <div class="container py-3">
+            <div class="">
+                <div class="column-count g-4" id="row">
                     <div class="inner shadow rounded-4 overflow-hidden">
-                        <div class="img">
+                        <div class="img text-truncate">
                             <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
+                        </div>
+                        <div class="article p-4">
+                            <article>
+                                <h3>title</h3>
+                                <caption>
+                                    <details>Lorem ipsum dolor sit amet.
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.Ipsum at vel fugit, a
+                                        similique quibusdam ea quidem neque expedita nostrum quam amet iusto sint rerum
+                                        sequi voluptas? Cumque, earum. Iste quidem asperiores distinctio, expedita,
+                                        consectetur illum omnis quod deleniti dolorem, aliquid explicabo! Quam ad
+                                        voluptatibus, eligendi animi quidem numquam officiis!
+                                    </details>
+                                </caption>
+                                <p>By:<b><i>autor</i></b></p>
+                                <a href="" target="_blank"
+                                    class="btn btn-primary rounded-4 my-2 read-more bg-transparent">Read More >></a>
+                            </article>
                         </div>
                     </div>
                 </div>
 
-                <!-- <div class="">
-                    <div class="inner">
-                        <div class="img">
-                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="inner">
-                        <div class="img">
-                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="inner">
-                        <div class="img">
-                            <img class="w-100 d-block" src="../images/News-desing.png" alt="" />
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
         </div>
     </section>
 
 
-
     <footer class=" py-5 my-footer-bg">
-        <div class="container">
+        <div class="container text-center">
 
             <div class="inner row align-items-center">
 
@@ -126,15 +138,15 @@
                     <div class="custom-footer-floating d-flex align-items-center">
                         <input type="email" name="emailBar" id="emailInput" placeholder=" ">
 
-                        <label id="emailLabel" for="emailBar">Enter your email to subscribe...</label>
+                        <label id="emailLabel" for="emailBar" class="flex-text">Enter email to subscribe...</label>
                         <button class="subscribe-btn btn rounded-5 col-2 border-1 my--bg" id="subscribeBtn">
-                            <p class="header-text-gradient fs-6 p-0 pt-1">Subscribe</p>
+                            <p class="header-text-gradient fs-6 p-0 pt-1 flex-text">Subscribe</p>
                         </button>
                     </div>
 
                 </div>
                 <ul class="links list-unstyled d-flex justify-content-center 
-                            align-items-center col-3 align-items-center">
+                            align-items-center col-12 col-md-3 align-items-center">
 
                     <li class="px-1 d-flex justify-content-center align-items-center">
                         <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -153,7 +165,6 @@
         </div>
     </footer>
 
-    
     <section class="utilities">
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast me-auto">
