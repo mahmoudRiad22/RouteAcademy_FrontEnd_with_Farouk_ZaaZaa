@@ -42,7 +42,6 @@
     color: #55b298;
 }
 
-
 .column-count {
     column-count: 1;
 }
@@ -50,7 +49,6 @@
     font-size: 10px;
     text-wrap: wrap;
 }
-
 
 /* #endregion Global Styling */
 /******************************************************************************/
@@ -137,7 +135,11 @@
 .custom-search-floating {
     position: relative;
 }
-.custom-search-floating input {
+.custom-search-floating textarea {
+    height: 6.25rem;
+}
+.custom-search-floating input,
+.custom-search-floating textarea {
     width: 100%;
     height: 3rem;
     padding: 0.7rem;
@@ -146,7 +148,8 @@
     background-color: rgb(127, 111, 180);
     transition: ease 0.2s all;
 }
-.custom-search-floating input:focus {
+.custom-search-floating input:focus,
+.custom-search-floating textarea:focus {
     outline: none;
     box-shadow: 0 0 10px 3px rgba(79, 62, 141, 0.7);
 }
@@ -332,6 +335,35 @@ footer .links li:hover a {
 }
 
 /* #endregion loaders */
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/******************************************************************************/
+/* #region Contac Section */
+.contact-section textarea{
+    height: 150px;
+}
+.contact-section .custom-search-floating {
+    padding: 0;
+    margin: 0;
+    margin-top: 0.625rem;
+}
+.contact-section .submit-btn {
+    padding: 0.25rem;
+    margin-top: 0.625rem;
+    height: 2.8rem;
+    width: 6rem;
+    background-color: #945d88;
+    color: black;
+    border: 0;
+    transition: all 0.25s;
+}
+.contact-section .submit-btn:hover {
+    background-color: #b171a4;
+    color: #ffd6e0;
+}
+/* #endregion Contac Section */
 /******************************************************************************/
 /******************************************************************************/
 
