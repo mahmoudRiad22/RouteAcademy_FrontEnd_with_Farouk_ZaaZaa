@@ -22,7 +22,6 @@ async function getPhotos(city) {
     }
 }
 
-// const rows = document.getElementById("rows");
 function displayPhotots(resData) {
     let box = "";
     for (const index in resData.results) {
@@ -43,7 +42,6 @@ function displayPhotots(resData) {
 getPhotos("egypt");
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", function () {
-    // console.log("searchInput :>> ", searchInput.value);
     const searchLabel = document.getElementById("searchLabel");
     if (searchInput.value) {
         searchLabel.classList.add("d-none");
