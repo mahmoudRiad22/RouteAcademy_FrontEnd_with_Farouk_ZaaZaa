@@ -23,5 +23,5 @@ testjs.js
 .env.test
 .env.production
 deploy-weather-app.yml
-
+setup.bat
 .github/workflows
