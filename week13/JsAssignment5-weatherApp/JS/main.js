@@ -22,6 +22,9 @@ const html = {
     },
 };
 
+document.getElementById("loaders").innerHTML = `
+    <span class="loader"></span>
+    `;
 async function getCurrentWeather(cityname) {
     document.getElementById("loaders").innerHTML = `
     <span class="loader"></span>
