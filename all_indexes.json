@@ -1,0 +1,278 @@
+[
+  {
+    "week": "week01",
+    "weekNumber": 1,
+    "count": 4,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week01/session1/index.html",
+        "project": "session1",
+        "name": "week01/session1",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week01/session1/task01.html",
+        "project": "unknown",
+        "name": "week01/unknown",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week01/session2/index.html",
+        "project": "session2",
+        "name": "week01/session2",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week01/session2/assignment2_PersonalData/index.html",
+        "project": "unknown",
+        "name": "week01/unknown",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week02",
+    "weekNumber": 2,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week02/assignment03_Bakery/index.html",
+        "project": "assignment03_Bakery",
+        "name": "week02/assignment03_Bakery",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week02/session1/index.html",
+        "project": "session1",
+        "name": "week02/session1",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week02/session2/index.html",
+        "project": "session2",
+        "name": "week02/session2",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week03",
+    "weekNumber": 3,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week03/assignment04_fokir/index.html",
+        "project": "assignment04_fokir",
+        "name": "week03/assignment04_fokir",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week03/session01/index.html",
+        "project": "session01",
+        "name": "week03/session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week03/session02/index.html",
+        "project": "session02",
+        "name": "week03/session02",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week04",
+    "weekNumber": 4,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week04/Assignment05-mealify/index.html",
+        "project": "Assignment05-mealify",
+        "name": "week04/Assignment05-mealify",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week04/session01/index.html",
+        "project": "session01",
+        "name": "week04/session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week04/session02/index.html",
+        "project": "session02",
+        "name": "week04/session02",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week05",
+    "weekNumber": 5,
+    "count": 1,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week05/session01/index.html",
+        "project": "session01",
+        "name": "week05/session01",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week06",
+    "weekNumber": 6,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week06/Assignment06_devfolio/index.html",
+        "project": "Assignment06_devfolio",
+        "name": "week06/Assignment06_devfolio",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week06/Session01/index.html",
+        "project": "Session01",
+        "name": "week06/Session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week06/session02/index.html",
+        "project": "session02",
+        "name": "week06/session02",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week07",
+    "weekNumber": 7,
+    "count": 1,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week07/session01/index.html",
+        "project": "session01",
+        "name": "week07/session01",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week09",
+    "weekNumber": 9,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week09/jsAssignment1-ProblemSolving/index.html",
+        "project": "jsAssignment1-ProblemSolving",
+        "name": "week09/jsAssignment1-ProblemSolving",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week09/session01/index.html",
+        "project": "session01",
+        "name": "week09/session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week09/session02/index.html",
+        "project": "session02",
+        "name": "week09/session02",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week10",
+    "weekNumber": 10,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week10/JsAssignment02-Quote-generator/index.html",
+        "project": "JsAssignment02-Quote-generator",
+        "name": "week10/JsAssignment02-Quote-generator",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week10/session01/index.html",
+        "project": "session01",
+        "name": "week10/session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week10/session02/index.html",
+        "project": "session02",
+        "name": "week10/session02",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week11",
+    "weekNumber": 11,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week11/jsAssignment3-Bookmarker/index.html",
+        "project": "jsAssignment3-Bookmarker",
+        "name": "week11/jsAssignment3-Bookmarker",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week11/session01/index.html",
+        "project": "session01",
+        "name": "week11/session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week11/session02/index.html",
+        "project": "session02",
+        "name": "week11/session02",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week12",
+    "weekNumber": 12,
+    "count": 2,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week12/JsAssigment4-loginSystemApp/index.html",
+        "project": "JsAssigment4-loginSystemApp",
+        "name": "week12/JsAssigment4-loginSystemApp",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week12/session01/index.html",
+        "project": "session01",
+        "name": "week12/session01",
+        "filename": "index.html"
+      }
+    ]
+  },
+  {
+    "week": "week13",
+    "weekNumber": 13,
+    "count": 3,
+    "projects": [
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week13/JsAssignment5-weatherApp/index.html",
+        "project": "JsAssignment5-weatherApp",
+        "name": "week13/JsAssignment5-weatherApp",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week13/session01/index.html",
+        "project": "session01",
+        "name": "week13/session01",
+        "filename": "index.html"
+      },
+      {
+        "url": "https://mahmoudriad22.github.io/RouteAcademy_FrontEnd_with_Farouk_ZaaZaa/week13/session02/index.html",
+        "project": "session02",
+        "name": "week13/session02",
+        "filename": "index.html"
+      }
+    ]
+  }
+]
