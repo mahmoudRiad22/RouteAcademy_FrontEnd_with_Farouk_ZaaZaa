@@ -2,10 +2,11 @@ import {UNSPLASH_ACCESS_KEY} from "../config.js";
 
 const baseUrl = "https://api.unsplash.com/search/photos?";
 
-async function getPhotos(city) {
     document.getElementById("loaders").innerHTML = `
     <span class="loader"></span>
     `;
+async function getPhotos(city) {
+
 
     try {
         console.clear();

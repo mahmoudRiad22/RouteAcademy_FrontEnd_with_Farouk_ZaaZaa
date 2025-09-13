@@ -1,6 +1,9 @@
 import {NEWS_API} from "../config.js";
 const city = `us`;
 
+    document.getElementById("loaders").innerHTML = `
+    <span class="loader"></span>
+    `;
 
 async function getNews(keyword) {
     document.getElementById("loaders").innerHTML = `
