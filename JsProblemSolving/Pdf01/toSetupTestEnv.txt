@@ -1,0 +1,30 @@
+open integerated terminal properly
+====================================================
+==> Install packages <==
+
+npm instal --save-dev
+====================================================
+==> in your functions folder main.js <==
+
+function init(){
+    return "Hello";
+}
+
+module.exports = {init}; 
+====================================================
+==> create main.test.js File <==
+==> Inside you test.js <==
+
+const main = require("../JS/main.js");
+
+test('test for init', ()=>{
+
+expect(main.init()).toBe("Hell");
+})
+
+====================================================
+==> to run the test and fail for the right reasons
+    npm test 
+====================================================
+setup cypress:
+    npx cypress open
