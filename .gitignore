@@ -25,3 +25,7 @@ testjs.js
 deploy-weather-app.yml
 setup.bat
 .github/workflows
+all_Indexes.txt
+howToUpdate.txt
+indexesGrouped.js
+all_indexes.ps1
