@@ -6,6 +6,8 @@ const offcanvasInfo = document.getElementById("offcanvasExampleInfo");
 const offcanvasSource = document.getElementById("offcanvasExampleSource");
 const errorBar = document.getElementById("errorBar");
 
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 function requestApi(key = "") {
     let api;
     if (!!key && key.trim()) {
