@@ -1,3 +1,122 @@
+// Ajax style to do httprequests
+const myRequest = new XMLHttpRequest();
+const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
+myRequest.open("get", url);
+// myRequest.send();
+myRequest.responseType = "json";
+myRequest.addEventListener("load", function () {
+    // console.log('myRequest.response :>> ', myRequest.status);
+    recipesData = myRequest.response.recipes;
+});
+
+/********************************************/
+/********************************************/
+// #region Callback
+console.clear();
+/* 
+callbacks:
+
+sending a function refrence as a parameter to be called inside another function
+
+callbacks are done in 2 steps
+    1- make a refrence call.
+    2- send the function
+
+*/
+
+function getFish(next) {
+    const myRequest = new XMLHttpRequest();
+    const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
+    myRequest.open("get", url);
+    myRequest.send();
+    myRequest.responseType = "json";
+    myRequest.addEventListener("load", function () {
+        console.log("Hello getFish");
+        console.log("myRequest.response :>> ", myRequest.status);
+        recipesData = myRequest.response.recipes;
+        next();
+    });
+}
+function getPasta(next) {
+    const myRequest = new XMLHttpRequest();
+    const url = "https://forkify-api.herokuapp.com/api/search?q=pasta";
+    myRequest.open("get", url);
+    myRequest.send();
+    myRequest.responseType = "json";
+    myRequest.addEventListener("load", function () {
+        console.log("Hello getPasta");
+        console.log("myRequest.response :>> ", myRequest.status);
+        recipesData = myRequest.response.recipes;
+        next();
+    });
+}
+function getLemon(next) {
+    const myRequest = new XMLHttpRequest();
+    const url = "https://forkify-api.herokuapp.com/api/search?q=lemon";
+    myRequest.open("get", url);
+    myRequest.send();
+    myRequest.responseType = "json";
+    myRequest.addEventListener("load", function () {
+        console.log("Hello getLemon");
+        console.log("myRequest.response :>> ", myRequest.status);
+        recipesData = myRequest.response.recipes;
+        next();
+    });
+}
+function getPizza(next) {
+    const myRequest = new XMLHttpRequest();
+    const url = "https://forkify-api.herokuapp.com/api/search?q=pizza";
+    myRequest.open("get", url);
+    myRequest.send();
+    myRequest.responseType = "json";
+    myRequest.addEventListener("load", function () {
+        console.log("Hello getPizza");
+        console.log("myRequest.response :>> ", myRequest.status);
+        recipesData = myRequest.response.recipes;
+        next();
+    });
+}
+function getCorn(next) {
+    const myRequest = new XMLHttpRequest();
+    const url = "https://forkify-api.herokuapp.com/api/search?q=corn";
+    myRequest.open("get", url);
+    myRequest.send();
+    myRequest.responseType = "json";
+    myRequest.addEventListener("load", function () {
+        console.log("Hello getCorn");
+        console.log("myRequest.response :>> ", myRequest.status);
+        recipesData = myRequest.response.recipes;
+        next();
+    });
+}
+function end() {
+    console.log("done!!");
+}
+
+// getLemon(() => {
+//     getFish(() => {
+//         getPizza(() => {
+//             getCorn(() => {
+//                 getPasta(() => {
+//                     end();
+//                 });
+//             });
+//         });
+//     });
+// });
+
+// #endregion Callback
+/********************************************/
+/********************************************/
+
+
+
+
+/********************************************/
+/********************************************/
+// #region Meals applying
+// console.clear();
+
 const API = "https://forkify-api.herokuapp.com/api/search?q=";
 const searchInput = document.getElementById("searchBar");
 const offCanvasTitle = document.getElementById("offcanvasExampleLabel");
@@ -6,8 +125,10 @@ const offcanvasInfo = document.getElementById("offcanvasExampleInfo");
 const offcanvasSource = document.getElementById("offcanvasExampleSource");
 const errorBar = document.getElementById("errorBar");
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 function requestApi(key = "") {
     let api;
     if (!!key && key.trim()) {
@@ -112,3 +233,7 @@ function updateOffCanvas(recipe) {
         offcanvasInfo.innerHTML += `<li class="list-group-item list-group-item-success">${recipe.ingredients[i]}</li>`;
     }
 }
+
+// #endregion Meals applying
+/********************************************/
+/********************************************/
