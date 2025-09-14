@@ -109,8 +109,115 @@ function end() {
 /********************************************/
 /********************************************/
 
+/********************************************/
+/********************************************/
+// #region promises
 
+/* a promise is used to cocatenate the async functions using the "then" statement
 
+to use the then sequence:
+    1- wrap the function code in a returned promise.
+    2- add the resolve and reject calls where it belongs inside the prmise
+    3- now you can use that function with the "then" sequence.
+ */
+console.clear();
+
+function getFish() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                console.log("Hello getFish");
+                console.log("myRequest.response :>> ", myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("Done");
+            } else reject("Failed at getFish");
+        });
+    });
+}
+function getPasta() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=pasta";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                console.log("Hello getPizza");
+                console.log("myRequest.response :>> ", myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("Done");
+            } else reject("Failed at getPasta");
+        });
+    });
+}
+function getLemon() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=lemon";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                console.log("Hello getPizza");
+                console.log("myRequest.response :>> ", myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("Done");
+            } else reject("Failed at getLemon");
+        });
+    });
+}
+function getPizza() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=pizza";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                console.log("Hello getPizza");
+                console.log("myRequest.response :>> ", myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("Done");
+            } else reject("Failed at getPizza");
+        });
+    });
+}
+function getCorn() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=corn";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                console.log("Hello getPizza");
+                console.log("myRequest.response :>> ", myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("Done");
+            } else reject("Failed at getCorn");
+        });
+    });
+}
+function end() {
+    console.log("done!!");
+}
+function error(errMsg) {
+    console.log(errMsg);
+}
+getFish().then(getLemon).then(getPizza).then(getPasta).then(getCorn).catch(error).finally(end);
+
+// #endregion promises
+/********************************************/
+/********************************************/
 
 /********************************************/
 /********************************************/
