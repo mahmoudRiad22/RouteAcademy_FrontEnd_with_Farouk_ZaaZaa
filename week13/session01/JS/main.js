@@ -1,13 +1,24 @@
+/********************************************/
+/********************************************/
+// #region Ajax httprequest
+console.clear();
+
 // Ajax style to do httprequests
-const myRequest = new XMLHttpRequest();
-const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
-myRequest.open("get", url);
-// myRequest.send();
-myRequest.responseType = "json";
-myRequest.addEventListener("load", function () {
-    // console.log('myRequest.response :>> ', myRequest.status);
-    recipesData = myRequest.response.recipes;
-});
+function getFishAjax() {
+    const myRequest = new XMLHttpRequest();
+    const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
+    myRequest.open("get", url);
+    // myRequest.send();
+    myRequest.responseType = "json";
+    myRequest.addEventListener("load", function () {
+        // console.log('myRequest.response :>> ', myRequest.status);
+        recipesData = myRequest.response.recipes;
+    });
+}
+
+// #endregion Ajax httprequest
+/********************************************/
+/********************************************/
 
 /********************************************/
 /********************************************/
@@ -24,7 +35,7 @@ callbacks are done in 2 steps
 
 */
 
-function getFish(next) {
+function getFishCallBack(next) {
     const myRequest = new XMLHttpRequest();
     const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
     myRequest.open("get", url);
@@ -37,7 +48,7 @@ function getFish(next) {
         next();
     });
 }
-function getPasta(next) {
+function getPastaCallBack(next) {
     const myRequest = new XMLHttpRequest();
     const url = "https://forkify-api.herokuapp.com/api/search?q=pasta";
     myRequest.open("get", url);
@@ -50,7 +61,7 @@ function getPasta(next) {
         next();
     });
 }
-function getLemon(next) {
+function getLemonCallBack(next) {
     const myRequest = new XMLHttpRequest();
     const url = "https://forkify-api.herokuapp.com/api/search?q=lemon";
     myRequest.open("get", url);
@@ -63,7 +74,7 @@ function getLemon(next) {
         next();
     });
 }
-function getPizza(next) {
+function getPizzaCallBack(next) {
     const myRequest = new XMLHttpRequest();
     const url = "https://forkify-api.herokuapp.com/api/search?q=pizza";
     myRequest.open("get", url);
@@ -76,7 +87,7 @@ function getPizza(next) {
         next();
     });
 }
-function getCorn(next) {
+function getCornCallBack(next) {
     const myRequest = new XMLHttpRequest();
     const url = "https://forkify-api.herokuapp.com/api/search?q=corn";
     myRequest.open("get", url);
@@ -93,11 +104,11 @@ function end() {
     console.log("done!!");
 }
 
-// getLemon(() => {
-//     getFish(() => {
-//         getPizza(() => {
-//             getCorn(() => {
-//                 getPasta(() => {
+// getFishCallBack(() => {
+//     getPastaCallBack(() => {
+//         getLemonCallBack(() => {
+//             getPizzaCallBack(() => {
+//                 getCornCallBack(() => {
 //                     end();
 //                 });
 //             });
@@ -122,7 +133,7 @@ to use the then sequence:
  */
 console.clear();
 
-function getFish() {
+function getFishPromise() {
     return new Promise((resolve, reject) => {
         const myRequest = new XMLHttpRequest();
         const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
@@ -139,7 +150,7 @@ function getFish() {
         });
     });
 }
-function getPasta() {
+function getPastaPromise() {
     return new Promise((resolve, reject) => {
         const myRequest = new XMLHttpRequest();
         const url = "https://forkify-api.herokuapp.com/api/search?q=pasta";
@@ -156,7 +167,7 @@ function getPasta() {
         });
     });
 }
-function getLemon() {
+function getLemonPromise() {
     return new Promise((resolve, reject) => {
         const myRequest = new XMLHttpRequest();
         const url = "https://forkify-api.herokuapp.com/api/search?q=lemon";
@@ -173,7 +184,7 @@ function getLemon() {
         });
     });
 }
-function getPizza() {
+function getPizzaPromise() {
     return new Promise((resolve, reject) => {
         const myRequest = new XMLHttpRequest();
         const url = "https://forkify-api.herokuapp.com/api/search?q=pizza";
@@ -190,7 +201,7 @@ function getPizza() {
         });
     });
 }
-function getCorn() {
+function getCornPromise() {
     return new Promise((resolve, reject) => {
         const myRequest = new XMLHttpRequest();
         const url = "https://forkify-api.herokuapp.com/api/search?q=corn";
@@ -213,12 +224,125 @@ function end() {
 function error(errMsg) {
     console.log(errMsg);
 }
-getFish().then(getLemon).then(getPizza).then(getPasta).then(getCorn).catch(error).finally(end);
+// getFishPromise()
+//     .then(getPastaPromise)
+//     .then(getLemonPromise)
+//     .then(getPizzaPromise)
+//     .then(getCornPromise)
+//     .catch(error)
+//     .finally(end);
 
 // #endregion promises
 /********************************************/
 /********************************************/
 
+/********************************************/
+/********************************************/
+// #region Async Await
+console.clear();
+
+function getFishAsyncAwait() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=fish";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                // console.log('myRequest.response :>> ', myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("getFishAsyncAwait :>> Done");
+            }
+            else reject("Failed at getFishAsyncAwait: response is not 200")
+        });
+    });
+}
+function getLemonAsyncAwait() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=Lemon";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                // console.log('myRequest.response :>> ', myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("getLemonAsyncAwait :>> Done");
+            }
+            else reject("Failed at getLemonAsyncAwait: response is not 200")
+        });
+    });
+}
+
+function getPastaAsyncAwait() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=pasta";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                // console.log('myRequest.response :>> ', myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("getPastaAsyncAwait :>> Done");
+            }
+            else reject("Failed at getPastaAsyncAwait: response is not 200")
+        });
+    });
+}
+
+function getPizzaAsyncAwait() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=Pizza";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                // console.log('myRequest.response :>> ', myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("getPizzaAsyncAwait :>> Done");
+            }
+            else reject("Failed at getPizzaAsyncAwait: response is not 200")
+        });
+    });
+}
+
+function getCornAsyncAwait() {
+    return new Promise((resolve, reject) => {
+        const myRequest = new XMLHttpRequest();
+        const url = "https://forkify-api.herokuapp.com/api/search?q=Corn";
+        myRequest.open("get", url);
+        myRequest.send();
+        myRequest.responseType = "json";
+        myRequest.addEventListener("load", function () {
+            if (myRequest.status == 200) {
+                // console.log('myRequest.response :>> ', myRequest.status);
+                recipesData = myRequest.response.recipes;
+                resolve("getCornAsyncAwait :>> Done");
+            }
+            else reject("Failed at getCornAsyncAwait: response is not 200")
+        });
+    });
+}
+
+async function process() {
+    // await getFishAsyncAwait();
+    console.log("status is :>>",await getFishAsyncAwait());
+    console.log("status is :>>",await getPastaAsyncAwait());
+    console.log("status is :>>",await getCornAsyncAwait());
+    console.log("status is :>>",await getLemonAsyncAwait());
+    console.log("status is :>>",await getPizzaAsyncAwait());
+}
+// process()
+
+// #endregion Async Await
+/********************************************/
+/********************************************/
 /********************************************/
 /********************************************/
 // #region Meals applying
