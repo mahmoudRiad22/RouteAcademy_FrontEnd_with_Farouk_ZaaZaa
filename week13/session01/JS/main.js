@@ -15,7 +15,7 @@ function getFishAjax() {
         recipesData = myRequest.response.recipes;
     });
 }
-
+// getFishAjax()
 // #endregion Ajax httprequest
 /********************************************/
 /********************************************/
@@ -240,6 +240,7 @@ function error(errMsg) {
 /********************************************/
 // #region Async Await
 console.clear();
+// the await must be inside an Async function and applied to returned promise functions
 
 function getFishAsyncAwait() {
     return new Promise((resolve, reject) => {
@@ -253,8 +254,7 @@ function getFishAsyncAwait() {
                 // console.log('myRequest.response :>> ', myRequest.status);
                 recipesData = myRequest.response.recipes;
                 resolve("getFishAsyncAwait :>> Done");
-            }
-            else reject("Failed at getFishAsyncAwait: response is not 200")
+            } else reject("Failed at getFishAsyncAwait: response is not 200");
         });
     });
 }
@@ -270,8 +270,7 @@ function getLemonAsyncAwait() {
                 // console.log('myRequest.response :>> ', myRequest.status);
                 recipesData = myRequest.response.recipes;
                 resolve("getLemonAsyncAwait :>> Done");
-            }
-            else reject("Failed at getLemonAsyncAwait: response is not 200")
+            } else reject("Failed at getLemonAsyncAwait: response is not 200");
         });
     });
 }
@@ -288,8 +287,7 @@ function getPastaAsyncAwait() {
                 // console.log('myRequest.response :>> ', myRequest.status);
                 recipesData = myRequest.response.recipes;
                 resolve("getPastaAsyncAwait :>> Done");
-            }
-            else reject("Failed at getPastaAsyncAwait: response is not 200")
+            } else reject("Failed at getPastaAsyncAwait: response is not 200");
         });
     });
 }
@@ -306,8 +304,7 @@ function getPizzaAsyncAwait() {
                 // console.log('myRequest.response :>> ', myRequest.status);
                 recipesData = myRequest.response.recipes;
                 resolve("getPizzaAsyncAwait :>> Done");
-            }
-            else reject("Failed at getPizzaAsyncAwait: response is not 200")
+            } else reject("Failed at getPizzaAsyncAwait: response is not 200");
         });
     });
 }
@@ -324,25 +321,50 @@ function getCornAsyncAwait() {
                 // console.log('myRequest.response :>> ', myRequest.status);
                 recipesData = myRequest.response.recipes;
                 resolve("getCornAsyncAwait :>> Done");
-            }
-            else reject("Failed at getCornAsyncAwait: response is not 200")
+            } else reject("Failed at getCornAsyncAwait: response is not 200");
         });
     });
 }
 
 async function process() {
     // await getFishAsyncAwait();
-    console.log("status is :>>",await getFishAsyncAwait());
-    console.log("status is :>>",await getPastaAsyncAwait());
-    console.log("status is :>>",await getCornAsyncAwait());
-    console.log("status is :>>",await getLemonAsyncAwait());
-    console.log("status is :>>",await getPizzaAsyncAwait());
+    console.log("status is :>>", await getFishAsyncAwait());
+    console.log("status is :>>", await getPastaAsyncAwait());
+    console.log("status is :>>", await getCornAsyncAwait());
+    console.log("status is :>>", await getLemonAsyncAwait());
+    console.log("status is :>>", await getPizzaAsyncAwait());
 }
 // process()
 
 // #endregion Async Await
 /********************************************/
 /********************************************/
+
+/********************************************/
+/********************************************/
+// #region Fetch Get with trch
+
+/** fetch only produce errors in the base url, other than that it retuns a bad request
+ * which is treated as sucessfull fetch, you must throw new error to catch it properly
+ */
+console.clear();
+
+async function getFishFetch() {
+    try {
+        const wrongUrl = "https://forkify-api.herokuapp.com/api/search?q=corn";
+        let res2 = await fetch(wrongUrl);
+        if (!res2.ok) throw new Error('HTTP error');
+    } catch (error) {
+        console.warn("here",error);
+    }
+}
+
+getFishFetch();
+// fetchData();
+// #endregion Fetch Get with trch
+/********************************************/
+/********************************************/
+
 /********************************************/
 /********************************************/
 // #region Meals applying
