@@ -1,9 +1,9 @@
 /********************************************/
 /********************************************/
 // #region recape or whatever it is
-console.clear();
 
 function recape() {
+    console.clear();
     function f1() {
         return new Promise(function (resolved, rejected) {
             console.log("function 1");
@@ -123,6 +123,7 @@ function recape() {
 /********************************************/
 /********************************************/
 // #region string manibulation
+
 function stringManibulation() {
     console.clear();
     let str = "          ,this, is, the, first, string, to, use, for, manibulation,   z";
@@ -150,6 +151,7 @@ function stringManibulation() {
     );
 }
 // stringManibulation();
+
 // #endregion string manibulation
 /********************************************/
 /********************************************/
@@ -194,6 +196,31 @@ function slobbyVsStrictMode() {
     console.log(arguments);
 }
 // slobbyVsStrictMode();
+
 // #endregion Slobby VS strict mode
 /********************************************/
 /********************************************/
+
+/********************************************/
+/********************************************/
+// #region var vs let vs const
+
+function VarVsLetVsConst() {
+    // var is deprecated from js after EC6
+    // we use let and const for declaration and assignment.
+    // let and const has a TDZ before the initalization.
+    // you can't access the variables in the TDZ[Temporary Dead Zone].
+
+    // all vriables are const unless you want that variable to be changed then use let
+
+    console.clear();
+    let x = 300;
+    console.log(x);
+    // let x = 300; // error: can't access x before initialization
+}
+VarVsLetVsConst();
+
+// #endregion var vs let vs const
+/********************************************/
+/********************************************/
+
