@@ -218,9 +218,54 @@ function VarVsLetVsConst() {
     console.log(x);
     // let x = 300; // error: can't access x before initialization
 }
-VarVsLetVsConst();
+// VarVsLetVsConst();
 
 // #endregion var vs let vs const
 /********************************************/
 /********************************************/
 
+/********************************************/
+/********************************************/
+// #region Default params & backtick aka template literal === ``
+
+function defaultParams() {
+    // simply assign a value to the params directly
+    // the value will be ignored if there is a value in the call
+    console.clear();
+
+    function test(name = "mahmoud", age = 30, salary = 4000) {
+        console.log("name :>> ", name);
+        console.log("age :>> ", age);
+        console.log("salary :>> ", salary);
+    }
+    test();
+    test('ayman', 25, 6000);
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+    // tagged backtick
+    function compine(strings, ...values){
+
+        let box = '';
+
+        strings.forEach((value,i) => {
+            box += value + (values[i] || '');            
+        });
+
+        console.log(box);
+    }
+
+
+    const x =100, y =200, z =300, m=400;
+    compine`this is 1st string = ${x}, 
+    here is the 2nd string = ${y},
+    here is the 3rd string = ${z},
+    here is the 4th string = ${m},
+    and so on...
+    `
+}
+defaultParams();
+
+// #endregion Default params
+/********************************************/
+/********************************************/
