@@ -324,7 +324,45 @@ function spreadOperatorWithIterables() {
     console.log("allP :>> ", allP);
     console.log("...allP :>> ", ...allP); // space seperated html p objects
 }
-spreadOperatorWithIterables();
+// spreadOperatorWithIterables();
 // #endregion spread operator
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region destructing object
+function destructingObject() {
+    console.clear();
+
+    // the idea is to create the variables based on the properties of the boject iteslf
+
+    const user = {
+        name: "mahmoud",
+        age: 30,
+        slikks: ['html', 'css', 'javaScript'],
+        job: 'front-end',
+        city: 'tanta',
+        country: 'Egypt',
+        salary: 4000,
+        family: {
+            sisters: ['aya', 'bassma'],
+            mother: 'mona',
+            father: 'mustafa'
+        },
+        location: '106 El-shorbagy st'
+    }
+
+    // simply type out the properties you need.
+    // then after the = write the obj where these properites belongs to.
+    const {location: userLocation, family:{sisters: userSisters}} = user;
+
+    console.log('location :>> ', userLocation);
+    console.log('sisters :>> ', userSisters);
+}
+
+destructingObject();
+
+// #endregion destructing object
 /********************************************/
 /********************************************/
