@@ -1,3 +1,4 @@
+// 'use strict'
 /********************************************/
 /********************************************/
 // #region recape or whatever it is
@@ -340,29 +341,95 @@ function destructingObject() {
     const user = {
         name: "mahmoud",
         age: 30,
-        slikks: ['html', 'css', 'javaScript'],
-        job: 'front-end',
-        city: 'tanta',
-        country: 'Egypt',
+        slikks: ["html", "css", "javaScript"],
+        job: "front-end",
+        city: "tanta",
+        country: "Egypt",
         salary: 4000,
         family: {
-            sisters: ['aya', 'bassma'],
-            mother: 'mona',
-            father: 'mustafa'
+            sisters: ["aya", "bassma"],
+            mother: "mona",
+            father: "mustafa",
         },
-        location: '106 El-shorbagy st'
-    }
+        location: "106 El-shorbagy st",
+    };
 
     // simply type out the properties you need.
     // then after the = write the obj where these properites belongs to.
-    const {location: userLocation, family:{sisters: userSisters}} = user;
+    const {
+        location: userLocation,
+        family: {sisters: userSisters},
+    } = user;
 
-    console.log('location :>> ', userLocation);
-    console.log('sisters :>> ', userSisters);
+    console.log("location :>> ", userLocation);
+    console.log("sisters :>> ", userSisters);
 }
 
-destructingObject();
+// destructingObject();
 
 // #endregion destructing object
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region this keyword
+
+/** summary
+ * the RULE IS: "this" points to the leftside of the dot at call time;
+ * 
+ * identify the call time {find where clog of "this" is called}
+ * if there is no dot, it goes back to window or undefined[if 'use strict']
+ * if there is a dot, it points to the left side of the dot
+ */
+console.clear();
+/** a function that tests the "this" keyword
+ *
+ */
+function thisKeyword() {
+    "use strict";
+    console.log("inside thisKeyword this :>> ", this);
+    /**this function is to test "this" inside a function */
+    function test() {
+        console.log("inside test this :>> ", this);
+    }
+    test();
+
+    // now we see this inside an object
+}
+let obj;
+const user = {
+    name: "mahmoud",
+    age: 30,
+    slikks: ["html", "css", "javaScript"],
+    job: "front-end",
+    city: "tanta",
+    country: "Egypt",
+    salary: 4000,
+    family: {
+        sisters: ["aya", "bassma"],
+        mother: "mona",
+        father: "mustafa",
+        doSomthing: function () {
+            console.log("this :>> ", this);
+            const obj = {
+                doAnotherThing: function () {
+                    console.log("this :>> ", this);
+                },
+            };
+            obj.doAnotherThing();
+
+            function test6(){
+                console.log('this :>> ', this);
+            }
+            test6();
+        },
+    },
+    location: "106 El-shorbagy st",
+};
+
+let ret = user.family.doSomthing();
+thisKeyword();
+// #endregion this keyword
 /********************************************/
 /********************************************/
