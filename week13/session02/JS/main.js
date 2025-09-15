@@ -229,9 +229,9 @@ function VarVsLetVsConst() {
 // #region Default params & backtick aka template literal === ``
 
 function defaultParams() {
+    console.clear();
     // simply assign a value to the params directly
     // the value will be ignored if there is a value in the call
-    console.clear();
 
     function test(name = "mahmoud", age = 30, salary = 4000) {
         console.log("name :>> ", name);
@@ -239,33 +239,92 @@ function defaultParams() {
         console.log("salary :>> ", salary);
     }
     test();
-    test('ayman', 25, 6000);
+    test("ayman", 25, 6000);
 
-/////////////////////////////////////////////
-/////////////////////////////////////////////
+    /////////////////////////////////////////////
+    /////////////////////////////////////////////
     // tagged backtick
-    function compine(strings, ...values){
+    function compine(strings, ...values) {
+        let box = "";
 
-        let box = '';
-
-        strings.forEach((value,i) => {
-            box += value + (values[i] || '');            
+        strings.forEach((value, i) => {
+            box += value + (values[i] || "");
         });
 
         console.log(box);
     }
 
-
-    const x =100, y =200, z =300, m=400;
+    const x = 100,
+        y = 200,
+        z = 300,
+        m = 400;
     compine`this is 1st string = ${x}, 
     here is the 2nd string = ${y},
     here is the 3rd string = ${z},
     here is the 4th string = ${m},
     and so on...
-    `
+    `;
 }
-defaultParams();
+// defaultParams();
 
 // #endregion Default params
+/********************************************/
+/********************************************/
+
+/********************************************/
+/********************************************/
+// #region spread operator
+
+function spreadOperatorWithIterables() {
+    console.clear();
+    // the spread operator uses " " as a seperator when spreading the values.
+    // the spread opertor is used to spread out the values of an iterable [string, array, obj]
+    // if used with func parameter it collect all the parameters in a single array.
+
+    // spread with strings
+    let str = "hello";
+    console.log("...str :>> ", ...str); // h e l l o
+
+    //spread with array
+    let arr = ["mahmoud", "isalm", "mohamed", "zienab", "aya", "omar"];
+    console.log("...arr :>> ", ...arr); // 'mahmoud' 'islam' 'mohamed' 'zienab' 'aya' 'omar'
+
+    // spread with objects
+    let obj1 = {name: "mahmoud", age: 30};
+
+    let obj1Info = {
+        city: "tanta",
+        country: "Egypt",
+    };
+
+    const obj1Full = {...obj1, ...obj1Info};
+    console.log("obj1Full :>> ", {...obj1, ...obj1Info});
+
+    // spread with array of objects
+    let obj = [
+        {
+            name: "mahmoud",
+            age: 30,
+            city: "tanta",
+            country: "Egypt",
+        },
+        {
+            name: "isalm",
+            age: 23,
+            city: "mansora",
+            country: "Egypt",
+        },
+    ];
+
+    console.log("...obj :>> ", ...obj);
+
+    // spread with iterables: i.e Nodelist
+    const allP = document.querySelectorAll("p");
+
+    console.log("allP :>> ", allP);
+    console.log("...allP :>> ", ...allP); // space seperated html p objects
+}
+spreadOperatorWithIterables();
+// #endregion spread operator
 /********************************************/
 /********************************************/
